@@ -24,11 +24,7 @@ public class Mapper {
 			List<DeployementConstraint> mappingConstraintList)
 			throws IOException {
 
-		// Set<Device> deviceList = NetworkDescription.getDeviceList();
-		// -----List<Device> deviceList = DeviceNetwork.getDeviceList();
-
-		// ---Set<DeployementConstraint> mappingConstraintList =
-		// DeploymentConstraintDescription.getMappingConstraintList();
+	
 
 		Map<Device, Set<String>> taskMapper = TaskMapper.mapTasks(deviceList,
 				mappingConstraintList);

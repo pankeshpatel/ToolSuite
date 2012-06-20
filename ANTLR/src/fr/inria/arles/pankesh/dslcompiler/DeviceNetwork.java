@@ -26,12 +26,7 @@ public class DeviceNetwork {
 	public DeviceNetwork() {
 	}
 
-	/*
-	 * public DeviceNetwork(String deviceName){ device = new
-	 * Device(getDeviceName(), getDeviceID(), getDeviceType(),
-	 * getNetworkAddress(), getRegionValues(), getRegionLabel(),
-	 * deviceAbilities); }
-	 */
+	
 
 	public void addDeviceObj() {
 
@@ -40,7 +35,7 @@ public class DeviceNetwork {
 				deviceAbilities);
 
 		Context.addDeviceinSymblTable(device);
-		// deviceList.add(device);
+		
 
 	}
 

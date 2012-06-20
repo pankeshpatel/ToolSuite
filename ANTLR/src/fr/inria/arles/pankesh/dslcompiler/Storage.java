@@ -63,37 +63,7 @@ public class Storage {
 
 	}
 
-	/*
-	 * public Information getInformation() { return information; }
-	 */
-
-	/*
-	 * public StorageService storageName(String storageServiceName) {
-	 * storageService = new StorageService(storageServiceName,
-	 * getAttributeSet(), getDataAccessList(), null);
-	 * genearteStorageServiceCode(storageService);
-	 * generateStorage(storageService); return storageService; }
-	 */
-
-	/*
-	 * public void genearteStorageServiceCode(StorageService storageService) {
-	 * JavaFrameworkFromST generatedStorageService = new JavaFrameworkFromST();
-	 * CompilationUnit generatedCU = generatedStorageService
-	 * .buildAbstractClassOFStorageService(storageService); SourceFileDumper
-	 * dumpGeneratedStorageService = new SourceFileDumper();
-	 * dumpGeneratedStorageService.dumpCompilationUnit(generatedCU); }
-	 */
-
-	/*
-	 * public Information access(String indexName, String datatype) { return new
-	 * Information(indexName, new PrimitiveType(datatype)); }
-	 */
-
-	/*
-	 * public void DataAccess(String accessName, Information query, Information
-	 * generatedInfo) { DataAccess dataAccess = new DataAccess(accessName,
-	 * query, generatedInfo); dataAccessList.add(dataAccess); }
-	 */
+	
 
 	// Getter and Setter of Data Access List
 

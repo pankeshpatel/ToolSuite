@@ -83,21 +83,4 @@ public class Actuator {
 		return attributeSet;
 	}
 
-	/*
-	 * public ActuatorDriver actuatorDriver(String csServiceName) {
-	 * actuatorDriver = new ActuatorDriver(csServiceName, getActionList(),
-	 * getAttributeSet(), null, null);
-	 * genearteActuatorDriverCode(actuatorDriver);
-	 * generateActuator(actuatorDriver); return actuatorDriver; }
-	 */
-
-	/*
-	 * public void genearteActuatorDriverCode(ActuatorDriver actuatorDriver) {
-	 * JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-	 * CompilationUnit generatedCU = generatedActuatorDriver
-	 * .buildAbstractClassoFActuatorDriver(actuatorDriver); SourceFileDumper
-	 * dumpGeneratedActuatorDriver = new SourceFileDumper();
-	 * dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU); }
-	 */
-
 }

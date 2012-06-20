@@ -37,16 +37,11 @@ public class TaskMapper {
 		// --O/p : 21 (regionLabel) -> device List.
 		for (Device deviceObj : deviceList) {
 
-			// --Set<RegionID> setOfRegion = deviceObj.getRegion();
-			// This call will return the center, floor, and Room Value of a
-			// device Object
+		
 			List<String> setOfRegion = deviceObj.getRegion().getAllRegionIDs();
 
 			for (String r : setOfRegion) {
-				// String tempRegion = r.getRegionID();
-
-				// regionLabelSet.add(r.getRegionLabel());
-
+		
 				if (deviceListByRegion.containsKey(r)) {
 
 					Set<Device> tempSet = deviceListByRegion.get(r);
@@ -86,21 +81,7 @@ public class TaskMapper {
 
 		}
 
-		/*
-		 * for (Device deviceObj : deviceList) {
-		 * 
-		 * List<String> setOfRegion =
-		 * deviceObj.getRegionLabels().getAllRegionLabel(); List<String>
-		 * setOfRegionIDs = deviceObj.getRegion().getAllRegionIDs();
-		 * 
-		 * for (String regionID : setOfRegionIDs) { for (String regionkey :
-		 * regionMap.keySet()) { for (String r : setOfRegion) {
-		 * 
-		 * if (regionkey.equals(r)) { regionMap.get(regionkey).add(regionID); }
-		 * // break; }
-		 * 
-		 * } } }
-		 */
+		
 
 		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
 

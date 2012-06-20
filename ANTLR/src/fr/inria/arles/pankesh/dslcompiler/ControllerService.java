@@ -27,53 +27,7 @@ public class ControllerService {
 	
 	private String controllerName;
 
-	/*
-	 * public Information getInformation() { return information; }
-	 */
-
-	/*
-	 * public Controller controllerName(String controllerName) { controller =
-	 * new Controller(controllerName, getAttributeSet(), getActionList(),
-	 * getConsumedInfo(), getPartitionAttributeVal());
-	 * genearteControllerCode(controller);
-	 * genearteControllerLogicCode(controller); return controller; }
-	 */
-
-	/*
-	 * public void generateCommand(String informationStr, String structName) {
-	 * information = new Command(informationStr, createStructure(structName)); }
-	 * 
-	 * public void consumeMeasurement(String informationStr, String structName)
-	 * { information = new Information(informationStr,
-	 * createStructure(structName)); }
-	 */
-
-	/*
-	 * public void genearteControllerCode(Controller controller) {
-	 * JavaFrameworkFromST generatedController = new JavaFrameworkFromST();
-	 * CompilationUnit generatedCU = generatedController
-	 * .buildAbstractClassoFController(controller); SourceFileDumper
-	 * dumpGeneratedComputationalService = new SourceFileDumper();
-	 * dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU); }
-	 */
-
-	/*
-	 * public Set<Information> getGeneratedInfo() { return generatedInfo; }
-	 */
-
-	/*
-	 * public Set<Information> getConsumedInfo() { return consumedInfo; }
-	 */
-
-	/*
-	 * public void command(Information information) {
-	 * generatedInfo.add(information); }
-	 */
-
-	/*
-	 * public void consume(Information information) {
-	 * consumedInfo.add(information); }
-	 */
+	
 
 	public ControllerService() { 	}
 	

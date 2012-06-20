@@ -22,16 +22,7 @@ public class Struct {
 		createdStructure = new Structure(structName, getStructFieldSet());
 	}
 
-	/*
-	 * public Structure createStructure(String structName) { createdStructure =
-	 * new Structure(structName, getStructFieldSet());
-	 * generateStructCode(createdStructure); return createdStructure; } public
-	 * void generateStructCode(Structure struct) { JavaFrameworkFromST
-	 * generatedStruct = new JavaFrameworkFromST(); CompilationUnit generatedCU
-	 * = generatedStruct .buildAbstractClassOFStructure(struct);
-	 * SourceFileDumper dumpGeneratedStruct = new SourceFileDumper();
-	 * dumpGeneratedStruct.dumpCompilationUnit(generatedCU); }
-	 */
+	
 
 	// Add new field to current structure
 	public void addField(String fieldName, String fieldType) {
