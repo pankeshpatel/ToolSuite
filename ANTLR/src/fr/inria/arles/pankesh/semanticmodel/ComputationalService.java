@@ -20,7 +20,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	}
 
 	public Set<DataAccess> getDataAccess() {
-		return dataAccess;
+			return dataAccess;		
 	}
 
 	public List<DataAccess> getAllDataAccess() {

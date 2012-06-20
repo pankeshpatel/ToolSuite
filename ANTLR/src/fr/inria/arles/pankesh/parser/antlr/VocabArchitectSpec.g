@@ -28,13 +28,11 @@ vocArchSpec :
 		context.currentMappingConstraint = new MappingConstraint(); }
 		':' (region_def)+  
 		{ context.currentRegion.generateCode(); }   
-       
-       'structs'         
+    'structs'         
         ':'       
-       (struct_def)+  
-       
-       'abilities' ':' abilities_def  
-       'softwarecomponents' ':' sc_def 
+    (struct_def)+  
+    'abilities' ':' abilities_def  
+    'softwarecomponents' ':' sc_def 
 ;
 
 region_def :
@@ -160,7 +158,8 @@ cs_def:
      context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
     (csAttribute_def ';')*
     (csGeneratedInfo_def ';')* 
-    (csConsumeInfo_def ';')*
+    (csConsumeInfo_def ';')* 
+    (csRequest_def  ';')*
     (partition_def ';')*
     { 
      context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
@@ -183,11 +182,17 @@ csGeneratedInfo_def:
     { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text); }
 ;
- 
+  
 csConsumeInfo_def:
   'consume' lc_id ('from' 'region-hops' ':' INT ':' ID )?  
    { context.currentComputationalService.addConsumedInfo($lc_id.text);  
+    
    }
+;
+
+csRequest_def :
+   'request' lc_id 
+   { context.currentComputationalService.getDataAccessListFromSymblTable($lc_id.text);}
 ;
 
 partition_def:
@@ -270,7 +275,6 @@ parameter_def :
     context.currentActuator.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     }
-    
 ; 
 
 ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )*

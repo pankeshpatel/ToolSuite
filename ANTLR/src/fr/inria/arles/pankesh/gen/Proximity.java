@@ -1,6 +1,5 @@
 package fr.inria.arles.pankesh.gen;
 import fr.inria.arles.pankesh.common.*;
-import util.RegionID;
 import util.*;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.pubsubmiddleware.CommandListener;

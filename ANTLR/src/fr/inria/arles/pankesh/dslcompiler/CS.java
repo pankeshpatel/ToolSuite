@@ -23,9 +23,7 @@ public class CS {
 	private String partitionAttributeValue;
 	private String computationalServiceName;
 
-	public CS() {
-
-	}
+	public CS() { }
 	
 	public String getComputationalServiceName() {
 		return computationalServiceName;
@@ -39,17 +37,11 @@ public class CS {
 		computationalService = new ComputationalService(getComputationalServiceName(),
 				getAttributeSet(), getGeneratedInfo(), getConsumedInfo(),
 				getDataAccessList(), getPartitionAttributeVal());
-	}
-	
-	
-	
-	
-	
+	}	
 
 	// Code generator of abstract files and Logic files
 
 	public void generateCode() {
-
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedComputationalService
 				.buildAbstractClassoFCS(computationalService);
@@ -66,22 +58,24 @@ public class CS {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-
 	
-	// Getter and Setter of Data access
-
-	public void dataAccess(String accessName, Information query,
-			Information generatedInfo) {
+	/* 
+	public void dataAccess(Information query, Information generatedInfo) {
 		DataAccess dataAccess = new DataAccess(query, generatedInfo);
 		dataAccessList.add(dataAccess);
-	}
+	}*/
 
 	public Set<DataAccess> getDataAccessList() {
-		return dataAccessList;
+		return dataAccessList; 
 	}
+	
+	public void getDataAccessListFromSymblTable(String dataAccessStr){
+		this.dataAccessList = Context.getDataAccessSymblTable(dataAccessStr);		
+	}	
+	
+	
 
-	// Getter and Setter of Partition Attribute
-
+	// Getter and Setter of Partition Attribute	
 	public void addPartitionAttribute(String regionName) {
 		partitionAttributeValue = regionName;
 		
@@ -101,35 +95,27 @@ public class CS {
 		consumedInfo.add(new Information(variableName, new DataType(
 				getDatafromSymblTable(variableName))));
 	}
-
 	public String getDatafromSymblTable(String variableName) {
 		return Context.getSymblTableData(variableName);
 	}
 
 	// Getter and setter of Generated Info
-
 	public Set<Information> getGeneratedInfo() {
 		return generatedInfo;
 	}
-
 	public void addGeneratedInfo(String variableName, String variableType) {
 		generatedInfo.add(new Information(variableName, new DataType(
 				variableType)));
 	}
 
 	// Getter and Setter of Attribute
-
 	private Set<Attribute> attributeSet = new HashSet<Attribute>();
-
 	public Set<Attribute> getAttributeSet() {
 		return attributeSet;
 	}
-
 	public void addAttribute(String fieldName, String fieldType) {
 		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
 				fieldType));
 		attributeSet.add(attribute);
 	}
-
-	
 }

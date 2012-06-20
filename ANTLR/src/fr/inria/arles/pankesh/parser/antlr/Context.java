@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import fr.inria.arles.pankesh.dslcompiler.Actuator;
 import fr.inria.arles.pankesh.dslcompiler.CS;
@@ -15,6 +16,7 @@ import fr.inria.arles.pankesh.dslcompiler.RegionsGenerator;
 import fr.inria.arles.pankesh.dslcompiler.Sensor;
 import fr.inria.arles.pankesh.dslcompiler.Storage;
 import fr.inria.arles.pankesh.dslcompiler.Struct;
+import fr.inria.arles.pankesh.semanticmodel.DataAccess;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 
 /**
@@ -32,12 +34,25 @@ public class Context {
 
 	public static List<DeployementConstraint> deploymentConstraintsList = new ArrayList<DeployementConstraint>();
 
+	public static Map<String, Set<DataAccess>> dataAccessSymblTable = 
+			new HashMap<String, Set<DataAccess>>();
+	
+	// Getter and Setter of  DataAccessSymblTable
+	
+	public static Set<DataAccess>  getDataAccessSymblTable(String dataAccessKey) {		
+		return dataAccessSymblTable.get(dataAccessKey);
+		
+	}
+	
+	public static void constructDataAccessSymblTable(String dataAccessKey, 
+			Set<DataAccess> dataAccessObj) {
+		dataAccessSymblTable.put(dataAccessKey, dataAccessObj);
+	}	
+	
 	// Getter and Setter of DeploymentConstrinstsSymblTable
-
 	public static void addDeploymentConstraints(DeployementConstraint dc) {
 		deploymentConstraintsList.add(dc);
 	}
-
 	public static List<DeployementConstraint> getDeploymentConstrainsList() {
 		return deploymentConstraintsList;
 	}
@@ -61,9 +76,7 @@ public class Context {
 
 		if (symblTable.containsKey(variableName)) {
 
-			// Set<SensorMeasurement> tempSet = symblTable.get(structName);
-			// tempSet.add(s);
-		} else { // If SymblTable does not have varaibleName, then add element
+		} else { 
 			symblTable.put(variableName, variableType);
 		}
 	}

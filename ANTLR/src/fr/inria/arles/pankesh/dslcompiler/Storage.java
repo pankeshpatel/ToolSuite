@@ -6,6 +6,7 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
 import fr.inria.arles.pankesh.semanticmodel.DataAccess;
 import fr.inria.arles.pankesh.semanticmodel.DataType;
@@ -15,7 +16,6 @@ import fr.inria.arles.pankesh.semanticmodel.StorageService;
 
 public class Storage {
 
-	private Information information;
 	private StorageService storageService;
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private Information queryIndex;
@@ -60,10 +60,7 @@ public class Storage {
 				.buildAbstractClassOFStorage(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
-
 	}
-
-	
 
 	// Getter and Setter of Data Access List
 
@@ -72,9 +69,10 @@ public class Storage {
 	}
 
 	public void addDataAccess() {
-		DataAccess dataAccess = new DataAccess(getDataAccessIndex(),
-				getGeneratedInfo());
-		dataAccessList.add(dataAccess);
+		DataAccess dataAccess = new DataAccess(getDataAccessIndex(), getGeneratedInfo());
+		dataAccessList.add(dataAccess);		
+		Context.constructDataAccessSymblTable(getGeneratedInfo().getName(), dataAccessList);
+		
 	}
 
 	// getter and Setter of generatedInfo
