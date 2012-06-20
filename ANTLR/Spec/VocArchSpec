@@ -1,0 +1,86 @@
+regions:
+	Room: String;
+	Floor: String;
+	Center: String;
+
+structs:
+    BadgeDetectedStruct 
+		badgeID : String;
+		badgeDetectedTimeStamp : String; 
+	
+    BadgeDisappearedStruct  
+		badgeID : String;
+		badgeDisappearedTimeStamp : String; 
+	
+    TempStruct 
+		tempValue : double; 
+		unitOfMeasurement : String; 
+        
+    SetTempStruct 
+		setTemp : double;
+		unitOfMeasurement : String;
+		
+	AvgTempStruct 
+		avgTempValue : double; 
+		unitOfMeasurement : String; 
+	
+    UserTempPref 
+		tempValue : double; 
+		unitOfMeasurement : String; 
+        accuracy : double;
+    
+    UserProfileStruct 
+		badgeID : String; 
+		tempPref : double; 		
+		
+abilities:
+	sensors: 
+        BadgeReader  
+		    attribute responseFormat : String; 
+		    generate  badgeDetected  :  BadgeDetectedStruct; 
+		    generate  badgeDisappeared : BadgeDisappearedStruct; 
+		 
+	    TemperatureSensor  
+		    attribute responseFormat : String; 
+		    generate  tempMeasurement : TempStruct; 
+     actuators:
+        Heater  
+		    attribute manufacturerName : String; 
+		    action On();
+		    action Off();
+		    action SetTemp(setTemp : SetTempStruct);
+		    
+softwarecomponents:	
+	 storageService
+        ProfileDB    
+            attribute responseFormat : String; 
+		    generate profile : UserProfileStruct accessed-by badgeID : String; 
+            deployment-instance: singleton;  
+     
+     computationalService
+        AvgTemp
+            attribute responseFormat : String;
+            generate avgTemperatureMeasurement : AvgTempStruct; 
+            consume tempMeasurement from region-hops:0:room; 
+            partition-per: room;    
+         
+        Proximity
+            attribute responseFormat : String;
+            generate tempPref : UserTempPref;
+            consume badgeDetected from region-hops:0:room;
+            consume badgeDisappeared from region-hops:0:room; 
+            consume profile  from region-hops:0:room;
+            partition-per: room;
+                
+	 controller 
+        RegulateTemp
+            attribute responseFormat : String;
+            consume avgTemperatureMeasurement  from region-hops:0:room; 
+            consume tempPref  from region-hops:0:room; 
+            command On() to region-hops:0:room; 
+            command Off() to region-hops:0:room; 
+            command SetTemp(setTemp) to region-hops:0:room;
+		    partition-per: room;
+		    
+	                  
+		       
