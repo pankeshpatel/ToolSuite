@@ -1,0 +1,104 @@
+regions :
+	Center : String ;
+	Floor :  String;
+	Room : String;
+
+structs:
+	BadgeDetectedStruct
+		badgeID : String;
+		timeStamp : String;	
+        
+	BadgeDisappearedStruct
+		badgeID : String;
+		timeStamp : String;
+        
+	TempStruct
+		tempValue : double;
+		unitOfMeasurement : String;
+        
+	SetTempStruct
+		setTemp : double;
+		unitOfMeasurement : String;
+        
+    AvgTempStruct
+		avgTempValue : double ;
+		unitOfMeasurement : String;
+	
+	UserTempPrefStruct
+		tempValue : double;
+		unitOfMeasurement : String;
+		accuracy : double;
+	
+	UserProfileStruct
+		badgeID : String ;
+		tempPref : double;
+        
+abilities:
+	sensors:
+		BadgeReader
+			attribute responseFormat : String;
+			generate badgeDetected : BadgeDetectedStruct;
+			generate badgeDisappeared : BadgeDisappearedStruct;
+		TemperatureSensor
+			attribute responseFormat : String;
+			generate  tempMeasurement : TempStruct;
+	
+	actuators:
+		Heater
+			attribute manufacturerName : String;
+			action On();
+			action Off();
+			action SetTemp(setTemp: SetTempStruct);		
+		Monitor
+			attribute responseFormat : String;
+			action Display(displayTemp : SetTempStruct); 
+softwarecomponents:
+    storageService
+  		ProfileDB	
+			attribute responseFormat : String;
+			generate profile : UserProfileStruct accessed-by badgeID : String;
+			deployment-instance : singleton;
+
+    computationalService
+		RoomAvgTemp
+			attribute responseFormat : String;
+			generate roomAvgTempMeasurement :AvgTempStruct;
+		    consume tempMeasurement from region-hops:0: Room;
+		    partition-per : Room ;
+		    
+		FloorAvgTemp
+			attribute responseFormat : String;
+			generate floorAvgTempMeasurement : AvgTempStruct;
+			consume roomAvgTempMeasurement from region-hops : 0 : Room;
+			partition-per :  Floor;
+		
+		CenterAvgTemp
+			attribute responseFormat : String;
+			generate centerAvgTempMeasurement : AvgTempStruct;
+			consume floorAvgTempMeasurement from region-hops : 0 : Room;
+			partition-per : Center;	
+	
+		Proximity
+			attribute responseFormat : String;
+			generate tempPref : UserTempPrefStruct;
+			consume badgeDetected from region-hops : 0 : Room;
+			consume badgeDisappeared from region-hops : 0 : Room;
+			request profile;
+			
+			partition-per : Room;
+			
+	controller
+		RegulateTemp 
+			attribute responseFormat : String;
+			consume roomAvgTempMeasurement from region-hops : 0 : Room;
+			consume tempPref from region-hops : 0: Room;
+			command On() to region-hops:0:Room;
+			command Off() to region-hops:0:Room;
+			command SetTemp() to region-hops:0:Room;
+			partition-per : Room;
+		
+		ManageTemp
+			attribute responseFormat : String;
+			consume centerAvgTempMeasurement from region-hops:0:Center;
+			command Display() to region-hops:0:Center;
+			partition-per : Center;
