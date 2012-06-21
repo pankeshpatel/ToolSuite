@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2012-06-20 10:36:57
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2012-06-21 16:21:53
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.DeviceNetwork; 
@@ -46,7 +46,7 @@ public class NetworkSpecParser extends Parser {
     }
 
     public String[] getTokenNames() { return NetworkSpecParser.tokenNames; }
-    public String getGrammarFileName() { return "Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g"; }
+    public String getGrammarFileName() { return "Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g"; }
 
 
       //Initialize the context
@@ -55,11 +55,11 @@ public class NetworkSpecParser extends Parser {
 
 
     // $ANTLR start "networkspec"
-    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:23:1: networkspec : 'devices' ':' ( device_def )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:23:1: networkspec : 'devices' ':' ( device_def )* ;
     public final void networkspec() throws RecognitionException {
         try {
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:23:12: ( 'devices' ':' ( device_def )* )
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:24:7: 'devices' ':' ( device_def )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:23:12: ( 'devices' ':' ( device_def )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:24:7: 'devices' ':' ( device_def )*
             {
             match(input,12,FOLLOW_12_in_networkspec56); 
 
@@ -68,7 +68,7 @@ public class NetworkSpecParser extends Parser {
              context = new Context();
                   
 
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:27:4: ( device_def )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:27:4: ( device_def )*
             loop1:
             do {
                 int alt1=2;
@@ -81,7 +81,7 @@ public class NetworkSpecParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:27:5: device_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:27:5: device_def
             	    {
             	    pushFollow(FOLLOW_device_def_in_networkspec72);
             	    device_def();
@@ -116,13 +116,13 @@ public class NetworkSpecParser extends Parser {
 
 
     // $ANTLR start "device_def"
-    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:30:1: device_def : deviceName= ( ID | CAPITALIZED_ID ) ':' networkAddress_def ';' 'region' ':' ( location_def )* 'type' ':' ( device_type )* ';' 'abilities' ':' ( abilities_def )* ';' ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:30:1: device_def : deviceName= ( ID | CAPITALIZED_ID ) ':' networkAddress_def ';' 'region' ':' ( location_def )* 'type' ':' ( device_type )* ';' 'abilities' ':' ( abilities_def )* ';' ;
     public final void device_def() throws RecognitionException {
         Token deviceName=null;
 
         try {
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:30:11: (deviceName= ( ID | CAPITALIZED_ID ) ':' networkAddress_def ';' 'region' ':' ( location_def )* 'type' ':' ( device_type )* ';' 'abilities' ':' ( abilities_def )* ';' )
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:31:4: deviceName= ( ID | CAPITALIZED_ID ) ':' networkAddress_def ';' 'region' ':' ( location_def )* 'type' ':' ( device_type )* ';' 'abilities' ':' ( abilities_def )* ';'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:30:11: (deviceName= ( ID | CAPITALIZED_ID ) ':' networkAddress_def ';' 'region' ':' ( location_def )* 'type' ':' ( device_type )* ';' 'abilities' ':' ( abilities_def )* ';' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:31:4: deviceName= ( ID | CAPITALIZED_ID ) ':' networkAddress_def ';' 'region' ':' ( location_def )* 'type' ':' ( device_type )* ';' 'abilities' ':' ( abilities_def )* ';'
             {
             deviceName=(Token)input.LT(1);
 
@@ -155,20 +155,20 @@ public class NetworkSpecParser extends Parser {
 
             match(input,9,FOLLOW_9_in_device_def131); 
 
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:37:18: ( location_def )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:37:18: ( location_def )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==ID) ) {
+                if ( (LA2_0==CAPITALIZED_ID) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:37:19: location_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:37:19: location_def
             	    {
             	    pushFollow(FOLLOW_location_def_in_device_def134);
             	    location_def();
@@ -189,7 +189,7 @@ public class NetworkSpecParser extends Parser {
 
             match(input,9,FOLLOW_9_in_device_def145); 
 
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:38:16: ( device_type )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:38:16: ( device_type )*
             loop3:
             do {
                 int alt3=2;
@@ -202,7 +202,7 @@ public class NetworkSpecParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:38:17: device_type
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:38:17: device_type
             	    {
             	    pushFollow(FOLLOW_device_type_in_device_def148);
             	    device_type();
@@ -225,7 +225,7 @@ public class NetworkSpecParser extends Parser {
 
             match(input,9,FOLLOW_9_in_device_def160); 
 
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:39:21: ( abilities_def )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:39:21: ( abilities_def )*
             loop4:
             do {
                 int alt4=2;
@@ -238,7 +238,7 @@ public class NetworkSpecParser extends Parser {
 
                 switch (alt4) {
             	case 1 :
-            	    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:39:22: abilities_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:39:22: abilities_def
             	    {
             	    pushFollow(FOLLOW_abilities_def_in_device_def163);
             	    abilities_def();
@@ -277,13 +277,13 @@ public class NetworkSpecParser extends Parser {
 
 
     // $ANTLR start "networkAddress_def"
-    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:43:1: networkAddress_def : 'networkaddress' ':' INT ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:43:1: networkAddress_def : 'networkaddress' ':' INT ;
     public final void networkAddress_def() throws RecognitionException {
         Token INT1=null;
 
         try {
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:43:20: ( 'networkaddress' ':' INT )
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:44:2: 'networkaddress' ':' INT
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:43:20: ( 'networkaddress' ':' INT )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:44:2: 'networkaddress' ':' INT
             {
             match(input,13,FOLLOW_13_in_networkAddress_def183); 
 
@@ -311,16 +311,16 @@ public class NetworkSpecParser extends Parser {
 
 
     // $ANTLR start "location_def"
-    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:48:1: location_def : ID ':' INT ';' ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:48:1: location_def : CAPITALIZED_ID ':' INT ';' ;
     public final void location_def() throws RecognitionException {
-        Token ID2=null;
+        Token CAPITALIZED_ID2=null;
         Token INT3=null;
 
         try {
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:48:14: ( ID ':' INT ';' )
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:49:3: ID ':' INT ';'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:48:14: ( CAPITALIZED_ID ':' INT ';' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:49:3: CAPITALIZED_ID ':' INT ';'
             {
-            ID2=(Token)match(input,ID,FOLLOW_ID_in_location_def202); 
+            CAPITALIZED_ID2=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_location_def202); 
 
             match(input,9,FOLLOW_9_in_location_def204); 
 
@@ -328,7 +328,7 @@ public class NetworkSpecParser extends Parser {
 
             match(input,10,FOLLOW_10_in_location_def208); 
 
-            context.currentNetwork.addRegionLabel((ID2!=null?ID2.getText():null));
+            context.currentNetwork.addRegionLabel((CAPITALIZED_ID2!=null?CAPITALIZED_ID2.getText():null));
             		context.currentNetwork.addRegionValue((INT3!=null?INT3.getText():null));
 
             }
@@ -349,13 +349,13 @@ public class NetworkSpecParser extends Parser {
 
 
     // $ANTLR start "device_type"
-    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:54:1: device_type : CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:54:1: device_type : CAPITALIZED_ID ;
     public final void device_type() throws RecognitionException {
         Token CAPITALIZED_ID4=null;
 
         try {
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:54:13: ( CAPITALIZED_ID )
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:55:4: CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:54:13: ( CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:55:4: CAPITALIZED_ID
             {
             CAPITALIZED_ID4=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_device_type224); 
 
@@ -379,17 +379,17 @@ public class NetworkSpecParser extends Parser {
 
 
     // $ANTLR start "abilities_def"
-    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:59:1: abilities_def : CAPITALIZED_ID ( ',' abilities_def )? ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:59:1: abilities_def : CAPITALIZED_ID ( ',' abilities_def )? ;
     public final void abilities_def() throws RecognitionException {
         Token CAPITALIZED_ID5=null;
 
         try {
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:59:15: ( CAPITALIZED_ID ( ',' abilities_def )? )
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:60:3: CAPITALIZED_ID ( ',' abilities_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:59:15: ( CAPITALIZED_ID ( ',' abilities_def )? )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:60:3: CAPITALIZED_ID ( ',' abilities_def )?
             {
             CAPITALIZED_ID5=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_abilities_def240); 
 
-            // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:60:18: ( ',' abilities_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:60:18: ( ',' abilities_def )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -398,7 +398,7 @@ public class NetworkSpecParser extends Parser {
             }
             switch (alt5) {
                 case 1 :
-                    // Y:\\git\\Parser\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:60:19: ',' abilities_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:60:19: ',' abilities_def
                     {
                     match(input,8,FOLLOW_8_in_abilities_def243); 
 
@@ -445,8 +445,8 @@ public class NetworkSpecParser extends Parser {
     public static final BitSet FOLLOW_networkAddress_def_in_device_def121 = new BitSet(new long[]{0x0000000000000400L});
     public static final BitSet FOLLOW_10_in_device_def123 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_device_def129 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_device_def131 = new BitSet(new long[]{0x0000000000008020L});
-    public static final BitSet FOLLOW_location_def_in_device_def134 = new BitSet(new long[]{0x0000000000008020L});
+    public static final BitSet FOLLOW_9_in_device_def131 = new BitSet(new long[]{0x0000000000008010L});
+    public static final BitSet FOLLOW_location_def_in_device_def134 = new BitSet(new long[]{0x0000000000008010L});
     public static final BitSet FOLLOW_15_in_device_def143 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_9_in_device_def145 = new BitSet(new long[]{0x0000000000000410L});
     public static final BitSet FOLLOW_device_type_in_device_def148 = new BitSet(new long[]{0x0000000000000410L});
@@ -458,7 +458,7 @@ public class NetworkSpecParser extends Parser {
     public static final BitSet FOLLOW_13_in_networkAddress_def183 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_9_in_networkAddress_def185 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_INT_in_networkAddress_def187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_location_def202 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_location_def202 = new BitSet(new long[]{0x0000000000000200L});
     public static final BitSet FOLLOW_9_in_location_def204 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_INT_in_location_def206 = new BitSet(new long[]{0x0000000000000400L});
     public static final BitSet FOLLOW_10_in_location_def208 = new BitSet(new long[]{0x0000000000000002L});

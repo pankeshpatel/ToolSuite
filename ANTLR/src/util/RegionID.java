@@ -5,10 +5,10 @@ import java.util.List;
 
 public class RegionID {
 
-	private String Room;
+	private String Center;
 
-	public String getRoom() {
-		return Room;
+	public String getCenter() {
+		return Center;
 	}
 
 	private String Floor;
@@ -17,38 +17,38 @@ public class RegionID {
 		return Floor;
 	}
 
-	private String Center;
+	private String Room;
 
-	public String getCenter() {
-		return Center;
+	public String getRoom() {
+		return Room;
 	}
 
-	public RegionID(String Center, String Floor, String Room ) {
+	public RegionID(String Center, String Floor, String Room) {
 		super();
-		this.Room = Room;
-		this.Floor = Floor;
 		this.Center = Center;
+		this.Floor = Floor;
+		this.Room = Room;
 	}
 
 	public boolean equals(Object obj) {
 		RegionID other = (RegionID) obj;
-		return other.getRoom().equals(this.Room)
+		return other.getCenter().equals(this.Center)
 				&& other.getFloor().equals(this.Floor)
-				&& other.getCenter().equals(this.Center);
+				&& other.getRoom().equals(this.Room);
 
 	}
 
 	@Override
 	public int hashCode() {
-		return Room.hashCode() + Floor.hashCode() + Center.hashCode();
+		return Center.hashCode() + Floor.hashCode() + Room.hashCode();
 
 	}
 
 	public List<String> getAllRegionIDs() {
 		ArrayList<String> allRegionIDs = new ArrayList<String>();
-		allRegionIDs.add(getRoom());
-		allRegionIDs.add(getFloor());
 		allRegionIDs.add(getCenter());
+		allRegionIDs.add(getFloor());
+		allRegionIDs.add(getRoom());
 		return allRegionIDs;
 	}
 

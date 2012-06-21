@@ -122,12 +122,12 @@ controller_def:
 ;
 
 cntrlPartition_def :
-	cntrlDeploymentConstraint ='partition-per' ':' ID 
+	cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
     { 
-    context.currentController.setPartitionAttribute($ID.text); 
+    context.currentController.setPartitionAttribute($CAPITALIZED_ID.text); 
      // Next two lines are for  Mapping constraints
     context.currentMappingConstraint.setAttributeName($cntrlDeploymentConstraint.text);  
-    context.currentMappingConstraint.setAttributeValue($ID.text);  
+    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text);  
     }
 ;
  
@@ -137,13 +137,15 @@ cntrlAttribute_def:
 ;
 
 cntrlConsumeInfo_def:
-	'consume' lc_id ('from' 'region-hops' ':' INT ':' ID )?  
+	'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?  
    { context.currentController.addConsumedInfo($lc_id.text);  }
 ; 
  
 cntrlCommand_def :
-    'command'  CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' ID 
-    { context.currentController.addCommand($CAPITALIZED_ID.text);  }
+    'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID 
+    { 
+      context.currentController.addCommand($name.text);  
+    }
 ;
 
 cntrlParameter_def :
@@ -184,7 +186,7 @@ csGeneratedInfo_def:
 ;
   
 csConsumeInfo_def:
-  'consume' lc_id ('from' 'region-hops' ':' INT ':' ID )?  
+  'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?  
    { context.currentComputationalService.addConsumedInfo($lc_id.text);  
     
    }
@@ -196,12 +198,12 @@ csRequest_def :
 ;
 
 partition_def:
-    csDeploymentConstraint='partition-per' ':' ID 
+    csDeploymentConstraint='partition-per' ':' CAPITALIZED_ID 
     { 
-    context.currentComputationalService.addPartitionAttribute($ID.text);   
+    context.currentComputationalService.addPartitionAttribute($CAPITALIZED_ID.text);   
     // Next two lines are for  Mapping constraints
     context.currentMappingConstraint.setAttributeName($csDeploymentConstraint.text);  
-    context.currentMappingConstraint.setAttributeValue($ID.text); 
+    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text); 
    }
 ;
 

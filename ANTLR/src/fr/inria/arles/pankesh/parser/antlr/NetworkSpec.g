@@ -46,8 +46,8 @@ networkAddress_def :
 ;
 
 location_def :
-		ID ':' INT ';'
-		{context.currentNetwork.addRegionLabel($ID.text);
+		CAPITALIZED_ID ':' INT ';'
+		{context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
 		context.currentNetwork.addRegionValue($INT.text);}
 ;
 
