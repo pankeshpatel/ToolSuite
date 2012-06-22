@@ -26,8 +26,6 @@ public class DeviceNetwork {
 	public DeviceNetwork() {
 	}
 
-	
-
 	public void addDeviceObj() {
 
 		device = new Device(getDeviceName(), getDeviceID(), getDeviceType(),
@@ -35,7 +33,6 @@ public class DeviceNetwork {
 				deviceAbilities);
 
 		Context.addDeviceinSymblTable(device);
-		
 
 	}
 
