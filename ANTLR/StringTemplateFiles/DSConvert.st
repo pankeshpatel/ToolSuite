@@ -1,4 +1,4 @@
-package fr.inria.arles.pankesh.gen.util;
+package $region.PackageName$;
 
 import java.util.List;
 

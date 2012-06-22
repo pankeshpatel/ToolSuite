@@ -1,9 +1,8 @@
-package fr.inria.arles.pankesh.gen;
+package $Actuatordriver.packageName$;
 
-import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.pubsubmiddleware.CommandListener;
-import fr.inria.arles.pankesh.semanticmodel.Device;
-import fr.inria.arles.pankesh.gen.util.Logger;
+import fr.inria.arles.pankesh.pubsubmiddleware.*;
+import fr.inria.arles.pankesh.semanticmodel.*;
+import fr.inria.arles.pankesh.common.*;
 
 public abstract class  $Actuatordriver.name$ implements Runnable, CommandListener  {	
 	

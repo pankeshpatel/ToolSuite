@@ -1,9 +1,9 @@
-package fr.inria.arles.pankesh.gen.logic;
+
+package $CS.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.*;
-import fr.inria.arles.pankesh.gen.$CS.name$;
-$CS.allConsumedInfo:{ consumedInfo | import fr.inria.arles.pankesh.gen.$consumedInfo.type.name$; }; separator="\n"$   	
+import $CS.PackageName$.*;
 	   	
 
 

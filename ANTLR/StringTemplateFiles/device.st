@@ -1,15 +1,14 @@
-package fr.inria.arles.pankesh.gen.sim.device$device.name$;
+package $device.PackageName$;
 
-import fr.inria.arles.pankesh.semanticmodel.Device;
-import fr.inria.arles.pankesh.dslcompiler.DeviceStartup;
+import fr.inria.arles.pankesh.semanticmodel.*;
+import fr.inria.arles.pankesh.common.*;
+import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import java.util.Set;
 import java.util.HashSet;
-import fr.inria.arles.pankesh.gen.util.RegionID;
-import fr.inria.arles.pankesh.gen.util.RegionLabel;
+import $device.logicPackageName$.*;
+import $device.UtilPackageName$.*;
 
 
-import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-$device.abilities:{ sc | import fr.inria.arles.pankesh.gen.logic.Fake$sc$; }; separator="\n"$
 
 
 public class Startup implements DeviceStartup {

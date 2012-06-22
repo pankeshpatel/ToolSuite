@@ -1,4 +1,4 @@
-package fr.inria.arles.pankesh.gen.util;
+package $region.PackageName$;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +37,9 @@ public List<String> getAllRegionIDs() {
 }
 
 public RegionID(List<String> list) {
-		 this.Room = list.get(0);
+		 this.Room = list.get(2);
 		 this.Floor = list.get(1);
-		 this.Center = list.get(2);		
+		 this.Center = list.get(0);		
 	}
 
 

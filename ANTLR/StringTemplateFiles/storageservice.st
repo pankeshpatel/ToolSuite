@@ -1,10 +1,11 @@
-package fr.inria.arles.pankesh.gen;
 
-import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.pubsubmiddleware.CommandListener;
-import fr.inria.arles.pankesh.semanticmodel.Device;
+package $Storageservice.packageName$;
+
+import fr.inria.arles.pankesh.pubsubmiddleware.*;
+import fr.inria.arles.pankesh.semanticmodel.*;
+import fr.inria.arles.pankesh.common.*;
 import java.util.HashMap;
-import fr.inria.arles.pankesh.gen.util.Logger;
+
 
 
 

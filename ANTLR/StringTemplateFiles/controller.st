@@ -1,10 +1,9 @@
-package fr.inria.arles.pankesh.gen;
-import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.pubsubmiddleware.Subscriber;
-import fr.inria.arles.pankesh.semanticmodel.Device;
-import fr.inria.arles.pankesh.gen.util.Logger;
-import fr.inria.arles.pankesh.gen.util.RegionSubscription;
-import fr.inria.arles.pankesh.gen.util.RegionID;
+package $CS.packageName$;
+
+import fr.inria.arles.pankesh.pubsubmiddleware.*;
+import fr.inria.arles.pankesh.semanticmodel.*;
+import fr.inria.arles.pankesh.common.*;
+import $CS.UtilPackageName$.*;
 
 
 public abstract class  $CS.name$ implements Subscriber, Runnable{

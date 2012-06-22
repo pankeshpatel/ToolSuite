@@ -1,9 +1,9 @@
-package fr.inria.arles.pankesh.gen.logic;
+package $Actuatordriver.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.*;
-import fr.inria.arles.pankesh.gen.$Actuatordriver.name$;
-$Actuatordriver.allActions:{ action |   $action.allParameter:{ param | import fr.inria.arles.pankesh.gen.$param.type.name$; }; separator=", "$  }; separator="\n"$    
+import $Actuatordriver.PackageName$.*;
+  
    
 public  class  Fake$Actuatordriver.name$ extends $Actuatordriver.name$  {	
 

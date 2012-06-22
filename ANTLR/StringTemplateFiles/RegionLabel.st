@@ -1,7 +1,9 @@
-package fr.inria.arles.pankesh.gen.util;
+package $region.PackageName$;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class RegionLabel { 
 	
@@ -27,9 +29,9 @@ public List<String> getAllRegionLabel() {
 }
 
 public RegionLabel(List<String> list) {
-		 this.RoomLabel = list.get(0);
+		 this.RoomLabel = list.get(2);
 		 this.FloorLabel = list.get(1);
-		 this.CenterLabel = list.get(2);		
+		 this.CenterLabel = list.get(0);		
 	}
 
    

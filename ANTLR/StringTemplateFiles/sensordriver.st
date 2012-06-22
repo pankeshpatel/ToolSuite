@@ -1,7 +1,8 @@
-package fr.inria.arles.pankesh.gen;
-import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.semanticmodel.Device;
-import fr.inria.arles.pankesh.gen.util.Logger;
+package $SensorDriver.packageName$;
+import fr.inria.arles.pankesh.pubsubmiddleware.*;
+import fr.inria.arles.pankesh.semanticmodel.*;
+import fr.inria.arles.pankesh.common.*;
+
 
 
 public abstract class  $SensorDriver.name$ implements Runnable { 

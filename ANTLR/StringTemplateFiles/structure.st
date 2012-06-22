@@ -1,6 +1,6 @@
-package fr.inria.arles.pankesh.gen;
+//package fr.inria.arles.pankesh.gen;
 
-
+package $struct.packageName$;
 
 public class $struct.name$ {    
     $struct.allStructFields:{field |

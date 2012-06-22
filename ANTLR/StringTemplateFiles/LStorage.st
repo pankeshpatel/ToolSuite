@@ -1,8 +1,8 @@
-package fr.inria.arles.pankesh.gen.logic;
+package $Storageservice.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.*;
-import fr.inria.arles.pankesh.gen.$Storageservice.name$;
+import $Storageservice.PackageName$.*;
 
 
 

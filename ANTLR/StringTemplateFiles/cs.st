@@ -1,11 +1,12 @@
-package fr.inria.arles.pankesh.gen;
-import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.pubsubmiddleware.CommandListener;
-import fr.inria.arles.pankesh.pubsubmiddleware.Subscriber;
-import fr.inria.arles.pankesh.semanticmodel.Device;
-import fr.inria.arles.pankesh.gen.util.Logger;
-import fr.inria.arles.pankesh.gen.util.RegionSubscription;
-import fr.inria.arles.pankesh.gen.util.RegionID;
+package $CS.packageName$;
+
+
+import fr.inria.arles.pankesh.pubsubmiddleware.*;
+import fr.inria.arles.pankesh.semanticmodel.*;
+import fr.inria.arles.pankesh.common.*;
+import $CS.UtilPackageName$.*;
+
+
 
 public abstract class  $CS.name$ implements Subscriber, Runnable, CommandListener{ 
 			
@@ -97,7 +98,8 @@ public abstract class  $CS.name$ implements Subscriber, Runnable, CommandListene
 		}
 		}$ 		
 		public void run() {	
-		}		
+		}	
+        
 		$CS.allDataAccess:{ dataAccess |
 		    protected  $dataAccess.generatedInfo.type.name$ get$dataAccess.dataAccessName; format="capital"$($dataAccess.query.type.name; format="capital" $ arg) {
 		    	 Logger.log(myDeviceInfo.getName(),"$CS.name$",

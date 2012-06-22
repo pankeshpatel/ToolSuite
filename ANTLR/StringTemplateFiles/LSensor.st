@@ -1,8 +1,8 @@
-package fr.inria.arles.pankesh.gen.logic;
+package $SensorDriver.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.*;
-import fr.inria.arles.pankesh.gen.$SensorDriver.name$;
+import $SensorDriver.PackageName$.*;
 
 public class  Fake$SensorDriver.name$ extends $SensorDriver.name$  { 
    
