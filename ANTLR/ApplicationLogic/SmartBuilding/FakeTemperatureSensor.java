@@ -23,6 +23,24 @@ public class FakeTemperatureSensor extends TemperatureSensor {
 		// TODO : write code Here
 	}
 
+	private boolean continueFlag = false;
+
+	@Override
+	public void run() {
+		continueFlag = true;
+		// while (true) {
+		try {
+			Thread.sleep(1000);
+			handleExpiryOfTimer();
+			// if (!continueFlag)
+			// break;
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			continueFlag = false;
+		}
+		// }
+	}
+
 	@Override
 	protected void handleExpiryOfTimer() {
 

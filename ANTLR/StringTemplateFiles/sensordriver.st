@@ -32,7 +32,7 @@ public abstract class  $SensorDriver.name$ implements Runnable {
        
         Logger.log(myDeviceInfo.getName(), "$SensorDriver.name$",
 				"Publishing $generatedInfo.name$");
-        //System.out.println( "$generatedInfo.name; format="capital"$ | Publish |" + myDeviceInfo.getName() );
+      
         
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="capital"$", newValue, myDeviceInfo);
 		}

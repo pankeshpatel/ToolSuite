@@ -2,9 +2,8 @@ package logic;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
-import framework.AvgTempStruct;
 import framework.ManageTemp;
-import framework.SetTempStruct;
+import framework.TempStruct;
 
 public class FakeManageTemp extends ManageTemp {
 
@@ -12,9 +11,10 @@ public class FakeManageTemp extends ManageTemp {
 		super(pubSubM, deviceInfo);
 	}
 
-	public void onNewcenterAvgTempMeasurement(AvgTempStruct arg) {
+	public void onNewcenterAvgTempMeasurement(TempStruct arg) {
 
-		SetTempStruct avgTemp = new SetTempStruct(arg.getavgTempValue(), "C");
+		TempStruct avgTemp = new TempStruct(arg.gettempValue(),
+				arg.getunitOfMeasurement());
 		Display(avgTemp);
 	}
 

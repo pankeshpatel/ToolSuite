@@ -6,7 +6,6 @@ import java.util.List;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
-import framework.AvgTempStruct;
 import framework.RoomAvgTemp;
 import framework.TempStruct;
 
@@ -16,7 +15,7 @@ public class FakeRoomAvgTemp extends RoomAvgTemp {
 			.synchronizedList(new ArrayList<Double>());
 	private double currentAverage;
 	private int numSample = 0;
-	private final int NUM_SAMPLE_FOR_AVG = 3;
+	private final int NUM_SAMPLE_FOR_AVG = 1;
 
 	public FakeRoomAvgTemp(PubSubMiddleware pubSubM, Device deviceInfo) {
 		super(pubSubM, deviceInfo);
@@ -36,9 +35,10 @@ public class FakeRoomAvgTemp extends RoomAvgTemp {
 			}
 
 			if (numSample == NUM_SAMPLE_FOR_AVG) {
+				numSample = 0;
 
-				AvgTempStruct avgTempMeasurement = new AvgTempStruct(
-						currentAverage, "C");
+				TempStruct avgTempMeasurement = new TempStruct(currentAverage,
+						arg.getunitOfMeasurement());
 				setroomAvgTempMeasurement(avgTempMeasurement);
 			}
 		}

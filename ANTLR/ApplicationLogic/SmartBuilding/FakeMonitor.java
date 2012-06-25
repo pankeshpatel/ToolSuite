@@ -3,7 +3,7 @@ package logic;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 import framework.Monitor;
-import framework.SetTempStruct;
+import framework.TempStruct;
 
 public class FakeMonitor extends Monitor {
 
@@ -13,9 +13,9 @@ public class FakeMonitor extends Monitor {
 	}
 
 	@Override
-	protected void Display(SetTempStruct arg) {
+	protected void Display(TempStruct arg) {
 		System.out.println("Monitor is receiving Temperature Data >>>>"
-				+ arg.getsetTemp());
+				+ arg.gettempValue());
 
 	}
 

@@ -3,6 +3,7 @@ package logic;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 import framework.ProfileDB;
+import framework.TempStruct;
 import framework.UserProfileStruct;
 
 public class FakeProfileDB extends ProfileDB {

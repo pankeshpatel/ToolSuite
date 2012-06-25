@@ -6,80 +6,65 @@ regions :
 structs:
 	BadgeDetectedStruct
 		badgeID : String;
-		timeStamp : String;	
+		timeStamp : long;	
         
 	BadgeDisappearedStruct
 		badgeID : String;
-		timeStamp : String;
+		timeStamp : long;
         
 	TempStruct
 		tempValue : double;
-		unitOfMeasurement : String;
-        
-	SetTempStruct
-		setTemp : double;
-		unitOfMeasurement : String;
-        
-    AvgTempStruct
-		avgTempValue : double ;
-		unitOfMeasurement : String;
-	
-	UserTempPrefStruct
-		tempValue : double;
-		unitOfMeasurement : String;
-		accuracy : double;
-	
+		unitOfMeasurement : String; 
+
 	UserProfileStruct
 		badgeID : String ;
 		tempPref : double;
+	
+	UserTempPrefStruct
+		tempValue : double;
+		unitOfMeasurement : String; 
+		timeStamp : long;	
         
 abilities:
 	sensors:
-		BadgeReader
-			attribute responseFormat : String;
+		BadgeReader			
 			generate badgeDetected : BadgeDetectedStruct;
 			generate badgeDisappeared : BadgeDisappearedStruct;
-		TemperatureSensor
-			attribute responseFormat : String;
+		TemperatureSensor			
 			generate  tempMeasurement : TempStruct;
 	
 	actuators:
-		Heater
-			attribute manufacturerName : String;
+		Heater			
 			action On();
 			action Off();
-			action SetTemp(setTemp: SetTempStruct);		
-		Monitor
-			attribute responseFormat : String;
-			action Display(displayTemp : SetTempStruct); 
+			action SetTemp(setTemp: TempStruct);
+					
+		Monitor			
+			action Display(displayTemp : TempStruct);
+			 
 softwarecomponents:
     storageService
-  		ProfileDB	
-			attribute responseFormat : String;
-			generate profile : UserProfileStruct accessed-by badgeID : String;
+  		ProfileDB			
+			generate profile : TempStruct accessed-by badgeID : String;
 			deployment-instance : singleton;
 
     computationalService
-		RoomAvgTemp
-			attribute responseFormat : String;
-			generate roomAvgTempMeasurement :AvgTempStruct;
+		RoomAvgTemp			
+			generate roomAvgTempMeasurement :TempStruct;
 		    consume tempMeasurement from region-hops:0: Room;
 		    partition-per : Room ;
 		    
-		FloorAvgTemp
-			attribute responseFormat : String;
-			generate floorAvgTempMeasurement : AvgTempStruct;
+		FloorAvgTemp			
+			generate floorAvgTempMeasurement : TempStruct;
 			consume roomAvgTempMeasurement from region-hops : 0 : Room;
 			partition-per :  Floor;
 		
-		CenterAvgTemp
-			attribute responseFormat : String;
-			generate centerAvgTempMeasurement : AvgTempStruct;
+		CenterAvgTemp			
+			generate centerAvgTempMeasurement : TempStruct;
 			consume floorAvgTempMeasurement from region-hops : 0 : Room;
 			partition-per : Center;	
 	
-		Proximity
-			attribute responseFormat : String;
+		Proximity			
 			generate tempPref : UserTempPrefStruct;
 			consume badgeDetected from region-hops : 0 : Room;
 			consume badgeDisappeared from region-hops : 0 : Room;
@@ -87,8 +72,7 @@ softwarecomponents:
 			partition-per : Room;
 			
 	controller
-		RegulateTemp 
-			attribute responseFormat : String;
+		RegulateTemp			
 			consume roomAvgTempMeasurement from region-hops : 0 : Room;
 			consume tempPref from region-hops : 0: Room;
 			command On() to region-hops:0:Room;
@@ -96,8 +80,7 @@ softwarecomponents:
 			command SetTemp(setTemp) to region-hops:0:Room;
 			partition-per : Room;
 		
-		ManageTemp
-			attribute responseFormat : String;
+		ManageTemp			
 			consume centerAvgTempMeasurement from region-hops:0:Center;
 			command Display(displayTemp) to region-hops:0:Center;
 			partition-per : Center;

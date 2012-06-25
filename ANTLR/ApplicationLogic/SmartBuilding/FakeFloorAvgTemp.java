@@ -6,8 +6,8 @@ import java.util.List;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
-import framework.AvgTempStruct;
 import framework.FloorAvgTemp;
+import framework.TempStruct;
 
 public class FakeFloorAvgTemp extends FloorAvgTemp {
 
@@ -15,20 +15,20 @@ public class FakeFloorAvgTemp extends FloorAvgTemp {
 			.synchronizedList(new ArrayList<Double>());
 	private double currentAverage;
 	private int numSample = 0;
-	private final int NUM_SAMPLE_FOR_AVG = 2;
+	private final int NUM_SAMPLE_FOR_AVG = 1;
 
 	public FakeFloorAvgTemp(PubSubMiddleware pubSubM, Device deviceInfo) {
 		super(pubSubM, deviceInfo);
 	}
 
-	public void onNewroomAvgTempMeasurement(AvgTempStruct arg) {
+	public void onNewroomAvgTempMeasurement(TempStruct arg) {
 
 		synchronized (this.temps) {
 
 			numSample = numSample + 1;
 			if (numSample <= NUM_SAMPLE_FOR_AVG) {
 
-				temps.add(arg.getavgTempValue());
+				temps.add(arg.gettempValue());
 				currentAverage = 0;
 
 				for (Double temp : temps) {
@@ -40,8 +40,9 @@ public class FakeFloorAvgTemp extends FloorAvgTemp {
 			}
 
 			if (numSample == NUM_SAMPLE_FOR_AVG) {
-
-				AvgTempStruct avgTemp = new AvgTempStruct(currentAverage, "C");
+				numSample = 0;
+				TempStruct avgTemp = new TempStruct(currentAverage,
+						arg.getunitOfMeasurement());
 				setfloorAvgTempMeasurement(avgTemp);
 			}
 		}

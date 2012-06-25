@@ -20,11 +20,7 @@ public class Startup implements DeviceStartup {
 	private static Set<String> abilities = new HashSet<String>();
 	private static PubSubMiddleware myPubSub = PubSubMiddleware.getInstance();
 
-public static void main(String[] args) {
-            
-	setUpNode(setUpDeviceInfo());
-        
-}
+
 
 private static void setUpNode(Device deviceInfo)	{	
 	

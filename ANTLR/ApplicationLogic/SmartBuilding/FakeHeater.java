@@ -3,7 +3,7 @@ package logic;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 import framework.Heater;
-import framework.SetTempStruct;
+import framework.TempStruct;
 
 public class FakeHeater extends Heater {
 
@@ -13,9 +13,9 @@ public class FakeHeater extends Heater {
 	}
 
 	@Override
-	protected void SetTemp(SetTempStruct arg) {
+	protected void SetTemp(TempStruct arg) {
 		System.out.println("Receiving Temeprature from RegulateTemp"
-				+ arg.getsetTemp());
+				+ arg.gettempValue());
 
 	}
 

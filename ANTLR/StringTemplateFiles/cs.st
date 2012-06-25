@@ -48,7 +48,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable, CommandListene
         Logger.log(myDeviceInfo.getName(),"$CS.name$",
 				"Publishing $generatedInfo.name$");
         
-       //System.out.println("$generatedInfo.name; format="capital"$ | Publish | " + myDeviceInfo.getName());
+     
         this.myPubSubMiddleware.publish("$generatedInfo.name; format="capital"$", newValue, myDeviceInfo);		
       }
     }    

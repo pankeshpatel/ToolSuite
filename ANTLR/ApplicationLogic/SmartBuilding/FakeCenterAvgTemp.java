@@ -6,8 +6,9 @@ import java.util.List;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
-import framework.AvgTempStruct;
+
 import framework.CenterAvgTemp;
+import framework.TempStruct;
 
 public class FakeCenterAvgTemp extends CenterAvgTemp {
 
@@ -21,14 +22,14 @@ public class FakeCenterAvgTemp extends CenterAvgTemp {
 		super(pubSubM, deviceInfo);
 	}
 
-	public void onNewfloorAvgTempMeasurement(AvgTempStruct arg) {
+	public void onNewfloorAvgTempMeasurement(TempStruct arg) {
 
 		synchronized (this.temps) {
 
 			numSample = numSample + 1;
 			if (numSample <= NUM_SAMPLE_FOR_AVG) {
 
-				temps.add(arg.getavgTempValue());
+				temps.add(arg.gettempValue());
 
 				currentAverage = 0;
 
@@ -41,8 +42,10 @@ public class FakeCenterAvgTemp extends CenterAvgTemp {
 			}
 
 			if (numSample == NUM_SAMPLE_FOR_AVG) {
+				numSample = 0;
 
-				AvgTempStruct avgTemp = new AvgTempStruct(currentAverage, "C");
+				TempStruct avgTemp = new TempStruct(currentAverage,
+						arg.getunitOfMeasurement());
 				setcenterAvgTempMeasurement(avgTemp);
 			}
 		}

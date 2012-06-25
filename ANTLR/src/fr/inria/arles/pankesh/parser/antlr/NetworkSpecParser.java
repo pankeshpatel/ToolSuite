@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2012-06-21 16:21:53
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2012-06-25 16:39:10
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.DeviceNetwork; 

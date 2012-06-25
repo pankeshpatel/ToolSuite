@@ -26,6 +26,24 @@ public class FakeBadgeReader extends BadgeReader {
 
 	}
 
+	private boolean continueFlag = false;
+
+	@Override
+	public void run() {
+		continueFlag = true;
+		// while (true) {
+		try {
+			Thread.sleep(1000);
+			handleExpiryOfTimer();
+			// if (!continueFlag)
+			// break;
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			continueFlag = false;
+		}
+		// }
+	}
+
 	BadgeListener badgeEventHandler = new BadgeListener() {
 
 		public void onNewResponse(BadgeData response) {
@@ -33,12 +51,12 @@ public class FakeBadgeReader extends BadgeReader {
 			if (response.getBadgeEvent().equals("detected")) {
 
 				BadgeDetectedStruct badgeDetectedStruct = new BadgeDetectedStruct(
-						"11.30:34 AM", response.getBadgeID());
+						response.getBadgeID(), response.timestamp);
 				setbadgeDetected(badgeDetectedStruct);
 			} else {
 
 				BadgeDisappearedStruct badgeDisappearedStruct = new BadgeDisappearedStruct(
-						"11.30:34 AM", response.getBadgeID());
+						response.getBadgeID(), response.timestamp);
 				setbadgeDisappeared(badgeDisappearedStruct);
 			}
 		}

@@ -5,6 +5,7 @@ import fr.inria.arles.pankesh.semanticmodel.Device;
 import framework.BadgeDetectedStruct;
 import framework.BadgeDisappearedStruct;
 import framework.Proximity;
+import framework.TempStruct;
 import framework.UserProfileStruct;
 import framework.UserTempPrefStruct;
 
@@ -16,20 +17,20 @@ public class FakeProximity extends Proximity {
 
 	public void onNewbadgeDetected(BadgeDetectedStruct arg) {
 
-		UserProfileStruct userprofileStruct = getprofile("BadgeID-d001");
+		TempStruct userprofile = getprofile(arg.getbadgeID());
 
 		UserTempPrefStruct userTempPref = new UserTempPrefStruct(
-				userprofileStruct.gettempPref(), "C", 25);
-		settempPref(userTempPref);
+				userprofile.gettempValue(), userprofile.getunitOfMeasurement(), arg.gettimeStamp());
+		settempPref(userTempPref);   
 
 	}
 
 	public void onNewbadgeDisappeared(BadgeDisappearedStruct arg) {
 
-		UserProfileStruct userprofileStruct = getprofile("BadgeID-d001");
+		TempStruct userprofile = getprofile(arg.getbadgeID());
 
 		UserTempPrefStruct userTempPref = new UserTempPrefStruct(
-				userprofileStruct.gettempPref(), "C", 25);
+				userprofile.gettempValue(), userprofile.getunitOfMeasurement(), arg.gettimeStamp());
 		settempPref(userTempPref);
 		getprofile("BadgeID-d001");
 
