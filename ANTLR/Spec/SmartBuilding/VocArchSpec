@@ -83,8 +83,7 @@ softwarecomponents:
 			generate tempPref : UserTempPrefStruct;
 			consume badgeDetected from region-hops : 0 : Room;
 			consume badgeDisappeared from region-hops : 0 : Room;
-			request profile;
-			
+			request profile;			
 			partition-per : Room;
 			
 	controller
@@ -94,11 +93,11 @@ softwarecomponents:
 			consume tempPref from region-hops : 0: Room;
 			command On() to region-hops:0:Room;
 			command Off() to region-hops:0:Room;
-			command SetTemp() to region-hops:0:Room;
+			command SetTemp(setTemp) to region-hops:0:Room;
 			partition-per : Room;
 		
 		ManageTemp
 			attribute responseFormat : String;
 			consume centerAvgTempMeasurement from region-hops:0:Center;
-			command Display() to region-hops:0:Center;
+			command Display(displayTemp) to region-hops:0:Center;
 			partition-per : Center;

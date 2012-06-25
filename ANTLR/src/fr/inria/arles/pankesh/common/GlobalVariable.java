@@ -4,13 +4,16 @@ public class GlobalVariable {
 
 	public static String vocArchSpec;
 	public static String networkSpec;
-	public static String frameworkDirPath;
-	public static String outputDirPath;
-	public static String logicDirPath;
-	public static String deviceDirPath;
-	public static String utilDirPath;
+	public static String frameworkDirPath = "/framework";
+	public static String outputDirPath = "./gen";
+	public static String logicDirPath = "/logic";
+	public static String deviceDirPath = "/sim/device";
+	public static String utilDirPath = "/util";
 	public static String stringTemplatePath;
 
+	
+	
+	
 	/*
 	 * public static String convertPathTopackage(String pathName) {
 	 * 

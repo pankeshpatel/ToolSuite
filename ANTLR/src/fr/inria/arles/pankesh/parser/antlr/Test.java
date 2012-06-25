@@ -19,7 +19,7 @@ public class Test {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		if (args.length != 6) {
+		if (args.length != 3) {
 			System.out
 					.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
 							+ "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
@@ -31,12 +31,7 @@ public class Test {
 
 		GlobalVariable.vocArchSpec = args[0];
 		GlobalVariable.networkSpec = args[1];
-		GlobalVariable.outputDirPath = args[2];
-		GlobalVariable.frameworkDirPath = "/framework";
-		GlobalVariable.logicDirPath = args[3];
-		GlobalVariable.deviceDirPath = args[4];
-		GlobalVariable.utilDirPath = "/util";
-		GlobalVariable.stringTemplatePath = args[5];
+		GlobalVariable.stringTemplatePath = args[2];
 
 		List<Device> deviceList;
 		List<DeployementConstraint> mappingConstraintList;
