@@ -1,0 +1,42 @@
+structs:
+	HouseFireStruct
+		smokePresence : boolean;
+		timeStamp : long;
+		tempValue : double;
+		unitOfMeasurement : String;
+	
+
+softwarecomponents:
+	computationalService:
+		 HouseAvgTempComputation
+		 	generate houseAvgTemp : TempStruct ;
+		 	consume tempMeasurement from region-hops :0 : House ;
+		 	partition-per : House;
+		 
+		 HouseFireComputation
+		 	generate houseFireState : HouseFireStruct ;
+		 	consume  houseAvgTemp from region-hops: 0 :House;
+		 	consume  smokePresence from region-hops : 0 : House;
+		 	partition-per : House;
+		
+		 HcFireComputation
+			generate hcFireState : HouseFireStruct; 
+			consume houseFireState from region-hops : 0 : HousingCommunity;
+			partition-per : HousingCommunity ;
+		 	
+	 controller:
+	 	HouseFireController
+	 	  consume houseFireState from region-hops:0:House;
+	 	  command Alarm_On() to region-hops:0:House ;
+	 	  command Alarm_Off() to region-hops:0:House;
+	 	  command Sprinkler_On() to region-hops:0: House;
+	 	  command Sprinkler_Off() to region-hops:0: House;
+	 	  command Unlock()  to region-hops:0:House;
+	 	  partition-per : House;
+	 	
+	 	HcFireController
+	 		consume hcFireState from region-hops:0:HousingCommunity;
+	 		command Light_On() to region-hops : 0 : HousingCommunity;
+	 		command Light_Off() to region-hops : 0 : HousingCommunity;
+	 		partition-per : HousingCommunity;
+	 
