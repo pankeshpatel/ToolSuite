@@ -6,7 +6,6 @@ import framework.BadgeDetectedStruct;
 import framework.BadgeDisappearedStruct;
 import framework.Proximity;
 import framework.TempStruct;
-import framework.UserProfileStruct;
 import framework.UserTempPrefStruct;
 
 public class FakeProximity extends Proximity {
@@ -32,7 +31,7 @@ public class FakeProximity extends Proximity {
 		UserTempPrefStruct userTempPref = new UserTempPrefStruct(
 				userprofile.gettempValue(), userprofile.getunitOfMeasurement(), arg.gettimeStamp());
 		settempPref(userTempPref);
-		getprofile("BadgeID-d001");
+		
 
 	}
 

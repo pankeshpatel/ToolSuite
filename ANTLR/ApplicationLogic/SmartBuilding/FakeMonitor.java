@@ -15,7 +15,7 @@ public class FakeMonitor extends Monitor {
 	@Override
 	protected void Display(TempStruct arg) {
 		System.out.println("Monitor is receiving Temperature Data >>>>"
-				+ arg.gettempValue());
+				+ arg.gettempValue() + arg.getunitOfMeasurement());
 
 	}
 

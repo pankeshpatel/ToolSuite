@@ -15,7 +15,10 @@ public class FakeRegulateTemp extends RegulateTemp {
 
 	public void onNewtempPref(UserTempPrefStruct arg) {
 
-		On();
+		if (arg.gettempValue() > 30 && (arg.getunitOfMeasurement()).equals("C")) {
+			Off();
+
+		}
 	}
 
 	public void onNewroomAvgTempMeasurement(TempStruct arg) {

@@ -27,11 +27,14 @@ public class FakeBadgeReader extends BadgeReader {
 	}
 
 	private boolean continueFlag = false;
+	
 
 	@Override
 	public void run() {
 		continueFlag = true;
 		// while (true) {
+		for(int i=0; i<=5; i++) {
+		
 		try {
 			Thread.sleep(1000);
 			handleExpiryOfTimer();
@@ -42,6 +45,8 @@ public class FakeBadgeReader extends BadgeReader {
 			continueFlag = false;
 		}
 		// }
+		
+		}
 	}
 
 	BadgeListener badgeEventHandler = new BadgeListener() {

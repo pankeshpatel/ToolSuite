@@ -15,7 +15,7 @@ public class FakeFloorAvgTemp extends FloorAvgTemp {
 			.synchronizedList(new ArrayList<Double>());
 	private double currentAverage;
 	private int numSample = 0;
-	private final int NUM_SAMPLE_FOR_AVG = 1;
+	private final int NUM_SAMPLE_FOR_AVG = 2;
 
 	public FakeFloorAvgTemp(PubSubMiddleware pubSubM, Device deviceInfo) {
 		super(pubSubM, deviceInfo);

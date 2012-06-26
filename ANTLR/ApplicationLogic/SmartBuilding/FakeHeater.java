@@ -15,7 +15,7 @@ public class FakeHeater extends Heater {
 	@Override
 	protected void SetTemp(TempStruct arg) {
 		System.out.println("Receiving Temeprature from RegulateTemp"
-				+ arg.gettempValue());
+				+ arg.gettempValue() + arg.getunitOfMeasurement());
 
 	}
 
@@ -25,10 +25,6 @@ public class FakeHeater extends Heater {
 
 	}
 
-	@Override
-	protected void On() {
-		System.out.println("On() procedure of Heater is invoked");
-
-	}
+	
 
 }

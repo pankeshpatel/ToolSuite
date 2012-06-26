@@ -15,11 +15,7 @@ structs:
 	TempStruct
 		tempValue : double;
 		unitOfMeasurement : String; 
-
-	UserProfileStruct
-		badgeID : String ;
-		tempPref : double;
-	
+			
 	UserTempPrefStruct
 		tempValue : double;
 		unitOfMeasurement : String; 
@@ -35,7 +31,6 @@ abilities:
 	
 	actuators:
 		Heater			
-			action On();
 			action Off();
 			action SetTemp(setTemp: TempStruct);
 					
@@ -75,7 +70,6 @@ softwarecomponents:
 		RegulateTemp			
 			consume roomAvgTempMeasurement from region-hops : 0 : Room;
 			consume tempPref from region-hops : 0: Room;
-			command On() to region-hops:0:Room;
 			command Off() to region-hops:0:Room;
 			command SetTemp(setTemp) to region-hops:0:Room;
 			partition-per : Room;
