@@ -22,15 +22,15 @@ abilities:
 	actuators:
 		Door
 			action Unlock();
-
+			
 		Alarm
-			action On();
-			action Off();
-		
-		Sprinkler
-			action On();
-			action Off();
+			action Activate();
+			action DeActivate(); 
+				
+		SprinklerSystem
+			action Start();
+			action Stop();
 	
 		Light
-			action On();
-			action Off();
+			action SwitchOn();
+			action SwitchOff();

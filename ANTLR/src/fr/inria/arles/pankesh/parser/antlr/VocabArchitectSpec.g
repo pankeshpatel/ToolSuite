@@ -44,9 +44,9 @@ region_def :
 ;
 
 sc_def :
-	'storageService' (ss_def)+ 
-    'computationalService' (cs_def)+ 
-    'controller' (controller_def)+ 
+	('storageService' (ss_def)+ )* 
+   'computationalService' (cs_def)+ 
+    ('controller' (controller_def)+ )*
      
 ;
 
@@ -226,7 +226,7 @@ dataType:
 ;
  
 primitiveType:
-  (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' )
+  (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' | id='boolean' )
 ;
 
 abilities_def :

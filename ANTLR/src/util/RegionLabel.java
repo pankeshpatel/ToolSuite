@@ -5,43 +5,34 @@ import java.util.List;
 
 public class RegionLabel {
 
-	private String CenterLabel;
+	private String HousingCommunityLabel;
 
-	public String getCenterLabel() {
-		return CenterLabel;
+	public String getHousingCommunityLabel() {
+		return HousingCommunityLabel;
 	}
 
-	private String FloorLabel;
+	private String HouseLabel;
 
-	public String getFloorLabel() {
-		return FloorLabel;
+	public String getHouseLabel() {
+		return HouseLabel;
 	}
 
-	private String RoomLabel;
-
-	public String getRoomLabel() {
-		return RoomLabel;
-	}
-
-	public RegionLabel(String CenterLabel, String FloorLabel, String RoomLabel) {
+	public RegionLabel(String HousingCommunityLabel, String HouseLabel) {
 		super();
-		this.CenterLabel = CenterLabel;
-		this.FloorLabel = FloorLabel;
-		this.RoomLabel = RoomLabel;
+		this.HousingCommunityLabel = HousingCommunityLabel;
+		this.HouseLabel = HouseLabel;
 	}
 
 	public List<String> getAllRegionLabel() {
 		ArrayList<String> allRegionLabels = new ArrayList<String>();
-		allRegionLabels.add(getCenterLabel());
-		allRegionLabels.add(getFloorLabel());
-		allRegionLabels.add(getRoomLabel());
+		allRegionLabels.add(getHousingCommunityLabel());
+		allRegionLabels.add(getHouseLabel());
 		return allRegionLabels;
 	}
 
 	public RegionLabel(List<String> list) {
-		this.RoomLabel = list.get(2);
-		this.FloorLabel = list.get(1);
-		this.CenterLabel = list.get(0);
+		this.HousingCommunityLabel = list.get(0);
+		this.HouseLabel = list.get(1);
 	}
 
 }

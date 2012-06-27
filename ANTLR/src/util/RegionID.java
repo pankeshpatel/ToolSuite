@@ -5,57 +5,47 @@ import java.util.List;
 
 public class RegionID {
 
-	private String Center;
+	private String HousingCommunity;
 
-	public String getCenter() {
-		return Center;
+	public String getHousingCommunity() {
+		return HousingCommunity;
 	}
 
-	private String Floor;
+	private String House;
 
-	public String getFloor() {
-		return Floor;
+	public String getHouse() {
+		return House;
 	}
 
-	private String Room;
-
-	public String getRoom() {
-		return Room;
-	}
-
-	public RegionID(String Center, String Floor, String Room) {
+	public RegionID(String HousingCommunity, String House) {
 		super();
-		this.Center = Center;
-		this.Floor = Floor;
-		this.Room = Room;
+		this.HousingCommunity = HousingCommunity;
+		this.House = House;
 	}
 
 	public boolean equals(Object obj) {
 		RegionID other = (RegionID) obj;
-		return other.getCenter().equals(this.Center)
-				&& other.getFloor().equals(this.Floor)
-				&& other.getRoom().equals(this.Room);
+		return other.getHousingCommunity().equals(this.HousingCommunity)
+				&& other.getHouse().equals(this.House);
 
 	}
 
 	@Override
 	public int hashCode() {
-		return Center.hashCode() + Floor.hashCode() + Room.hashCode();
+		return HousingCommunity.hashCode() + House.hashCode();
 
 	}
 
 	public List<String> getAllRegionIDs() {
 		ArrayList<String> allRegionIDs = new ArrayList<String>();
-		allRegionIDs.add(getCenter());
-		allRegionIDs.add(getFloor());
-		allRegionIDs.add(getRoom());
+		allRegionIDs.add(getHousingCommunity());
+		allRegionIDs.add(getHouse());
 		return allRegionIDs;
 	}
 
 	public RegionID(List<String> list) {
-		this.Room = list.get(2);
-		this.Floor = list.get(1);
-		this.Center = list.get(0);
+		this.HousingCommunity = list.get(0);
+		this.House = list.get(1);
 	}
 
 }

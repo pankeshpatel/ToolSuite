@@ -87,16 +87,14 @@ Controller:
 ;
 
 Command:
-	'command' actuatorName = ID ('_' commandName = ID )? '(' ')'  'to' 'region-hops' ':' regionID = INT ':'  regionLabel = [RegionLabel] ';'	
+	'command' commandName = [ActionName]  '(' ')'  'to' 'region-hops' ':' regionID = INT ':'  regionLabel = [RegionLabel] ';'	
 ;
 
 /*
  *  This is  Vocabulary Specification 
 */
 
-
-VocSpec:
-	
+VocSpec:	
 	
 	// Vocabulary Specification must have region Specification
 	('regions' ':' (regions += Region)+ )+
@@ -145,7 +143,9 @@ SourceName: name = ID;
 
 Actuator: actuatorName = ID ((actions += Actions))* ;
 
-Actions: 'action' name=ID '(' (parameters += Parameters)* ')' ';' ;
+Actions: 'action' actionName= ActionName '(' (parameters += Parameters)* ')' ';' ;
+
+ActionName: name = ID ; 
 
 Parameters: name = ID ':' type = Type ;
 
