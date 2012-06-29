@@ -1,12 +1,15 @@
 package fr.inria.arles.pankesh.pubsubmiddleware;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import util.RegionID;
 
+
+import fr.inria.arles.pankesh.common.RegionIDTables;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 
 public class PubSubMiddleware {
@@ -14,9 +17,13 @@ public class PubSubMiddleware {
 	private Map<String, Set<Subscriber>> subscriberMap = new Hashtable<String, Set<Subscriber>>();
 	private Map<String, Set<CommandListener>> registeredInstanceMap = new Hashtable<String, Set<CommandListener>>();
 
-	private Map<RegionID, Set<Subscriber>> regionSubscriber = new Hashtable<RegionID, Set<Subscriber>>();
+	private Map<List<String>, Set<Subscriber>> regionSubscriber = new Hashtable<List<String>, Set<Subscriber>>();
+
+	private List<String> pubSubRegionIDList = new ArrayList<String>();
 
 	private Set<Subscriber> subscriberSet = new HashSet<Subscriber>();
+
+	RegionIDTables regionIDtb = new RegionIDTables();
 
 	static PubSubMiddleware singletonInstance;
 
@@ -28,7 +35,7 @@ public class PubSubMiddleware {
 	}
 
 	public void subscribe(Subscriber s, String eventSignature,
-			RegionID regionInfo) {
+			List<String> regionInfo) {
 
 		registerNewSubscriber(s, eventSignature, regionInfo);
 	}
@@ -37,43 +44,23 @@ public class PubSubMiddleware {
 
 		Set<Subscriber> subscriberPatternSet = new HashSet<Subscriber>();
 
-		// Get Exact match
-		RegionID regionS1 = new RegionID(deviceInfo.getRegion().getCenter(),
-				deviceInfo.getRegion().getFloor(), deviceInfo.getRegion()
-						.getRoom());
-		Set<Subscriber> s1 = regionSubscriber.get(regionS1);
+		pubSubRegionIDList = deviceInfo.getRegion();
+		
+		System.out.println("PubSubRegionIDList>>>>" +  pubSubRegionIDList);
 
-		if (s1 != null) {
-			subscriberPatternSet.addAll(s1);
-		}
+		for (int i = 0; i <= pubSubRegionIDList.size(); i++) {
 
-		// Get (7, 12, *) match
+			List<String> regionIDResult = regionIDtb.getRegionIDField(i,
+					pubSubRegionIDList);
+			
+			System.out.println("RegionIDResult>>>>" + regionIDResult);
 
-		RegionID regionS2 = new RegionID(deviceInfo.getRegion().getCenter(),
-				deviceInfo.getRegion().getFloor(), "*");
-		Set<Subscriber> s2 = regionSubscriber.get(regionS2);
+			Set<Subscriber> s = regionSubscriber.get(regionIDResult);
 
-		if (s2 != null) {
-			subscriberPatternSet.addAll(s2);
-		}
+			if (s != null) {
+				subscriberPatternSet.addAll(s);
+			}
 
-		// Get (7, *, *) match
-
-		RegionID regionS3 = new RegionID(deviceInfo.getRegion().getCenter(),
-				"*", "*");
-		Set<Subscriber> s3 = regionSubscriber.get(regionS3);
-
-		if (s3 != null) {
-			subscriberPatternSet.addAll(s3);
-		}
-
-		// Get (7, *, *) match
-
-		RegionID regionS4 = new RegionID("*", "*", "*");
-		Set<Subscriber> s4 = regionSubscriber.get(regionS4);
-
-		if (s4 != null) {
-			subscriberPatternSet.addAll(s4);
 		}
 
 		Set<Subscriber> subscriberEventSet = getSubscribersForEvent(eventName);
@@ -87,26 +74,6 @@ public class PubSubMiddleware {
 			}
 		}
 
-		/*
-		 * Set<Subscriber> subscriberEventSet =
-		 * getSubscribersForEvent(eventName);
-		 * 
-		 * Set<Region> regions = deviceInfo.getRegion();
-		 * 
-		 * for (Region region : regions) { String regionID =
-		 * region.getRegionID();
-		 * 
-		 * Set<Subscriber> subscriberSetRegionID =
-		 * getSubscribersForRegionID(regionID);
-		 * 
-		 * subscriberSet = SetOperations.intersection(subscriberEventSet,
-		 * subscriberSetRegionID);
-		 * 
-		 * }
-		 * 
-		 * if (subscriberSet != null) { for (Subscriber s : subscriberSet) {
-		 * s.notifyReceived(eventName, arg, deviceInfo); } }
-		 */
 	}
 
 	private Set<Subscriber> getSubscribersForEvent(String eventName) {
@@ -115,32 +82,7 @@ public class PubSubMiddleware {
 	}
 
 	private void registerNewSubscriber(Subscriber s, String eSig,
-			RegionID regionInfo) {
-
-		/*
-		 * if(cache.containsKey(eSig, regionInfo)){
-		 * 
-		 * @SuppressWarnings("unchecked") Set<Subscriber> tempSet =
-		 * (Set<Subscriber>) cache.get(eSig, regionInfo); tempSet.add(s);
-		 * 
-		 * }else{ Set<Subscriber> newSet = new HashSet<Subscriber>();
-		 * newSet.add(s); cache.put(eSig, regionInfo, s);
-		 * 
-		 * }
-		 * 
-		 * 
-		 * System.out.println(cache.get(regionInfo));
-		 */
-
-		/*
-		 * for (String regionID : regionInfo.keySet()) { if
-		 * (subscriberByRegionID.containsKey(regionID)) { Set<Subscriber>
-		 * tempSet = subscriberByRegionID.get(regionID); tempSet.add(s); } else
-		 * { Set<Subscriber> newSet = new HashSet<Subscriber>(); newSet.add(s);
-		 * subscriberByRegionID.put(regionID, newSet); }
-		 * 
-		 * }
-		 */
+			List<String> regionInfo) {
 
 		if (regionSubscriber.containsKey(regionInfo)) {
 			Set<Subscriber> tempSet = regionSubscriber.get(regionInfo);

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabArchitectSpec.g 2012-06-27 13:08:00
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabArchitectSpec.g 2012-06-29 16:47:03
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 

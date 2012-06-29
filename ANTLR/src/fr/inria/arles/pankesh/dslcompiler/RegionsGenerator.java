@@ -39,11 +39,11 @@ public class RegionsGenerator {
 
 	private void generateRegionCode(Regions region, String className) {
 
-		JavaFrameworkFromST generatedRegion = new JavaFrameworkFromST();
+		/*JavaFrameworkFromST generatedRegion = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedRegion
 				.buildAbstractClassOFRegion(region, className);
 		SourceFileDumper dumpGeneratedRegion = new SourceFileDumper();
-		dumpGeneratedRegion.dumpCompilationUnit(generatedCU);
+		dumpGeneratedRegion.dumpCompilationUnit(generatedCU);*/
 
 	}
 

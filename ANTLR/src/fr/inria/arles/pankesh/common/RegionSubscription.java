@@ -3,10 +3,6 @@ package fr.inria.arles.pankesh.common;
 import java.util.ArrayList;
 import java.util.List;
 
-import util.DSConvert;
-import util.RegionID;
-import util.RegionLabel;
-
 public class RegionSubscription {
 
 	public static List<String> getSubscriptionString(String partitionAttrVal,
@@ -32,16 +28,16 @@ public class RegionSubscription {
 
 	}
 
-	public static RegionID getSubscriptionRequest(String partitionAttrVal,
-			RegionLabel regionLabel, RegionID regionID) {
+	public static List<String> getSubscriptionRequest(String partitionAttrVal,
+			List<String> regionLabel, List<String> regionID) {
 
 		List<String> regionIDsList = new ArrayList<String>();
 
 		// Get all RegionLabel
-		List<String> regionLabels = regionLabel.getAllRegionLabel();
+		List<String> regionLabels = regionLabel;
 
 		// Get all RegionIDs
-		List<String> regionIDs = regionID.getAllRegionIDs();
+		List<String> regionIDs = regionID;
 
 		// get SubscriprionString
 		List<String> subscriptionRegionLabels = getSubscriptionString(
@@ -54,10 +50,9 @@ public class RegionSubscription {
 			} else {
 				regionIDsList.add("*");
 			}
-
 		}
 
-		return DSConvert.convertListToObj(regionIDsList);
+		return regionIDsList;
 
 	}
 

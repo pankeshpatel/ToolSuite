@@ -30,15 +30,14 @@ public class TaskMapper {
 
 		// Construct regionLabelSet --- O/p: [center, floor, room]
 		for (Device deviceObj : deviceList) {
-			regionLabelSet.addAll(deviceObj.getRegionLabels()
-					.getAllRegionLabel());
+			regionLabelSet.addAll(deviceObj.getRegionLabels());
 		}
 
 		// --O/p : 21 (regionLabel) -> device List.
 		for (Device deviceObj : deviceList) {
 
 		
-			List<String> setOfRegion = deviceObj.getRegion().getAllRegionIDs();
+			List<String> setOfRegion = deviceObj.getRegion();
 
 			for (String r : setOfRegion) {
 		
@@ -66,10 +65,8 @@ public class TaskMapper {
 
 		for (Device deviceObj : deviceList) {
 
-			List<String> setOfRegionLabels = deviceObj.getRegionLabels()
-					.getAllRegionLabel();
-			List<String> setOfRegionIDs = deviceObj.getRegion()
-					.getAllRegionIDs();
+			List<String> setOfRegionLabels = deviceObj.getRegionLabels();
+			List<String> setOfRegionIDs = deviceObj.getRegion();
 
 			int i, j;
 			for (i = 0, j = 0; i < setOfRegionLabels.size(); i++, j++) {

@@ -4,7 +4,8 @@ package $CS.packageName$;
 import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.common.*;
-import $CS.UtilPackageName$.*;
+import java.util.List;
+
 
 
 
@@ -88,7 +89,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable, CommandListene
 	    public abstract void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg);	   		
 	   	public void subscribe$consumedInfo.name; format="capital"$() {
 	   		    
-	   		RegionID regionInfo = RegionSubscription.getSubscriptionRequest(
+	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
 					partitionAttribute, myDeviceInfo.getRegionLabels(),
 					myDeviceInfo.getRegion());
 	   		

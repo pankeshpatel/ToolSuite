@@ -4,9 +4,11 @@ import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.common.*;
 import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashSet;
 import $device.logicPackageName$.*;
-import $device.UtilPackageName$.*;
+
 
 
 
@@ -41,9 +43,12 @@ private static Device setUpDeviceInfo() {
 		
 	$device.abilities:{ sc | abilities.add("$sc$"); }$ 
 	
-	RegionID regionIDs = new RegionID( $device.region.allRegionIDs:{ region | "$region$" }; separator=","$ );
-	
-	RegionLabel regionLabels = new RegionLabel( $device.RegionLabels.allRegionLabel:{ region | "$region$" }; separator=","$);
+	List<String> regionIDs = new ArrayList<String>();
+  List<String> regionLabels = new ArrayList<String>();
+  
+  $device.region:{ region | regionIDs.add("$region$") ; } $
+  
+  $device.RegionLabels:{ region | regionLabels.add("$region$"); } $
 	
 	Device device = new Device(name , id , type, networkAddress, regionIDs, regionLabels , abilities);
 	return device;    

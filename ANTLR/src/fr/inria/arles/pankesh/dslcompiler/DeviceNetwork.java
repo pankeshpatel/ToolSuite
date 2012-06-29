@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import util.RegionID;
-import util.RegionLabel;
 
 import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Device;
@@ -80,8 +78,8 @@ public class DeviceNetwork {
 		regionValue.add(value);
 	}
 
-	public RegionID getRegionValues() {
-		return new RegionID(regionValue);
+	public List<String> getRegionValues() {
+		return regionValue;
 	}
 
 	// Getter and Setter of RegionLabels
@@ -90,8 +88,8 @@ public class DeviceNetwork {
 		regionLabels.add(regionLabel);
 	}
 
-	public RegionLabel getRegionLabel() {
-		return new RegionLabel(regionLabels);
+	public List<String> getRegionLabel() {
+		return regionLabels;
 	}
 
 	// Getter and Setter of Device Abilities

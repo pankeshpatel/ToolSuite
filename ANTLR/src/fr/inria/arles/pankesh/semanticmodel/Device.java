@@ -1,12 +1,13 @@
 package fr.inria.arles.pankesh.semanticmodel;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import fr.inria.arles.pankesh.common.GlobalVariable;
 
-import util.RegionID;
-import util.RegionLabel;
+
 
 public class Device {
 
@@ -14,20 +15,25 @@ public class Device {
 	private String id;
 	private String type;
 	private String networkAddress;
-	private RegionID region;
-	private RegionLabel regionLabel;
+	//private RegionID region;
+	//private RegionLabel regionLabel;
+	
+	private List<String> regionIDs = new ArrayList<String>();
+	private List<String> regionLabels = new ArrayList<String>();
 
 	private Set<String> abilities = new HashSet<String>();
 
 	public Device(String name, String id, String type, String networkAddress,
-			RegionID region, RegionLabel regionLabel, Set<String> abilities) {
+			List<String> regionIDs, List<String> regionLabels, Set<String> abilities) {
 
 		this.name = name;
 		this.id = id;
 		this.type = type;
 		this.networkAddress = networkAddress;
-		this.region = region;
-		this.regionLabel = regionLabel;
+		this.regionIDs = regionIDs;
+		this.regionLabels = regionLabels;
+		//this.region = region;
+		//this.regionLabel = regionLabel;
 		this.abilities = abilities;
 	}
 
@@ -47,14 +53,24 @@ public class Device {
 		return networkAddress;
 	}
 
-	public RegionLabel getRegionLabels() {
+	/*public RegionLabel getRegionLabels() {
 		return regionLabel;
 	}
 
 	public RegionID getRegion() {
 		return region;
 	}
+*/
+	public List<String> getRegionLabels() {
+		return regionLabels;
+	}
 
+	public List<String> getRegion() {
+		return regionIDs;
+	}
+
+	
+	
 	public Set<String> getAbilities() {
 		return abilities;
 	}
