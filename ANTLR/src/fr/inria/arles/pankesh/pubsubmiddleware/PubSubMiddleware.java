@@ -46,14 +46,14 @@ public class PubSubMiddleware {
 
 		pubSubRegionIDList = deviceInfo.getRegion();
 		
-		System.out.println("PubSubRegionIDList>>>>" +  pubSubRegionIDList);
+		
 
 		for (int i = 0; i <= pubSubRegionIDList.size(); i++) {
 
 			List<String> regionIDResult = regionIDtb.getRegionIDField(i,
 					pubSubRegionIDList);
 			
-			System.out.println("RegionIDResult>>>>" + regionIDResult);
+			
 
 			Set<Subscriber> s = regionSubscriber.get(regionIDResult);
 
