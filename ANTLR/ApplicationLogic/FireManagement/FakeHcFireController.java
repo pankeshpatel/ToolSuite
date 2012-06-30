@@ -30,9 +30,7 @@ public class FakeHcFireController extends HcFireController {
 				}
 			}
 
-		}
-		else
-		{
+		} else {
 			SwitchOff();
 		}
 

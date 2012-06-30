@@ -20,7 +20,7 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	}
 
 	public Set<DataAccess> getDataAccess() {
-			return dataAccess;		
+		return dataAccess;
 	}
 
 	public List<DataAccess> getAllDataAccess() {
@@ -28,20 +28,24 @@ public class ComputationalService extends SoftwareComponent<Information> {
 		allDataAccess.addAll(getDataAccess());
 		return allDataAccess;
 	}
-	
+
 	private String packageName;
-	public String getPackageName(){
-		packageName =  GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
-		return packageName;		
+
+	public String getPackageName() {
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		return packageName;
 	}
-	
-	public String getLogicPackageName(){
-		packageName =  GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
-		return packageName;		
+
+	public String getLogicPackageName() {
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
+		return packageName;
 	}
-	
-	public String getUtilPackageName(){
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
+
+	public String getUtilPackageName() {
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 }

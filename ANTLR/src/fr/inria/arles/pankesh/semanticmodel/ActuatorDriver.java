@@ -27,7 +27,7 @@ public class ActuatorDriver extends SoftwareComponent<Information> {
 		allGeneratedInfo.addAll(getActions());
 		return allGeneratedInfo;
 	}
-	
+
 	private String packageName;
 
 	public String getPackageName() {
@@ -41,6 +41,5 @@ public class ActuatorDriver extends SoftwareComponent<Information> {
 				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
-
 
 }

@@ -26,8 +26,9 @@ public class Structure extends DataType {
 		allStructFields.addAll(getFields());
 		return allStructFields;
 	}
-	
+
 	private String packageName;
+
 	public String getPackageName() {
 		packageName = GlobalVariable
 				.convertPathTopackage(GlobalVariable.frameworkDirPath);

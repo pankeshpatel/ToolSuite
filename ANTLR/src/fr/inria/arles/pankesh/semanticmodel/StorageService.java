@@ -28,7 +28,7 @@ public class StorageService extends SoftwareComponent {
 		allDataAccess.addAll(getDataAccess());
 		return allDataAccess;
 	}
-	
+
 	private String packageName;
 
 	public String getPackageName() {

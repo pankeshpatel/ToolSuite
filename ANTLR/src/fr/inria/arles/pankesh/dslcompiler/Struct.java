@@ -22,8 +22,6 @@ public class Struct {
 		createdStructure = new Structure(structName, getStructFieldSet());
 	}
 
-	
-
 	// Add new field to current structure
 	public void addField(String fieldName, String fieldType) {
 		StructField Field = new StructField(fieldName, new PrimitiveType(

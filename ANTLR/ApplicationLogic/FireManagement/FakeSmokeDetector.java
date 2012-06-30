@@ -1,8 +1,12 @@
 package logic;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.semanticmodel.*;
-import framework.*;
+import fr.inria.arles.pankesh.semanticmodel.Device;
+import fr.inria.arles.pankesh.sensordriver.badgereader.BadgeData;
+import fr.inria.arles.pankesh.sensordriver.badgereader.BadgeListener;
+import fr.inria.arles.pankesh.sensordriver.dummydevice.DummyBadgeReader;
+import framework.SmokeDetector;
+import framework.SmokePresenceStruct;
 
 public class FakeSmokeDetector extends SmokeDetector {
 
@@ -16,9 +20,30 @@ public class FakeSmokeDetector extends SmokeDetector {
 		// TODO : write code Here
 	}
 
+	BadgeListener smokeEventHandler = new BadgeListener() {
+
+		public void onNewResponse(BadgeData response) {
+
+			if (response.getBadgeEvent().equals("detected")) {
+
+				SmokePresenceStruct badgeDetectedStruct = new SmokePresenceStruct(
+						true, response.timestamp);
+				setsmokePresence(badgeDetectedStruct);
+			} else {
+
+				SmokePresenceStruct badgeDisappearedStruct = new SmokePresenceStruct(
+						false, response.timestamp);
+
+				setsmokePresence(badgeDisappearedStruct);
+
+			}
+		}
+
+	};
+
 	@Override
 	protected void handleExpiryOfTimer() {
-		// TODO: For periodic sensing : it is for 10 seconds
+		DummyBadgeReader.getInstance().getData(smokeEventHandler);
 
 	}
 

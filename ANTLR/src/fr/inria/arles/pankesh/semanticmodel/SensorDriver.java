@@ -15,11 +15,11 @@ public class SensorDriver extends SoftwareComponent<SensorMeasurement> {
 		super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 
 	}
-	
+
 	private String packageName;
 
 	public String getPackageName() {
-		
+
 		packageName = GlobalVariable
 				.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;

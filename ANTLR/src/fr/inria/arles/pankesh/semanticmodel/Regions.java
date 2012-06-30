@@ -24,11 +24,12 @@ public class Regions {
 		allregionFields.addAll(getFields());
 		return allregionFields;
 	}
-	
+
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 

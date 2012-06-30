@@ -11,9 +11,6 @@ public class GlobalVariable {
 	public static String utilDirPath = "/util";
 	public static String stringTemplatePath;
 
-	
-	
-	
 	/*
 	 * public static String convertPathTopackage(String pathName) {
 	 * 

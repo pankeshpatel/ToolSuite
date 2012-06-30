@@ -23,21 +23,23 @@ public class CS {
 	private String partitionAttributeValue;
 	private String computationalServiceName;
 
-	public CS() { }
-	
+	public CS() {
+	}
+
 	public String getComputationalServiceName() {
 		return computationalServiceName;
 	}
 
 	public void setComputationalServiceName(String computationalServiceName) {
 		this.computationalServiceName = computationalServiceName;
-	}	
+	}
 
 	public void createCSObject() {
-		computationalService = new ComputationalService(getComputationalServiceName(),
-				getAttributeSet(), getGeneratedInfo(), getConsumedInfo(),
-				getDataAccessList(), getPartitionAttributeVal());
-	}	
+		computationalService = new ComputationalService(
+				getComputationalServiceName(), getAttributeSet(),
+				getGeneratedInfo(), getConsumedInfo(), getDataAccessList(),
+				getPartitionAttributeVal());
+	}
 
 	// Code generator of abstract files and Logic files
 
@@ -58,27 +60,25 @@ public class CS {
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
-	
-	/* 
-	public void dataAccess(Information query, Information generatedInfo) {
-		DataAccess dataAccess = new DataAccess(query, generatedInfo);
-		dataAccessList.add(dataAccess);
-	}*/
+
+	/*
+	 * public void dataAccess(Information query, Information generatedInfo) {
+	 * DataAccess dataAccess = new DataAccess(query, generatedInfo);
+	 * dataAccessList.add(dataAccess); }
+	 */
 
 	public Set<DataAccess> getDataAccessList() {
-		return dataAccessList; 
+		return dataAccessList;
 	}
-	
-	public void getDataAccessListFromSymblTable(String dataAccessStr){
-		this.dataAccessList = Context.getDataAccessSymblTable(dataAccessStr);		
-	}	
-	
-	
 
-	// Getter and Setter of Partition Attribute	
+	public void getDataAccessListFromSymblTable(String dataAccessStr) {
+		this.dataAccessList = Context.getDataAccessSymblTable(dataAccessStr);
+	}
+
+	// Getter and Setter of Partition Attribute
 	public void addPartitionAttribute(String regionName) {
 		partitionAttributeValue = regionName;
-		
+
 	}
 
 	public String getPartitionAttributeVal() {
@@ -95,6 +95,7 @@ public class CS {
 		consumedInfo.add(new Information(variableName, new DataType(
 				getDatafromSymblTable(variableName))));
 	}
+
 	public String getDatafromSymblTable(String variableName) {
 		return Context.getSymblTableData(variableName);
 	}
@@ -103,6 +104,7 @@ public class CS {
 	public Set<Information> getGeneratedInfo() {
 		return generatedInfo;
 	}
+
 	public void addGeneratedInfo(String variableName, String variableType) {
 		generatedInfo.add(new Information(variableName, new DataType(
 				variableType)));
@@ -110,9 +112,11 @@ public class CS {
 
 	// Getter and Setter of Attribute
 	private Set<Attribute> attributeSet = new HashSet<Attribute>();
+
 	public Set<Attribute> getAttributeSet() {
 		return attributeSet;
 	}
+
 	public void addAttribute(String fieldName, String fieldType) {
 		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
 				fieldType));

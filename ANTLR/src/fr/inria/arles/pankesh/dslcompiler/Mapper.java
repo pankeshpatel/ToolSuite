@@ -24,8 +24,6 @@ public class Mapper {
 			List<DeployementConstraint> mappingConstraintList)
 			throws IOException {
 
-	
-
 		Map<Device, Set<String>> taskMapper = TaskMapper.mapTasks(deviceList,
 				mappingConstraintList);
 

@@ -24,27 +24,21 @@ public class ControllerService {
 	private Set<Action> actions = new HashSet<Action>();
 	private String partitionAttributeValue;
 	private Parameter parameter;
-	
+
 	private String controllerName;
 
-	
+	public ControllerService() {
+	}
 
-	public ControllerService() { 	}
-	
-	
 	public String getControllerName() {
 		return controllerName;
 	}
-
-
 
 	public void setControllerName(String controllerName) {
 		this.controllerName = controllerName;
 	}
 
-	
-
-	public void  createCSObject() {
+	public void createCSObject() {
 		controller = new Controller(getControllerName(), getAttributeSet(),
 				getActionList(), getConsumedInfo(), getPartitionAttributeVal());
 	}
@@ -128,7 +122,4 @@ public class ControllerService {
 		attributeSet.add(attribute);
 	}
 
-
-
-	
 }

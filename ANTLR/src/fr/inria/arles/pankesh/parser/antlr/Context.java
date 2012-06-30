@@ -34,25 +34,25 @@ public class Context {
 
 	public static List<DeployementConstraint> deploymentConstraintsList = new ArrayList<DeployementConstraint>();
 
-	public static Map<String, Set<DataAccess>> dataAccessSymblTable = 
-			new HashMap<String, Set<DataAccess>>();
-	
-	// Getter and Setter of  DataAccessSymblTable
-	
-	public static Set<DataAccess>  getDataAccessSymblTable(String dataAccessKey) {		
+	public static Map<String, Set<DataAccess>> dataAccessSymblTable = new HashMap<String, Set<DataAccess>>();
+
+	// Getter and Setter of DataAccessSymblTable
+
+	public static Set<DataAccess> getDataAccessSymblTable(String dataAccessKey) {
 		return dataAccessSymblTable.get(dataAccessKey);
-		
+
 	}
-	
-	public static void constructDataAccessSymblTable(String dataAccessKey, 
+
+	public static void constructDataAccessSymblTable(String dataAccessKey,
 			Set<DataAccess> dataAccessObj) {
 		dataAccessSymblTable.put(dataAccessKey, dataAccessObj);
-	}	
-	
+	}
+
 	// Getter and Setter of DeploymentConstrinstsSymblTable
 	public static void addDeploymentConstraints(DeployementConstraint dc) {
 		deploymentConstraintsList.add(dc);
 	}
+
 	public static List<DeployementConstraint> getDeploymentConstrainsList() {
 		return deploymentConstraintsList;
 	}
@@ -76,7 +76,7 @@ public class Context {
 
 		if (symblTable.containsKey(variableName)) {
 
-		} else { 
+		} else {
 			symblTable.put(variableName, variableType);
 		}
 	}

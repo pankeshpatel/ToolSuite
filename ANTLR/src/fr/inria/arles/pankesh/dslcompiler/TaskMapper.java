@@ -36,11 +36,10 @@ public class TaskMapper {
 		// --O/p : 21 (regionLabel) -> device List.
 		for (Device deviceObj : deviceList) {
 
-		
 			List<String> setOfRegion = deviceObj.getRegion();
 
 			for (String r : setOfRegion) {
-		
+
 				if (deviceListByRegion.containsKey(r)) {
 
 					Set<Device> tempSet = deviceListByRegion.get(r);
@@ -77,8 +76,6 @@ public class TaskMapper {
 			}
 
 		}
-
-		
 
 		final Map<Device, Set<String>> finalMapping = new HashMap<Device, Set<String>>();
 

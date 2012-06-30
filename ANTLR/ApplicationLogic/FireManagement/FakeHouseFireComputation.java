@@ -16,13 +16,14 @@ public class FakeHouseFireComputation extends HouseFireComputation {
 	}
 
 	public void onNewsmokePresence(SmokePresenceStruct arg) {
-		
+
 		System.out.println("Receiving data --OnNewSmokePresence");
-		
+
 		this.smokePresence = arg.getsmokePresence();
 		this.timeStamp = arg.gettimeStamp();
 
-		if (this.tempValue >= 55 && (this.unitOfMeasurement).equals("C") && this.smokePresence == true) {
+		if (this.tempValue >= 55 && (this.unitOfMeasurement).equals("C")
+				&& this.smokePresence == true) {
 			SmokePresenceStruct smokePresenceStruct = new SmokePresenceStruct(
 					this.smokePresence, this.timeStamp);
 			sethouseFireState(smokePresenceStruct);
@@ -31,13 +32,14 @@ public class FakeHouseFireComputation extends HouseFireComputation {
 	}
 
 	public void onNewhouseAvgTemp(TempStruct arg) {
-		
+
 		System.out.println("Receiving data --onNewhouseAvgTemp");
-		
+
 		this.tempValue = arg.gettempValue();
 		this.unitOfMeasurement = arg.getunitOfMeasurement();
 
-		if (this.tempValue >= 55 && (this.unitOfMeasurement).equals("C")  && this.smokePresence == true) {
+		if (this.tempValue >= 55 && (this.unitOfMeasurement).equals("C")
+				&& this.smokePresence == true) {
 			SmokePresenceStruct smokePresenceStruct = new SmokePresenceStruct(
 					this.smokePresence, this.timeStamp);
 			sethouseFireState(smokePresenceStruct);

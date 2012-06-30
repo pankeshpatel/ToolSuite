@@ -18,12 +18,13 @@ public class Sensor {
 
 	private Set<SensorMeasurement> generatedInfo = new HashSet<SensorMeasurement>();
 
-	public Sensor() {}
+	public Sensor() {
+	}
 
 	public Sensor(String sensorName) {
 		sensorDriver = new SensorDriver(sensorName, getAttributeSet(),
 				getGeneratedInfo(), null);
-	}	
+	}
 
 	// This function generates logic file of Sensor
 	public void generateSensorCode() {

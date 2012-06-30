@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
 import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 

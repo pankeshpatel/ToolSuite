@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
-
 import fr.inria.arles.pankesh.common.RegionIDTables;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 
@@ -45,15 +43,11 @@ public class PubSubMiddleware {
 		Set<Subscriber> subscriberPatternSet = new HashSet<Subscriber>();
 
 		pubSubRegionIDList = deviceInfo.getRegion();
-		
-		
 
 		for (int i = 0; i <= pubSubRegionIDList.size(); i++) {
 
 			List<String> regionIDResult = regionIDtb.getRegionIDField(i,
 					pubSubRegionIDList);
-			
-			
 
 			Set<Subscriber> s = regionSubscriber.get(regionIDResult);
 

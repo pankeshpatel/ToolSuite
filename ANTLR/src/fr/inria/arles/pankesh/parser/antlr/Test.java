@@ -26,8 +26,8 @@ public class Test {
 							+ "<relativepathfordevices> <relativepathforutil> ");
 			System.exit(1);
 		}
-		
-		// --- VocArchSpec NetworkSpec gen /logic /sim/device  /util
+
+		// --- VocArchSpec NetworkSpec gen /logic /sim/device /util
 
 		GlobalVariable.vocArchSpec = args[0];
 		GlobalVariable.networkSpec = args[1];

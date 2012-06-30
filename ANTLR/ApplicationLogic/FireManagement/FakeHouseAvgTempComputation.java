@@ -1,6 +1,5 @@
 package logic;
 
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,8 +15,7 @@ public class FakeHouseAvgTempComputation extends HouseAvgTempComputation {
 	private double currentAverage;
 	private int numSample = 0;
 	private final int NUM_SAMPLE_FOR_AVG = 2;
-	
-	
+
 	public FakeHouseAvgTempComputation(PubSubMiddleware pubSubM,
 			Device deviceInfo) {
 		super(pubSubM, deviceInfo);
@@ -34,7 +32,7 @@ public class FakeHouseAvgTempComputation extends HouseAvgTempComputation {
 				}
 				currentAverage /= temps.size();
 			}
-			
+
 			if (numSample == NUM_SAMPLE_FOR_AVG) {
 				numSample = 0;
 
@@ -42,7 +40,7 @@ public class FakeHouseAvgTempComputation extends HouseAvgTempComputation {
 						arg.getunitOfMeasurement());
 				sethouseAvgTemp(avgTempMeasurement);
 			}
-		
+
 		}
 
 	}

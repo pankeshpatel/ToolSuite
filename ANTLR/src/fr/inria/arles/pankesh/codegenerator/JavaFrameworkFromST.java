@@ -17,12 +17,13 @@ import fr.inria.arles.pankesh.semanticmodel.Structure;
 
 public class JavaFrameworkFromST {
 
-	/*private StringTemplateGroup group = new StringTemplateGroup("myGroup",
-			"./StringTemplateFiles/", DefaultTemplateLexer.class);*/
-	
-	private StringTemplateGroup group = new StringTemplateGroup("myGroup", 
-	GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
+	/*
+	 * private StringTemplateGroup group = new StringTemplateGroup("myGroup",
+	 * "./StringTemplateFiles/", DefaultTemplateLexer.class);
+	 */
 
+	private StringTemplateGroup group = new StringTemplateGroup("myGroup",
+			GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
 
 	public CompilationUnit buildAbstractClassoFSensorDriver(
 			SensorDriver sensorDriver) {
@@ -35,9 +36,7 @@ public class JavaFrameworkFromST {
 	}
 
 	public CompilationUnit buildAbstractClassoFSensor(SensorDriver sensorDriver) {
-		
-		
-		
+
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("LSensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("Fake" + sensorDriver.getName() + ".java",
@@ -57,9 +56,6 @@ public class JavaFrameworkFromST {
 	public CompilationUnit buildAbstractClassoFActuator(
 			ActuatorDriver actuatorDriver) {
 
-		
-		
-		
 		StringTemplate templateOfActuatorDriver = group
 				.getInstanceOf("LActuator");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
@@ -80,8 +76,6 @@ public class JavaFrameworkFromST {
 	public CompilationUnit buildAbstractClassOFStorage(
 			StorageService storageService) {
 
-		
-		
 		StringTemplate templateOfStorageService = group
 				.getInstanceOf("LStorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
@@ -103,8 +97,6 @@ public class JavaFrameworkFromST {
 	public CompilationUnit buildAbstractClassoFCSLogic(
 			ComputationalService computationalService) {
 
-		
-		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("LComputation");
 		templateOfComputationalService.setAttribute("CS", computationalService);
@@ -125,8 +117,6 @@ public class JavaFrameworkFromST {
 	public CompilationUnit buildAbstractClassoFControllerLogic(
 			Controller controller) {
 
-		
-		
 		StringTemplate templateOfComputationalService = group
 				.getInstanceOf("LController");
 		templateOfComputationalService.setAttribute("CS", controller);
@@ -151,7 +141,8 @@ public class JavaFrameworkFromST {
 				"device", device.getName());
 	}
 
-	public CompilationUnit buildAbstractClassOFRegion(Regions region, String className) {
+	public CompilationUnit buildAbstractClassOFRegion(Regions region,
+			String className) {
 
 		StringTemplate templateOfStructure = group.getInstanceOf(className);
 		templateOfStructure.setAttribute("region", region);

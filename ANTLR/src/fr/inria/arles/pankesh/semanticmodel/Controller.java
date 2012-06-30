@@ -27,21 +27,24 @@ public class Controller extends SoftwareComponent {
 		allGeneratedInfo.addAll(getActions());
 		return allGeneratedInfo;
 	}
-	
-	
+
 	private String packageName;
-	public String getPackageName(){
-		packageName =  GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);	
-		return packageName;		
+
+	public String getPackageName() {
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		return packageName;
 	}
-	
-	public String getLogicPackageName(){
-		packageName =  GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
-		return packageName;		
+
+	public String getLogicPackageName() {
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
+		return packageName;
 	}
-	
-	public String getUtilPackageName(){
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
+
+	public String getUtilPackageName() {
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 

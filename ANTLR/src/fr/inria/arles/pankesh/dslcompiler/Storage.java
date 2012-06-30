@@ -20,15 +20,12 @@ public class Storage {
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private Information queryIndex;
 	private Information generatedInfo;
-	private  String storageServiceName;
-	
-	
-	
+	private String storageServiceName;
 
 	public Storage() {
 
 	}
-	
+
 	public String getStorageServiceName() {
 		return storageServiceName;
 	}
@@ -36,7 +33,6 @@ public class Storage {
 	public void setStorageServiceName(String storageServiceName) {
 		this.storageServiceName = storageServiceName;
 	}
-	
 
 	public void createStorageObject() {
 		storageService = new StorageService(getStorageServiceName(),
@@ -69,10 +65,12 @@ public class Storage {
 	}
 
 	public void addDataAccess() {
-		DataAccess dataAccess = new DataAccess(getDataAccessIndex(), getGeneratedInfo());
-		dataAccessList.add(dataAccess);		
-		Context.constructDataAccessSymblTable(getGeneratedInfo().getName(), dataAccessList);
-		
+		DataAccess dataAccess = new DataAccess(getDataAccessIndex(),
+				getGeneratedInfo());
+		dataAccessList.add(dataAccess);
+		Context.constructDataAccessSymblTable(getGeneratedInfo().getName(),
+				dataAccessList);
+
 	}
 
 	// getter and Setter of generatedInfo
@@ -108,7 +106,5 @@ public class Storage {
 				fieldType));
 		attributeSet.add(attribute);
 	}
-
-	
 
 }

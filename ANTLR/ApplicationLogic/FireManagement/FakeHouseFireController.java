@@ -11,22 +11,20 @@ public class FakeHouseFireController extends HouseFireController {
 	}
 
 	public void onNewhouseFireState(SmokePresenceStruct arg) {
-		
-		System.out.println(" Receiving data OnNewHouseFireState---HouseFireController");
-		
-		
-		if (arg.getsmokePresence()){
+
+		System.out
+				.println(" Receiving data OnNewHouseFireState---HouseFireController");
+
+		if (arg.getsmokePresence()) {
 			Activate();
 			Start();
 			Unlock();
-		}else
-		{
+		} else {
 			DeActivate();
 			Stop();
-			
+
 		}
-		
-		
+
 	}
 
 }

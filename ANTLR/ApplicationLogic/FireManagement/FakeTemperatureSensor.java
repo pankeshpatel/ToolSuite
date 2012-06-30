@@ -1,6 +1,5 @@
 package logic;
 
-
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.sensordriver.dummydevice.DummyTempSensor;

@@ -6,7 +6,6 @@ import java.io.IOException;
 
 import fr.inria.arles.pankesh.common.*;
 
-
 public class SourceFileDumper {
 
 	private File file;
@@ -35,47 +34,58 @@ public class SourceFileDumper {
 
 		if ((unit.getType()).equals("device")) {
 
-			/*new File("./src/fr/inria/arles/pankesh/gen/sim/device"
-					+ unit.getObjectName()).mkdir();
-			String dirName = "./src/fr/inria/arles/pankesh/gen/sim/device"
-					+ unit.getObjectName();*/
-			
-	
-			new File(GlobalVariable.outputDirPath +  GlobalVariable.deviceDirPath + unit.getObjectName()).mkdirs();
-			String dirName = GlobalVariable.outputDirPath +  GlobalVariable.deviceDirPath + unit.getObjectName();
-	
+			/*
+			 * new File("./src/fr/inria/arles/pankesh/gen/sim/device" +
+			 * unit.getObjectName()).mkdir(); String dirName =
+			 * "./src/fr/inria/arles/pankesh/gen/sim/device" +
+			 * unit.getObjectName();
+			 */
+
+			new File(GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceDirPath + unit.getObjectName())
+					.mkdirs();
+			String dirName = GlobalVariable.outputDirPath
+					+ GlobalVariable.deviceDirPath + unit.getObjectName();
 
 			File dir = new File(dirName);
 			file = new File(dir, unit.getName());
 
 		} else if (unit.getType().equals("Logic")) {
 
-			//new File("./src/fr/inria/arles/pankesh/gen/logic").mkdir();
-			/*file = new File("./src/fr/inria/arles/pankesh/gen/logic/"
-					+ unit.getName());
-			*/
-			
-			new File(GlobalVariable.outputDirPath +  GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.outputDirPath +  GlobalVariable.logicDirPath + "/" + unit.getName());
-			
-			
+			// new File("./src/fr/inria/arles/pankesh/gen/logic").mkdir();
+			/*
+			 * file = new File("./src/fr/inria/arles/pankesh/gen/logic/" +
+			 * unit.getName());
+			 */
+
+			new File(GlobalVariable.outputDirPath + GlobalVariable.logicDirPath)
+					.mkdirs();
+			file = new File(GlobalVariable.outputDirPath
+					+ GlobalVariable.logicDirPath + "/" + unit.getName());
+
 		} else if (unit.getType().equals("Region")) {
 
-			//new File("./src/fr/inria/arles/pankesh/gen/util").mkdir();
-			/*file = new File("./src/fr/inria/arles/pankesh/gen/util/"
-					+ unit.getName());*/
-			
-			new File(GlobalVariable.outputDirPath +  GlobalVariable.utilDirPath).mkdirs();
-			file = new File(GlobalVariable.outputDirPath +  GlobalVariable.utilDirPath + "/"
-					+ unit.getName());
-		} else {
-			//new File("./src/fr/inria/arles/pankesh/gen").mkdir();
-			/*file = new File("./src/fr/inria/arles/pankesh/gen/"
-			+ unit.getName());*/
-			new File(GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath).mkdirs();
-			file = new File(GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath + "/" +unit.getName());
+			// new File("./src/fr/inria/arles/pankesh/gen/util").mkdir();
+			/*
+			 * file = new File("./src/fr/inria/arles/pankesh/gen/util/" +
+			 * unit.getName());
+			 */
 
-			
+			new File(GlobalVariable.outputDirPath + GlobalVariable.utilDirPath)
+					.mkdirs();
+			file = new File(GlobalVariable.outputDirPath
+					+ GlobalVariable.utilDirPath + "/" + unit.getName());
+		} else {
+			// new File("./src/fr/inria/arles/pankesh/gen").mkdir();
+			/*
+			 * file = new File("./src/fr/inria/arles/pankesh/gen/" +
+			 * unit.getName());
+			 */
+			new File(GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath).mkdirs();
+			file = new File(GlobalVariable.outputDirPath
+					+ GlobalVariable.frameworkDirPath + "/" + unit.getName());
+
 		}
 
 		file.createNewFile();
