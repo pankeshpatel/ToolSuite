@@ -2,7 +2,8 @@ package fr.inria.arles.pankesh.common;
 
 public class GlobalVariable {
 
-	public static String vocArchSpec;
+	public static String vocabSpec;
+	public static String archSpec;
 	public static String networkSpec;
 	public static String frameworkDirPath = "/framework";
 	public static String outputDirPath = "./gen";

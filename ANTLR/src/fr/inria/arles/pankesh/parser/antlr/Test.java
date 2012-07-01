@@ -5,8 +5,7 @@ import java.util.List;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 
-import fr.inria.arles.pankesh.common.*;
-
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.dslcompiler.DeployementConstraint;
 import fr.inria.arles.pankesh.dslcompiler.Mapper;
 import fr.inria.arles.pankesh.semanticmodel.Device;
@@ -19,7 +18,7 @@ public class Test {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		if (args.length != 3) {
+		if (args.length != 4) {
 			System.out
 					.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
 							+ "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
@@ -29,22 +28,29 @@ public class Test {
 
 		// --- VocArchSpec NetworkSpec gen /logic /sim/device /util
 
-		GlobalVariable.vocArchSpec = args[0];
-		GlobalVariable.networkSpec = args[1];
-		GlobalVariable.stringTemplatePath = args[2];
+		GlobalVariable.vocabSpec = args[0];
+		GlobalVariable.archSpec = args[1];
+		GlobalVariable.networkSpec = args[2];
+		GlobalVariable.stringTemplatePath = args[3];
 
 		List<Device> deviceList;
 		List<DeployementConstraint> mappingConstraintList;
 
-		// This code parses the Vocabulary and Network Description
-		ANTLRFileStream vocArchStream = new ANTLRFileStream(
-				GlobalVariable.vocArchSpec);
-		VocabArchitectSpecLexer vocArchLexer = new VocabArchitectSpecLexer(
-				vocArchStream);
-		CommonTokenStream vocArchTokens = new CommonTokenStream(vocArchLexer);
-		VocabArchitectSpecParser vocArchParser = new VocabArchitectSpecParser(
-				vocArchTokens);
-		vocArchParser.vocArchSpec();
+		// This code parses the Vocabulary Specification
+		
+		ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+		VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+		CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+		VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+		vocParser.vocabSpec();
+		
+		// This code parses the Architecture Specificaton
+		ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
+		ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
+		CommonTokenStream archTokens = new CommonTokenStream(archLexer);
+		ArchSpecParser archParser = new ArchSpecParser(archTokens);
+		archParser.archSpec();
+		
 		mappingConstraintList = Context.getDeploymentConstrainsList();
 
 		// This code parses the Network description.

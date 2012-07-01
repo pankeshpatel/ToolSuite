@@ -1,4 +1,4 @@
-grammar VocabArchitectSpec;
+grammar VocabSpec; 
 
 options {
   language     = Java;  
@@ -15,13 +15,13 @@ import fr.inria.arles.pankesh.dslcompiler.*;
 import fr.inria.arles.pankesh.semanticmodel.*;  
    
 } 
-
+ 
 @members {
   //Initialize the context
   private Context context; 
 }
 
-vocArchSpec : 
+vocabSpec : 
 		'regions'
 		{ context = new Context();
 		context.currentRegion = new RegionsGenerator();
@@ -32,7 +32,7 @@ vocArchSpec :
         ':'       
     (struct_def)+  
     'abilities' ':' abilities_def  
-    'softwarecomponents' ':' sc_def 
+   // 'softwarecomponents' ':' sc_def  
 ;
 
 region_def :
