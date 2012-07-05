@@ -18,12 +18,12 @@ softwarecomponents:
 		    
 		FloorAvgTemp			
 			generate floorAvgTempMeasurement : TempStruct;
-			consume roomAvgTempMeasurement from region-hops : 0 : Room;
+			consume roomAvgTempMeasurement from region-hops : 0 : Floor;
 			partition-per :  Floor;
 		
 		CenterAvgTemp			
 			generate centerAvgTempMeasurement : TempStruct;
-			consume floorAvgTempMeasurement from region-hops : 0 : Room;
+			consume floorAvgTempMeasurement from region-hops : 0 : Center;
 			partition-per : Center;	
 	
 		Proximity			
