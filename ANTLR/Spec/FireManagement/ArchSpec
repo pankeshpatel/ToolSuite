@@ -6,7 +6,7 @@ structs:
 		unitOfMeasurement : String;	
 
 softwarecomponents:
-	 computationalService:
+	 computationalService
 		 HouseAvgTempComputation
 		 	generate houseAvgTemp : TempStruct ;
 		 	consume tempMeasurement from region-hops :0 : House ;
@@ -24,7 +24,7 @@ softwarecomponents:
 			partition-per : HousingCommunity ;
 		 	
 		 	
-	controller:
+	controller
 	 	HouseFireController
 	 	  consume houseFireState from region-hops:0:House;
 	 	  command Activate() to region-hops:0: House;

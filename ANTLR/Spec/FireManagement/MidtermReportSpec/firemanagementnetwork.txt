@@ -1,0 +1,57 @@
+devices:
+        D1:
+            networkaddress: 128.27.61.130;
+            region :
+                HousingCommunity: 15;
+                House: 101;                                          
+            type: PC ;
+            abilities: TemperatureSensor, Door, Alarm ; 
+        D2:
+            networkaddress: 128.27.61.131 ;
+            region :
+               HousingCommunity: 15;
+                House: 101;              
+            type: PC ;
+            abilities: TemperatureSensor, SmokeDetector; 
+        D3:
+            networkaddress: 128.27.61.132;
+            region :
+                HousingCommunity: 15;
+                House: 101;              
+            type: PC ;
+            abilities: TemperatureSensor, SprinklerSystem ;
+        D4:
+            networkaddress: 128.27.61.133;
+            region :
+                HousingCommunity: 15;
+                House: 101;              
+            type: PC ;
+            abilities: Light;
+        D5:
+            networkaddress: 128.27.61.134;
+            region :
+                HousingCommunity: 15;
+                House: 102;               
+            type: PC ;
+            abilities: TemperatureSensor, SmokeDetector, Alarm ;
+        D6:
+            networkaddress: 128.27.61.135;
+            region :
+               HousingCommunity: 15;
+                House: 102;                 
+            type: PC ;
+            abilities: TemperatureSensor, SprinklerSystem;
+        D7:
+            networkaddress: 128.27.61.136;
+            region :
+               HousingCommunity: 15;
+               House: 102;                     
+            type: PC ;
+            abilities: TemperatureSensor, Door;
+        D8:
+            networkaddress: 128.27.61.137;
+            region :
+                HousingCommunity: 15;
+                House: 102;              
+            type: PC ;
+            abilities: Light ;

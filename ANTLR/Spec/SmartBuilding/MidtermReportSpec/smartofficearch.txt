@@ -1,0 +1,36 @@
+structs:    
+	UserTempPrefStruct
+		tempValue : double;
+		unitOfMeasurement : String; 
+		timeStamp : long;
+softwarecomponents:
+    computationalService
+		RoomAvgTemp			
+			generate roomAvgTempMeasurement :TempStruct;
+		    consume tempMeasurement from region-hops:0: Room;
+		    in-region : Room ;		    
+		FloorAvgTemp			
+			generate floorAvgTempMeasurement : TempStruct;
+			consume roomAvgTempMeasurement from region-hops : 0 : Floor;
+			in-region :  Floor;		
+		CenterAvgTemp			
+			generate centerAvgTempMeasurement : TempStruct;
+			consume floorAvgTempMeasurement from region-hops : 0 : Center;
+			in-region : Center;		
+		Proximity			
+			generate tempPref : UserTempPrefStruct;
+			consume badgeDetected from region-hops : 0 : Room;
+			consume badgeDisappeared from region-hops : 0 : Room;
+			request profile;			
+			in-region : Room;			
+	controller
+		RegulateTemp			
+			consume roomAvgTempMeasurement from region-hops : 0 : Room;
+			consume tempPref from region-hops : 0: Room;
+			command Off() to region-hops:0:Room;
+			command SetTemp(setTemp) to region-hops:0:Room;
+			in-region : Room;		
+		ManageTemp			
+			consume centerAvgTempMeasurement from region-hops:0:Center;
+			command Display(displayTemp) to region-hops:0:Center;
+			in-region : Center;

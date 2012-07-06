@@ -1,0 +1,65 @@
+devices:
+        D1:
+            networkaddress: 128.27.61.130;
+            region :
+                Center: 15;
+                Floor: 11;
+                Room:0;                
+            type: PC ;
+            abilities: TemperatureSensor,BadgeReader ; 
+        D2:
+            networkaddress: 128.27.61.131 ;
+            region :
+                Center: 15;
+                Floor: 11;
+                Room:0; 
+            type: PC ;
+            abilities: TemperatureSensor, Heater ; 
+        D3:
+            networkaddress: 128.27.61.132;
+            region :
+                Center: 15;
+                Floor: 11;
+                Room:1;
+            type: PC ;
+            abilities: TemperatureSensor, Heater, ProfileDB, BadgeReader ;
+        D4:
+            networkaddress: 128.27.61.133;
+            region :
+                Center: 15;
+                Floor: 11;
+                Room:1;
+            type: PC ;
+            abilities: TemperatureSensor ;
+        D5:
+            networkaddress: 128.27.61.134;
+            region :
+                Center: 15;
+                Floor: 21;
+                Room:2;
+            type: PC ;
+            abilities: TemperatureSensor, BadgeReader ;
+        D6:
+            networkaddress: 128.27.61.135;
+            region :
+               Center: 15;
+                Floor: 21;
+                Room:2;
+            type: PC ;
+            abilities: TemperatureSensor , Monitor, Heater ;        
+        D7:
+            networkaddress: 128.27.61.136;
+            region :
+                Center: 16;
+                Floor: 14;
+                Room:3;
+            type: PC ;
+            abilities: TemperatureSensor , Monitor, BadgeReader ;           
+        D8:
+            networkaddress: 128.27.61.137;
+            region :
+                Center: 16;
+                Floor: 14;
+                Room:3;
+            type: PC ;
+            abilities: ProfileDB,TemperatureSensor, Heater ;
