@@ -1,28 +1,35 @@
 regions :
- 	House : String;
- 	HousingCommunity : String;	
-structs:
+	House : String;
+	HousingCommunity : String;
+	
+structs :
 	TempStruct
 		tempValue : double;
-		unitOfMeasurement: String;	
+		unitOfMeasurement : String;
+	
 	SmokePresenceStruct
 		smokePresence : boolean;
-		timeStamp : long;
+		timStamp : long;
+		
 abilities:
 	sensors:
 		TemperatureSensor
-			generate tempMeasurement : TempStruct ;		
-		SmokeDetector
-			generate smokePresence : SmokePresenceStruct;		
-	actuators:
-		Door
-			action Unlock();			
-		Alarm
-			action Activate();
-			action DeActivate(); 				
-		SprinklerSystem
-			action Start();
-			action Stop();	
-		Light
-			action SwitchOn();
-			action SwitchOff();
+			generate tempMeasurement : TempStruct;
+		
+		SmokeDetector 
+			generate smokPresence : SmokePresenceStruct;
+		
+	  actuators:
+	  	 Door
+	  	 	action Unlock();
+	  	 Alarm
+	  	 	action Activate();
+	  	 	action DeActivate();
+	  	 
+	  	 SprinklerSystem
+	  	 	action Start();
+	  	 	action Stop();
+	  	 
+	  	 Light 
+	  	 	action SwitchOn();
+	  	 	action SwitchOff();	

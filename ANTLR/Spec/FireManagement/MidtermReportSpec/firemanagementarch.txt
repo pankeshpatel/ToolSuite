@@ -3,33 +3,38 @@ structs:
 		smokePresence : boolean;
 		timeStamp : long;
 		tempValue : double;
-		unitOfMeasurement : String;	
+		unitOfMeasurement : String;
+		
 softwarecomponents:
-	 computationalService:
-		 HouseAvgTempComputation
-		 	generate houseAvgTemp : TempStruct ;
-		 	consume tempMeasurement from hops:0 : House ;
-		 	in-region : House;		 
-		 HouseFireComputation
-		 	generate houseFireState : HouseFireStruct ;
-		 	consume  houseAvgTemp from region-hops: 0 :House;
-		 	consume  smokePresence from hops: 0 : House;
-		 	in-region : House;		
-		 HcFireComputation
-			generate hcFireState : HouseFireStruct; 
-			consume houseFireState from hops: 0 : HousingCommunity;
-			in-region : HousingCommunity ;		 	
-	controller:
-	 	HouseFireController
-	 	  consume houseFireState from region-hops:0:House;
-	 	  command Activate() to hops:0: House;
-	 	  command DeActivate() to hops: 0 : House;
-	 	  command Start() to hops:0:House;
-	 	  command Stop() to hops:0:House;
-	 	  command Unlock() to hops:0:House;
-	 	  in-region : House;	 
-	 HcFireController
-	 		consume hcFireState from hops:0:HousingCommunity;
-	 		command SwitchOn() to hops:0:HousingCommunity;
-	 		command SwitchOff() to hops:0:HousingCommunity;
-	 		in-region : HousingCommunity;
+	computationalService:
+		HouseAvgTempComputation
+			generate houseAvgTemp : TempStruct;
+			consume tempMeasurement from hops : 0: House;
+			in-region : House;
+			
+		HouseFireComputation
+			generate houseFireState : HouseFireStruct;
+			consume houseAvgTemp from hops : 0 : House;
+			consume smokPresence from hops : 0 : House;
+			in-region : House;
+		
+		HcFireComputation
+			generate hcFireState : HouseFireStruct;
+			consume houseFireState from  hops : 0 : HousingCommunity;
+			in-region : HousingCommunity;
+			
+		controller:
+			HouseFireController
+				consume	houseFireState from hops : 0 : House;
+				command Activate() to hops : 0 : House;
+				command DeActivate() to hops : 0 : House;
+				command Start() to hops : 0: House;
+				command Stop() to hops : 0 : House;
+				command Unlock() to hops : 0 : House;
+				in-region : House;
+				
+			HcFireController
+				consume hcFireState from hops:0: HousingCommunity;
+				command SwitchOn() to hops:0: HousingCommunity;
+				command SwitchOff() to hops:0: HousingCommunity;
+				in-region : HousingCommunity;
