@@ -1,12 +1,14 @@
 devices:
 	DOne :
-		region :
+		networkaddress: 128;
+	 	region :
 			Center : 15 ;
 			Floor : 11;
 			Room : 0;
 		type :  SunSPoT;
 		abilities : TemperatureSensor , BadgeReader ;
     DTwo :
+        networkaddress: 128;
     	 region :
     	 	Center :  15 ;
     	 	Floor : 11 ;
@@ -14,6 +16,7 @@ devices:
     	 type : Android ;
     	 abilities : TemperatureSensor, Heater;
     DThree :
+    	networkaddress: 128;
     	 region :
     	 	Center : 15 ;
     	 	Floor : 11 ;
@@ -21,6 +24,7 @@ devices:
     	 type : SunSPoT ;
     	 abilities : TemperatureSensor , Heater , ProfileDB , BadgeReader ;
     DFour :
+    	networkaddress: 128;
     	region :
     		Center : 15;
     		Floor : 11;
@@ -28,6 +32,7 @@ devices:
     	type : SunSPoT ;
     	abilities : TemperatureSensor ;
     DFive :
+    	networkaddress: 128;
     	region : 
     		Center : 15;
     		Floor : 21 ;
@@ -35,14 +40,15 @@ devices:
     	type : SunSPoT ;
     	abilities : TemperatureSensor , BadgeReader;
     DSix :
+    	networkaddress: 128;
     	 region :
     	 	Center : 15;
     	 	Floor : 21;
     	 	Room : 2;
     	 type : SunSPoT;
-    	 abilities : TemperatureSensor, Monitor, Heater;
-    
+    	 abilities : TemperatureSensor, Monitor, Heater;    
     DSeven :
+    	networkaddress: 128;
     	region :
     		Center : 16;
     		Floor : 14 ;
@@ -51,6 +57,7 @@ devices:
     	abilities : TemperatureSensor , Monitor , BadgeReader;
     	
     DEight :
+    	networkaddress: 128;
     	region:
     		Center : 16;
     		Floor : 14;

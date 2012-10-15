@@ -1,10 +1,11 @@
 package logic;
 
+import fr.inria.arles.pankesh.factory.BadgeReaderSensorFactory;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.Device;
-import fr.inria.arles.pankesh.sensordriver.badgereader.BadgeData;
-import fr.inria.arles.pankesh.sensordriver.badgereader.BadgeListener;
-import fr.inria.arles.pankesh.sensordriver.dummydevice.DummyBadgeReader;
+import fr.inria.arles.pankesh.sensordriver.badgereader.BadgeDetectListener;
+import fr.inria.arles.pankesh.sensordriver.badgereader.BadgeDisappearListener;
+import fr.inria.arles.pankesh.sensordriver.badgereader.IBadgeReader;
 import framework.BadgeDetectedStruct;
 import framework.BadgeDisappearedStruct;
 import framework.BadgeReader;
@@ -27,50 +28,62 @@ public class FakeBadgeReader extends BadgeReader {
 	}
 
 	private boolean continueFlag = false;
-	
 
 	@Override
 	public void run() {
 		continueFlag = true;
 		// while (true) {
-		for(int i=0; i<=5; i++) {
-		
-		try {
-			Thread.sleep(1000);
-			handleExpiryOfTimer();
-			// if (!continueFlag)
-			// break;
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-			continueFlag = false;
-		}
-		// }
-		
+		for (int i = 0; i <= 5; i++) {
+
+			try {
+				Thread.sleep(1000);
+				handleExpiryOfTimer();
+				// if (!continueFlag)
+				// break;
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+				continueFlag = false;
+			}
+			// }
+
 		}
 	}
 
-	BadgeListener badgeEventHandler = new BadgeListener() {
+	BadgeDetectListener badgeDetectEvent = new BadgeDetectListener() {
 
-		public void onNewResponse(BadgeData response) {
-
-			if (response.getBadgeEvent().equals("detected")) {
-
-				BadgeDetectedStruct badgeDetectedStruct = new BadgeDetectedStruct(
-						response.getBadgeID(), response.timestamp);
-				setbadgeDetected(badgeDetectedStruct);
-			} else {
-
-				BadgeDisappearedStruct badgeDisappearedStruct = new BadgeDisappearedStruct(
-						response.getBadgeID(), response.timestamp);
-				setbadgeDisappeared(badgeDisappearedStruct);
-			}
+		@Override
+		public void onNewBadgeDetect(BadgeDetectedStruct response) {
+			BadgeDetectedStruct badgeDetectedStruct = new BadgeDetectedStruct(
+					response.getbadgeID(), response.gettimeStamp());
+			setbadgeDetected(badgeDetectedStruct);
 		}
+	};
 
+	BadgeDisappearListener badgeDisappearedEvent = new BadgeDisappearListener() {
+
+		@Override
+		public void onNewBadgeDisappeared(BadgeDisappearedStruct response) {
+			BadgeDisappearedStruct badgeDisappearedStruct = new BadgeDisappearedStruct(
+					response.getbadgeID(), response.gettimeStamp());
+			setbadgeDisappeared(badgeDisappearedStruct);
+		}
 	};
 
 	@Override
 	protected void handleExpiryOfTimer() {
-		DummyBadgeReader.getInstance().getData(badgeEventHandler);
-	}
 
+		IBadgeReader badgeReader = BadgeReaderSensorFactory.getBadgeReaderSensor("motorola");
+		
+		if (Math.random() < 0.5) {
+			
+			badgeReader.getBadgeDetectData(badgeDetectEvent);
+			
+			//DummyBadgeReader.getInstance().getBadgeDetectData(badgeDetectEvent);
+		} else {
+			
+			badgeReader.getBadgeDisappearedData(badgeDisappearedEvent);
+			//DummyBadgeReader.getInstance().getBadgeDisappearedData(
+			//		badgeDisappearedEvent);
+		}
+	}
 }

@@ -19,8 +19,9 @@ public class FakeProximity extends Proximity {
 		TempStruct userprofile = getprofile(arg.getbadgeID());
 
 		UserTempPrefStruct userTempPref = new UserTempPrefStruct(
-				userprofile.gettempValue(), userprofile.getunitOfMeasurement(), arg.gettimeStamp());
-		settempPref(userTempPref);   
+				userprofile.gettempValue(), userprofile.getunitOfMeasurement(),
+				arg.gettimeStamp());
+		settempPref(userTempPref);
 
 	}
 
@@ -29,9 +30,9 @@ public class FakeProximity extends Proximity {
 		TempStruct userprofile = getprofile(arg.getbadgeID());
 
 		UserTempPrefStruct userTempPref = new UserTempPrefStruct(
-				userprofile.gettempValue(), userprofile.getunitOfMeasurement(), arg.gettimeStamp());
+				userprofile.gettempValue(), userprofile.getunitOfMeasurement(),
+				arg.gettimeStamp());
 		settempPref(userTempPref);
-		
 
 	}
 

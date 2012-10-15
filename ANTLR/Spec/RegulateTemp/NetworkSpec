@@ -8,7 +8,7 @@ devices:
             type: PC ;
             abilities: BadgeReader ; 
         D2:
-            networkaddress: 128 ;
+            networkaddress: 128;
             region :
                 room:1 ; 
                 floor: 12;

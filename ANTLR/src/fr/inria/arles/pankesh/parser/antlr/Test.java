@@ -19,8 +19,8 @@ public class Test {
 	public static void main(String[] args) throws Exception {
 
 		if (args.length != 4) {
-			System.out
-					.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
+			
+		System.out.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
 							+ "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
 							+ "<relativepathfordevices> <relativepathforutil> ");
 			System.exit(1);
