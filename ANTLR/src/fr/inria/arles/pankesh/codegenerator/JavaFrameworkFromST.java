@@ -4,14 +4,14 @@ import org.antlr.stringtemplate.StringTemplate;
 import org.antlr.stringtemplate.StringTemplateGroup;
 import org.antlr.stringtemplate.language.DefaultTemplateLexer;
 
-import fr.inria.arles.pankesh.common.*;
-
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.semanticmodel.ActuatorDriver;
 import fr.inria.arles.pankesh.semanticmodel.ComputationalService;
 import fr.inria.arles.pankesh.semanticmodel.Controller;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 import fr.inria.arles.pankesh.semanticmodel.Regions;
 import fr.inria.arles.pankesh.semanticmodel.SensorDriver;
+import fr.inria.arles.pankesh.semanticmodel.SensorMeasurement;
 import fr.inria.arles.pankesh.semanticmodel.StorageService;
 import fr.inria.arles.pankesh.semanticmodel.Structure;
 
@@ -42,6 +42,26 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Fake" + sensorDriver.getName() + ".java",
 				templateOfSensorDriver, "Logic", "sensor");
 	}
+	
+	public CompilationUnit buildAbstractClassoFSensorInterface (SensorDriver sensorDriver){
+		
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("ISensor");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);		
+		return new CompilationUnit("I" + sensorDriver.getName() + ".java", 
+				templateOfSensorDriver, "Interface", "sensor");		
+	}
+	
+	public CompilationUnit buildAbstractClassoFSensorListener(SensorMeasurement sensorMeasurement){
+		
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("SensorListener");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);		
+		return new CompilationUnit( "Listener" + sensorMeasurement.getName()  + ".java",
+					templateOfSensorDriver, "Listener" , "sensor" );
+		
+	}
+	
+	
+	
 
 	public CompilationUnit buildAbstractClassoFActuatorDriver(
 			ActuatorDriver actuatorDriver) {
@@ -70,6 +90,13 @@ public class JavaFrameworkFromST {
 				.getInstanceOf("storageservice");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + ".java",
+				templateOfStorageService, "storageService", "Future");
+	}
+	
+	public CompilationUnit buildClassOFStorageInterface(StorageService storageService){
+		StringTemplate templateOfStorageService = group.getInstanceOf("storageinterface");
+		templateOfStorageService.setAttribute("Storageservice", storageService);
+		return new CompilationUnit("I" + storageService.getName() + ".java", 
 				templateOfStorageService, "storageService", "Future");
 	}
 

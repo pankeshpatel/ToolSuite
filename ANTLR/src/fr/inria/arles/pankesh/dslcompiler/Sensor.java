@@ -26,7 +26,7 @@ public class Sensor {
 				getGeneratedInfo(), null);
 	}
 
-	// This function generates logic file of Sensor
+	// This function generates internal logic file of Sensor
 	public void generateSensorCode() {
 		JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensor
@@ -36,14 +36,41 @@ public class Sensor {
 
 	}
 
+	// This function generates (1) framework of Sensor (2) Internal logic of Sensor
+	// (3)  interface code        .
 	public void generateCode() {
 		JavaFrameworkFromST generatedSensorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedSensorDriver
 				.buildAbstractClassoFSensorDriver(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorDriver = new SourceFileDumper();
 		dumpGeneratedSensorDriver.dumpCompilationUnit(generatedCU);
-		generateSensorCode();
+		generateSensorCode();  // Internal logic call
+		generateInterfaceCode(); // This function generates interfaces of sensor 	
+		
+		for(int i=0; i< sensorDriver.getAllGeneratedInfo().size(); i++) {
+			generateSensorListener(sensorDriver.getAllGeneratedInfo().get(i)); // This function generates Listener
+		}
 	}
+	
+
+	private void generateInterfaceCode() {  // This function generates interfaces of Sensor.
+		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorInterface.buildAbstractClassoFSensorInterface(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorInterface = new SourceFileDumper();
+		dumpGeneratedSensorInterface.dumpCompilationUnit(generateCU);
+	}
+	
+	public void generateSensorListener(SensorMeasurement sensorMeasurement){
+		JavaFrameworkFromST generateSensorListener = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorListener.buildAbstractClassoFSensorListener(sensorMeasurement);
+		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
+		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);		
+	}
+	
+	
+	
+	
+	
 
 	// Getter and Setter of GeneratedInfo
 

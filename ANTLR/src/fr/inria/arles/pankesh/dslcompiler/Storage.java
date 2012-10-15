@@ -48,6 +48,15 @@ public class Storage {
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
 		generateStorage(); // This function call will generate partial logic
 							// file of storage
+		generateStorageInterface();  // This function will generate StorageService Interface.
+	}
+
+	private void generateStorageInterface() {
+		JavaFrameworkFromST generateStorageInterface = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generateStorageInterface.buildClassOFStorageInterface(storageService);
+		SourceFileDumper dumpGeneratedStorageInterface = new SourceFileDumper();
+		dumpGeneratedStorageInterface.dumpCompilationUnit(generatedCU);
+		
 	}
 
 	private void generateStorage() {

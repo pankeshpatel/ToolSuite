@@ -3,8 +3,6 @@ import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.common.*;
 
-
-
 public abstract class  $SensorDriver.name$ implements Runnable { 
    
 	protected final PubSubMiddleware myPubSubMiddleware;

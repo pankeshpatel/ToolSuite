@@ -1,4 +1,3 @@
-
 package $Storageservice.packageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.*;
