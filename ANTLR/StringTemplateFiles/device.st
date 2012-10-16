@@ -9,15 +9,12 @@ import java.util.List;
 import java.util.HashSet;
 import $device.logicPackageName$.*;
 
-
-
-
-
 public class Startup implements DeviceStartup {
 	
 	private static String name ;
 	private static String id ;
 	private static String type ;
+	private static String softwarePlatform;
 	private static String networkAddress;
 	private static Set<String> abilities = new HashSet<String>();
 	private static PubSubMiddleware myPubSub = PubSubMiddleware.getInstance();
@@ -38,6 +35,7 @@ private static Device setUpDeviceInfo() {
 	 name = "$device.name$";
 	 id =  "$device.Id$";
 	 type = "$device.type$";
+	 softwarePlatform = "Android";
 	networkAddress =  "$device.networkAddress$";
 	
 		
@@ -50,7 +48,7 @@ private static Device setUpDeviceInfo() {
   
   $device.RegionLabels:{ region | regionLabels.add("$region$"); } $
 	
-	Device device = new Device(name , id , type, networkAddress, regionIDs, regionLabels , abilities);
+	Device device = new Device(name , id , type, networkAddress, regionIDs, regionLabels , abilities, softwarePlatform);
 	return device;    
 }
 

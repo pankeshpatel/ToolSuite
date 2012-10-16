@@ -13,6 +13,7 @@ public class Device {
 	private String id;
 	private String type;
 	private String networkAddress;
+	private String softwarePlatform;
 	// private RegionID region;
 	// private RegionLabel regionLabel;
 
@@ -23,7 +24,7 @@ public class Device {
 
 	public Device(String name, String id, String type, String networkAddress,
 			List<String> regionIDs, List<String> regionLabels,
-			Set<String> abilities) {
+			Set<String> abilities, String softwarePlatform) {
 
 		this.name = name;
 		this.id = id;
@@ -34,6 +35,8 @@ public class Device {
 		// this.region = region;
 		// this.regionLabel = regionLabel;
 		this.abilities = abilities;
+		this.softwarePlatform = softwarePlatform;
+		
 	}
 
 	public String getName() {
@@ -51,6 +54,11 @@ public class Device {
 	public String getNetworkAddress() {
 		return networkAddress;
 	}
+	
+	public String getSoftwarePlatform(){
+		return softwarePlatform ;
+	}
+	
 
 	/*
 	 * public RegionLabel getRegionLabels() { return regionLabel; }

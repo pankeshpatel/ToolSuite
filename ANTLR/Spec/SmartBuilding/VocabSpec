@@ -18,16 +18,17 @@ structs:
         
 abilities:
 	sensors:
-		BadgeReader			
+		BadgeReader  
 			generate badgeDetected : BadgeDetectedStruct;
 			generate badgeDisappeared : BadgeDisappearedStruct;
-		TemperatureSensor			
+			
+		TemperatureSensor 
 			generate  tempMeasurement : TempStruct;
 
 	actuators:
-		Heater			
+		Heater
 			action Off();
 			action SetTemp(setTemp: TempStruct);
 					
-		Monitor			
+		Monitor
 			action Display(displayTemp : TempStruct);

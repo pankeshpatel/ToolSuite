@@ -58,7 +58,7 @@ public class Mapper {
 
 		return new Device(device.getName(), device.getId(), device.getType(),
 				device.getNetworkAddress(), device.getRegion(),
-				device.getRegionLabels(), resultAbilities);
+				device.getRegionLabels(), resultAbilities, device.getSoftwarePlatform());
 	}
 
 	private static void genearateDeviceCode(Device device) {
