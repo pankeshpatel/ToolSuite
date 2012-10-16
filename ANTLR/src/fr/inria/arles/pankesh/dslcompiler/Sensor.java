@@ -45,13 +45,24 @@ public class Sensor {
 		SourceFileDumper dumpGeneratedSensorDriver = new SourceFileDumper();
 		dumpGeneratedSensorDriver.dumpCompilationUnit(generatedCU);
 		generateSensorCode();  // Internal logic call
-		generateInterfaceCode(); // This function generates interfaces of sensor 	
-		
+		generateInterfaceCode(); // This function generates interfaces of sensor
 		for(int i=0; i< sensorDriver.getAllGeneratedInfo().size(); i++) {
 			generateSensorListener(sensorDriver.getAllGeneratedInfo().get(i)); // This function generates Listener
 		}
+		
+		generateSensorFactory(); // This function generates sensor factory
+		
+		
 	}
 	
+
+	private void generateSensorFactory() {
+		JavaFrameworkFromST generateSensorFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorFactory.buildAbstractClassoFSensorFactory(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorFacotry = new SourceFileDumper();
+		dumpGeneratedSensorFacotry.dumpCompilationUnit(generateCU);
+		
+	}
 
 	private void generateInterfaceCode() {  // This function generates interfaces of Sensor.
 		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();

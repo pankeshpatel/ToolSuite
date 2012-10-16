@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import fr.inria.arles.pankesh.common.*;
+import fr.inria.arles.pankesh.common.GlobalVariable;
 
 public class SourceFileDumper {
 
@@ -63,7 +63,15 @@ public class SourceFileDumper {
 			file = new File(GlobalVariable.outputDirPath
 					+ GlobalVariable.logicDirPath + "/" + unit.getName());
 
-		} else if (unit.getType().equals("Region")) {
+		} else if (unit.getType().equals("Factory")) {
+			
+			new File(GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
+			
+			file = new File(GlobalVariable.outputDirPath
+			+ GlobalVariable.factoryDirPath + "/" + unit.getName());
+		
+		
+	}else if (unit.getType().equals("Region")) {
 
 			// new File("./src/fr/inria/arles/pankesh/gen/util").mkdir();
 			/*

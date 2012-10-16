@@ -31,4 +31,12 @@ public class SensorDriver extends SoftwareComponent<SensorMeasurement> {
 		return packageName;
 	}
 
+	public String getFactoryPackageName() {
+
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.factoryDirPath);
+		return packageName;
+
+	}
+
 }

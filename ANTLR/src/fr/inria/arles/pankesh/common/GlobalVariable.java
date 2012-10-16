@@ -10,6 +10,7 @@ public class GlobalVariable {
 	public static String logicDirPath = "/logic";
 	public static String deviceDirPath = "/sim/device";
 	public static String utilDirPath = "/util";
+	public static String factoryDirPath = "/factory";
 	public static String stringTemplatePath;
 
 	/*

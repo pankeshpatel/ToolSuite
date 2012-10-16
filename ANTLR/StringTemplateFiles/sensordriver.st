@@ -23,7 +23,7 @@ public abstract class  $SensorDriver.name$ implements Runnable {
     }
 }; separator="\n"$
 	$SensorDriver.allGeneratedInfo:{ generatedInfo | private $generatedInfo.type.name$ $generatedInfo.name; format="avoidCapital"$;	
-	public abstract void handle$generatedInfo.name; format="capital"$();	
+	//public abstract void handle$generatedInfo.name; format="capital"$();	
     protected void set$generatedInfo.name; format="capital"$( $generatedInfo.type.name$ newValue) {
       if ($generatedInfo.name; format="avoidCapital"$ != newValue) {
         $generatedInfo.name; format="avoidCapital"$ = newValue; 

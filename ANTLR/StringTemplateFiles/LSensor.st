@@ -15,10 +15,10 @@ public class  Fake$SensorDriver.name$ extends $SensorDriver.name$  {
 	
 	$SensorDriver.allGeneratedInfo:{ generatedInfo | 	
 	
-	@Override
+	/*@Override
 	public void handle$generatedInfo.name; format="capital"$()	{
 	     // TODO : write code Here
-	}
+	} */
    
 }; separator="\n"$
 		

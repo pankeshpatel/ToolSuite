@@ -17,11 +17,6 @@ import fr.inria.arles.pankesh.semanticmodel.Structure;
 
 public class JavaFrameworkFromST {
 
-	/*
-	 * private StringTemplateGroup group = new StringTemplateGroup("myGroup",
-	 * "./StringTemplateFiles/", DefaultTemplateLexer.class);
-	 */
-
 	private StringTemplateGroup group = new StringTemplateGroup("myGroup",
 			GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
 
@@ -50,6 +45,17 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("I" + sensorDriver.getName() + ".java", 
 				templateOfSensorDriver, "Interface", "sensor");		
 	}
+	
+	public CompilationUnit buildAbstractClassoFSensorFactory(SensorDriver sensorDriver){
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensorfactory");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit(sensorDriver.getName() + "Factory" + ".java",
+				templateOfSensorDriver,"Factory", "Sensor");	
+	}
+	
+	
+	
+	
 	
 	public CompilationUnit buildAbstractClassoFSensorListener(SensorMeasurement sensorMeasurement){
 		
@@ -92,6 +98,17 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(storageService.getName() + ".java",
 				templateOfStorageService, "storageService", "Future");
 	}
+	
+	public CompilationUnit buildAbstractClassoFStorageFactory(StorageService storageService){
+		
+		StringTemplate templateOfStorageService = group.getInstanceOf("storagefactory");
+		templateOfStorageService.setAttribute("Storageservice", storageService);
+		return new CompilationUnit(storageService.getName() + "Factory" + ".java", 
+				templateOfStorageService, "Factory" , "Future");		
+	}
+	
+	
+	
 	
 	public CompilationUnit buildClassOFStorageInterface(StorageService storageService){
 		StringTemplate templateOfStorageService = group.getInstanceOf("storageinterface");
