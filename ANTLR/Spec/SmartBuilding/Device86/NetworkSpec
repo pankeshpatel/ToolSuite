@@ -1,0 +1,693 @@
+devices:
+	D1:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 110;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D2:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 110;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D3:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 110;
+		type :  Andriod;
+		abilities : Heater ;
+    D4:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 110;
+		type :  Andriod;
+		abilities : TemperatureSensor ; 
+    D5:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 110;
+		type :  Andriod;
+		abilities : TemperatureSensor ;       
+    D6:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 110;
+		type :  Andriod;
+		abilities : TemperatureSensor ;     
+    D7:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 111;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D8:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 111;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D9:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 111;
+		type :  Andriod;
+		abilities : Heater ;
+    D10:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 111;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D11:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 111;
+		type :  Andriod;
+		abilities : TemperatureSensor ;  
+    D12:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 112;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D13:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 112;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D14:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 112;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D15:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 112;
+		type :  Andriod;
+		abilities : Heater ;
+    D16:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 112;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D17:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 112;
+		type :  Andriod;
+		abilities : TemperatureSensor ;   
+    D18:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 113;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D19:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 113;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D20:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 113;
+		type :  Andriod;
+		abilities : Heater ;
+    D21:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1511;
+			Room : 113;
+		type :  Andriod;
+		abilities : TemperatureSensor ;   
+    D22:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 120;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D23:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 120;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D24:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 120;
+		type :  Andriod;
+		abilities : Heater ;
+    D25:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 120;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D26:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 120;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D27:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 121;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D28:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 121;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D29:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 121;
+		type :  Andriod;
+		abilities : Heater ;
+    D30:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 121;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D31:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 121;
+		type :  Andriod;
+		abilities : TemperatureSensor ;         
+    D32:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 122;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D33:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 122;
+		type :  Andriod;
+		abilities : TemperatureSensor ; 
+    D34:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 122;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D35:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 122;
+		type :  Andriod;
+		abilities : Heater ;
+    D36:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 122;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D37:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 122;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D38:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 123;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D39:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 123;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D40:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 123;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D41:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 123;
+		type :  Andriod;
+		abilities : Heater ;
+    D42:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 123;
+		type :  Andriod;
+		abilities : TemperatureSensor ;      
+    D43:
+		networkaddress: 128;
+	 	region :
+			Center : 15 ;
+			Floor : 1512;
+			Room : 123;
+		type :  Andriod;
+		abilities : TemperatureSensor, ProfileDB, Monitor ;       
+        D44:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 210;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D45:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 210;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D46:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 210;
+		type :  Andriod;
+		abilities : Heater ;
+    D47:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 210;
+		type :  Andriod;
+		abilities : TemperatureSensor ; 
+    D48:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 210;
+		type :  Andriod;
+		abilities : TemperatureSensor ;       
+    D49:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 211;
+		type :  Andriod;
+		abilities : TemperatureSensor ;     
+    D50:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 211;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D51:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 211;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D52:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 211;
+		type :  Andriod;
+		abilities : Heater ;
+    D53:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 211;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D54:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 211;
+		type :  Andriod;
+		abilities : TemperatureSensor ;  
+    D55:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 212;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D56:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 212;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D57:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 212;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D58:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 212;
+		type :  Andriod;
+		abilities : Heater ;
+    D59:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 212;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D60:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 212;
+		type :  Andriod;
+		abilities : TemperatureSensor ;   
+    D61:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 213;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D62:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 213;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D63:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 213;
+		type :  Andriod;
+		abilities : Heater ;
+    D64:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1621;
+			Room : 213;
+		type :  Andriod;
+		abilities : TemperatureSensor ;   
+    D65:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 220;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D66:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 220;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D67:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 220;
+		type :  Andriod;
+		abilities : Heater ;
+    D68:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 220;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D69:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 220;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D70:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 221;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D71:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 221;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D72:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 221;
+		type :  Andriod;
+		abilities : Heater ;
+    D73:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 221;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D74:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 221;
+		type :  Andriod;
+		abilities : TemperatureSensor ;         
+    D75:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 222;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D76:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 222;
+		type :  Andriod;
+		abilities : TemperatureSensor ; 
+    D77:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 222;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D78:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 222;
+		type :  Andriod;
+		abilities : Heater ;
+    D79:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 222;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D80:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 222;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D81:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 223;
+		type :  Andriod;
+		abilities : TemperatureSensor ;
+    D82:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 223;
+		type :  Andriod;
+		abilities : TemperatureSensor ;    
+    D83:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 223;
+		type :  Andriod;
+		abilities : BadgeReader ;
+    D84:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 223;
+		type :  Andriod;
+		abilities : Heater ;
+    D85:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 223;
+		type :  Andriod;
+		abilities : TemperatureSensor ;      
+    D86:
+		networkaddress: 128;
+	 	region :
+			Center : 16 ;
+			Floor : 1622;
+			Room : 223;
+		type :  Andriod;
+		abilities : TemperatureSensor, ProfileDB, Monitor ;
+     
+        
+    
+    
