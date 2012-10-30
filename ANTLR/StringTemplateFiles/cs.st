@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public abstract class  $CS.name$ implements Subscriber, Runnable, CommandListener{ 
+public abstract class  $CS.name$ implements Subscriber, Runnable{ 
 			
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
@@ -56,15 +56,15 @@ public abstract class  $CS.name$ implements Subscriber, Runnable, CommandListene
     protected  $generatedInfo.type.name$ get$generatedInfo.name; format="capital"$() {
       return  $generatedInfo.name; format="avoidCapital"$;
     }
-        public final Object commandReceived(String methodName, Object arg, Device deviceInfo)  {
-       
-        if (methodName.equals("get$CS.name$")) {
-            return get$generatedInfo.name; format="capital"$();
-        }
-        return null;
-        }   
+    
+  
         
 }; separator="\n"$
+		
+		
+		
+		
+		
        
         
         public void notifyReceived(String eventName, Object arg, Device deviceInfo) { 

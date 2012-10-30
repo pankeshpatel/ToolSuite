@@ -36,7 +36,7 @@ public class Device {
 		// this.regionLabel = regionLabel;
 		this.abilities = abilities;
 		this.softwarePlatform = softwarePlatform;
-		
+
 	}
 
 	public String getName() {
@@ -54,11 +54,10 @@ public class Device {
 	public String getNetworkAddress() {
 		return networkAddress;
 	}
-	
-	public String getSoftwarePlatform(){
-		return softwarePlatform ;
+
+	public String getSoftwarePlatform() {
+		return softwarePlatform;
 	}
-	
 
 	/*
 	 * public RegionLabel getRegionLabels() { return regionLabel; }

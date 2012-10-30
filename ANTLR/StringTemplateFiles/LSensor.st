@@ -1,7 +1,7 @@
 package $SensorDriver.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
-import fr.inria.arles.pankesh.factory.*;
+import factory.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
 
 import $SensorDriver.PackageName$.*;

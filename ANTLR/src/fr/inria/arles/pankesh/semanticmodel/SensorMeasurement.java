@@ -12,9 +12,9 @@ public class SensorMeasurement extends Information {
 	public DataType getDataType() {
 		return type;
 	}
-	
+
 	private String packageName;
-	
+
 	public String getPackageName() {
 
 		packageName = GlobalVariable

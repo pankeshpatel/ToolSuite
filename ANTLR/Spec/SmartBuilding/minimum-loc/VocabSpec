@@ -1,0 +1,25 @@
+regions :
+	Room : Integer ;
+	
+structs:
+	BadgeDetectedStruct
+		badgeID : String; 
+			   
+	TempStruct
+		tempValue : double;
+		        
+abilities:
+	sensors:
+		BadgeReader  
+			generate badgeDetected : BadgeDetectedStruct;
+		
+		TemperatureSensor 
+			generate  tempMeasurement : TempStruct;
+
+	actuators:
+		Heater
+			action Off();
+	
+					
+		Monitor
+			action Display(displayTemp : TempStruct);

@@ -64,14 +64,14 @@ public class SourceFileDumper {
 					+ GlobalVariable.logicDirPath + "/" + unit.getName());
 
 		} else if (unit.getType().equals("Factory")) {
-			
-			new File(GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
-			
+
+			new File(GlobalVariable.outputDirPath
+					+ GlobalVariable.factoryDirPath).mkdirs();
+
 			file = new File(GlobalVariable.outputDirPath
-			+ GlobalVariable.factoryDirPath + "/" + unit.getName());
-		
-		
-	}else if (unit.getType().equals("Region")) {
+					+ GlobalVariable.factoryDirPath + "/" + unit.getName());
+
+		} else if (unit.getType().equals("Region")) {
 
 			// new File("./src/fr/inria/arles/pankesh/gen/util").mkdir();
 			/*

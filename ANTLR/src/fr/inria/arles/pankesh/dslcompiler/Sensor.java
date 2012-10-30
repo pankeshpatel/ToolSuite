@@ -36,52 +36,53 @@ public class Sensor {
 
 	}
 
-	// This function generates (1) framework of Sensor (2) Internal logic of Sensor
-	// (3)  interface code        .
+	// This function generates (1) framework of Sensor (2) Internal logic of
+	// Sensor
+	// (3) interface code .
 	public void generateCode() {
 		JavaFrameworkFromST generatedSensorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedSensorDriver
 				.buildAbstractClassoFSensorDriver(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorDriver = new SourceFileDumper();
 		dumpGeneratedSensorDriver.dumpCompilationUnit(generatedCU);
-		generateSensorCode();  // Internal logic call
+		generateSensorCode(); // Internal logic call
 		generateInterfaceCode(); // This function generates interfaces of sensor
-		for(int i=0; i< sensorDriver.getAllGeneratedInfo().size(); i++) {
-			generateSensorListener(sensorDriver.getAllGeneratedInfo().get(i)); // This function generates Listener
+		for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+			generateSensorListener(sensorDriver.getAllGeneratedInfo().get(i)); // This
+																				// function
+																				// generates
+																				// Listener
 		}
-		
+
 		generateSensorFactory(); // This function generates sensor factory
-		
-		
+
 	}
-	
 
 	private void generateSensorFactory() {
 		JavaFrameworkFromST generateSensorFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorFactory.buildAbstractClassoFSensorFactory(sensorDriver);
+		CompilationUnit generateCU = generateSensorFactory
+				.buildAbstractClassoFSensorFactory(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorFacotry = new SourceFileDumper();
 		dumpGeneratedSensorFacotry.dumpCompilationUnit(generateCU);
-		
+
 	}
 
-	private void generateInterfaceCode() {  // This function generates interfaces of Sensor.
+	private void generateInterfaceCode() { // This function generates interfaces
+											// of Sensor.
 		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorInterface.buildAbstractClassoFSensorInterface(sensorDriver);
+		CompilationUnit generateCU = generateSensorInterface
+				.buildAbstractClassoFSensorInterface(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorInterface = new SourceFileDumper();
 		dumpGeneratedSensorInterface.dumpCompilationUnit(generateCU);
 	}
-	
-	public void generateSensorListener(SensorMeasurement sensorMeasurement){
+
+	public void generateSensorListener(SensorMeasurement sensorMeasurement) {
 		JavaFrameworkFromST generateSensorListener = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorListener.buildAbstractClassoFSensorListener(sensorMeasurement);
+		CompilationUnit generateCU = generateSensorListener
+				.buildAbstractClassoFSensorListener(sensorMeasurement);
 		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
-		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);		
+		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}
-	
-	
-	
-	
-	
 
 	// Getter and Setter of GeneratedInfo
 

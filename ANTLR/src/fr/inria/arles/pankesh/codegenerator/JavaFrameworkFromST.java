@@ -37,37 +37,36 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Fake" + sensorDriver.getName() + ".java",
 				templateOfSensorDriver, "Logic", "sensor");
 	}
-	
-	public CompilationUnit buildAbstractClassoFSensorInterface (SensorDriver sensorDriver){
-		
+
+	public CompilationUnit buildAbstractClassoFSensorInterface(
+			SensorDriver sensorDriver) {
+
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("ISensor");
-		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);		
-		return new CompilationUnit("I" + sensorDriver.getName() + ".java", 
-				templateOfSensorDriver, "Interface", "sensor");		
-	}
-	
-	public CompilationUnit buildAbstractClassoFSensorFactory(SensorDriver sensorDriver){
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensorfactory");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
-		return new CompilationUnit(sensorDriver.getName() + "Factory" + ".java",
-				templateOfSensorDriver,"Factory", "Sensor");	
+		return new CompilationUnit("I" + sensorDriver.getName() + ".java",
+				templateOfSensorDriver, "Interface", "sensor");
 	}
-	
-	
-	
-	
-	
-	public CompilationUnit buildAbstractClassoFSensorListener(SensorMeasurement sensorMeasurement){
-		
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("SensorListener");
-		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);		
-		return new CompilationUnit( "Listener" + sensorMeasurement.getName()  + ".java",
-					templateOfSensorDriver, "Listener" , "sensor" );
-		
+
+	public CompilationUnit buildAbstractClassoFSensorFactory(
+			SensorDriver sensorDriver) {
+		StringTemplate templateOfSensorDriver = group
+				.getInstanceOf("sensorfactory");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit(
+				sensorDriver.getName() + "Factory" + ".java",
+				templateOfSensorDriver, "Factory", "Sensor");
 	}
-	
-	
-	
+
+	public CompilationUnit buildAbstractClassoFSensorListener(
+			SensorMeasurement sensorMeasurement) {
+
+		StringTemplate templateOfSensorDriver = group
+				.getInstanceOf("SensorListener");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);
+		return new CompilationUnit("Listener" + sensorMeasurement.getName()
+				+ ".java", templateOfSensorDriver, "Listener", "sensor");
+
+	}
 
 	public CompilationUnit buildAbstractClassoFActuatorDriver(
 			ActuatorDriver actuatorDriver) {
@@ -98,22 +97,23 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(storageService.getName() + ".java",
 				templateOfStorageService, "storageService", "Future");
 	}
-	
-	public CompilationUnit buildAbstractClassoFStorageFactory(StorageService storageService){
-		
-		StringTemplate templateOfStorageService = group.getInstanceOf("storagefactory");
+
+	public CompilationUnit buildAbstractClassoFStorageFactory(
+			StorageService storageService) {
+
+		StringTemplate templateOfStorageService = group
+				.getInstanceOf("storagefactory");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
-		return new CompilationUnit(storageService.getName() + "Factory" + ".java", 
-				templateOfStorageService, "Factory" , "Future");		
+		return new CompilationUnit(storageService.getName() + "Factory"
+				+ ".java", templateOfStorageService, "Factory", "Future");
 	}
-	
-	
-	
-	
-	public CompilationUnit buildClassOFStorageInterface(StorageService storageService){
-		StringTemplate templateOfStorageService = group.getInstanceOf("storageinterface");
+
+	public CompilationUnit buildClassOFStorageInterface(
+			StorageService storageService) {
+		StringTemplate templateOfStorageService = group
+				.getInstanceOf("storageinterface");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
-		return new CompilationUnit("I" + storageService.getName() + ".java", 
+		return new CompilationUnit("I" + storageService.getName() + ".java",
 				templateOfStorageService, "storageService", "Future");
 	}
 

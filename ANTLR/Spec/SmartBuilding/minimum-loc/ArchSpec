@@ -1,0 +1,43 @@
+structs:    
+	UserTempPrefStruct
+		tempValue : double;			
+
+softwarecomponents:
+    storageService
+  		ProfileDB			
+			generate profile : TempStruct accessed-by badgeID : String;
+			generate profileOne : TempStruct accessed-by badgeID : String;
+			deployment-instance : singleton;
+
+    computationalService
+		RoomAvgTemp			
+			generate roomAvgTempMeasurement :TempStruct;
+		    consume tempMeasurement from region-hops:0: Room;
+		    partition-per : Room ;
+		    
+		FloorAvgTemp			
+			generate floorAvgTempMeasurement : TempStruct;
+			consume roomAvgTempMeasurement from region-hops : 0 : Room;
+			partition-per :  Room;
+		
+		CenterAvgTemp			
+			generate centerAvgTempMeasurement : TempStruct;
+			consume floorAvgTempMeasurement from region-hops : 0 : Room;
+			partition-per : Room;	
+	
+		Proximity			
+			generate tempPref : UserTempPrefStruct;
+			consume badgeDetected from region-hops : 0 : Room;		
+			request profile;			
+			partition-per : Room;
+			
+	controller
+		RegulateTemp			
+			consume roomAvgTempMeasurement from region-hops : 0 : Room;			
+			command Off() to region-hops:0:Room;		
+			partition-per : Room;
+		
+		ManageTemp			
+			consume centerAvgTempMeasurement from region-hops:0:Room;
+			command Display(displayTemp) to region-hops:0:Room;
+			partition-per : Room;

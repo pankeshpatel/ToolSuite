@@ -63,17 +63,6 @@ public abstract class  $SensorDriver.name$ implements Runnable {
 				}
 			}
 		}	    
-	    protected abstract void handleExpiryOfTimer();
-	    
+	    protected abstract void handleExpiryOfTimer(); 
 	      
 }
-
-
-
-
-    
-	
-	
-    
-
-    

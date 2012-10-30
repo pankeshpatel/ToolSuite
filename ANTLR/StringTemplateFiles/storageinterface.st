@@ -15,7 +15,9 @@ public interface  I$Storageservice.name$   {
   public $dataAccess.generatedInfo.type.name$ get$dataAccess.dataAccessName$($dataAccess.query.type.name; format="capital" $ index); 
   
   
-}$  
+}$
+
+  public abstract boolean isEventDriven();   
 
 }
     

@@ -19,9 +19,8 @@ public class DeviceNetwork {
 	private String networkAddress;
 	private String deviceName;
 	private String softwarePlatform;
-	
+
 	private List<Device> deviceList = new ArrayList<Device>();
-	
 
 	public DeviceNetwork() {
 	}
@@ -35,16 +34,16 @@ public class DeviceNetwork {
 		Context.addDeviceinSymblTable(device);
 
 	}
-	
-	// Getter and Setter of  Software Platform
-	
+
+	// Getter and Setter of Software Platform
+
 	public void setSoftwarePlatform(String softwarePlatform) {
 		this.softwarePlatform = softwarePlatform;
 	}
-	
-	public String getSoftwarePlatform(){
+
+	public String getSoftwarePlatform() {
 		return softwarePlatform;
-	}	
+	}
 
 	// Getter and Setter of DeviceName
 	public void setDeviceName(String deviceName) {

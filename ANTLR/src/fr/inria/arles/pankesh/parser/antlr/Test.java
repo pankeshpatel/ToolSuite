@@ -19,8 +19,9 @@ public class Test {
 	public static void main(String[] args) throws Exception {
 
 		if (args.length != 4) {
-			
-		System.out.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
+
+			System.out
+					.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
 							+ "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
 							+ "<relativepathfordevices> <relativepathforutil> ");
 			System.exit(1);
@@ -37,20 +38,22 @@ public class Test {
 		List<DeployementConstraint> mappingConstraintList;
 
 		// This code parses the Vocabulary Specification
-		
-		ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+
+		ANTLRFileStream vocStream = new ANTLRFileStream(
+				GlobalVariable.vocabSpec);
 		VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 		CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 		VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 		vocParser.vocabSpec();
-		
+
 		// This code parses the Architecture Specificaton
-		ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
+		ANTLRFileStream archStream = new ANTLRFileStream(
+				GlobalVariable.archSpec);
 		ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
 		CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 		ArchSpecParser archParser = new ArchSpecParser(archTokens);
 		archParser.archSpec();
-		
+
 		mappingConstraintList = Context.getDeploymentConstrainsList();
 
 		// This code parses the Network description.
