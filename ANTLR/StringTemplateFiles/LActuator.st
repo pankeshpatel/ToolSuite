@@ -3,6 +3,7 @@ package $Actuatordriver.logicPackageName$;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import $Actuatordriver.PackageName$.*;
+import factory.*;
   
    
 public  class  Fake$Actuatordriver.name$ extends $Actuatordriver.name$  {	
@@ -15,8 +16,8 @@ public  class  Fake$Actuatordriver.name$ extends $Actuatordriver.name$  {
     $Actuatordriver.allActions:{ action |     
     @Override
     protected  void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; separator=", "$) {
-      //TODO : write code here
-    
+     I$Actuatordriver.name$ obj$Actuatordriver.name$ = $Actuatordriver.name$Factory.get$Actuatordriver.name$("Android");
+     obj$Actuatordriver.name$.$action.name$($action.allParameter:{ param | arg }; separator=", "$);
     }
     
     }; separator="\n"$

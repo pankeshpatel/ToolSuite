@@ -77,6 +77,17 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(actuatorDriver.getName() + ".java",
 				templateOfActuatorDriver, "actuatorDriver", "Future");
 	}
+	
+	public CompilationUnit buildActuatorInterface(
+			ActuatorDriver actuatorDriver) {
+
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("iactuator");
+		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
+		return new CompilationUnit("I" + actuatorDriver.getName() + ".java",
+				templateOfActuatorDriver, "Interface", "actuator");
+	}
+	
+	
 
 	public CompilationUnit buildAbstractClassoFActuator(
 			ActuatorDriver actuatorDriver) {
