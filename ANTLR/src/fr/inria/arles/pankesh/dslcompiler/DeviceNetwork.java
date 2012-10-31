@@ -14,7 +14,6 @@ public class DeviceNetwork {
 	private Set<String> deviceAbilities = new HashSet<String>();
 	private List<String> regionLabels = new ArrayList<String>();
 	private List<String> regionValue = new ArrayList<String>();
-	private String deviceID;
 	private String deviceType;
 	private String networkAddress;
 	private String deviceName;
@@ -27,9 +26,9 @@ public class DeviceNetwork {
 
 	public void addDeviceObj() {
 
-		device = new Device(getDeviceName(), getDeviceID(), getDeviceType(),
+		device = new Device(getDeviceName(), getDeviceType(),
 				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities, softwarePlatform);
+				deviceAbilities);
 
 		Context.addDeviceinSymblTable(device);
 
@@ -54,14 +53,7 @@ public class DeviceNetwork {
 		return deviceName;
 	}
 
-	// Getter and setter of DeviceID
-	public String getDeviceID() {
-		return deviceID;
-	}
-
-	public void setDeviceID(String deviceID) {
-		this.deviceID = deviceID;
-	}
+	
 
 	// Getter and Setter of DeviceType
 

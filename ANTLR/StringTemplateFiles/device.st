@@ -12,8 +12,6 @@ import $device.logicPackageName$.*;
 public class Startup implements DeviceStartup {
 	
 	private static String name ;
-	private static String id ;
-	private static String type ;
 	private static String softwarePlatform;
 	private static String networkAddress;
 	private static Set<String> abilities = new HashSet<String>();
@@ -33,10 +31,8 @@ private static void setUpNode(Device deviceInfo)	{
 private static Device setUpDeviceInfo() {
     
 	 name = "$device.name$";
-	 id =  "$device.Id$";
-	 type = "$device.type$";
-	 softwarePlatform = "Android";
-	networkAddress =  "$device.networkAddress$";
+	 softwarePlatform = "$device.type$";
+	 networkAddress =  "$device.networkAddress$";
 	
 		
 	$device.abilities:{ sc | abilities.add("$sc$"); }$ 
@@ -48,7 +44,7 @@ private static Device setUpDeviceInfo() {
   
   $device.RegionLabels:{ region | regionLabels.add("$region$"); } $
 	
-	Device device = new Device(name , id , type, networkAddress, regionIDs, regionLabels , abilities, softwarePlatform);
+	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , abilities);
 	return device;    
 }
 

@@ -72,7 +72,7 @@ public void run() {
 			
 			
 	I$SensorDriver.name$ obj$SensorDriver.name$ = $SensorDriver.name$Factory
-			.get$SensorDriver.name$(myDeviceInfo.getSoftwarePlatform());
+			.get$SensorDriver.name$(myDeviceInfo.getType());
 
 	if (obj$SensorDriver.name$.isEventDriven()) {
 
