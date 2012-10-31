@@ -44,7 +44,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, CommandListene
     	
 		   $action.name$($action.allParameter:{ param | ($param.type.name$)arg }; separator=", "$);
 		   return null;
-      } }; separator=" else "$
+      } }; separator="\n"$
     		  return null;
     }	
     
