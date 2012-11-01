@@ -38,8 +38,16 @@ public class Actuator {
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 		generateActuator(); // This function call will create a partial Logic
 							// files
-		generateActuatorInterface(); // This function call will create Interface of Heater.
+		generateActuatorInterface(); // This function call will create Interface of Actuator.		
+		generateActuatorFactory();
 		
+	}
+
+	private void generateActuatorFactory() {
+		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedActuatorDriver.buildFactoryofActuator(actuatorDriver);
+		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);		
 	}
 
 	private void generateActuatorInterface() {

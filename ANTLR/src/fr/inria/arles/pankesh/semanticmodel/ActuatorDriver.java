@@ -41,5 +41,13 @@ public class ActuatorDriver extends SoftwareComponent<Information> {
 				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
+	
+	public String getFactoryPackageName() {
+
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.factoryDirPath);
+		return packageName;
+
+	}
 
 }
