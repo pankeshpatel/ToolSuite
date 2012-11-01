@@ -55,7 +55,16 @@ public class Sensor {
 		}
 
 		generateSensorFactory(); // This function generates sensor factory
+		
+		generateSensorImplFactory();
 
+	}
+
+	private void generateSensorImplFactory() {
+		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorImplFactory.buildImploFSensorFactory(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);		
 	}
 
 	private void generateSensorFactory() {

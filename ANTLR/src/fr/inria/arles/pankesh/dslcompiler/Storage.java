@@ -53,6 +53,15 @@ public class Storage {
 
 		generateStorageFactory(); // This function will generate StorageService
 									// Interface.
+		generateStorageImplFactory();
+		
+	}
+
+	private void generateStorageImplFactory() {
+		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generateStorageFactory.buildImploFStorageFactory(storageService);
+		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
+		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);		
 	}
 
 	private void generateStorageFactory() {

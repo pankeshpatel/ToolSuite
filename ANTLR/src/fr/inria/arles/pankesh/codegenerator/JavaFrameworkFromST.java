@@ -39,6 +39,14 @@ public class JavaFrameworkFromST {
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("I" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Interface", "sensor");
 	}
+	
+	public CompilationUnit buildImploFSensorFactory(SensorDriver sensorDriver) {
+
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("implsensor");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit("Impl" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor");
+	}
+	
 
 	public CompilationUnit buildAbstractClassoFSensorFactory(SensorDriver sensorDriver) {
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensorfactory");
@@ -80,6 +88,15 @@ public class JavaFrameworkFromST {
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Fake" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Logic", "actuator");
 	}
+	
+	public CompilationUnit buildImploFActuatorFactory(ActuatorDriver actuatorDriver) {
+
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("implactuator");
+		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
+		return new CompilationUnit("Impl" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator");
+	}
+	
+	
 
 	public CompilationUnit buildAbstractClassOFStorageService(StorageService storageService) {
 
@@ -87,6 +104,15 @@ public class JavaFrameworkFromST {
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + ".java", templateOfStorageService, "storageService", "Future");
 	}
+	
+	public CompilationUnit buildImploFStorageFactory(StorageService storageService) {
+
+		StringTemplate templateOfStorageService = group.getInstanceOf("implstorage");
+		templateOfStorageService.setAttribute("Storageservice", storageService);
+		return new CompilationUnit("Impl" + storageService.getName() + ".java", templateOfStorageService, "ImplFactory", "actuator");
+	}
+	
+	
 
 	public CompilationUnit buildAbstractClassoFStorageFactory(StorageService storageService) {
 

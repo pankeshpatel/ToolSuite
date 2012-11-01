@@ -17,7 +17,5 @@ public abstract interface  I$SensorDriver.name$ {
 
 
    public abstract boolean isEventDriven(); 
-       
-     
-        
+   
 }

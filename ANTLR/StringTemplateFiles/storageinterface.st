@@ -1,7 +1,5 @@
 package $Storageservice.packageName$;
 
-
-
 public interface  I$Storageservice.name$   {  
   
    

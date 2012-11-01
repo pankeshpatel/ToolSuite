@@ -48,5 +48,11 @@ public class StorageService extends SoftwareComponent {
 				.convertPathTopackage(GlobalVariable.factoryDirPath);
 		return packageName;
 	}
+	
+		public String getDeviceImplPackageName(){
+		
+		packageName  = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		return packageName;		
+	}
 
 }

@@ -41,6 +41,16 @@ public class Actuator {
 		generateActuatorInterface(); // This function call will create Interface of Actuator.		
 		generateActuatorFactory();
 		
+		generateActuatorFactoryImpl();
+		
+	}
+
+	private void generateActuatorFactoryImpl() {
+		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedActuatorDriver.buildImploFActuatorFactory(actuatorDriver);
+		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);	
+		
 	}
 
 	private void generateActuatorFactory() {

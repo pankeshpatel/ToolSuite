@@ -71,7 +71,16 @@ public class SourceFileDumper {
 			file = new File(GlobalVariable.outputDirPath
 					+ GlobalVariable.factoryDirPath + "/" + unit.getName());
 
-		} else if (unit.getType().equals("Region")) {
+		} else if (unit.getType().equals("ImplFactory")) {
+			
+			new File(GlobalVariable.outputDirPath
+			 +  GlobalVariable.deviceImplDirPath).mkdirs();
+			
+			file = new File(GlobalVariable.outputDirPath
+			     + GlobalVariable.deviceImplDirPath + "/" + unit.getName());			
+		}
+		
+		else if (unit.getType().equals("Region")) {
 
 			// new File("./src/fr/inria/arles/pankesh/gen/util").mkdir();
 			/*

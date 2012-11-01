@@ -11,6 +11,7 @@ public class GlobalVariable {
 	public static String deviceDirPath = "/sim/device";
 	public static String utilDirPath = "/util";
 	public static String factoryDirPath = "/factory";
+	public static String deviceImplDirPath = "/deviceImpl";
 	public static String stringTemplatePath;
 
 	/*

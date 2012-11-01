@@ -49,5 +49,14 @@ public class ActuatorDriver extends SoftwareComponent<Information> {
 		return packageName;
 
 	}
+	
+	
+	public String getFactoryDeviceImplActuator() {
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		
+		return packageName;
+		
+		
+	}
 
 }
