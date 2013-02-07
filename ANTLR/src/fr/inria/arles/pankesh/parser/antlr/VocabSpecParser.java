@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g 2013-02-07 14:22:05
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g 2013-02-07 15:09:07
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 
@@ -1939,11 +1939,11 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "abilities_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ 'storages' ':' ( ss_def )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ( ss_def ) )* ;
     public final void abilities_def() throws RecognitionException {
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ 'storages' ':' ( ss_def )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ 'storages' ':' ( ss_def )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ( ss_def ) )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ( 'storages' ':' ( ss_def ) )*
             {
             match(input,35,FOLLOW_35_in_abilities_def1007); 
 
@@ -2023,29 +2023,35 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            match(input,38,FOLLOW_38_in_abilities_def1031); 
-
-            match(input,11,FOLLOW_11_in_abilities_def1034); 
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:19: ( ss_def )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:3: ( 'storages' ':' ( ss_def ) )*
             loop27:
             do {
                 int alt27=2;
                 int LA27_0 = input.LA(1);
 
-                if ( (LA27_0==CAPITALIZED_ID) ) {
+                if ( (LA27_0==38) ) {
                     alt27=1;
                 }
 
 
                 switch (alt27) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:20: ss_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:4: 'storages' ':' ( ss_def )
             	    {
-            	    pushFollow(FOLLOW_ss_def_in_abilities_def1037);
+            	    match(input,38,FOLLOW_38_in_abilities_def1032); 
+
+            	    match(input,11,FOLLOW_11_in_abilities_def1035); 
+
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:20: ( ss_def )
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:21: ss_def
+            	    {
+            	    pushFollow(FOLLOW_ss_def_in_abilities_def1038);
             	    ss_def();
 
             	    state._fsp--;
+
+
+            	    }
 
 
             	    }
@@ -2083,7 +2089,7 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:238:11: ( CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:239:5: CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )*
             {
-            CAPITALIZED_ID27=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def1053); 
+            CAPITALIZED_ID27=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def1055); 
 
             context.currentSensor = new Sensor((CAPITALIZED_ID27!=null?CAPITALIZED_ID27.getText():null));
 
@@ -2102,13 +2108,13 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:241:6: attribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_attribute_def_in_sensor_def1066);
+            	    pushFollow(FOLLOW_attribute_def_in_sensor_def1068);
             	    attribute_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_sensor_def1068); 
+            	    match(input,12,FOLLOW_12_in_sensor_def1070); 
 
             	    }
             	    break;
@@ -2134,13 +2140,13 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:242:6: sensorMeasurement_def ';'
             	    {
-            	    pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def1077);
+            	    pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def1079);
             	    sensorMeasurement_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_sensor_def1079); 
+            	    match(input,12,FOLLOW_12_in_sensor_def1081); 
 
             	    }
             	    break;
@@ -2182,17 +2188,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:246:14: ( 'attribute' lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:247:5: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_attribute_def1100); 
+            match(input,19,FOLLOW_19_in_attribute_def1102); 
 
-            pushFollow(FOLLOW_lc_id_in_attribute_def1102);
+            pushFollow(FOLLOW_lc_id_in_attribute_def1104);
             lc_id28=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_attribute_def1104); 
+            match(input,11,FOLLOW_11_in_attribute_def1106); 
 
-            pushFollow(FOLLOW_dataType_in_attribute_def1106);
+            pushFollow(FOLLOW_dataType_in_attribute_def1108);
             dataType29=dataType();
 
             state._fsp--;
@@ -2228,17 +2234,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:251:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:252:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,28,FOLLOW_28_in_sensorMeasurement_def1126); 
+            match(input,28,FOLLOW_28_in_sensorMeasurement_def1128); 
 
-            pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def1128);
+            pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def1130);
             lc_id30=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_sensorMeasurement_def1130); 
+            match(input,11,FOLLOW_11_in_sensorMeasurement_def1132); 
 
-            CAPITALIZED_ID31=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1133); 
+            CAPITALIZED_ID31=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1135); 
 
              context.currentSensor.addSensorMeasurement((lc_id30!=null?input.toString(lc_id30.start,lc_id30.stop):null), (CAPITALIZED_ID31!=null?CAPITALIZED_ID31.getText():null)); 
                 context.constructSymbTable((lc_id30!=null?input.toString(lc_id30.start,lc_id30.stop):null), (CAPITALIZED_ID31!=null?CAPITALIZED_ID31.getText():null)); 
@@ -2269,7 +2275,7 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:257:13: ( CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:258:4: CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )*
             {
-            CAPITALIZED_ID32=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def1151); 
+            CAPITALIZED_ID32=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def1153); 
 
             context.currentActuator = new Actuator((CAPITALIZED_ID32!=null?CAPITALIZED_ID32.getText():null));
 
@@ -2288,13 +2294,13 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:260:5: actuatorAttribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_actuatorAttribute_def_in_actuator_def1162);
+            	    pushFollow(FOLLOW_actuatorAttribute_def_in_actuator_def1164);
             	    actuatorAttribute_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_actuator_def1164); 
+            	    match(input,12,FOLLOW_12_in_actuator_def1166); 
 
             	    }
             	    break;
@@ -2320,13 +2326,13 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:261:5: action_def ';'
             	    {
-            	    pushFollow(FOLLOW_action_def_in_actuator_def1172);
+            	    pushFollow(FOLLOW_action_def_in_actuator_def1174);
             	    action_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_actuator_def1174); 
+            	    match(input,12,FOLLOW_12_in_actuator_def1176); 
 
             	    }
             	    break;
@@ -2368,17 +2374,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:265:22: ( 'attribute' lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:266:6: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_actuatorAttribute_def1197); 
+            match(input,19,FOLLOW_19_in_actuatorAttribute_def1199); 
 
-            pushFollow(FOLLOW_lc_id_in_actuatorAttribute_def1199);
+            pushFollow(FOLLOW_lc_id_in_actuatorAttribute_def1201);
             lc_id33=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_actuatorAttribute_def1201); 
+            match(input,11,FOLLOW_11_in_actuatorAttribute_def1203); 
 
-            pushFollow(FOLLOW_dataType_in_actuatorAttribute_def1203);
+            pushFollow(FOLLOW_dataType_in_actuatorAttribute_def1205);
             dataType34=dataType();
 
             state._fsp--;
@@ -2412,11 +2418,11 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:270:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:271:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
             {
-            match(input,17,FOLLOW_17_in_action_def1222); 
+            match(input,17,FOLLOW_17_in_action_def1224); 
 
-            CAPITALIZED_ID35=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def1224); 
+            CAPITALIZED_ID35=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def1226); 
 
-            match(input,8,FOLLOW_8_in_action_def1226); 
+            match(input,8,FOLLOW_8_in_action_def1228); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:271:33: ( parameter_def )?
             int alt32=2;
@@ -2429,7 +2435,7 @@ public class VocabSpecParser extends Parser {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:271:34: parameter_def
                     {
-                    pushFollow(FOLLOW_parameter_def_in_action_def1229);
+                    pushFollow(FOLLOW_parameter_def_in_action_def1231);
                     parameter_def();
 
                     state._fsp--;
@@ -2441,7 +2447,7 @@ public class VocabSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_action_def1233); 
+            match(input,9,FOLLOW_9_in_action_def1235); 
 
              context.currentActuator.addAction((CAPITALIZED_ID35!=null?CAPITALIZED_ID35.getText():null)); 
 
@@ -2473,15 +2479,15 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:275:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:276:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_parameter_def1253);
+            pushFollow(FOLLOW_lc_id_in_parameter_def1255);
             lc_id36=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_parameter_def1255); 
+            match(input,11,FOLLOW_11_in_parameter_def1257); 
 
-            CAPITALIZED_ID37=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def1258); 
+            CAPITALIZED_ID37=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def1260); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:276:31: ( ',' parameter_def )?
             int alt33=2;
@@ -2494,9 +2500,9 @@ public class VocabSpecParser extends Parser {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:276:32: ',' parameter_def
                     {
-                    match(input,10,FOLLOW_10_in_parameter_def1261); 
+                    match(input,10,FOLLOW_10_in_parameter_def1263); 
 
-                    pushFollow(FOLLOW_parameter_def_in_parameter_def1263);
+                    pushFollow(FOLLOW_parameter_def_in_parameter_def1265);
                     parameter_def();
 
                     state._fsp--;
@@ -2663,41 +2669,41 @@ public class VocabSpecParser extends Parser {
     public static final BitSet FOLLOW_sensor_def_in_abilities_def1014 = new BitSet(new long[]{0x0000000000040010L});
     public static final BitSet FOLLOW_18_in_abilities_def1020 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_11_in_abilities_def1022 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_actuator_def_in_abilities_def1025 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_38_in_abilities_def1031 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_abilities_def1034 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ss_def_in_abilities_def1037 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensor_def1053 = new BitSet(new long[]{0x0000000010080002L});
-    public static final BitSet FOLLOW_attribute_def_in_sensor_def1066 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_sensor_def1068 = new BitSet(new long[]{0x0000000010080002L});
-    public static final BitSet FOLLOW_sensorMeasurement_def_in_sensor_def1077 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_sensor_def1079 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_19_in_attribute_def1100 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_attribute_def1102 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_attribute_def1104 = new BitSet(new long[]{0x000000002410E000L});
-    public static final BitSet FOLLOW_dataType_in_attribute_def1106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_sensorMeasurement_def1126 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_sensorMeasurement_def1128 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_sensorMeasurement_def1130 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def1151 = new BitSet(new long[]{0x00000000000A0002L});
-    public static final BitSet FOLLOW_actuatorAttribute_def_in_actuator_def1162 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_actuator_def1164 = new BitSet(new long[]{0x00000000000A0002L});
-    public static final BitSet FOLLOW_action_def_in_actuator_def1172 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_actuator_def1174 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_19_in_actuatorAttribute_def1197 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_actuatorAttribute_def1199 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_actuatorAttribute_def1201 = new BitSet(new long[]{0x000000002410E000L});
-    public static final BitSet FOLLOW_dataType_in_actuatorAttribute_def1203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_action_def1222 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def1224 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_action_def1226 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_parameter_def_in_action_def1229 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_action_def1233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_parameter_def1253 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_parameter_def1255 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def1258 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_parameter_def1261 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_parameter_def_in_parameter_def1263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_actuator_def_in_abilities_def1025 = new BitSet(new long[]{0x0000004000000012L});
+    public static final BitSet FOLLOW_38_in_abilities_def1032 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_abilities_def1035 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ss_def_in_abilities_def1038 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensor_def1055 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_attribute_def_in_sensor_def1068 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_sensor_def1070 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_sensorMeasurement_def_in_sensor_def1079 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_sensor_def1081 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_19_in_attribute_def1102 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_attribute_def1104 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_attribute_def1106 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_attribute_def1108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_sensorMeasurement_def1128 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_sensorMeasurement_def1130 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_sensorMeasurement_def1132 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def1153 = new BitSet(new long[]{0x00000000000A0002L});
+    public static final BitSet FOLLOW_actuatorAttribute_def_in_actuator_def1164 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_actuator_def1166 = new BitSet(new long[]{0x00000000000A0002L});
+    public static final BitSet FOLLOW_action_def_in_actuator_def1174 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_actuator_def1176 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_19_in_actuatorAttribute_def1199 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_actuatorAttribute_def1201 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_actuatorAttribute_def1203 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_actuatorAttribute_def1205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_action_def1224 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def1226 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_action_def1228 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_parameter_def_in_action_def1231 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_action_def1235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_parameter_def1255 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_parameter_def1257 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def1260 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_parameter_def1263 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_parameter_def_in_parameter_def1265 = new BitSet(new long[]{0x0000000000000002L});
 
 }

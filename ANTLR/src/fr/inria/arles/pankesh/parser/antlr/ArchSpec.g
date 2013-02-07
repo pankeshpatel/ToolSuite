@@ -28,9 +28,7 @@ archSpec :
     context.currentMappingConstraint = new MappingConstraint(); }
   //  ':' (region_def)+  
     { context.currentRegion.generateCode(); }   
-    'structs'         
-        ':'       
-    (struct_def)+  
+    ('structs' ':' struct_def)*  
    // 'abilities' ':' abilities_def  
     'softwarecomponents' ':' component_def 
 ;

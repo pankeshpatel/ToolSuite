@@ -232,7 +232,7 @@ primitiveType:
 abilities_def :
   'sensors' ':'   (sensor_def)+
   'actuators' ':' (actuator_def)+
-  'storages'  ':' (ss_def)*
+  ('storages'  ':' (ss_def))*
  ; 
 
 sensor_def:
