@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g 2013-02-07 15:10:47
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g 2013-02-07 18:35:28
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class ArchSpecParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", "WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", "'accessed-by'", "'action'", "'actuators'", "'attribute'", "'boolean'", "'command'", "'computationalService'", "'consume'", "'deployment-instance'", "'double'", "'from'", "'generate'", "'long'", "'partition-per'", "'region-hops'", "'request'", "'sensors'", "'singleton'", "'softwarecomponents'", "'structs'", "'to'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", "WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", "'accessed-by'", "'action'", "'actuators'", "'attribute'", "'boolean'", "'command'", "'computationalService'", "'consume'", "'controller'", "'deployment-instance'", "'double'", "'from'", "'generate'", "'long'", "'partition-per'", "'region-hops'", "'request'", "'sensors'", "'singleton'", "'softwarecomponents'", "'structs'", "'to'"
     };
 
     public static final int EOF=-1;
@@ -47,6 +47,7 @@ public class ArchSpecParser extends Parser {
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
+    public static final int T__37=37;
     public static final int CAPITALIZED_ID=4;
     public static final int ID=5;
     public static final int INT=6;
@@ -95,7 +96,7 @@ public class ArchSpecParser extends Parser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==35) ) {
+                if ( (LA1_0==36) ) {
                     alt1=1;
                 }
 
@@ -104,7 +105,7 @@ public class ArchSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:31:6: 'structs' ':' struct_def
             	    {
-            	    match(input,35,FOLLOW_35_in_archSpec87); 
+            	    match(input,36,FOLLOW_36_in_archSpec87); 
 
             	    match(input,11,FOLLOW_11_in_archSpec89); 
 
@@ -123,7 +124,7 @@ public class ArchSpecParser extends Parser {
             } while (true);
 
 
-            match(input,34,FOLLOW_34_in_archSpec105); 
+            match(input,35,FOLLOW_35_in_archSpec105); 
 
             match(input,11,FOLLOW_11_in_archSpec107); 
 
@@ -195,11 +196,11 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "component_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:44:1: component_def : 'computationalService' ':' ( cs_def )+ ( ( controller_def )+ )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:44:1: component_def : 'computationalService' ':' ( cs_def )+ 'controller' ':' ( controller_def )+ ;
     public final void component_def() throws RecognitionException {
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:44:15: ( 'computationalService' ':' ( cs_def )+ ( ( controller_def )+ )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:46:4: 'computationalService' ':' ( cs_def )+ ( ( controller_def )+ )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:44:15: ( 'computationalService' ':' ( cs_def )+ 'controller' ':' ( controller_def )+ )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:46:4: 'computationalService' ':' ( cs_def )+ 'controller' ':' ( controller_def )+
             {
             match(input,22,FOLLOW_22_in_component_def156); 
 
@@ -240,62 +241,42 @@ public class ArchSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:47:5: ( ( controller_def )+ )*
-            loop4:
-            do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+            match(input,24,FOLLOW_24_in_component_def169); 
 
-                if ( (LA4_0==CAPITALIZED_ID) ) {
-                    alt4=1;
+            match(input,11,FOLLOW_11_in_component_def171); 
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:47:21: ( controller_def )+
+            int cnt3=0;
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0==CAPITALIZED_ID) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt3) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:47:6: ( controller_def )+
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:47:22: controller_def
             	    {
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:47:6: ( controller_def )+
-            	    int cnt3=0;
-            	    loop3:
-            	    do {
-            	        int alt3=2;
-            	        int LA3_0 = input.LA(1);
+            	    pushFollow(FOLLOW_controller_def_in_component_def174);
+            	    controller_def();
 
-            	        if ( (LA3_0==CAPITALIZED_ID) ) {
-            	            alt3=1;
-            	        }
-
-
-            	        switch (alt3) {
-            	    	case 1 :
-            	    	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:47:7: controller_def
-            	    	    {
-            	    	    pushFollow(FOLLOW_controller_def_in_component_def172);
-            	    	    controller_def();
-
-            	    	    state._fsp--;
-
-
-            	    	    }
-            	    	    break;
-
-            	    	default :
-            	    	    if ( cnt3 >= 1 ) break loop3;
-            	                EarlyExitException eee =
-            	                    new EarlyExitException(3, input);
-            	                throw eee;
-            	        }
-            	        cnt3++;
-            	    } while (true);
+            	    state._fsp--;
 
 
             	    }
             	    break;
 
             	default :
-            	    break loop4;
+            	    if ( cnt3 >= 1 ) break loop3;
+                        EarlyExitException eee =
+                            new EarlyExitException(3, input);
+                        throw eee;
                 }
+                cnt3++;
             } while (true);
 
 
@@ -317,69 +298,37 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "ss_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:51:1: ss_def : CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:53:1: ss_def : CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )* ;
     public final void ss_def() throws RecognitionException {
         Token CAPITALIZED_ID3=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:51:7: ( CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:52:3: CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:53:7: ( CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:54:3: CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )*
             {
-            CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def193); 
+            CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def204); 
 
              context.currentStorageService = new Storage();
                   //context.currentStorageService = new Storage((CAPITALIZED_ID3!=null?CAPITALIZED_ID3.getText():null));
                   
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:56:5: ( storageAttribute_def ';' )*
-            loop5:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:58:5: ( storageAttribute_def ';' )*
+            loop4:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA5_0==19) ) {
-                    alt5=1;
+                if ( (LA4_0==19) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt4) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:56:6: storageAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:58:6: storageAttribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_storageAttribute_def_in_ss_def206);
+            	    pushFollow(FOLLOW_storageAttribute_def_in_ss_def217);
             	    storageAttribute_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_ss_def208); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop5;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:57:5: ( storageDataAccess_def ';' )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
-
-                if ( (LA6_0==27) ) {
-                    alt6=1;
-                }
-
-
-                switch (alt6) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:57:6: storageDataAccess_def ';'
-            	    {
-            	    pushFollow(FOLLOW_storageDataAccess_def_in_ss_def217);
-            	    storageDataAccess_def();
 
             	    state._fsp--;
 
@@ -390,39 +339,71 @@ public class ArchSpecParser extends Parser {
             	    break;
 
             	default :
-            	    break loop6;
+            	    break loop4;
                 }
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:58:5: ( storagePartition_def ';' )*
-            loop7:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:59:5: ( storageDataAccess_def ';' )*
+            loop5:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA7_0==24) ) {
-                    alt7=1;
+                if ( (LA5_0==28) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt5) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:58:6: storagePartition_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:59:6: storageDataAccess_def ';'
             	    {
-            	    pushFollow(FOLLOW_storagePartition_def_in_ss_def229);
-            	    storagePartition_def();
+            	    pushFollow(FOLLOW_storageDataAccess_def_in_ss_def228);
+            	    storageDataAccess_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_ss_def231); 
+            	    match(input,12,FOLLOW_12_in_ss_def230); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop5;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:60:5: ( storagePartition_def ';' )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( (LA6_0==25) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:60:6: storagePartition_def ';'
+            	    {
+            	    pushFollow(FOLLOW_storagePartition_def_in_ss_def240);
+            	    storagePartition_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_ss_def242); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop6;
                 }
             } while (true);
 
@@ -455,7 +436,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "storageAttribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:70:1: storageAttribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:72:1: storageAttribute_def : 'attribute' lc_id ':' dataType ;
     public final void storageAttribute_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id4 =null;
 
@@ -463,20 +444,20 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:70:21: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:71:3: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:72:21: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:73:3: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_storageAttribute_def251); 
+            match(input,19,FOLLOW_19_in_storageAttribute_def262); 
 
-            pushFollow(FOLLOW_lc_id_in_storageAttribute_def253);
+            pushFollow(FOLLOW_lc_id_in_storageAttribute_def264);
             lc_id4=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_storageAttribute_def255); 
+            match(input,11,FOLLOW_11_in_storageAttribute_def266); 
 
-            pushFollow(FOLLOW_dataType_in_storageAttribute_def257);
+            pushFollow(FOLLOW_dataType_in_storageAttribute_def268);
             dataType5=dataType();
 
             state._fsp--;
@@ -502,21 +483,21 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "storageDataAccess_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:75:1: storageDataAccess_def : storageGeneratedInfo_def 'accessed-by' storagedataIndex_def ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:77:1: storageDataAccess_def : storageGeneratedInfo_def 'accessed-by' storagedataIndex_def ;
     public final void storageDataAccess_def() throws RecognitionException {
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:75:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:76:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:77:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:78:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
             {
-            pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def278);
+            pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def289);
             storageGeneratedInfo_def();
 
             state._fsp--;
 
 
-            match(input,16,FOLLOW_16_in_storageDataAccess_def281); 
+            match(input,16,FOLLOW_16_in_storageDataAccess_def292); 
 
-            pushFollow(FOLLOW_storagedataIndex_def_in_storageDataAccess_def283);
+            pushFollow(FOLLOW_storagedataIndex_def_in_storageDataAccess_def294);
             storagedataIndex_def();
 
             state._fsp--;
@@ -542,27 +523,27 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "storageGeneratedInfo_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:80:1: storageGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:82:1: storageGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
     public final void storageGeneratedInfo_def() throws RecognitionException {
         Token CAPITALIZED_ID7=null;
         ArchSpecParser.lc_id_return lc_id6 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:80:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:81:5: 'generate' lc_id ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:82:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:83:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,27,FOLLOW_27_in_storageGeneratedInfo_def302); 
+            match(input,28,FOLLOW_28_in_storageGeneratedInfo_def313); 
 
-            pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def304);
+            pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def315);
             lc_id6=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_storageGeneratedInfo_def306); 
+            match(input,11,FOLLOW_11_in_storageGeneratedInfo_def317); 
 
-            CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def309); 
+            CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def320); 
 
              context.currentStorageService.addGeneratedInfo((lc_id6!=null?input.toString(lc_id6.start,lc_id6.stop):null), (CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));  
                 context.constructSymbTable((lc_id6!=null?input.toString(lc_id6.start,lc_id6.stop):null), (CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));
@@ -585,7 +566,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "storagedataIndex_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:86:1: storagedataIndex_def : lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:88:1: storagedataIndex_def : lc_id ':' dataType ;
     public final void storagedataIndex_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id8 =null;
 
@@ -593,18 +574,18 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:86:21: ( lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:87:9: lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:88:21: ( lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:89:9: lc_id ':' dataType
             {
-            pushFollow(FOLLOW_lc_id_in_storagedataIndex_def331);
+            pushFollow(FOLLOW_lc_id_in_storagedataIndex_def342);
             lc_id8=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_storagedataIndex_def333); 
+            match(input,11,FOLLOW_11_in_storagedataIndex_def344); 
 
-            pushFollow(FOLLOW_dataType_in_storagedataIndex_def335);
+            pushFollow(FOLLOW_dataType_in_storagedataIndex_def346);
             dataType9=dataType();
 
             state._fsp--;
@@ -630,20 +611,20 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "storagePartition_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:91:1: storagePartition_def : storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton' ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:93:1: storagePartition_def : storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton' ;
     public final void storagePartition_def() throws RecognitionException {
         Token storageDeploymentConstraint=null;
         Token storageDeploymentConstraintValue=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:91:22: (storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:92:5: storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:93:22: (storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:94:5: storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton'
             {
-            storageDeploymentConstraint=(Token)match(input,24,FOLLOW_24_in_storagePartition_def364); 
+            storageDeploymentConstraint=(Token)match(input,25,FOLLOW_25_in_storagePartition_def375); 
 
-            match(input,11,FOLLOW_11_in_storagePartition_def366); 
+            match(input,11,FOLLOW_11_in_storagePartition_def377); 
 
-            storageDeploymentConstraintValue=(Token)match(input,33,FOLLOW_33_in_storagePartition_def372); 
+            storageDeploymentConstraintValue=(Token)match(input,34,FOLLOW_34_in_storagePartition_def383); 
 
 
                  
@@ -670,70 +651,38 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "controller_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:102:1: controller_def : CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:104:1: controller_def : CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )* ;
     public final void controller_def() throws RecognitionException {
         Token CAPITALIZED_ID10=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:102:15: ( CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:103:3: CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:104:15: ( CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:105:3: CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )*
             {
-            CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def389); 
+            CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def400); 
 
 
                 context.currentController = new ControllerService();
                 //context.currentController = new ControllerService((CAPITALIZED_ID10!=null?CAPITALIZED_ID10.getText():null));
                 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:108:5: ( cntrlAttribute_def ';' )*
-            loop8:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:110:5: ( cntrlAttribute_def ';' )*
+            loop7:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                if ( (LA8_0==19) ) {
-                    alt8=1;
+                if ( (LA7_0==19) ) {
+                    alt7=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt7) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:108:6: cntrlAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:110:6: cntrlAttribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_cntrlAttribute_def_in_controller_def402);
+            	    pushFollow(FOLLOW_cntrlAttribute_def_in_controller_def413);
             	    cntrlAttribute_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_controller_def404); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop8;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:109:5: ( cntrlConsumeInfo_def ';' )*
-            loop9:
-            do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
-
-                if ( (LA9_0==23) ) {
-                    alt9=1;
-                }
-
-
-                switch (alt9) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:109:6: cntrlConsumeInfo_def ';'
-            	    {
-            	    pushFollow(FOLLOW_cntrlConsumeInfo_def_in_controller_def413);
-            	    cntrlConsumeInfo_def();
 
             	    state._fsp--;
 
@@ -744,28 +693,28 @@ public class ArchSpecParser extends Parser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop7;
                 }
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:110:5: ( cntrlCommand_def ';' )*
-            loop10:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:111:5: ( cntrlConsumeInfo_def ';' )*
+            loop8:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA10_0==21) ) {
-                    alt10=1;
+                if ( (LA8_0==23) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt8) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:110:6: cntrlCommand_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:111:6: cntrlConsumeInfo_def ';'
             	    {
-            	    pushFollow(FOLLOW_cntrlCommand_def_in_controller_def424);
-            	    cntrlCommand_def();
+            	    pushFollow(FOLLOW_cntrlConsumeInfo_def_in_controller_def424);
+            	    cntrlConsumeInfo_def();
 
             	    state._fsp--;
 
@@ -776,39 +725,71 @@ public class ArchSpecParser extends Parser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop8;
                 }
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:111:5: ( cntrlPartition_def ';' )*
-            loop11:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:112:5: ( cntrlCommand_def ';' )*
+            loop9:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA11_0==29) ) {
-                    alt11=1;
+                if ( (LA9_0==21) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt9) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:111:6: cntrlPartition_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:112:6: cntrlCommand_def ';'
             	    {
-            	    pushFollow(FOLLOW_cntrlPartition_def_in_controller_def436);
-            	    cntrlPartition_def();
+            	    pushFollow(FOLLOW_cntrlCommand_def_in_controller_def435);
+            	    cntrlCommand_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_controller_def438); 
+            	    match(input,12,FOLLOW_12_in_controller_def437); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop9;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:113:5: ( cntrlPartition_def ';' )*
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0==30) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:113:6: cntrlPartition_def ';'
+            	    {
+            	    pushFollow(FOLLOW_cntrlPartition_def_in_controller_def447);
+            	    cntrlPartition_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_controller_def449); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop10;
                 }
             } while (true);
 
@@ -840,20 +821,20 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "cntrlPartition_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:122:1: cntrlPartition_def : cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:124:1: cntrlPartition_def : cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
     public final void cntrlPartition_def() throws RecognitionException {
         Token cntrlDeploymentConstraint=null;
         Token CAPITALIZED_ID11=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:122:20: (cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:123:3: cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:124:20: (cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:125:3: cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
             {
-            cntrlDeploymentConstraint=(Token)match(input,29,FOLLOW_29_in_cntrlPartition_def460); 
+            cntrlDeploymentConstraint=(Token)match(input,30,FOLLOW_30_in_cntrlPartition_def471); 
 
-            match(input,11,FOLLOW_11_in_cntrlPartition_def462); 
+            match(input,11,FOLLOW_11_in_cntrlPartition_def473); 
 
-            CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def464); 
+            CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def475); 
 
              
                 context.currentController.setPartitionAttribute((CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null)); 
@@ -880,7 +861,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "cntrlAttribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:132:1: cntrlAttribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:134:1: cntrlAttribute_def : 'attribute' lc_id ':' dataType ;
     public final void cntrlAttribute_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id12 =null;
 
@@ -888,20 +869,20 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:132:19: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:133:3: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:134:19: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:135:3: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_cntrlAttribute_def482); 
+            match(input,19,FOLLOW_19_in_cntrlAttribute_def493); 
 
-            pushFollow(FOLLOW_lc_id_in_cntrlAttribute_def484);
+            pushFollow(FOLLOW_lc_id_in_cntrlAttribute_def495);
             lc_id12=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_cntrlAttribute_def486); 
+            match(input,11,FOLLOW_11_in_cntrlAttribute_def497); 
 
-            pushFollow(FOLLOW_dataType_in_cntrlAttribute_def488);
+            pushFollow(FOLLOW_dataType_in_cntrlAttribute_def499);
             dataType13=dataType();
 
             state._fsp--;
@@ -927,45 +908,45 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "cntrlConsumeInfo_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:137:1: cntrlConsumeInfo_def : 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:139:1: cntrlConsumeInfo_def : 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? ;
     public final void cntrlConsumeInfo_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id14 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:137:21: ( 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:138:3: 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:139:21: ( 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:140:3: 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
             {
-            match(input,23,FOLLOW_23_in_cntrlConsumeInfo_def505); 
+            match(input,23,FOLLOW_23_in_cntrlConsumeInfo_def516); 
 
-            pushFollow(FOLLOW_lc_id_in_cntrlConsumeInfo_def507);
+            pushFollow(FOLLOW_lc_id_in_cntrlConsumeInfo_def518);
             lc_id14=lc_id();
 
             state._fsp--;
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:138:19: ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:140:19: ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA12_0==26) ) {
-                alt12=1;
+            if ( (LA11_0==27) ) {
+                alt11=1;
             }
-            switch (alt12) {
+            switch (alt11) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:138:20: 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:140:20: 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
                     {
-                    match(input,26,FOLLOW_26_in_cntrlConsumeInfo_def510); 
+                    match(input,27,FOLLOW_27_in_cntrlConsumeInfo_def521); 
 
-                    match(input,30,FOLLOW_30_in_cntrlConsumeInfo_def512); 
+                    match(input,31,FOLLOW_31_in_cntrlConsumeInfo_def523); 
 
-                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def514); 
+                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def525); 
 
-                    match(input,INT,FOLLOW_INT_in_cntrlConsumeInfo_def516); 
+                    match(input,INT,FOLLOW_INT_in_cntrlConsumeInfo_def527); 
 
-                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def518); 
+                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def529); 
 
-                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def520); 
+                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def531); 
 
                     }
                     break;
@@ -993,32 +974,32 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "cntrlCommand_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:142:1: cntrlCommand_def : 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:144:1: cntrlCommand_def : 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
     public final void cntrlCommand_def() throws RecognitionException {
         Token name=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:142:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:143:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:144:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:145:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
             {
-            match(input,21,FOLLOW_21_in_cntrlCommand_def545); 
+            match(input,21,FOLLOW_21_in_cntrlCommand_def556); 
 
-            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def552); 
+            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def563); 
 
-            match(input,8,FOLLOW_8_in_cntrlCommand_def554); 
+            match(input,8,FOLLOW_8_in_cntrlCommand_def565); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:143:42: ( cntrlParameter_def )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:145:42: ( cntrlParameter_def )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==ID) ) {
-                alt13=1;
+            if ( (LA12_0==ID) ) {
+                alt12=1;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:143:43: cntrlParameter_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:145:43: cntrlParameter_def
                     {
-                    pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def557);
+                    pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def568);
                     cntrlParameter_def();
 
                     state._fsp--;
@@ -1030,19 +1011,19 @@ public class ArchSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_cntrlCommand_def561); 
+            match(input,9,FOLLOW_9_in_cntrlCommand_def572); 
 
-            match(input,36,FOLLOW_36_in_cntrlCommand_def563); 
+            match(input,37,FOLLOW_37_in_cntrlCommand_def574); 
 
-            match(input,30,FOLLOW_30_in_cntrlCommand_def566); 
+            match(input,31,FOLLOW_31_in_cntrlCommand_def577); 
 
-            match(input,11,FOLLOW_11_in_cntrlCommand_def568); 
+            match(input,11,FOLLOW_11_in_cntrlCommand_def579); 
 
-            match(input,INT,FOLLOW_INT_in_cntrlCommand_def570); 
+            match(input,INT,FOLLOW_INT_in_cntrlCommand_def581); 
 
-            match(input,11,FOLLOW_11_in_cntrlCommand_def572); 
+            match(input,11,FOLLOW_11_in_cntrlCommand_def583); 
 
-            match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def574); 
+            match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def585); 
 
              
                   context.currentController.addCommand((name!=null?name.getText():null));  
@@ -1066,35 +1047,35 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "cntrlParameter_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:149:1: cntrlParameter_def : lc_id ( ',' parameter_def )? ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:151:1: cntrlParameter_def : lc_id ( ',' parameter_def )? ;
     public final void cntrlParameter_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id15 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:149:20: ( lc_id ( ',' parameter_def )? )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:150:5: lc_id ( ',' parameter_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:151:20: ( lc_id ( ',' parameter_def )? )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:152:5: lc_id ( ',' parameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_cntrlParameter_def594);
+            pushFollow(FOLLOW_lc_id_in_cntrlParameter_def605);
             lc_id15=lc_id();
 
             state._fsp--;
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:150:12: ( ',' parameter_def )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:152:12: ( ',' parameter_def )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA14_0==10) ) {
-                alt14=1;
+            if ( (LA13_0==10) ) {
+                alt13=1;
             }
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:150:13: ',' parameter_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:152:13: ',' parameter_def
                     {
-                    match(input,10,FOLLOW_10_in_cntrlParameter_def598); 
+                    match(input,10,FOLLOW_10_in_cntrlParameter_def609); 
 
-                    pushFollow(FOLLOW_parameter_def_in_cntrlParameter_def600);
+                    pushFollow(FOLLOW_parameter_def_in_cntrlParameter_def611);
                     parameter_def();
 
                     state._fsp--;
@@ -1126,69 +1107,37 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "cs_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:154:1: cs_def : CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:156:1: cs_def : CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )* ;
     public final void cs_def() throws RecognitionException {
         Token CAPITALIZED_ID16=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:154:7: ( CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:155:3: CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:156:7: ( CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:157:3: CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )*
             {
-            CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cs_def621); 
+            CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cs_def632); 
 
              
                  context.currentComputationalService = new CS(); 
                  context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID16!=null?CAPITALIZED_ID16.getText():null));
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:159:5: ( csAttribute_def ';' )*
-            loop15:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:161:5: ( csAttribute_def ';' )*
+            loop14:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA15_0==19) ) {
-                    alt15=1;
+                if ( (LA14_0==19) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt14) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:159:6: csAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:161:6: csAttribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_csAttribute_def_in_cs_def634);
+            	    pushFollow(FOLLOW_csAttribute_def_in_cs_def645);
             	    csAttribute_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_cs_def636); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop15;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:160:5: ( csGeneratedInfo_def ';' )*
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
-
-                if ( (LA16_0==27) ) {
-                    alt16=1;
-                }
-
-
-                switch (alt16) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:160:6: csGeneratedInfo_def ';'
-            	    {
-            	    pushFollow(FOLLOW_csGeneratedInfo_def_in_cs_def645);
-            	    csGeneratedInfo_def();
 
             	    state._fsp--;
 
@@ -1199,92 +1148,92 @@ public class ArchSpecParser extends Parser {
             	    break;
 
             	default :
+            	    break loop14;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:162:5: ( csGeneratedInfo_def ';' )*
+            loop15:
+            do {
+                int alt15=2;
+                int LA15_0 = input.LA(1);
+
+                if ( (LA15_0==28) ) {
+                    alt15=1;
+                }
+
+
+                switch (alt15) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:162:6: csGeneratedInfo_def ';'
+            	    {
+            	    pushFollow(FOLLOW_csGeneratedInfo_def_in_cs_def656);
+            	    csGeneratedInfo_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_cs_def658); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop15;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:163:5: ( csConsumeInfo_def ';' )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( (LA16_0==23) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:163:6: csConsumeInfo_def ';'
+            	    {
+            	    pushFollow(FOLLOW_csConsumeInfo_def_in_cs_def668);
+            	    csConsumeInfo_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_cs_def670); 
+
+            	    }
+            	    break;
+
+            	default :
             	    break loop16;
                 }
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:161:5: ( csConsumeInfo_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:164:5: ( csRequest_def ';' )*
             loop17:
             do {
                 int alt17=2;
                 int LA17_0 = input.LA(1);
 
-                if ( (LA17_0==23) ) {
+                if ( (LA17_0==32) ) {
                     alt17=1;
                 }
 
 
                 switch (alt17) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:161:6: csConsumeInfo_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:164:6: csRequest_def ';'
             	    {
-            	    pushFollow(FOLLOW_csConsumeInfo_def_in_cs_def657);
-            	    csConsumeInfo_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_cs_def659); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop17;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:162:5: ( csRequest_def ';' )*
-            loop18:
-            do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
-
-                if ( (LA18_0==31) ) {
-                    alt18=1;
-                }
-
-
-                switch (alt18) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:162:6: csRequest_def ';'
-            	    {
-            	    pushFollow(FOLLOW_csRequest_def_in_cs_def669);
+            	    pushFollow(FOLLOW_csRequest_def_in_cs_def680);
             	    csRequest_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_cs_def672); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop18;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:163:5: ( partition_def ';' )*
-            loop19:
-            do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
-
-                if ( (LA19_0==29) ) {
-                    alt19=1;
-                }
-
-
-                switch (alt19) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:163:6: partition_def ';'
-            	    {
-            	    pushFollow(FOLLOW_partition_def_in_cs_def681);
-            	    partition_def();
 
             	    state._fsp--;
 
@@ -1295,7 +1244,39 @@ public class ArchSpecParser extends Parser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop17;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:165:5: ( partition_def ';' )*
+            loop18:
+            do {
+                int alt18=2;
+                int LA18_0 = input.LA(1);
+
+                if ( (LA18_0==30) ) {
+                    alt18=1;
+                }
+
+
+                switch (alt18) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:165:6: partition_def ';'
+            	    {
+            	    pushFollow(FOLLOW_partition_def_in_cs_def692);
+            	    partition_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_cs_def694); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop18;
                 }
             } while (true);
 
@@ -1328,7 +1309,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "csAttribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:175:1: csAttribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:177:1: csAttribute_def : 'attribute' lc_id ':' dataType ;
     public final void csAttribute_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id17 =null;
 
@@ -1336,20 +1317,20 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:175:17: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:176:5: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:177:17: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:178:5: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_csAttribute_def704); 
+            match(input,19,FOLLOW_19_in_csAttribute_def715); 
 
-            pushFollow(FOLLOW_lc_id_in_csAttribute_def706);
+            pushFollow(FOLLOW_lc_id_in_csAttribute_def717);
             lc_id17=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_csAttribute_def708); 
+            match(input,11,FOLLOW_11_in_csAttribute_def719); 
 
-            pushFollow(FOLLOW_dataType_in_csAttribute_def710);
+            pushFollow(FOLLOW_dataType_in_csAttribute_def721);
             dataType18=dataType();
 
             state._fsp--;
@@ -1375,27 +1356,27 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "csGeneratedInfo_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:180:1: csGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:182:1: csGeneratedInfo_def : 'generate' lc_id ':' CAPITALIZED_ID ;
     public final void csGeneratedInfo_def() throws RecognitionException {
         Token CAPITALIZED_ID20=null;
         ArchSpecParser.lc_id_return lc_id19 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:180:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:181:5: 'generate' lc_id ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:182:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:183:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,27,FOLLOW_27_in_csGeneratedInfo_def729); 
+            match(input,28,FOLLOW_28_in_csGeneratedInfo_def740); 
 
-            pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def731);
+            pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def742);
             lc_id19=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_csGeneratedInfo_def733); 
+            match(input,11,FOLLOW_11_in_csGeneratedInfo_def744); 
 
-            CAPITALIZED_ID20=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def736); 
+            CAPITALIZED_ID20=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def747); 
 
              context.currentComputationalService.addGeneratedInfo((lc_id19!=null?input.toString(lc_id19.start,lc_id19.stop):null), (CAPITALIZED_ID20!=null?CAPITALIZED_ID20.getText():null)); 
                 context.constructSymbTable((lc_id19!=null?input.toString(lc_id19.start,lc_id19.stop):null), (CAPITALIZED_ID20!=null?CAPITALIZED_ID20.getText():null)); 
@@ -1418,45 +1399,45 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "csConsumeInfo_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:186:1: csConsumeInfo_def : 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:188:1: csConsumeInfo_def : 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? ;
     public final void csConsumeInfo_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id21 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:186:18: ( 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:187:3: 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:188:18: ( 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:189:3: 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
             {
-            match(input,23,FOLLOW_23_in_csConsumeInfo_def754); 
+            match(input,23,FOLLOW_23_in_csConsumeInfo_def765); 
 
-            pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def756);
+            pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def767);
             lc_id21=lc_id();
 
             state._fsp--;
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:187:19: ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:189:19: ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA20_0==26) ) {
-                alt20=1;
+            if ( (LA19_0==27) ) {
+                alt19=1;
             }
-            switch (alt20) {
+            switch (alt19) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:187:20: 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:189:20: 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
                     {
-                    match(input,26,FOLLOW_26_in_csConsumeInfo_def759); 
+                    match(input,27,FOLLOW_27_in_csConsumeInfo_def770); 
 
-                    match(input,30,FOLLOW_30_in_csConsumeInfo_def761); 
+                    match(input,31,FOLLOW_31_in_csConsumeInfo_def772); 
 
-                    match(input,11,FOLLOW_11_in_csConsumeInfo_def763); 
+                    match(input,11,FOLLOW_11_in_csConsumeInfo_def774); 
 
-                    match(input,INT,FOLLOW_INT_in_csConsumeInfo_def765); 
+                    match(input,INT,FOLLOW_INT_in_csConsumeInfo_def776); 
 
-                    match(input,11,FOLLOW_11_in_csConsumeInfo_def767); 
+                    match(input,11,FOLLOW_11_in_csConsumeInfo_def778); 
 
-                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def769); 
+                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def780); 
 
                     }
                     break;
@@ -1486,18 +1467,18 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "csRequest_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:193:1: csRequest_def : 'request' lc_id ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:195:1: csRequest_def : 'request' lc_id ;
     public final void csRequest_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id22 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:193:15: ( 'request' lc_id )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:194:4: 'request' lc_id
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:195:15: ( 'request' lc_id )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:196:4: 'request' lc_id
             {
-            match(input,31,FOLLOW_31_in_csRequest_def791); 
+            match(input,32,FOLLOW_32_in_csRequest_def802); 
 
-            pushFollow(FOLLOW_lc_id_in_csRequest_def793);
+            pushFollow(FOLLOW_lc_id_in_csRequest_def804);
             lc_id22=lc_id();
 
             state._fsp--;
@@ -1523,20 +1504,20 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "partition_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:198:1: partition_def : csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:200:1: partition_def : csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID ;
     public final void partition_def() throws RecognitionException {
         Token csDeploymentConstraint=null;
         Token CAPITALIZED_ID23=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:198:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:199:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:200:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:201:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
             {
-            csDeploymentConstraint=(Token)match(input,29,FOLLOW_29_in_partition_def813); 
+            csDeploymentConstraint=(Token)match(input,30,FOLLOW_30_in_partition_def824); 
 
-            match(input,11,FOLLOW_11_in_partition_def815); 
+            match(input,11,FOLLOW_11_in_partition_def826); 
 
-            CAPITALIZED_ID23=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def817); 
+            CAPITALIZED_ID23=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def828); 
 
              
                 context.currentComputationalService.addPartitionAttribute((CAPITALIZED_ID23!=null?CAPITALIZED_ID23.getText():null));   
@@ -1563,46 +1544,46 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "struct_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:208:1: struct_def : CAPITALIZED_ID ( structField_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:210:1: struct_def : CAPITALIZED_ID ( structField_def ';' )* ;
     public final void struct_def() throws RecognitionException {
         Token CAPITALIZED_ID24=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:208:11: ( CAPITALIZED_ID ( structField_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:209:5: CAPITALIZED_ID ( structField_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:210:11: ( CAPITALIZED_ID ( structField_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:211:5: CAPITALIZED_ID ( structField_def ';' )*
             {
-            CAPITALIZED_ID24=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def836); 
+            CAPITALIZED_ID24=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def847); 
 
             context.currentStruct = new Struct((CAPITALIZED_ID24!=null?CAPITALIZED_ID24.getText():null));
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:211:5: ( structField_def ';' )*
-            loop21:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:213:5: ( structField_def ';' )*
+            loop20:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA21_0==ID) ) {
-                    alt21=1;
+                if ( (LA20_0==ID) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt20) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:211:6: structField_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:213:6: structField_def ';'
             	    {
-            	    pushFollow(FOLLOW_structField_def_in_struct_def850);
+            	    pushFollow(FOLLOW_structField_def_in_struct_def861);
             	    structField_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_struct_def852); 
+            	    match(input,12,FOLLOW_12_in_struct_def863); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop20;
                 }
             } while (true);
 
@@ -1627,7 +1608,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "structField_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:214:1: structField_def : lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:216:1: structField_def : lc_id ':' dataType ;
     public final void structField_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id25 =null;
 
@@ -1635,18 +1616,18 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:214:16: ( lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:215:3: lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:216:16: ( lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:217:3: lc_id ':' dataType
             {
-            pushFollow(FOLLOW_lc_id_in_structField_def874);
+            pushFollow(FOLLOW_lc_id_in_structField_def885);
             lc_id25=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_structField_def876); 
+            match(input,11,FOLLOW_11_in_structField_def887); 
 
-            pushFollow(FOLLOW_dataType_in_structField_def878);
+            pushFollow(FOLLOW_dataType_in_structField_def889);
             dataType26=dataType();
 
             state._fsp--;
@@ -1675,17 +1656,17 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "lc_id"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:219:1: lc_id : ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:221:1: lc_id : ID ;
     public final ArchSpecParser.lc_id_return lc_id() throws RecognitionException {
         ArchSpecParser.lc_id_return retval = new ArchSpecParser.lc_id_return();
         retval.start = input.LT(1);
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:219:6: ( ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:219:8: ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:221:6: ( ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:221:8: ID
             {
-            match(input,ID,FOLLOW_ID_in_lc_id894); 
+            match(input,ID,FOLLOW_ID_in_lc_id905); 
 
             }
 
@@ -1711,17 +1692,17 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "dataType"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:222:1: dataType : primitiveType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:224:1: dataType : primitiveType ;
     public final ArchSpecParser.dataType_return dataType() throws RecognitionException {
         ArchSpecParser.dataType_return retval = new ArchSpecParser.dataType_return();
         retval.start = input.LT(1);
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:222:9: ( primitiveType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:223:3: primitiveType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:224:9: ( primitiveType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:225:3: primitiveType
             {
-            pushFollow(FOLLOW_primitiveType_in_dataType907);
+            pushFollow(FOLLOW_primitiveType_in_dataType918);
             primitiveType();
 
             state._fsp--;
@@ -1748,95 +1729,95 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "primitiveType"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:226:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:228:1: primitiveType : (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) ;
     public final void primitiveType() throws RecognitionException {
         Token id=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:226:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:228:14: ( (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' ) )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
             {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
-            int alt22=6;
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
+            int alt21=6;
             switch ( input.LA(1) ) {
             case 14:
                 {
-                alt22=1;
+                alt21=1;
                 }
                 break;
             case 13:
                 {
-                alt22=2;
+                alt21=2;
                 }
                 break;
             case 15:
                 {
-                alt22=3;
+                alt21=3;
                 }
                 break;
-            case 25:
+            case 26:
                 {
-                alt22=4;
+                alt21=4;
                 }
                 break;
-            case 28:
+            case 29:
                 {
-                alt22=5;
+                alt21=5;
                 }
                 break;
             case 20:
                 {
-                alt22=6;
+                alt21=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt22) {
+            switch (alt21) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:4: id= 'Integer'
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:4: id= 'Integer'
                     {
-                    id=(Token)match(input,14,FOLLOW_14_in_primitiveType922); 
+                    id=(Token)match(input,14,FOLLOW_14_in_primitiveType933); 
 
                     }
                     break;
                 case 2 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:19: id= 'Boolean'
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:19: id= 'Boolean'
                     {
-                    id=(Token)match(input,13,FOLLOW_13_in_primitiveType928); 
+                    id=(Token)match(input,13,FOLLOW_13_in_primitiveType939); 
 
                     }
                     break;
                 case 3 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:34: id= 'String'
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:34: id= 'String'
                     {
-                    id=(Token)match(input,15,FOLLOW_15_in_primitiveType934); 
+                    id=(Token)match(input,15,FOLLOW_15_in_primitiveType945); 
 
                     }
                     break;
                 case 4 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:49: id= 'double'
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:49: id= 'double'
                     {
-                    id=(Token)match(input,25,FOLLOW_25_in_primitiveType943); 
+                    id=(Token)match(input,26,FOLLOW_26_in_primitiveType954); 
 
                     }
                     break;
                 case 5 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:65: id= 'long'
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:65: id= 'long'
                     {
-                    id=(Token)match(input,28,FOLLOW_28_in_primitiveType951); 
+                    id=(Token)match(input,29,FOLLOW_29_in_primitiveType962); 
 
                     }
                     break;
                 case 6 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:227:79: id= 'boolean'
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:229:79: id= 'boolean'
                     {
-                    id=(Token)match(input,20,FOLLOW_20_in_primitiveType957); 
+                    id=(Token)match(input,20,FOLLOW_20_in_primitiveType968); 
 
                     }
                     break;
@@ -1862,17 +1843,56 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "abilities_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:230:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:232:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ;
     public final void abilities_def() throws RecognitionException {
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:230:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:231:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:232:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:233:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+
             {
-            match(input,32,FOLLOW_32_in_abilities_def970); 
+            match(input,33,FOLLOW_33_in_abilities_def981); 
 
-            match(input,11,FOLLOW_11_in_abilities_def972); 
+            match(input,11,FOLLOW_11_in_abilities_def983); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:231:19: ( sensor_def )+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:233:19: ( sensor_def )+
+            int cnt22=0;
+            loop22:
+            do {
+                int alt22=2;
+                int LA22_0 = input.LA(1);
+
+                if ( (LA22_0==CAPITALIZED_ID) ) {
+                    alt22=1;
+                }
+
+
+                switch (alt22) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:233:20: sensor_def
+            	    {
+            	    pushFollow(FOLLOW_sensor_def_in_abilities_def988);
+            	    sensor_def();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt22 >= 1 ) break loop22;
+                        EarlyExitException eee =
+                            new EarlyExitException(22, input);
+                        throw eee;
+                }
+                cnt22++;
+            } while (true);
+
+
+            match(input,18,FOLLOW_18_in_abilities_def994); 
+
+            match(input,11,FOLLOW_11_in_abilities_def996); 
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:234:19: ( actuator_def )+
             int cnt23=0;
             loop23:
             do {
@@ -1886,10 +1906,10 @@ public class ArchSpecParser extends Parser {
 
                 switch (alt23) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:231:20: sensor_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:234:20: actuator_def
             	    {
-            	    pushFollow(FOLLOW_sensor_def_in_abilities_def977);
-            	    sensor_def();
+            	    pushFollow(FOLLOW_actuator_def_in_abilities_def999);
+            	    actuator_def();
 
             	    state._fsp--;
 
@@ -1904,45 +1924,6 @@ public class ArchSpecParser extends Parser {
                         throw eee;
                 }
                 cnt23++;
-            } while (true);
-
-
-            match(input,18,FOLLOW_18_in_abilities_def983); 
-
-            match(input,11,FOLLOW_11_in_abilities_def985); 
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:232:19: ( actuator_def )+
-            int cnt24=0;
-            loop24:
-            do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
-
-                if ( (LA24_0==CAPITALIZED_ID) ) {
-                    alt24=1;
-                }
-
-
-                switch (alt24) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:232:20: actuator_def
-            	    {
-            	    pushFollow(FOLLOW_actuator_def_in_abilities_def988);
-            	    actuator_def();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt24 >= 1 ) break loop24;
-                        EarlyExitException eee =
-                            new EarlyExitException(24, input);
-                        throw eee;
-                }
-                cnt24++;
             } while (true);
 
 
@@ -1964,67 +1945,35 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "sensor_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:235:1: sensor_def : CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:237:1: sensor_def : CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* ;
     public final void sensor_def() throws RecognitionException {
         Token CAPITALIZED_ID27=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:235:11: ( CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:236:5: CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:237:11: ( CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:238:5: CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )*
             {
-            CAPITALIZED_ID27=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def1004); 
+            CAPITALIZED_ID27=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def1015); 
 
             context.currentSensor = new Sensor((CAPITALIZED_ID27!=null?CAPITALIZED_ID27.getText():null));
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:238:5: ( attribute_def ';' )*
-            loop25:
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:240:5: ( attribute_def ';' )*
+            loop24:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA25_0==19) ) {
-                    alt25=1;
+                if ( (LA24_0==19) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt24) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:238:6: attribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:240:6: attribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_attribute_def_in_sensor_def1017);
+            	    pushFollow(FOLLOW_attribute_def_in_sensor_def1028);
             	    attribute_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_sensor_def1019); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop25;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:239:5: ( sensorMeasurement_def ';' )*
-            loop26:
-            do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
-
-                if ( (LA26_0==27) ) {
-                    alt26=1;
-                }
-
-
-                switch (alt26) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:239:6: sensorMeasurement_def ';'
-            	    {
-            	    pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def1028);
-            	    sensorMeasurement_def();
 
             	    state._fsp--;
 
@@ -2035,7 +1984,39 @@ public class ArchSpecParser extends Parser {
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop24;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:241:5: ( sensorMeasurement_def ';' )*
+            loop25:
+            do {
+                int alt25=2;
+                int LA25_0 = input.LA(1);
+
+                if ( (LA25_0==28) ) {
+                    alt25=1;
+                }
+
+
+                switch (alt25) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:241:6: sensorMeasurement_def ';'
+            	    {
+            	    pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def1039);
+            	    sensorMeasurement_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_sensor_def1041); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop25;
                 }
             } while (true);
 
@@ -2060,7 +2041,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "attribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:243:1: attribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:245:1: attribute_def : 'attribute' lc_id ':' dataType ;
     public final void attribute_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id28 =null;
 
@@ -2068,20 +2049,20 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:243:14: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:244:5: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:245:14: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:246:5: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_attribute_def1051); 
+            match(input,19,FOLLOW_19_in_attribute_def1062); 
 
-            pushFollow(FOLLOW_lc_id_in_attribute_def1053);
+            pushFollow(FOLLOW_lc_id_in_attribute_def1064);
             lc_id28=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_attribute_def1055); 
+            match(input,11,FOLLOW_11_in_attribute_def1066); 
 
-            pushFollow(FOLLOW_dataType_in_attribute_def1057);
+            pushFollow(FOLLOW_dataType_in_attribute_def1068);
             dataType29=dataType();
 
             state._fsp--;
@@ -2107,27 +2088,27 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "sensorMeasurement_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:248:1: sensorMeasurement_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:250:1: sensorMeasurement_def : 'generate' lc_id ':' CAPITALIZED_ID ;
     public final void sensorMeasurement_def() throws RecognitionException {
         Token CAPITALIZED_ID31=null;
         ArchSpecParser.lc_id_return lc_id30 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:248:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:249:5: 'generate' lc_id ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:250:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:251:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,27,FOLLOW_27_in_sensorMeasurement_def1077); 
+            match(input,28,FOLLOW_28_in_sensorMeasurement_def1088); 
 
-            pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def1079);
+            pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def1090);
             lc_id30=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_sensorMeasurement_def1081); 
+            match(input,11,FOLLOW_11_in_sensorMeasurement_def1092); 
 
-            CAPITALIZED_ID31=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1084); 
+            CAPITALIZED_ID31=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1095); 
 
              context.currentSensor.addSensorMeasurement((lc_id30!=null?input.toString(lc_id30.start,lc_id30.stop):null), (CAPITALIZED_ID31!=null?CAPITALIZED_ID31.getText():null)); 
                 context.constructSymbTable((lc_id30!=null?input.toString(lc_id30.start,lc_id30.stop):null), (CAPITALIZED_ID31!=null?CAPITALIZED_ID31.getText():null)); 
@@ -2150,78 +2131,78 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "actuator_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:254:1: actuator_def : CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:256:1: actuator_def : CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* ;
     public final void actuator_def() throws RecognitionException {
         Token CAPITALIZED_ID32=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:254:13: ( CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:255:4: CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:256:13: ( CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:257:4: CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )*
             {
-            CAPITALIZED_ID32=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def1102); 
+            CAPITALIZED_ID32=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def1113); 
 
             context.currentActuator = new Actuator((CAPITALIZED_ID32!=null?CAPITALIZED_ID32.getText():null));
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:257:4: ( actuatorAttribute_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:259:4: ( actuatorAttribute_def ';' )*
+            loop26:
+            do {
+                int alt26=2;
+                int LA26_0 = input.LA(1);
+
+                if ( (LA26_0==19) ) {
+                    alt26=1;
+                }
+
+
+                switch (alt26) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:259:5: actuatorAttribute_def ';'
+            	    {
+            	    pushFollow(FOLLOW_actuatorAttribute_def_in_actuator_def1124);
+            	    actuatorAttribute_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_actuator_def1126); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop26;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:260:4: ( action_def ';' )*
             loop27:
             do {
                 int alt27=2;
                 int LA27_0 = input.LA(1);
 
-                if ( (LA27_0==19) ) {
+                if ( (LA27_0==17) ) {
                     alt27=1;
                 }
 
 
                 switch (alt27) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:257:5: actuatorAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:260:5: action_def ';'
             	    {
-            	    pushFollow(FOLLOW_actuatorAttribute_def_in_actuator_def1113);
-            	    actuatorAttribute_def();
+            	    pushFollow(FOLLOW_action_def_in_actuator_def1134);
+            	    action_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_actuator_def1115); 
+            	    match(input,12,FOLLOW_12_in_actuator_def1136); 
 
             	    }
             	    break;
 
             	default :
             	    break loop27;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:258:4: ( action_def ';' )*
-            loop28:
-            do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
-
-                if ( (LA28_0==17) ) {
-                    alt28=1;
-                }
-
-
-                switch (alt28) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:258:5: action_def ';'
-            	    {
-            	    pushFollow(FOLLOW_action_def_in_actuator_def1123);
-            	    action_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_actuator_def1125); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop28;
                 }
             } while (true);
 
@@ -2246,7 +2227,7 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "actuatorAttribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:262:1: actuatorAttribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:264:1: actuatorAttribute_def : 'attribute' lc_id ':' dataType ;
     public final void actuatorAttribute_def() throws RecognitionException {
         ArchSpecParser.lc_id_return lc_id33 =null;
 
@@ -2254,20 +2235,20 @@ public class ArchSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:262:22: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:263:6: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:264:22: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:265:6: 'attribute' lc_id ':' dataType
             {
-            match(input,19,FOLLOW_19_in_actuatorAttribute_def1148); 
+            match(input,19,FOLLOW_19_in_actuatorAttribute_def1159); 
 
-            pushFollow(FOLLOW_lc_id_in_actuatorAttribute_def1150);
+            pushFollow(FOLLOW_lc_id_in_actuatorAttribute_def1161);
             lc_id33=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_actuatorAttribute_def1152); 
+            match(input,11,FOLLOW_11_in_actuatorAttribute_def1163); 
 
-            pushFollow(FOLLOW_dataType_in_actuatorAttribute_def1154);
+            pushFollow(FOLLOW_dataType_in_actuatorAttribute_def1165);
             dataType34=dataType();
 
             state._fsp--;
@@ -2293,32 +2274,32 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "action_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:267:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:269:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
     public final void action_def() throws RecognitionException {
         Token CAPITALIZED_ID35=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:267:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:268:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:269:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:270:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
             {
-            match(input,17,FOLLOW_17_in_action_def1173); 
+            match(input,17,FOLLOW_17_in_action_def1184); 
 
-            CAPITALIZED_ID35=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def1175); 
+            CAPITALIZED_ID35=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def1186); 
 
-            match(input,8,FOLLOW_8_in_action_def1177); 
+            match(input,8,FOLLOW_8_in_action_def1188); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:268:33: ( parameter_def )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:270:33: ( parameter_def )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA29_0==ID) ) {
-                alt29=1;
+            if ( (LA28_0==ID) ) {
+                alt28=1;
             }
-            switch (alt29) {
+            switch (alt28) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:268:34: parameter_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:270:34: parameter_def
                     {
-                    pushFollow(FOLLOW_parameter_def_in_action_def1180);
+                    pushFollow(FOLLOW_parameter_def_in_action_def1191);
                     parameter_def();
 
                     state._fsp--;
@@ -2330,7 +2311,7 @@ public class ArchSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_action_def1184); 
+            match(input,9,FOLLOW_9_in_action_def1195); 
 
              context.currentActuator.addAction((CAPITALIZED_ID35!=null?CAPITALIZED_ID35.getText():null)); 
 
@@ -2352,40 +2333,40 @@ public class ArchSpecParser extends Parser {
 
 
     // $ANTLR start "parameter_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:272:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:274:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
     public final void parameter_def() throws RecognitionException {
         Token CAPITALIZED_ID37=null;
         ArchSpecParser.lc_id_return lc_id36 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:272:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:273:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:274:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:275:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_parameter_def1204);
+            pushFollow(FOLLOW_lc_id_in_parameter_def1215);
             lc_id36=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_parameter_def1206); 
+            match(input,11,FOLLOW_11_in_parameter_def1217); 
 
-            CAPITALIZED_ID37=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def1209); 
+            CAPITALIZED_ID37=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def1220); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:273:31: ( ',' parameter_def )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:275:31: ( ',' parameter_def )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA30_0==10) ) {
-                alt30=1;
+            if ( (LA29_0==10) ) {
+                alt29=1;
             }
-            switch (alt30) {
+            switch (alt29) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:273:32: ',' parameter_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:275:32: ',' parameter_def
                     {
-                    match(input,10,FOLLOW_10_in_parameter_def1212); 
+                    match(input,10,FOLLOW_10_in_parameter_def1223); 
 
-                    pushFollow(FOLLOW_parameter_def_in_parameter_def1214);
+                    pushFollow(FOLLOW_parameter_def_in_parameter_def1225);
                     parameter_def();
 
                     state._fsp--;
@@ -2422,165 +2403,167 @@ public class ArchSpecParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_35_in_archSpec87 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_36_in_archSpec87 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_11_in_archSpec89 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_struct_def_in_archSpec91 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_34_in_archSpec105 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_struct_def_in_archSpec91 = new BitSet(new long[]{0x0000001800000000L});
+    public static final BitSet FOLLOW_35_in_archSpec105 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_11_in_archSpec107 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_component_def_in_archSpec109 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_CAPITALIZED_ID_in_region_def127 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_region_def129 = new BitSet(new long[]{0x000000001210E000L});
+    public static final BitSet FOLLOW_11_in_region_def129 = new BitSet(new long[]{0x000000002410E000L});
     public static final BitSet FOLLOW_dataType_in_region_def131 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_region_def134 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_component_def156 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_11_in_component_def158 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_cs_def_in_component_def161 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_controller_def_in_component_def172 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_ss_def193 = new BitSet(new long[]{0x0000000009080002L});
-    public static final BitSet FOLLOW_storageAttribute_def_in_ss_def206 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ss_def208 = new BitSet(new long[]{0x0000000009080002L});
-    public static final BitSet FOLLOW_storageDataAccess_def_in_ss_def217 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ss_def219 = new BitSet(new long[]{0x0000000009000002L});
-    public static final BitSet FOLLOW_storagePartition_def_in_ss_def229 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ss_def231 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_19_in_storageAttribute_def251 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_storageAttribute_def253 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storageAttribute_def255 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_storageAttribute_def257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def278 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_storageDataAccess_def281 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_storagedataIndex_def_in_storageDataAccess_def283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_storageGeneratedInfo_def302 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_storageGeneratedInfo_def304 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storageGeneratedInfo_def306 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_storagedataIndex_def331 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storagedataIndex_def333 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_storagedataIndex_def335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_storagePartition_def364 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storagePartition_def366 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_storagePartition_def372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_controller_def389 = new BitSet(new long[]{0x0000000020A80002L});
-    public static final BitSet FOLLOW_cntrlAttribute_def_in_controller_def402 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def404 = new BitSet(new long[]{0x0000000020A80002L});
-    public static final BitSet FOLLOW_cntrlConsumeInfo_def_in_controller_def413 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def415 = new BitSet(new long[]{0x0000000020A00002L});
-    public static final BitSet FOLLOW_cntrlCommand_def_in_controller_def424 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def426 = new BitSet(new long[]{0x0000000020200002L});
-    public static final BitSet FOLLOW_cntrlPartition_def_in_controller_def436 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def438 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_29_in_cntrlPartition_def460 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlPartition_def462 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_cntrlAttribute_def482 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_cntrlAttribute_def484 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlAttribute_def486 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_cntrlAttribute_def488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_cntrlConsumeInfo_def505 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_cntrlConsumeInfo_def507 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_cntrlConsumeInfo_def510 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_cntrlConsumeInfo_def512 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def514 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_cntrlConsumeInfo_def516 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def518 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_cntrlCommand_def545 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def552 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_cntrlCommand_def554 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def557 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_cntrlCommand_def561 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_cntrlCommand_def563 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_cntrlCommand_def566 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlCommand_def568 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_cntrlCommand_def570 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlCommand_def572 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def594 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_cntrlParameter_def598 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_parameter_def_in_cntrlParameter_def600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cs_def621 = new BitSet(new long[]{0x00000000A8880002L});
-    public static final BitSet FOLLOW_csAttribute_def_in_cs_def634 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def636 = new BitSet(new long[]{0x00000000A8880002L});
-    public static final BitSet FOLLOW_csGeneratedInfo_def_in_cs_def645 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def647 = new BitSet(new long[]{0x00000000A8800002L});
-    public static final BitSet FOLLOW_csConsumeInfo_def_in_cs_def657 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def659 = new BitSet(new long[]{0x00000000A0800002L});
-    public static final BitSet FOLLOW_csRequest_def_in_cs_def669 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def672 = new BitSet(new long[]{0x00000000A0000002L});
-    public static final BitSet FOLLOW_partition_def_in_cs_def681 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def683 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_19_in_csAttribute_def704 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csAttribute_def706 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csAttribute_def708 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_csAttribute_def710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_csGeneratedInfo_def729 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def731 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csGeneratedInfo_def733 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_csConsumeInfo_def754 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def756 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_csConsumeInfo_def759 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_csConsumeInfo_def761 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csConsumeInfo_def763 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_csConsumeInfo_def765 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csConsumeInfo_def767 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_csRequest_def791 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csRequest_def793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_partition_def813 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_partition_def815 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def836 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_structField_def_in_struct_def850 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_struct_def852 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_lc_id_in_structField_def874 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_structField_def876 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_structField_def878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_lc_id894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primitiveType_in_dataType907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_primitiveType922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_primitiveType928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_primitiveType934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_primitiveType943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_primitiveType951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_primitiveType957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_abilities_def970 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_abilities_def972 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_sensor_def_in_abilities_def977 = new BitSet(new long[]{0x0000000000040010L});
-    public static final BitSet FOLLOW_18_in_abilities_def983 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_abilities_def985 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_actuator_def_in_abilities_def988 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensor_def1004 = new BitSet(new long[]{0x0000000008080002L});
-    public static final BitSet FOLLOW_attribute_def_in_sensor_def1017 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_sensor_def1019 = new BitSet(new long[]{0x0000000008080002L});
-    public static final BitSet FOLLOW_sensorMeasurement_def_in_sensor_def1028 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_sensor_def1030 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_19_in_attribute_def1051 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_attribute_def1053 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_attribute_def1055 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_attribute_def1057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_sensorMeasurement_def1077 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_sensorMeasurement_def1079 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_sensorMeasurement_def1081 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def1102 = new BitSet(new long[]{0x00000000000A0002L});
-    public static final BitSet FOLLOW_actuatorAttribute_def_in_actuator_def1113 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_actuator_def1115 = new BitSet(new long[]{0x00000000000A0002L});
-    public static final BitSet FOLLOW_action_def_in_actuator_def1123 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_actuator_def1125 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_19_in_actuatorAttribute_def1148 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_actuatorAttribute_def1150 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_actuatorAttribute_def1152 = new BitSet(new long[]{0x000000001210E000L});
-    public static final BitSet FOLLOW_dataType_in_actuatorAttribute_def1154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_action_def1173 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def1175 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_action_def1177 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_parameter_def_in_action_def1180 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_action_def1184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_parameter_def1204 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_parameter_def1206 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def1209 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_parameter_def1212 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_parameter_def_in_parameter_def1214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_cs_def_in_component_def161 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_24_in_component_def169 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_component_def171 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_controller_def_in_component_def174 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_ss_def204 = new BitSet(new long[]{0x0000000012080002L});
+    public static final BitSet FOLLOW_storageAttribute_def_in_ss_def217 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ss_def219 = new BitSet(new long[]{0x0000000012080002L});
+    public static final BitSet FOLLOW_storageDataAccess_def_in_ss_def228 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ss_def230 = new BitSet(new long[]{0x0000000012000002L});
+    public static final BitSet FOLLOW_storagePartition_def_in_ss_def240 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ss_def242 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_19_in_storageAttribute_def262 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_storageAttribute_def264 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storageAttribute_def266 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_storageAttribute_def268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def289 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_storageDataAccess_def292 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_storagedataIndex_def_in_storageDataAccess_def294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_storageGeneratedInfo_def313 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_storageGeneratedInfo_def315 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storageGeneratedInfo_def317 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_storagedataIndex_def342 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storagedataIndex_def344 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_storagedataIndex_def346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_storagePartition_def375 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storagePartition_def377 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_storagePartition_def383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_controller_def400 = new BitSet(new long[]{0x0000000040A80002L});
+    public static final BitSet FOLLOW_cntrlAttribute_def_in_controller_def413 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def415 = new BitSet(new long[]{0x0000000040A80002L});
+    public static final BitSet FOLLOW_cntrlConsumeInfo_def_in_controller_def424 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def426 = new BitSet(new long[]{0x0000000040A00002L});
+    public static final BitSet FOLLOW_cntrlCommand_def_in_controller_def435 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def437 = new BitSet(new long[]{0x0000000040200002L});
+    public static final BitSet FOLLOW_cntrlPartition_def_in_controller_def447 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def449 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_30_in_cntrlPartition_def471 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlPartition_def473 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_cntrlAttribute_def493 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_cntrlAttribute_def495 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlAttribute_def497 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_cntrlAttribute_def499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_cntrlConsumeInfo_def516 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_cntrlConsumeInfo_def518 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_cntrlConsumeInfo_def521 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_cntrlConsumeInfo_def523 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def525 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_cntrlConsumeInfo_def527 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def529 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_cntrlCommand_def556 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def563 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_cntrlCommand_def565 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def568 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_cntrlCommand_def572 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_cntrlCommand_def574 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_cntrlCommand_def577 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlCommand_def579 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_cntrlCommand_def581 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlCommand_def583 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def605 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_cntrlParameter_def609 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_parameter_def_in_cntrlParameter_def611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cs_def632 = new BitSet(new long[]{0x0000000150880002L});
+    public static final BitSet FOLLOW_csAttribute_def_in_cs_def645 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def647 = new BitSet(new long[]{0x0000000150880002L});
+    public static final BitSet FOLLOW_csGeneratedInfo_def_in_cs_def656 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def658 = new BitSet(new long[]{0x0000000150800002L});
+    public static final BitSet FOLLOW_csConsumeInfo_def_in_cs_def668 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def670 = new BitSet(new long[]{0x0000000140800002L});
+    public static final BitSet FOLLOW_csRequest_def_in_cs_def680 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def683 = new BitSet(new long[]{0x0000000140000002L});
+    public static final BitSet FOLLOW_partition_def_in_cs_def692 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def694 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_19_in_csAttribute_def715 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csAttribute_def717 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csAttribute_def719 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_csAttribute_def721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_csGeneratedInfo_def740 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def742 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csGeneratedInfo_def744 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_csConsumeInfo_def765 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def767 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_csConsumeInfo_def770 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_csConsumeInfo_def772 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csConsumeInfo_def774 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_csConsumeInfo_def776 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csConsumeInfo_def778 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_csRequest_def802 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csRequest_def804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_partition_def824 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_partition_def826 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def847 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_structField_def_in_struct_def861 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_struct_def863 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_lc_id_in_structField_def885 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_structField_def887 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_structField_def889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_lc_id905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primitiveType_in_dataType918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_primitiveType933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_primitiveType939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_primitiveType945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_primitiveType954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_primitiveType962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_primitiveType968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_abilities_def981 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_abilities_def983 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_sensor_def_in_abilities_def988 = new BitSet(new long[]{0x0000000000040010L});
+    public static final BitSet FOLLOW_18_in_abilities_def994 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_abilities_def996 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_actuator_def_in_abilities_def999 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensor_def1015 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_attribute_def_in_sensor_def1028 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_sensor_def1030 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_sensorMeasurement_def_in_sensor_def1039 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_sensor_def1041 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_19_in_attribute_def1062 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_attribute_def1064 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_attribute_def1066 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_attribute_def1068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_sensorMeasurement_def1088 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_sensorMeasurement_def1090 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_sensorMeasurement_def1092 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def1113 = new BitSet(new long[]{0x00000000000A0002L});
+    public static final BitSet FOLLOW_actuatorAttribute_def_in_actuator_def1124 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_actuator_def1126 = new BitSet(new long[]{0x00000000000A0002L});
+    public static final BitSet FOLLOW_action_def_in_actuator_def1134 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_actuator_def1136 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_19_in_actuatorAttribute_def1159 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_actuatorAttribute_def1161 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_actuatorAttribute_def1163 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_actuatorAttribute_def1165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_action_def1184 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def1186 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_action_def1188 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_parameter_def_in_action_def1191 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_action_def1195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_parameter_def1215 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_parameter_def1217 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def1220 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_parameter_def1223 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_parameter_def_in_parameter_def1225 = new BitSet(new long[]{0x0000000000000002L});
 
 }

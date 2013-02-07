@@ -44,7 +44,9 @@ region_def :
 component_def :
    //('storageService' ':' (ss_def)+ )* 
    'computationalService' ':' (cs_def)+ 
-    ((controller_def)+ )*
+   'controller' ':' (controller_def)+   
+   //(controller_def)*
+    //'controller' ':' (controller_def)+ 
      
 ;
 
