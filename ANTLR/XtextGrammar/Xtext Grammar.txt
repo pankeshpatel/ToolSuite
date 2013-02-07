@@ -59,6 +59,7 @@ ArchSpec:
 	 ('computationalService' ':' (computationalService += ComputationalService)+ )*  
 	  	  
 	  // Architecture Specification must contain controller definition.
+	   'controller' ':' (controller += Controller)+ 
 	  //('controller' ':' (controller += Controller)+ )+
 	 // ((controller += Controller)+ )+
 
