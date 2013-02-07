@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g 2012-11-06 17:13:28
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g 2013-02-07 14:22:05
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class VocabSpecParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", "WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", "'abilities'", "'accessed-by'", "'action'", "'actuators'", "'attribute'", "'boolean'", "'command'", "'computationalService'", "'consume'", "'controller'", "'deployment-instance'", "'double'", "'from'", "'generate'", "'long'", "'partition-per'", "'region-hops'", "'regions'", "'request'", "'sensors'", "'singleton'", "'storageService'", "'structs'", "'to'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", "WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", "'accessed-by'", "'action'", "'actuators'", "'attribute'", "'boolean'", "'command'", "'computationalService'", "'consume'", "'controller'", "'deployment-instance'", "'double'", "'from'", "'generate'", "'long'", "'partition-per'", "'region-hops'", "'regions'", "'request'", "'resources'", "'sensors'", "'singleton'", "'storageService'", "'storages'", "'structs'", "'to'"
     };
 
     public static final int EOF=-1;
@@ -50,6 +50,7 @@ public class VocabSpecParser extends Parser {
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
+    public static final int T__40=40;
     public static final int CAPITALIZED_ID=4;
     public static final int ID=5;
     public static final int INT=6;
@@ -80,19 +81,19 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "vocabSpec"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:24:1: vocabSpec : 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'abilities' ':' abilities_def ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:24:1: vocabSpec : 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def ;
     public final void vocabSpec() throws RecognitionException {
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:24:11: ( 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'abilities' ':' abilities_def )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:25:3: 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'abilities' ':' abilities_def
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:24:11: ( 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:25:3: 'regions' ':' ( region_def )+ 'structs' ':' ( struct_def )+ 'resources' ':' abilities_def
             {
-            match(input,33,FOLLOW_33_in_vocabSpec62); 
+            match(input,32,FOLLOW_32_in_vocabSpec63); 
 
              context = new Context();
             		context.currentRegion = new RegionsGenerator();
             		context.currentMappingConstraint = new MappingConstraint(); 
 
-            match(input,11,FOLLOW_11_in_vocabSpec70); 
+            match(input,11,FOLLOW_11_in_vocabSpec71); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:29:7: ( region_def )+
             int cnt1=0;
@@ -110,7 +111,7 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:29:8: region_def
             	    {
-            	    pushFollow(FOLLOW_region_def_in_vocabSpec73);
+            	    pushFollow(FOLLOW_region_def_in_vocabSpec74);
             	    region_def();
 
             	    state._fsp--;
@@ -131,9 +132,9 @@ public class VocabSpecParser extends Parser {
 
              context.currentRegion.generateCode(); 
 
-            match(input,38,FOLLOW_38_in_vocabSpec90); 
+            match(input,39,FOLLOW_39_in_vocabSpec91); 
 
-            match(input,11,FOLLOW_11_in_vocabSpec109); 
+            match(input,11,FOLLOW_11_in_vocabSpec110); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:33:5: ( struct_def )+
             int cnt2=0;
@@ -151,7 +152,7 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:33:6: struct_def
             	    {
-            	    pushFollow(FOLLOW_struct_def_in_vocabSpec123);
+            	    pushFollow(FOLLOW_struct_def_in_vocabSpec124);
             	    struct_def();
 
             	    state._fsp--;
@@ -170,11 +171,11 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            match(input,16,FOLLOW_16_in_vocabSpec133); 
+            match(input,34,FOLLOW_34_in_vocabSpec134); 
 
-            match(input,11,FOLLOW_11_in_vocabSpec135); 
+            match(input,11,FOLLOW_11_in_vocabSpec136); 
 
-            pushFollow(FOLLOW_abilities_def_in_vocabSpec137);
+            pushFollow(FOLLOW_abilities_def_in_vocabSpec138);
             abilities_def();
 
             state._fsp--;
@@ -208,17 +209,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:38:12: ( CAPITALIZED_ID ':' dataType ';' )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:40:6: CAPITALIZED_ID ':' dataType ';'
             {
-            CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_region_def159); 
+            CAPITALIZED_ID1=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_region_def165); 
 
-            match(input,11,FOLLOW_11_in_region_def161); 
+            match(input,11,FOLLOW_11_in_region_def167); 
 
-            pushFollow(FOLLOW_dataType_in_region_def163);
+            pushFollow(FOLLOW_dataType_in_region_def169);
             dataType2=dataType();
 
             state._fsp--;
 
 
-            match(input,12,FOLLOW_12_in_region_def166); 
+            match(input,12,FOLLOW_12_in_region_def172); 
 
              
                 context.currentRegion.addRegion((CAPITALIZED_ID1!=null?CAPITALIZED_ID1.getText():null), (dataType2!=null?input.toString(dataType2.start,dataType2.stop):null)); 
@@ -263,7 +264,7 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:47:3: 'storageService' ( ss_def )+
             	    {
-            	    match(input,37,FOLLOW_37_in_sc_def183); 
+            	    match(input,37,FOLLOW_37_in_sc_def189); 
 
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:47:20: ( ss_def )+
             	    int cnt3=0;
@@ -281,7 +282,7 @@ public class VocabSpecParser extends Parser {
             	    	case 1 :
             	    	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:47:21: ss_def
             	    	    {
-            	    	    pushFollow(FOLLOW_ss_def_in_sc_def186);
+            	    	    pushFollow(FOLLOW_ss_def_in_sc_def192);
             	    	    ss_def();
 
             	    	    state._fsp--;
@@ -309,7 +310,7 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            match(input,23,FOLLOW_23_in_sc_def197); 
+            match(input,22,FOLLOW_22_in_sc_def203); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:48:27: ( cs_def )+
             int cnt5=0;
@@ -327,7 +328,7 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:48:28: cs_def
             	    {
-            	    pushFollow(FOLLOW_cs_def_in_sc_def200);
+            	    pushFollow(FOLLOW_cs_def_in_sc_def206);
             	    cs_def();
 
             	    state._fsp--;
@@ -352,7 +353,7 @@ public class VocabSpecParser extends Parser {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==25) ) {
+                if ( (LA7_0==24) ) {
                     alt7=1;
                 }
 
@@ -361,7 +362,7 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:49:6: 'controller' ( controller_def )+
             	    {
-            	    match(input,25,FOLLOW_25_in_sc_def210); 
+            	    match(input,24,FOLLOW_24_in_sc_def216); 
 
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:49:19: ( controller_def )+
             	    int cnt6=0;
@@ -379,7 +380,7 @@ public class VocabSpecParser extends Parser {
             	    	case 1 :
             	    	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:49:20: controller_def
             	    	    {
-            	    	    pushFollow(FOLLOW_controller_def_in_sc_def213);
+            	    	    pushFollow(FOLLOW_controller_def_in_sc_def219);
             	    	    controller_def();
 
             	    	    state._fsp--;
@@ -425,15 +426,15 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "ss_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:53:1: ss_def : CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:53:1: ss_def : CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ;
     public final void ss_def() throws RecognitionException {
         Token CAPITALIZED_ID3=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:53:7: ( CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:54:3: CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* ( storagePartition_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:53:7: ( CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:54:3: CAPITALIZED_ID ( storageAttribute_def ';' )* ( storageDataAccess_def ';' )*
             {
-            CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def234); 
+            CAPITALIZED_ID3=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_ss_def240); 
 
             	context.currentStorageService = new Storage();
                 	//context.currentStorageService = new Storage((CAPITALIZED_ID3!=null?CAPITALIZED_ID3.getText():null));
@@ -445,7 +446,7 @@ public class VocabSpecParser extends Parser {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==20) ) {
+                if ( (LA8_0==19) ) {
                     alt8=1;
                 }
 
@@ -454,13 +455,13 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:58:6: storageAttribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_storageAttribute_def_in_ss_def247);
+            	    pushFollow(FOLLOW_storageAttribute_def_in_ss_def253);
             	    storageAttribute_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_ss_def249); 
+            	    match(input,12,FOLLOW_12_in_ss_def255); 
 
             	    }
             	    break;
@@ -477,7 +478,7 @@ public class VocabSpecParser extends Parser {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==29) ) {
+                if ( (LA9_0==28) ) {
                     alt9=1;
                 }
 
@@ -486,51 +487,19 @@ public class VocabSpecParser extends Parser {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:59:6: storageDataAccess_def ';'
             	    {
-            	    pushFollow(FOLLOW_storageDataAccess_def_in_ss_def258);
+            	    pushFollow(FOLLOW_storageDataAccess_def_in_ss_def264);
             	    storageDataAccess_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_ss_def260); 
+            	    match(input,12,FOLLOW_12_in_ss_def266); 
 
             	    }
             	    break;
 
             	default :
             	    break loop9;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:60:5: ( storagePartition_def ';' )*
-            loop10:
-            do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
-
-                if ( (LA10_0==26) ) {
-                    alt10=1;
-                }
-
-
-                switch (alt10) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:60:6: storagePartition_def ';'
-            	    {
-            	    pushFollow(FOLLOW_storagePartition_def_in_ss_def270);
-            	    storagePartition_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_ss_def272); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop10;
                 }
             } while (true);
 
@@ -574,17 +543,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:72:21: ( 'attribute' lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:73:3: 'attribute' lc_id ':' dataType
             {
-            match(input,20,FOLLOW_20_in_storageAttribute_def292); 
+            match(input,19,FOLLOW_19_in_storageAttribute_def290); 
 
-            pushFollow(FOLLOW_lc_id_in_storageAttribute_def294);
+            pushFollow(FOLLOW_lc_id_in_storageAttribute_def292);
             lc_id4=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_storageAttribute_def296); 
+            match(input,11,FOLLOW_11_in_storageAttribute_def294); 
 
-            pushFollow(FOLLOW_dataType_in_storageAttribute_def298);
+            pushFollow(FOLLOW_dataType_in_storageAttribute_def296);
             dataType5=dataType();
 
             state._fsp--;
@@ -616,15 +585,15 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:77:23: ( storageGeneratedInfo_def 'accessed-by' storagedataIndex_def )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:78:6: storageGeneratedInfo_def 'accessed-by' storagedataIndex_def
             {
-            pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def319);
+            pushFollow(FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def317);
             storageGeneratedInfo_def();
 
             state._fsp--;
 
 
-            match(input,17,FOLLOW_17_in_storageDataAccess_def322); 
+            match(input,16,FOLLOW_16_in_storageDataAccess_def320); 
 
-            pushFollow(FOLLOW_storagedataIndex_def_in_storageDataAccess_def324);
+            pushFollow(FOLLOW_storagedataIndex_def_in_storageDataAccess_def322);
             storagedataIndex_def();
 
             state._fsp--;
@@ -660,17 +629,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:82:26: ( 'generate' lc_id ':' CAPITALIZED_ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:83:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,29,FOLLOW_29_in_storageGeneratedInfo_def343); 
+            match(input,28,FOLLOW_28_in_storageGeneratedInfo_def341); 
 
-            pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def345);
+            pushFollow(FOLLOW_lc_id_in_storageGeneratedInfo_def343);
             lc_id6=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_storageGeneratedInfo_def347); 
+            match(input,11,FOLLOW_11_in_storageGeneratedInfo_def345); 
 
-            CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def350); 
+            CAPITALIZED_ID7=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def348); 
 
              context.currentStorageService.addGeneratedInfo((lc_id6!=null?input.toString(lc_id6.start,lc_id6.stop):null), (CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));  
                 context.constructSymbTable((lc_id6!=null?input.toString(lc_id6.start,lc_id6.stop):null), (CAPITALIZED_ID7!=null?CAPITALIZED_ID7.getText():null));
@@ -704,15 +673,15 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:88:21: ( lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:89:9: lc_id ':' dataType
             {
-            pushFollow(FOLLOW_lc_id_in_storagedataIndex_def372);
+            pushFollow(FOLLOW_lc_id_in_storagedataIndex_def370);
             lc_id8=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_storagedataIndex_def374); 
+            match(input,11,FOLLOW_11_in_storagedataIndex_def372); 
 
-            pushFollow(FOLLOW_dataType_in_storagedataIndex_def376);
+            pushFollow(FOLLOW_dataType_in_storagedataIndex_def374);
             dataType9=dataType();
 
             state._fsp--;
@@ -747,11 +716,11 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:93:22: (storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton' )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:94:5: storageDeploymentConstraint= 'deployment-instance' ':' storageDeploymentConstraintValue= 'singleton'
             {
-            storageDeploymentConstraint=(Token)match(input,26,FOLLOW_26_in_storagePartition_def405); 
+            storageDeploymentConstraint=(Token)match(input,25,FOLLOW_25_in_storagePartition_def403); 
 
-            match(input,11,FOLLOW_11_in_storagePartition_def407); 
+            match(input,11,FOLLOW_11_in_storagePartition_def405); 
 
-            storageDeploymentConstraintValue=(Token)match(input,36,FOLLOW_36_in_storagePartition_def413); 
+            storageDeploymentConstraintValue=(Token)match(input,36,FOLLOW_36_in_storagePartition_def411); 
 
 
                  
@@ -786,7 +755,7 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:104:15: ( CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )* )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:105:3: CAPITALIZED_ID ( cntrlAttribute_def ';' )* ( cntrlConsumeInfo_def ';' )* ( cntrlCommand_def ';' )* ( cntrlPartition_def ';' )*
             {
-            CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def430); 
+            CAPITALIZED_ID10=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_controller_def428); 
 
 
                 context.currentController = new ControllerService();
@@ -794,27 +763,59 @@ public class VocabSpecParser extends Parser {
                 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:110:5: ( cntrlAttribute_def ';' )*
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0==19) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:110:6: cntrlAttribute_def ';'
+            	    {
+            	    pushFollow(FOLLOW_cntrlAttribute_def_in_controller_def441);
+            	    cntrlAttribute_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_controller_def443); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop10;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:111:5: ( cntrlConsumeInfo_def ';' )*
             loop11:
             do {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==20) ) {
+                if ( (LA11_0==23) ) {
                     alt11=1;
                 }
 
 
                 switch (alt11) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:110:6: cntrlAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:111:6: cntrlConsumeInfo_def ';'
             	    {
-            	    pushFollow(FOLLOW_cntrlAttribute_def_in_controller_def443);
-            	    cntrlAttribute_def();
+            	    pushFollow(FOLLOW_cntrlConsumeInfo_def_in_controller_def452);
+            	    cntrlConsumeInfo_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_controller_def445); 
+            	    match(input,12,FOLLOW_12_in_controller_def454); 
 
             	    }
             	    break;
@@ -825,28 +826,28 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:111:5: ( cntrlConsumeInfo_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:112:5: ( cntrlCommand_def ';' )*
             loop12:
             do {
                 int alt12=2;
                 int LA12_0 = input.LA(1);
 
-                if ( (LA12_0==24) ) {
+                if ( (LA12_0==21) ) {
                     alt12=1;
                 }
 
 
                 switch (alt12) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:111:6: cntrlConsumeInfo_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:112:6: cntrlCommand_def ';'
             	    {
-            	    pushFollow(FOLLOW_cntrlConsumeInfo_def_in_controller_def454);
-            	    cntrlConsumeInfo_def();
+            	    pushFollow(FOLLOW_cntrlCommand_def_in_controller_def463);
+            	    cntrlCommand_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_controller_def456); 
+            	    match(input,12,FOLLOW_12_in_controller_def465); 
 
             	    }
             	    break;
@@ -857,66 +858,34 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:112:5: ( cntrlCommand_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:113:5: ( cntrlPartition_def ';' )*
             loop13:
             do {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( (LA13_0==22) ) {
+                if ( (LA13_0==30) ) {
                     alt13=1;
                 }
 
 
                 switch (alt13) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:112:6: cntrlCommand_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:113:6: cntrlPartition_def ';'
             	    {
-            	    pushFollow(FOLLOW_cntrlCommand_def_in_controller_def465);
-            	    cntrlCommand_def();
+            	    pushFollow(FOLLOW_cntrlPartition_def_in_controller_def475);
+            	    cntrlPartition_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_controller_def467); 
+            	    match(input,12,FOLLOW_12_in_controller_def477); 
 
             	    }
             	    break;
 
             	default :
             	    break loop13;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:113:5: ( cntrlPartition_def ';' )*
-            loop14:
-            do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
-
-                if ( (LA14_0==31) ) {
-                    alt14=1;
-                }
-
-
-                switch (alt14) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:113:6: cntrlPartition_def ';'
-            	    {
-            	    pushFollow(FOLLOW_cntrlPartition_def_in_controller_def477);
-            	    cntrlPartition_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_controller_def479); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop14;
                 }
             } while (true);
 
@@ -957,11 +926,11 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:124:20: (cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:125:2: cntrlDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
             {
-            cntrlDeploymentConstraint=(Token)match(input,31,FOLLOW_31_in_cntrlPartition_def500); 
+            cntrlDeploymentConstraint=(Token)match(input,30,FOLLOW_30_in_cntrlPartition_def498); 
 
-            match(input,11,FOLLOW_11_in_cntrlPartition_def502); 
+            match(input,11,FOLLOW_11_in_cntrlPartition_def500); 
 
-            CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def504); 
+            CAPITALIZED_ID11=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def502); 
 
              
                 context.currentController.setPartitionAttribute((CAPITALIZED_ID11!=null?CAPITALIZED_ID11.getText():null)); 
@@ -999,17 +968,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:134:19: ( 'attribute' lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:135:3: 'attribute' lc_id ':' dataType
             {
-            match(input,20,FOLLOW_20_in_cntrlAttribute_def522); 
+            match(input,19,FOLLOW_19_in_cntrlAttribute_def520); 
 
-            pushFollow(FOLLOW_lc_id_in_cntrlAttribute_def524);
+            pushFollow(FOLLOW_lc_id_in_cntrlAttribute_def522);
             lc_id12=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_cntrlAttribute_def526); 
+            match(input,11,FOLLOW_11_in_cntrlAttribute_def524); 
 
-            pushFollow(FOLLOW_dataType_in_cntrlAttribute_def528);
+            pushFollow(FOLLOW_dataType_in_cntrlAttribute_def526);
             dataType13=dataType();
 
             state._fsp--;
@@ -1044,36 +1013,36 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:139:21: ( 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:140:2: 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
             {
-            match(input,24,FOLLOW_24_in_cntrlConsumeInfo_def544); 
+            match(input,23,FOLLOW_23_in_cntrlConsumeInfo_def542); 
 
-            pushFollow(FOLLOW_lc_id_in_cntrlConsumeInfo_def546);
+            pushFollow(FOLLOW_lc_id_in_cntrlConsumeInfo_def544);
             lc_id14=lc_id();
 
             state._fsp--;
 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:140:18: ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==28) ) {
-                alt15=1;
+            if ( (LA14_0==27) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:140:19: 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
                     {
-                    match(input,28,FOLLOW_28_in_cntrlConsumeInfo_def549); 
+                    match(input,27,FOLLOW_27_in_cntrlConsumeInfo_def547); 
 
-                    match(input,32,FOLLOW_32_in_cntrlConsumeInfo_def551); 
+                    match(input,31,FOLLOW_31_in_cntrlConsumeInfo_def549); 
 
-                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def553); 
+                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def551); 
 
-                    match(input,INT,FOLLOW_INT_in_cntrlConsumeInfo_def555); 
+                    match(input,INT,FOLLOW_INT_in_cntrlConsumeInfo_def553); 
 
-                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def557); 
+                    match(input,11,FOLLOW_11_in_cntrlConsumeInfo_def555); 
 
-                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def559); 
+                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def557); 
 
                     }
                     break;
@@ -1109,24 +1078,24 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:144:18: ( 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:145:5: 'command' name= CAPITALIZED_ID '(' ( cntrlParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
             {
-            match(input,22,FOLLOW_22_in_cntrlCommand_def584); 
+            match(input,21,FOLLOW_21_in_cntrlCommand_def582); 
 
-            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def591); 
+            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def589); 
 
-            match(input,8,FOLLOW_8_in_cntrlCommand_def593); 
+            match(input,8,FOLLOW_8_in_cntrlCommand_def591); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:145:42: ( cntrlParameter_def )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA16_0==ID) ) {
-                alt16=1;
+            if ( (LA15_0==ID) ) {
+                alt15=1;
             }
-            switch (alt16) {
+            switch (alt15) {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:145:43: cntrlParameter_def
                     {
-                    pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def596);
+                    pushFollow(FOLLOW_cntrlParameter_def_in_cntrlCommand_def594);
                     cntrlParameter_def();
 
                     state._fsp--;
@@ -1138,19 +1107,19 @@ public class VocabSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_cntrlCommand_def600); 
+            match(input,9,FOLLOW_9_in_cntrlCommand_def598); 
 
-            match(input,39,FOLLOW_39_in_cntrlCommand_def602); 
+            match(input,40,FOLLOW_40_in_cntrlCommand_def600); 
 
-            match(input,32,FOLLOW_32_in_cntrlCommand_def605); 
+            match(input,31,FOLLOW_31_in_cntrlCommand_def603); 
 
-            match(input,11,FOLLOW_11_in_cntrlCommand_def607); 
+            match(input,11,FOLLOW_11_in_cntrlCommand_def605); 
 
-            match(input,INT,FOLLOW_INT_in_cntrlCommand_def609); 
+            match(input,INT,FOLLOW_INT_in_cntrlCommand_def607); 
 
-            match(input,11,FOLLOW_11_in_cntrlCommand_def611); 
+            match(input,11,FOLLOW_11_in_cntrlCommand_def609); 
 
-            match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def613); 
+            match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def611); 
 
              
                   context.currentController.addCommand((name!=null?name.getText():null));  
@@ -1183,26 +1152,26 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:151:20: ( lc_id ( ',' parameter_def )? )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:152:5: lc_id ( ',' parameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_cntrlParameter_def633);
+            pushFollow(FOLLOW_lc_id_in_cntrlParameter_def631);
             lc_id15=lc_id();
 
             state._fsp--;
 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:152:12: ( ',' parameter_def )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==10) ) {
-                alt17=1;
+            if ( (LA16_0==10) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:152:13: ',' parameter_def
                     {
-                    match(input,10,FOLLOW_10_in_cntrlParameter_def637); 
+                    match(input,10,FOLLOW_10_in_cntrlParameter_def635); 
 
-                    pushFollow(FOLLOW_parameter_def_in_cntrlParameter_def639);
+                    pushFollow(FOLLOW_parameter_def_in_cntrlParameter_def637);
                     parameter_def();
 
                     state._fsp--;
@@ -1242,34 +1211,66 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:156:7: ( CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )* )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:157:3: CAPITALIZED_ID ( csAttribute_def ';' )* ( csGeneratedInfo_def ';' )* ( csConsumeInfo_def ';' )* ( csRequest_def ';' )* ( partition_def ';' )*
             {
-            CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cs_def660); 
+            CAPITALIZED_ID16=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_cs_def658); 
 
              
                  context.currentComputationalService = new CS(); 
                  context.currentMappingConstraint.setSoftwareComponentName((CAPITALIZED_ID16!=null?CAPITALIZED_ID16.getText():null));
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:161:5: ( csAttribute_def ';' )*
+            loop17:
+            do {
+                int alt17=2;
+                int LA17_0 = input.LA(1);
+
+                if ( (LA17_0==19) ) {
+                    alt17=1;
+                }
+
+
+                switch (alt17) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:161:6: csAttribute_def ';'
+            	    {
+            	    pushFollow(FOLLOW_csAttribute_def_in_cs_def671);
+            	    csAttribute_def();
+
+            	    state._fsp--;
+
+
+            	    match(input,12,FOLLOW_12_in_cs_def673); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop17;
+                }
+            } while (true);
+
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:162:5: ( csGeneratedInfo_def ';' )*
             loop18:
             do {
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( (LA18_0==20) ) {
+                if ( (LA18_0==28) ) {
                     alt18=1;
                 }
 
 
                 switch (alt18) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:161:6: csAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:162:6: csGeneratedInfo_def ';'
             	    {
-            	    pushFollow(FOLLOW_csAttribute_def_in_cs_def673);
-            	    csAttribute_def();
+            	    pushFollow(FOLLOW_csGeneratedInfo_def_in_cs_def682);
+            	    csGeneratedInfo_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_cs_def675); 
+            	    match(input,12,FOLLOW_12_in_cs_def684); 
 
             	    }
             	    break;
@@ -1280,28 +1281,28 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:162:5: ( csGeneratedInfo_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:163:5: ( csConsumeInfo_def ';' )*
             loop19:
             do {
                 int alt19=2;
                 int LA19_0 = input.LA(1);
 
-                if ( (LA19_0==29) ) {
+                if ( (LA19_0==23) ) {
                     alt19=1;
                 }
 
 
                 switch (alt19) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:162:6: csGeneratedInfo_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:163:6: csConsumeInfo_def ';'
             	    {
-            	    pushFollow(FOLLOW_csGeneratedInfo_def_in_cs_def684);
-            	    csGeneratedInfo_def();
+            	    pushFollow(FOLLOW_csConsumeInfo_def_in_cs_def694);
+            	    csConsumeInfo_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_cs_def686); 
+            	    match(input,12,FOLLOW_12_in_cs_def696); 
 
             	    }
             	    break;
@@ -1312,28 +1313,28 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:163:5: ( csConsumeInfo_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:164:5: ( csRequest_def ';' )*
             loop20:
             do {
                 int alt20=2;
                 int LA20_0 = input.LA(1);
 
-                if ( (LA20_0==24) ) {
+                if ( (LA20_0==33) ) {
                     alt20=1;
                 }
 
 
                 switch (alt20) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:163:6: csConsumeInfo_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:164:6: csRequest_def ';'
             	    {
-            	    pushFollow(FOLLOW_csConsumeInfo_def_in_cs_def696);
-            	    csConsumeInfo_def();
+            	    pushFollow(FOLLOW_csRequest_def_in_cs_def706);
+            	    csRequest_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_cs_def698); 
+            	    match(input,12,FOLLOW_12_in_cs_def709); 
 
             	    }
             	    break;
@@ -1344,66 +1345,34 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:164:5: ( csRequest_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:165:5: ( partition_def ';' )*
             loop21:
             do {
                 int alt21=2;
                 int LA21_0 = input.LA(1);
 
-                if ( (LA21_0==34) ) {
+                if ( (LA21_0==30) ) {
                     alt21=1;
                 }
 
 
                 switch (alt21) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:164:6: csRequest_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:165:6: partition_def ';'
             	    {
-            	    pushFollow(FOLLOW_csRequest_def_in_cs_def708);
-            	    csRequest_def();
+            	    pushFollow(FOLLOW_partition_def_in_cs_def718);
+            	    partition_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_cs_def711); 
+            	    match(input,12,FOLLOW_12_in_cs_def720); 
 
             	    }
             	    break;
 
             	default :
             	    break loop21;
-                }
-            } while (true);
-
-
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:165:5: ( partition_def ';' )*
-            loop22:
-            do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
-
-                if ( (LA22_0==31) ) {
-                    alt22=1;
-                }
-
-
-                switch (alt22) {
-            	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:165:6: partition_def ';'
-            	    {
-            	    pushFollow(FOLLOW_partition_def_in_cs_def720);
-            	    partition_def();
-
-            	    state._fsp--;
-
-
-            	    match(input,12,FOLLOW_12_in_cs_def722); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop22;
                 }
             } while (true);
 
@@ -1447,17 +1416,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:177:17: ( 'attribute' lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:178:5: 'attribute' lc_id ':' dataType
             {
-            match(input,20,FOLLOW_20_in_csAttribute_def743); 
+            match(input,19,FOLLOW_19_in_csAttribute_def741); 
 
-            pushFollow(FOLLOW_lc_id_in_csAttribute_def745);
+            pushFollow(FOLLOW_lc_id_in_csAttribute_def743);
             lc_id17=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_csAttribute_def747); 
+            match(input,11,FOLLOW_11_in_csAttribute_def745); 
 
-            pushFollow(FOLLOW_dataType_in_csAttribute_def749);
+            pushFollow(FOLLOW_dataType_in_csAttribute_def747);
             dataType18=dataType();
 
             state._fsp--;
@@ -1493,17 +1462,17 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:182:20: ( 'generate' lc_id ':' CAPITALIZED_ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:183:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,29,FOLLOW_29_in_csGeneratedInfo_def768); 
+            match(input,28,FOLLOW_28_in_csGeneratedInfo_def766); 
 
-            pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def770);
+            pushFollow(FOLLOW_lc_id_in_csGeneratedInfo_def768);
             lc_id19=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_csGeneratedInfo_def772); 
+            match(input,11,FOLLOW_11_in_csGeneratedInfo_def770); 
 
-            CAPITALIZED_ID20=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def775); 
+            CAPITALIZED_ID20=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def773); 
 
              context.currentComputationalService.addGeneratedInfo((lc_id19!=null?input.toString(lc_id19.start,lc_id19.stop):null), (CAPITALIZED_ID20!=null?CAPITALIZED_ID20.getText():null)); 
                 context.constructSymbTable((lc_id19!=null?input.toString(lc_id19.start,lc_id19.stop):null), (CAPITALIZED_ID20!=null?CAPITALIZED_ID20.getText():null)); 
@@ -1535,36 +1504,36 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:188:18: ( 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )? )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:189:3: 'consume' lc_id ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
             {
-            match(input,24,FOLLOW_24_in_csConsumeInfo_def793); 
+            match(input,23,FOLLOW_23_in_csConsumeInfo_def791); 
 
-            pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def795);
+            pushFollow(FOLLOW_lc_id_in_csConsumeInfo_def793);
             lc_id21=lc_id();
 
             state._fsp--;
 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:189:19: ( 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA23_0==28) ) {
-                alt23=1;
+            if ( (LA22_0==27) ) {
+                alt22=1;
             }
-            switch (alt23) {
+            switch (alt22) {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:189:20: 'from' 'region-hops' ':' INT ':' CAPITALIZED_ID
                     {
-                    match(input,28,FOLLOW_28_in_csConsumeInfo_def798); 
+                    match(input,27,FOLLOW_27_in_csConsumeInfo_def796); 
 
-                    match(input,32,FOLLOW_32_in_csConsumeInfo_def800); 
+                    match(input,31,FOLLOW_31_in_csConsumeInfo_def798); 
 
-                    match(input,11,FOLLOW_11_in_csConsumeInfo_def802); 
+                    match(input,11,FOLLOW_11_in_csConsumeInfo_def800); 
 
-                    match(input,INT,FOLLOW_INT_in_csConsumeInfo_def804); 
+                    match(input,INT,FOLLOW_INT_in_csConsumeInfo_def802); 
 
-                    match(input,11,FOLLOW_11_in_csConsumeInfo_def806); 
+                    match(input,11,FOLLOW_11_in_csConsumeInfo_def804); 
 
-                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def808); 
+                    match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def806); 
 
                     }
                     break;
@@ -1603,9 +1572,9 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:195:15: ( 'request' lc_id )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:196:4: 'request' lc_id
             {
-            match(input,34,FOLLOW_34_in_csRequest_def830); 
+            match(input,33,FOLLOW_33_in_csRequest_def828); 
 
-            pushFollow(FOLLOW_lc_id_in_csRequest_def832);
+            pushFollow(FOLLOW_lc_id_in_csRequest_def830);
             lc_id22=lc_id();
 
             state._fsp--;
@@ -1640,11 +1609,11 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:200:14: (csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:201:5: csDeploymentConstraint= 'partition-per' ':' CAPITALIZED_ID
             {
-            csDeploymentConstraint=(Token)match(input,31,FOLLOW_31_in_partition_def852); 
+            csDeploymentConstraint=(Token)match(input,30,FOLLOW_30_in_partition_def850); 
 
-            match(input,11,FOLLOW_11_in_partition_def854); 
+            match(input,11,FOLLOW_11_in_partition_def852); 
 
-            CAPITALIZED_ID23=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def856); 
+            CAPITALIZED_ID23=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_partition_def854); 
 
              
                 context.currentComputationalService.addPartitionAttribute((CAPITALIZED_ID23!=null?CAPITALIZED_ID23.getText():null));   
@@ -1679,38 +1648,38 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:210:11: ( CAPITALIZED_ID ( structField_def ';' )* )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:211:5: CAPITALIZED_ID ( structField_def ';' )*
             {
-            CAPITALIZED_ID24=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def875); 
+            CAPITALIZED_ID24=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_struct_def873); 
 
             context.currentStruct = new Struct((CAPITALIZED_ID24!=null?CAPITALIZED_ID24.getText():null));
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:213:5: ( structField_def ';' )*
-            loop24:
+            loop23:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA24_0==ID) ) {
-                    alt24=1;
+                if ( (LA23_0==ID) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt23) {
             	case 1 :
             	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:213:6: structField_def ';'
             	    {
-            	    pushFollow(FOLLOW_structField_def_in_struct_def889);
+            	    pushFollow(FOLLOW_structField_def_in_struct_def887);
             	    structField_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_struct_def891); 
+            	    match(input,12,FOLLOW_12_in_struct_def889); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop23;
                 }
             } while (true);
 
@@ -1746,15 +1715,15 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:216:16: ( lc_id ':' dataType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:217:3: lc_id ':' dataType
             {
-            pushFollow(FOLLOW_lc_id_in_structField_def913);
+            pushFollow(FOLLOW_lc_id_in_structField_def911);
             lc_id25=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_structField_def915); 
+            match(input,11,FOLLOW_11_in_structField_def913); 
 
-            pushFollow(FOLLOW_dataType_in_structField_def917);
+            pushFollow(FOLLOW_dataType_in_structField_def915);
             dataType26=dataType();
 
             state._fsp--;
@@ -1793,7 +1762,7 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:221:6: ( ID )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:221:8: ID
             {
-            match(input,ID,FOLLOW_ID_in_lc_id933); 
+            match(input,ID,FOLLOW_ID_in_lc_id931); 
 
             }
 
@@ -1829,7 +1798,7 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:224:9: ( primitiveType )
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:225:3: primitiveType
             {
-            pushFollow(FOLLOW_primitiveType_in_dataType946);
+            pushFollow(FOLLOW_primitiveType_in_dataType944);
             primitiveType();
 
             state._fsp--;
@@ -1865,86 +1834,86 @@ public class VocabSpecParser extends Parser {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
             {
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:3: (id= 'Integer' |id= 'Boolean' |id= 'String' |id= 'double' |id= 'long' |id= 'boolean' )
-            int alt25=6;
+            int alt24=6;
             switch ( input.LA(1) ) {
             case 14:
                 {
-                alt25=1;
+                alt24=1;
                 }
                 break;
             case 13:
                 {
-                alt25=2;
+                alt24=2;
                 }
                 break;
             case 15:
                 {
-                alt25=3;
+                alt24=3;
                 }
                 break;
-            case 27:
+            case 26:
                 {
-                alt25=4;
+                alt24=4;
                 }
                 break;
-            case 30:
+            case 29:
                 {
-                alt25=5;
+                alt24=5;
                 }
                 break;
-            case 21:
+            case 20:
                 {
-                alt25=6;
+                alt24=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt25) {
+            switch (alt24) {
                 case 1 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:4: id= 'Integer'
                     {
-                    id=(Token)match(input,14,FOLLOW_14_in_primitiveType961); 
+                    id=(Token)match(input,14,FOLLOW_14_in_primitiveType959); 
 
                     }
                     break;
                 case 2 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:19: id= 'Boolean'
                     {
-                    id=(Token)match(input,13,FOLLOW_13_in_primitiveType967); 
+                    id=(Token)match(input,13,FOLLOW_13_in_primitiveType965); 
 
                     }
                     break;
                 case 3 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:34: id= 'String'
                     {
-                    id=(Token)match(input,15,FOLLOW_15_in_primitiveType973); 
+                    id=(Token)match(input,15,FOLLOW_15_in_primitiveType971); 
 
                     }
                     break;
                 case 4 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:49: id= 'double'
                     {
-                    id=(Token)match(input,27,FOLLOW_27_in_primitiveType982); 
+                    id=(Token)match(input,26,FOLLOW_26_in_primitiveType980); 
 
                     }
                     break;
                 case 5 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:65: id= 'long'
                     {
-                    id=(Token)match(input,30,FOLLOW_30_in_primitiveType990); 
+                    id=(Token)match(input,29,FOLLOW_29_in_primitiveType988); 
 
                     }
                     break;
                 case 6 :
                     // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:229:79: id= 'boolean'
                     {
-                    id=(Token)match(input,21,FOLLOW_21_in_primitiveType996); 
+                    id=(Token)match(input,20,FOLLOW_20_in_primitiveType994); 
 
                     }
                     break;
@@ -1970,17 +1939,56 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "abilities_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:1: abilities_def : 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ 'storages' ':' ( ss_def )* ;
     public final void abilities_def() throws RecognitionException {
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:232:15: ( 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ 'storages' ':' ( ss_def )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:3: 'sensors' ':' ( sensor_def )+ 'actuators' ':' ( actuator_def )+ 'storages' ':' ( ss_def )*
             {
-            match(input,35,FOLLOW_35_in_abilities_def1009); 
+            match(input,35,FOLLOW_35_in_abilities_def1007); 
 
-            match(input,11,FOLLOW_11_in_abilities_def1011); 
+            match(input,11,FOLLOW_11_in_abilities_def1009); 
 
             // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:19: ( sensor_def )+
+            int cnt25=0;
+            loop25:
+            do {
+                int alt25=2;
+                int LA25_0 = input.LA(1);
+
+                if ( (LA25_0==CAPITALIZED_ID) ) {
+                    alt25=1;
+                }
+
+
+                switch (alt25) {
+            	case 1 :
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:20: sensor_def
+            	    {
+            	    pushFollow(FOLLOW_sensor_def_in_abilities_def1014);
+            	    sensor_def();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt25 >= 1 ) break loop25;
+                        EarlyExitException eee =
+                            new EarlyExitException(25, input);
+                        throw eee;
+                }
+                cnt25++;
+            } while (true);
+
+
+            match(input,18,FOLLOW_18_in_abilities_def1020); 
+
+            match(input,11,FOLLOW_11_in_abilities_def1022); 
+
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:234:19: ( actuator_def )+
             int cnt26=0;
             loop26:
             do {
@@ -1994,10 +2002,10 @@ public class VocabSpecParser extends Parser {
 
                 switch (alt26) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:233:20: sensor_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:234:20: actuator_def
             	    {
-            	    pushFollow(FOLLOW_sensor_def_in_abilities_def1016);
-            	    sensor_def();
+            	    pushFollow(FOLLOW_actuator_def_in_abilities_def1025);
+            	    actuator_def();
 
             	    state._fsp--;
 
@@ -2015,12 +2023,11 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            match(input,19,FOLLOW_19_in_abilities_def1022); 
+            match(input,38,FOLLOW_38_in_abilities_def1031); 
 
-            match(input,11,FOLLOW_11_in_abilities_def1024); 
+            match(input,11,FOLLOW_11_in_abilities_def1034); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:234:19: ( actuator_def )+
-            int cnt27=0;
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:19: ( ss_def )*
             loop27:
             do {
                 int alt27=2;
@@ -2033,10 +2040,10 @@ public class VocabSpecParser extends Parser {
 
                 switch (alt27) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:234:20: actuator_def
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:235:20: ss_def
             	    {
-            	    pushFollow(FOLLOW_actuator_def_in_abilities_def1027);
-            	    actuator_def();
+            	    pushFollow(FOLLOW_ss_def_in_abilities_def1037);
+            	    ss_def();
 
             	    state._fsp--;
 
@@ -2045,12 +2052,8 @@ public class VocabSpecParser extends Parser {
             	    break;
 
             	default :
-            	    if ( cnt27 >= 1 ) break loop27;
-                        EarlyExitException eee =
-                            new EarlyExitException(27, input);
-                        throw eee;
+            	    break loop27;
                 }
-                cnt27++;
             } while (true);
 
 
@@ -2072,40 +2075,40 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "sensor_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:237:1: sensor_def : CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:238:1: sensor_def : CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* ;
     public final void sensor_def() throws RecognitionException {
         Token CAPITALIZED_ID27=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:237:11: ( CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:238:5: CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:238:11: ( CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:239:5: CAPITALIZED_ID ( attribute_def ';' )* ( sensorMeasurement_def ';' )*
             {
-            CAPITALIZED_ID27=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def1043); 
+            CAPITALIZED_ID27=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensor_def1053); 
 
             context.currentSensor = new Sensor((CAPITALIZED_ID27!=null?CAPITALIZED_ID27.getText():null));
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:240:5: ( attribute_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:241:5: ( attribute_def ';' )*
             loop28:
             do {
                 int alt28=2;
                 int LA28_0 = input.LA(1);
 
-                if ( (LA28_0==20) ) {
+                if ( (LA28_0==19) ) {
                     alt28=1;
                 }
 
 
                 switch (alt28) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:240:6: attribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:241:6: attribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_attribute_def_in_sensor_def1056);
+            	    pushFollow(FOLLOW_attribute_def_in_sensor_def1066);
             	    attribute_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_sensor_def1058); 
+            	    match(input,12,FOLLOW_12_in_sensor_def1068); 
 
             	    }
             	    break;
@@ -2116,28 +2119,28 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:241:5: ( sensorMeasurement_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:242:5: ( sensorMeasurement_def ';' )*
             loop29:
             do {
                 int alt29=2;
                 int LA29_0 = input.LA(1);
 
-                if ( (LA29_0==29) ) {
+                if ( (LA29_0==28) ) {
                     alt29=1;
                 }
 
 
                 switch (alt29) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:241:6: sensorMeasurement_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:242:6: sensorMeasurement_def ';'
             	    {
-            	    pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def1067);
+            	    pushFollow(FOLLOW_sensorMeasurement_def_in_sensor_def1077);
             	    sensorMeasurement_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_sensor_def1069); 
+            	    match(input,12,FOLLOW_12_in_sensor_def1079); 
 
             	    }
             	    break;
@@ -2168,7 +2171,7 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "attribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:245:1: attribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:246:1: attribute_def : 'attribute' lc_id ':' dataType ;
     public final void attribute_def() throws RecognitionException {
         VocabSpecParser.lc_id_return lc_id28 =null;
 
@@ -2176,20 +2179,20 @@ public class VocabSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:245:14: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:246:5: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:246:14: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:247:5: 'attribute' lc_id ':' dataType
             {
-            match(input,20,FOLLOW_20_in_attribute_def1090); 
+            match(input,19,FOLLOW_19_in_attribute_def1100); 
 
-            pushFollow(FOLLOW_lc_id_in_attribute_def1092);
+            pushFollow(FOLLOW_lc_id_in_attribute_def1102);
             lc_id28=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_attribute_def1094); 
+            match(input,11,FOLLOW_11_in_attribute_def1104); 
 
-            pushFollow(FOLLOW_dataType_in_attribute_def1096);
+            pushFollow(FOLLOW_dataType_in_attribute_def1106);
             dataType29=dataType();
 
             state._fsp--;
@@ -2215,27 +2218,27 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "sensorMeasurement_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:250:1: sensorMeasurement_def : 'generate' lc_id ':' CAPITALIZED_ID ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:251:1: sensorMeasurement_def : 'generate' lc_id ':' CAPITALIZED_ID ;
     public final void sensorMeasurement_def() throws RecognitionException {
         Token CAPITALIZED_ID31=null;
         VocabSpecParser.lc_id_return lc_id30 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:250:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:251:5: 'generate' lc_id ':' CAPITALIZED_ID
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:251:23: ( 'generate' lc_id ':' CAPITALIZED_ID )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:252:5: 'generate' lc_id ':' CAPITALIZED_ID
             {
-            match(input,29,FOLLOW_29_in_sensorMeasurement_def1116); 
+            match(input,28,FOLLOW_28_in_sensorMeasurement_def1126); 
 
-            pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def1118);
+            pushFollow(FOLLOW_lc_id_in_sensorMeasurement_def1128);
             lc_id30=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_sensorMeasurement_def1120); 
+            match(input,11,FOLLOW_11_in_sensorMeasurement_def1130); 
 
-            CAPITALIZED_ID31=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1123); 
+            CAPITALIZED_ID31=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1133); 
 
              context.currentSensor.addSensorMeasurement((lc_id30!=null?input.toString(lc_id30.start,lc_id30.stop):null), (CAPITALIZED_ID31!=null?CAPITALIZED_ID31.getText():null)); 
                 context.constructSymbTable((lc_id30!=null?input.toString(lc_id30.start,lc_id30.stop):null), (CAPITALIZED_ID31!=null?CAPITALIZED_ID31.getText():null)); 
@@ -2258,40 +2261,40 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "actuator_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:256:1: actuator_def : CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:257:1: actuator_def : CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* ;
     public final void actuator_def() throws RecognitionException {
         Token CAPITALIZED_ID32=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:256:13: ( CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:257:4: CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:257:13: ( CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )* )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:258:4: CAPITALIZED_ID ( actuatorAttribute_def ';' )* ( action_def ';' )*
             {
-            CAPITALIZED_ID32=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def1141); 
+            CAPITALIZED_ID32=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_actuator_def1151); 
 
             context.currentActuator = new Actuator((CAPITALIZED_ID32!=null?CAPITALIZED_ID32.getText():null));
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:259:4: ( actuatorAttribute_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:260:4: ( actuatorAttribute_def ';' )*
             loop30:
             do {
                 int alt30=2;
                 int LA30_0 = input.LA(1);
 
-                if ( (LA30_0==20) ) {
+                if ( (LA30_0==19) ) {
                     alt30=1;
                 }
 
 
                 switch (alt30) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:259:5: actuatorAttribute_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:260:5: actuatorAttribute_def ';'
             	    {
-            	    pushFollow(FOLLOW_actuatorAttribute_def_in_actuator_def1152);
+            	    pushFollow(FOLLOW_actuatorAttribute_def_in_actuator_def1162);
             	    actuatorAttribute_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_actuator_def1154); 
+            	    match(input,12,FOLLOW_12_in_actuator_def1164); 
 
             	    }
             	    break;
@@ -2302,28 +2305,28 @@ public class VocabSpecParser extends Parser {
             } while (true);
 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:260:4: ( action_def ';' )*
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:261:4: ( action_def ';' )*
             loop31:
             do {
                 int alt31=2;
                 int LA31_0 = input.LA(1);
 
-                if ( (LA31_0==18) ) {
+                if ( (LA31_0==17) ) {
                     alt31=1;
                 }
 
 
                 switch (alt31) {
             	case 1 :
-            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:260:5: action_def ';'
+            	    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:261:5: action_def ';'
             	    {
-            	    pushFollow(FOLLOW_action_def_in_actuator_def1162);
+            	    pushFollow(FOLLOW_action_def_in_actuator_def1172);
             	    action_def();
 
             	    state._fsp--;
 
 
-            	    match(input,12,FOLLOW_12_in_actuator_def1164); 
+            	    match(input,12,FOLLOW_12_in_actuator_def1174); 
 
             	    }
             	    break;
@@ -2354,7 +2357,7 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "actuatorAttribute_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:264:1: actuatorAttribute_def : 'attribute' lc_id ':' dataType ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:265:1: actuatorAttribute_def : 'attribute' lc_id ':' dataType ;
     public final void actuatorAttribute_def() throws RecognitionException {
         VocabSpecParser.lc_id_return lc_id33 =null;
 
@@ -2362,20 +2365,20 @@ public class VocabSpecParser extends Parser {
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:264:22: ( 'attribute' lc_id ':' dataType )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:265:6: 'attribute' lc_id ':' dataType
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:265:22: ( 'attribute' lc_id ':' dataType )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:266:6: 'attribute' lc_id ':' dataType
             {
-            match(input,20,FOLLOW_20_in_actuatorAttribute_def1187); 
+            match(input,19,FOLLOW_19_in_actuatorAttribute_def1197); 
 
-            pushFollow(FOLLOW_lc_id_in_actuatorAttribute_def1189);
+            pushFollow(FOLLOW_lc_id_in_actuatorAttribute_def1199);
             lc_id33=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_actuatorAttribute_def1191); 
+            match(input,11,FOLLOW_11_in_actuatorAttribute_def1201); 
 
-            pushFollow(FOLLOW_dataType_in_actuatorAttribute_def1193);
+            pushFollow(FOLLOW_dataType_in_actuatorAttribute_def1203);
             dataType34=dataType();
 
             state._fsp--;
@@ -2401,21 +2404,21 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "action_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:269:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:270:1: action_def : 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' ;
     public final void action_def() throws RecognitionException {
         Token CAPITALIZED_ID35=null;
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:269:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:270:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:270:11: ( 'action' CAPITALIZED_ID '(' ( parameter_def )? ')' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:271:5: 'action' CAPITALIZED_ID '(' ( parameter_def )? ')'
             {
-            match(input,18,FOLLOW_18_in_action_def1212); 
+            match(input,17,FOLLOW_17_in_action_def1222); 
 
-            CAPITALIZED_ID35=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def1214); 
+            CAPITALIZED_ID35=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_action_def1224); 
 
-            match(input,8,FOLLOW_8_in_action_def1216); 
+            match(input,8,FOLLOW_8_in_action_def1226); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:270:33: ( parameter_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:271:33: ( parameter_def )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -2424,9 +2427,9 @@ public class VocabSpecParser extends Parser {
             }
             switch (alt32) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:270:34: parameter_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:271:34: parameter_def
                     {
-                    pushFollow(FOLLOW_parameter_def_in_action_def1219);
+                    pushFollow(FOLLOW_parameter_def_in_action_def1229);
                     parameter_def();
 
                     state._fsp--;
@@ -2438,7 +2441,7 @@ public class VocabSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_action_def1223); 
+            match(input,9,FOLLOW_9_in_action_def1233); 
 
              context.currentActuator.addAction((CAPITALIZED_ID35!=null?CAPITALIZED_ID35.getText():null)); 
 
@@ -2460,27 +2463,27 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "parameter_def"
-    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:274:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
+    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:275:1: parameter_def : lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? ;
     public final void parameter_def() throws RecognitionException {
         Token CAPITALIZED_ID37=null;
         VocabSpecParser.lc_id_return lc_id36 =null;
 
 
         try {
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:274:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:275:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:275:15: ( lc_id ':' CAPITALIZED_ID ( ',' parameter_def )? )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:276:5: lc_id ':' CAPITALIZED_ID ( ',' parameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_parameter_def1243);
+            pushFollow(FOLLOW_lc_id_in_parameter_def1253);
             lc_id36=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_parameter_def1245); 
+            match(input,11,FOLLOW_11_in_parameter_def1255); 
 
-            CAPITALIZED_ID37=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def1248); 
+            CAPITALIZED_ID37=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_parameter_def1258); 
 
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:275:31: ( ',' parameter_def )?
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:276:31: ( ',' parameter_def )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -2489,11 +2492,11 @@ public class VocabSpecParser extends Parser {
             }
             switch (alt33) {
                 case 1 :
-                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:275:32: ',' parameter_def
+                    // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g:276:32: ',' parameter_def
                     {
-                    match(input,10,FOLLOW_10_in_parameter_def1251); 
+                    match(input,10,FOLLOW_10_in_parameter_def1261); 
 
-                    pushFollow(FOLLOW_parameter_def_in_parameter_def1253);
+                    pushFollow(FOLLOW_parameter_def_in_parameter_def1263);
                     parameter_def();
 
                     state._fsp--;
@@ -2530,170 +2533,171 @@ public class VocabSpecParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_33_in_vocabSpec62 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_vocabSpec70 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_region_def_in_vocabSpec73 = new BitSet(new long[]{0x0000004000000010L});
-    public static final BitSet FOLLOW_38_in_vocabSpec90 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_vocabSpec109 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_struct_def_in_vocabSpec123 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_16_in_vocabSpec133 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_vocabSpec135 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_abilities_def_in_vocabSpec137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_region_def159 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_region_def161 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_region_def163 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_region_def166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_sc_def183 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ss_def_in_sc_def186 = new BitSet(new long[]{0x0000002000800010L});
-    public static final BitSet FOLLOW_23_in_sc_def197 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_cs_def_in_sc_def200 = new BitSet(new long[]{0x0000000002000012L});
-    public static final BitSet FOLLOW_25_in_sc_def210 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_controller_def_in_sc_def213 = new BitSet(new long[]{0x0000000002000012L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_ss_def234 = new BitSet(new long[]{0x0000000024100002L});
-    public static final BitSet FOLLOW_storageAttribute_def_in_ss_def247 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ss_def249 = new BitSet(new long[]{0x0000000024100002L});
-    public static final BitSet FOLLOW_storageDataAccess_def_in_ss_def258 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ss_def260 = new BitSet(new long[]{0x0000000024000002L});
-    public static final BitSet FOLLOW_storagePartition_def_in_ss_def270 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ss_def272 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_20_in_storageAttribute_def292 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_storageAttribute_def294 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storageAttribute_def296 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_storageAttribute_def298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def319 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_storageDataAccess_def322 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_storagedataIndex_def_in_storageDataAccess_def324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_storageGeneratedInfo_def343 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_storageGeneratedInfo_def345 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storageGeneratedInfo_def347 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_storagedataIndex_def372 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storagedataIndex_def374 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_storagedataIndex_def376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_storagePartition_def405 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_storagePartition_def407 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_storagePartition_def413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_controller_def430 = new BitSet(new long[]{0x0000000081500002L});
-    public static final BitSet FOLLOW_cntrlAttribute_def_in_controller_def443 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def445 = new BitSet(new long[]{0x0000000081500002L});
-    public static final BitSet FOLLOW_cntrlConsumeInfo_def_in_controller_def454 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def456 = new BitSet(new long[]{0x0000000081400002L});
-    public static final BitSet FOLLOW_cntrlCommand_def_in_controller_def465 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def467 = new BitSet(new long[]{0x0000000080400002L});
-    public static final BitSet FOLLOW_cntrlPartition_def_in_controller_def477 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_controller_def479 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_31_in_cntrlPartition_def500 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlPartition_def502 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_cntrlAttribute_def522 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_cntrlAttribute_def524 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlAttribute_def526 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_cntrlAttribute_def528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_cntrlConsumeInfo_def544 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_cntrlConsumeInfo_def546 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_28_in_cntrlConsumeInfo_def549 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_cntrlConsumeInfo_def551 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def553 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_cntrlConsumeInfo_def555 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def557 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_cntrlCommand_def584 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def591 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_cntrlCommand_def593 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def596 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_cntrlCommand_def600 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_cntrlCommand_def602 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_cntrlCommand_def605 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlCommand_def607 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_cntrlCommand_def609 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_cntrlCommand_def611 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def633 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_cntrlParameter_def637 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_parameter_def_in_cntrlParameter_def639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cs_def660 = new BitSet(new long[]{0x00000004A1100002L});
-    public static final BitSet FOLLOW_csAttribute_def_in_cs_def673 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def675 = new BitSet(new long[]{0x00000004A1100002L});
-    public static final BitSet FOLLOW_csGeneratedInfo_def_in_cs_def684 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def686 = new BitSet(new long[]{0x00000004A1000002L});
-    public static final BitSet FOLLOW_csConsumeInfo_def_in_cs_def696 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def698 = new BitSet(new long[]{0x0000000481000002L});
-    public static final BitSet FOLLOW_csRequest_def_in_cs_def708 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def711 = new BitSet(new long[]{0x0000000480000002L});
-    public static final BitSet FOLLOW_partition_def_in_cs_def720 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_cs_def722 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_20_in_csAttribute_def743 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csAttribute_def745 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csAttribute_def747 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_csAttribute_def749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_csGeneratedInfo_def768 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def770 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csGeneratedInfo_def772 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_csConsumeInfo_def793 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def795 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_28_in_csConsumeInfo_def798 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_csConsumeInfo_def800 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csConsumeInfo_def802 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_csConsumeInfo_def804 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_csConsumeInfo_def806 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_csRequest_def830 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_csRequest_def832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_partition_def852 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_partition_def854 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def875 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_structField_def_in_struct_def889 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_struct_def891 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_lc_id_in_structField_def913 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_structField_def915 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_structField_def917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_lc_id933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primitiveType_in_dataType946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_primitiveType961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_primitiveType967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_primitiveType973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_primitiveType982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_primitiveType990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_primitiveType996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_abilities_def1009 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_abilities_def1011 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_sensor_def_in_abilities_def1016 = new BitSet(new long[]{0x0000000000080010L});
-    public static final BitSet FOLLOW_19_in_abilities_def1022 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_abilities_def1024 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_actuator_def_in_abilities_def1027 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensor_def1043 = new BitSet(new long[]{0x0000000020100002L});
-    public static final BitSet FOLLOW_attribute_def_in_sensor_def1056 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_sensor_def1058 = new BitSet(new long[]{0x0000000020100002L});
-    public static final BitSet FOLLOW_sensorMeasurement_def_in_sensor_def1067 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_sensor_def1069 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_20_in_attribute_def1090 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_attribute_def1092 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_attribute_def1094 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_attribute_def1096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_sensorMeasurement_def1116 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_sensorMeasurement_def1118 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_sensorMeasurement_def1120 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def1141 = new BitSet(new long[]{0x0000000000140002L});
-    public static final BitSet FOLLOW_actuatorAttribute_def_in_actuator_def1152 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_actuator_def1154 = new BitSet(new long[]{0x0000000000140002L});
-    public static final BitSet FOLLOW_action_def_in_actuator_def1162 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_actuator_def1164 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_20_in_actuatorAttribute_def1187 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_actuatorAttribute_def1189 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_actuatorAttribute_def1191 = new BitSet(new long[]{0x000000004820E000L});
-    public static final BitSet FOLLOW_dataType_in_actuatorAttribute_def1193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_action_def1212 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def1214 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_action_def1216 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_parameter_def_in_action_def1219 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_action_def1223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_parameter_def1243 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_parameter_def1245 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def1248 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_parameter_def1251 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_parameter_def_in_parameter_def1253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_vocabSpec63 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_vocabSpec71 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_region_def_in_vocabSpec74 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_39_in_vocabSpec91 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_vocabSpec110 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_struct_def_in_vocabSpec124 = new BitSet(new long[]{0x0000000400000010L});
+    public static final BitSet FOLLOW_34_in_vocabSpec134 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_vocabSpec136 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_abilities_def_in_vocabSpec138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_region_def165 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_region_def167 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_region_def169 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_region_def172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_sc_def189 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ss_def_in_sc_def192 = new BitSet(new long[]{0x0000002000400010L});
+    public static final BitSet FOLLOW_22_in_sc_def203 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_cs_def_in_sc_def206 = new BitSet(new long[]{0x0000000001000012L});
+    public static final BitSet FOLLOW_24_in_sc_def216 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_controller_def_in_sc_def219 = new BitSet(new long[]{0x0000000001000012L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_ss_def240 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_storageAttribute_def_in_ss_def253 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ss_def255 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_storageDataAccess_def_in_ss_def264 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ss_def266 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_19_in_storageAttribute_def290 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_storageAttribute_def292 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storageAttribute_def294 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_storageAttribute_def296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_storageGeneratedInfo_def_in_storageDataAccess_def317 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_storageDataAccess_def320 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_storagedataIndex_def_in_storageDataAccess_def322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_storageGeneratedInfo_def341 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_storageGeneratedInfo_def343 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storageGeneratedInfo_def345 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_storageGeneratedInfo_def348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_storagedataIndex_def370 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storagedataIndex_def372 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_storagedataIndex_def374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_storagePartition_def403 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_storagePartition_def405 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_storagePartition_def411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_controller_def428 = new BitSet(new long[]{0x0000000040A80002L});
+    public static final BitSet FOLLOW_cntrlAttribute_def_in_controller_def441 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def443 = new BitSet(new long[]{0x0000000040A80002L});
+    public static final BitSet FOLLOW_cntrlConsumeInfo_def_in_controller_def452 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def454 = new BitSet(new long[]{0x0000000040A00002L});
+    public static final BitSet FOLLOW_cntrlCommand_def_in_controller_def463 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def465 = new BitSet(new long[]{0x0000000040200002L});
+    public static final BitSet FOLLOW_cntrlPartition_def_in_controller_def475 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_controller_def477 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_30_in_cntrlPartition_def498 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlPartition_def500 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlPartition_def502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_cntrlAttribute_def520 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_cntrlAttribute_def522 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlAttribute_def524 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_cntrlAttribute_def526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_cntrlConsumeInfo_def542 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_cntrlConsumeInfo_def544 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_cntrlConsumeInfo_def547 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_cntrlConsumeInfo_def549 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def551 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_cntrlConsumeInfo_def553 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlConsumeInfo_def555 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlConsumeInfo_def557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_cntrlCommand_def582 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def589 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_cntrlCommand_def591 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_cntrlParameter_def_in_cntrlCommand_def594 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_cntrlCommand_def598 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_cntrlCommand_def600 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_cntrlCommand_def603 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlCommand_def605 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_cntrlCommand_def607 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_cntrlCommand_def609 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cntrlCommand_def611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_cntrlParameter_def631 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_cntrlParameter_def635 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_parameter_def_in_cntrlParameter_def637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_cs_def658 = new BitSet(new long[]{0x0000000250880002L});
+    public static final BitSet FOLLOW_csAttribute_def_in_cs_def671 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def673 = new BitSet(new long[]{0x0000000250880002L});
+    public static final BitSet FOLLOW_csGeneratedInfo_def_in_cs_def682 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def684 = new BitSet(new long[]{0x0000000250800002L});
+    public static final BitSet FOLLOW_csConsumeInfo_def_in_cs_def694 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def696 = new BitSet(new long[]{0x0000000240800002L});
+    public static final BitSet FOLLOW_csRequest_def_in_cs_def706 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def709 = new BitSet(new long[]{0x0000000240000002L});
+    public static final BitSet FOLLOW_partition_def_in_cs_def718 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_cs_def720 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_19_in_csAttribute_def741 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csAttribute_def743 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csAttribute_def745 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_csAttribute_def747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_csGeneratedInfo_def766 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csGeneratedInfo_def768 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csGeneratedInfo_def770 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csGeneratedInfo_def773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_csConsumeInfo_def791 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csConsumeInfo_def793 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_csConsumeInfo_def796 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_csConsumeInfo_def798 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csConsumeInfo_def800 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_csConsumeInfo_def802 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_csConsumeInfo_def804 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_csConsumeInfo_def806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_csRequest_def828 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_csRequest_def830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_partition_def850 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_partition_def852 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_partition_def854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_struct_def873 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_structField_def_in_struct_def887 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_struct_def889 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_lc_id_in_structField_def911 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_structField_def913 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_structField_def915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_lc_id931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primitiveType_in_dataType944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_primitiveType959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_primitiveType965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_primitiveType971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_primitiveType980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_primitiveType988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_primitiveType994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_abilities_def1007 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_abilities_def1009 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_sensor_def_in_abilities_def1014 = new BitSet(new long[]{0x0000000000040010L});
+    public static final BitSet FOLLOW_18_in_abilities_def1020 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_abilities_def1022 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_actuator_def_in_abilities_def1025 = new BitSet(new long[]{0x0000004000000010L});
+    public static final BitSet FOLLOW_38_in_abilities_def1031 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_abilities_def1034 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ss_def_in_abilities_def1037 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensor_def1053 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_attribute_def_in_sensor_def1066 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_sensor_def1068 = new BitSet(new long[]{0x0000000010080002L});
+    public static final BitSet FOLLOW_sensorMeasurement_def_in_sensor_def1077 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_sensor_def1079 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_19_in_attribute_def1100 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_attribute_def1102 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_attribute_def1104 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_attribute_def1106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_sensorMeasurement_def1126 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_sensorMeasurement_def1128 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_sensorMeasurement_def1130 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_sensorMeasurement_def1133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_actuator_def1151 = new BitSet(new long[]{0x00000000000A0002L});
+    public static final BitSet FOLLOW_actuatorAttribute_def_in_actuator_def1162 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_actuator_def1164 = new BitSet(new long[]{0x00000000000A0002L});
+    public static final BitSet FOLLOW_action_def_in_actuator_def1172 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_actuator_def1174 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_19_in_actuatorAttribute_def1197 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_actuatorAttribute_def1199 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_actuatorAttribute_def1201 = new BitSet(new long[]{0x000000002410E000L});
+    public static final BitSet FOLLOW_dataType_in_actuatorAttribute_def1203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_action_def1222 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_action_def1224 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_action_def1226 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_parameter_def_in_action_def1229 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_action_def1233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_parameter_def1253 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_parameter_def1255 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_parameter_def1258 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_parameter_def1261 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_parameter_def_in_parameter_def1263 = new BitSet(new long[]{0x0000000000000002L});
 
 }

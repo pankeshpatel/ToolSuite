@@ -85,22 +85,22 @@ public class TaskMapper {
 
 		for (String regionLabel : regionMap.keySet()) {
 			for (DeployementConstraint mc : mappingConstraintList) {
-
-				if (mc.getAttributeName().equals("deployment-instance")
-						&& mc.getAttributeValue().equals("singleton")) {
-
-					List<Device> selectedDeviceWithAbility = pickDevicesWithAbilities(
-							"DBServer", deviceList);
-
-					for (Device ds : selectedDeviceWithAbility) {
-
-						String tempSoftwareComponent = mc
-								.getSoftwareComponentName();
-						finalMapping.get(ds).add(tempSoftwareComponent);
-
-					}
-
-				} else {
+//
+//				if (mc.getAttributeName().equals("deployment-instance")
+//						&& mc.getAttributeValue().equals("singleton")) {
+//
+//					List<Device> selectedDeviceWithAbility = pickDevicesWithAbilities(
+//							"DBServer", deviceList);
+//
+//					for (Device ds : selectedDeviceWithAbility) {
+//
+//						String tempSoftwareComponent = mc
+//								.getSoftwareComponentName();
+//						finalMapping.get(ds).add(tempSoftwareComponent);
+//
+//					}
+//
+//				} else {
 
 					if (regionLabel.equals(mc.getAttributeValue())) {
 
@@ -126,7 +126,7 @@ public class TaskMapper {
 						}
 
 						// }
-					}
+				//	}
 
 				}
 

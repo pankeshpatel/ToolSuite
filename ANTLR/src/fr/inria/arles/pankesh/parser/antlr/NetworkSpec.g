@@ -18,7 +18,7 @@ import fr.inria.arles.pankesh.semanticmodel.*;
   //Initialize the context
   private Context context; 
 }
-
+  
 
 networkspec: 
       'devices' ':'
@@ -32,11 +32,11 @@ device_def:
  	 { 
  	 context.currentNetwork = new DeviceNetwork();
  	 context.currentNetwork.setDeviceName($deviceName.text);
- 	 }  	  
- 	  networkAddress_def ';'
+ 	 }  
+ 	
  	  'region' ':' (location_def)* 
  	  'type' ':' (device_type)* ';'
- 	  'abilities' ':' (abilities_def)* ';'
+ 	  'resources' ':' (abilities_def)* ';'
  	  { context.currentNetwork.addDeviceObj();}
 ;
 

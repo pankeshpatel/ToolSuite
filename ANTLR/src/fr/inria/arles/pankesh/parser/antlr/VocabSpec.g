@@ -19,7 +19,7 @@ import fr.inria.arles.pankesh.semanticmodel.*;
 @members {
   //Initialize the context
   private Context context; 
-}
+} 
 
 vocabSpec : 
 		'regions'
@@ -31,11 +31,11 @@ vocabSpec :
     'structs'         
         ':'       
     (struct_def)+  
-    'abilities' ':' abilities_def  
+    'resources' ':' abilities_def   
    // 'softwarecomponents' ':' sc_def  
 ;
 
-region_def :
+region_def :    
 	
      CAPITALIZED_ID ':' dataType  ';'
     { 
@@ -57,7 +57,7 @@ ss_def:
     	}
     (storageAttribute_def ';')*
     (storageDataAccess_def ';')* 
-    (storagePartition_def ';')*
+  // (storagePartition_def ';')*
      {
      	
      context.currentStorageService.setStorageServiceName($CAPITALIZED_ID.text);
@@ -232,6 +232,7 @@ primitiveType:
 abilities_def :
   'sensors' ':'   (sensor_def)+
   'actuators' ':' (actuator_def)+
+  'storages'  ':' (ss_def)*
  ; 
 
 sensor_def:

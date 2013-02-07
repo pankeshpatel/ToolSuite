@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2012-11-06 17:13:30
+// $ANTLR 3.4 Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2013-02-07 14:22:14
 
   package fr.inria.arles.pankesh.parser.antlr; 
 
@@ -107,10 +107,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:7: ( 'abilities' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:9: 'abilities'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:7: ( 'devices' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:9: 'devices'
             {
-            match("abilities"); 
+            match("devices"); 
 
 
 
@@ -130,10 +130,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:7: ( 'devices' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:9: 'devices'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:7: ( 'networkaddress' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:9: 'networkaddress'
             {
-            match("devices"); 
+            match("networkaddress"); 
 
 
 
@@ -153,10 +153,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:7: ( 'networkaddress' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:9: 'networkaddress'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:7: ( 'region' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:9: 'region'
             {
-            match("networkaddress"); 
+            match("region"); 
 
 
 
@@ -176,10 +176,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:7: ( 'region' )
-            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:9: 'region'
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:7: ( 'resources' )
+            // Y:\\git\\FrameworkGenerator\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:9: 'resources'
             {
-            match("region"); 
+            match("resources"); 
 
 
 
@@ -529,101 +529,33 @@ public class NetworkSpecLexer extends Lexer {
             alt7=3;
             }
             break;
-        case 'a':
+        case 'd':
             {
             int LA7_4 = input.LA(2);
 
-            if ( (LA7_4=='b') ) {
-                int LA7_13 = input.LA(3);
+            if ( (LA7_4=='e') ) {
+                int LA7_12 = input.LA(3);
 
-                if ( (LA7_13=='i') ) {
-                    int LA7_18 = input.LA(4);
+                if ( (LA7_12=='v') ) {
+                    int LA7_16 = input.LA(4);
 
-                    if ( (LA7_18=='l') ) {
-                        int LA7_23 = input.LA(5);
+                    if ( (LA7_16=='i') ) {
+                        int LA7_21 = input.LA(5);
 
-                        if ( (LA7_23=='i') ) {
-                            int LA7_28 = input.LA(6);
+                        if ( (LA7_21=='c') ) {
+                            int LA7_26 = input.LA(6);
 
-                            if ( (LA7_28=='t') ) {
-                                int LA7_33 = input.LA(7);
+                            if ( (LA7_26=='e') ) {
+                                int LA7_31 = input.LA(7);
 
-                                if ( (LA7_33=='i') ) {
-                                    int LA7_37 = input.LA(8);
+                                if ( (LA7_31=='s') ) {
+                                    int LA7_35 = input.LA(8);
 
-                                    if ( (LA7_37=='e') ) {
-                                        int LA7_41 = input.LA(9);
-
-                                        if ( (LA7_41=='s') ) {
-                                            int LA7_44 = input.LA(10);
-
-                                            if ( ((LA7_44 >= '0' && LA7_44 <= '9')||(LA7_44 >= 'A' && LA7_44 <= 'Z')||(LA7_44 >= 'a' && LA7_44 <= 'z')) ) {
-                                                alt7=9;
-                                            }
-                                            else {
-                                                alt7=4;
-                                            }
-                                        }
-                                        else {
-                                            alt7=9;
-                                        }
-                                    }
-                                    else {
-                                        alt7=9;
-                                    }
-                                }
-                                else {
-                                    alt7=9;
-                                }
-                            }
-                            else {
-                                alt7=9;
-                            }
-                        }
-                        else {
-                            alt7=9;
-                        }
-                    }
-                    else {
-                        alt7=9;
-                    }
-                }
-                else {
-                    alt7=9;
-                }
-            }
-            else {
-                alt7=9;
-            }
-            }
-            break;
-        case 'd':
-            {
-            int LA7_5 = input.LA(2);
-
-            if ( (LA7_5=='e') ) {
-                int LA7_14 = input.LA(3);
-
-                if ( (LA7_14=='v') ) {
-                    int LA7_19 = input.LA(4);
-
-                    if ( (LA7_19=='i') ) {
-                        int LA7_24 = input.LA(5);
-
-                        if ( (LA7_24=='c') ) {
-                            int LA7_29 = input.LA(6);
-
-                            if ( (LA7_29=='e') ) {
-                                int LA7_34 = input.LA(7);
-
-                                if ( (LA7_34=='s') ) {
-                                    int LA7_38 = input.LA(8);
-
-                                    if ( ((LA7_38 >= '0' && LA7_38 <= '9')||(LA7_38 >= 'A' && LA7_38 <= 'Z')||(LA7_38 >= 'a' && LA7_38 <= 'z')) ) {
+                                    if ( ((LA7_35 >= '0' && LA7_35 <= '9')||(LA7_35 >= 'A' && LA7_35 <= 'Z')||(LA7_35 >= 'a' && LA7_35 <= 'z')) ) {
                                         alt7=9;
                                     }
                                     else {
-                                        alt7=5;
+                                        alt7=4;
                                     }
                                 }
                                 else {
@@ -653,52 +585,52 @@ public class NetworkSpecLexer extends Lexer {
             break;
         case 'n':
             {
-            int LA7_6 = input.LA(2);
+            int LA7_5 = input.LA(2);
 
-            if ( (LA7_6=='e') ) {
-                int LA7_15 = input.LA(3);
+            if ( (LA7_5=='e') ) {
+                int LA7_13 = input.LA(3);
 
-                if ( (LA7_15=='t') ) {
-                    int LA7_20 = input.LA(4);
+                if ( (LA7_13=='t') ) {
+                    int LA7_17 = input.LA(4);
 
-                    if ( (LA7_20=='w') ) {
-                        int LA7_25 = input.LA(5);
+                    if ( (LA7_17=='w') ) {
+                        int LA7_22 = input.LA(5);
 
-                        if ( (LA7_25=='o') ) {
-                            int LA7_30 = input.LA(6);
+                        if ( (LA7_22=='o') ) {
+                            int LA7_27 = input.LA(6);
 
-                            if ( (LA7_30=='r') ) {
-                                int LA7_35 = input.LA(7);
+                            if ( (LA7_27=='r') ) {
+                                int LA7_32 = input.LA(7);
 
-                                if ( (LA7_35=='k') ) {
-                                    int LA7_39 = input.LA(8);
+                                if ( (LA7_32=='k') ) {
+                                    int LA7_36 = input.LA(8);
 
-                                    if ( (LA7_39=='a') ) {
-                                        int LA7_43 = input.LA(9);
+                                    if ( (LA7_36=='a') ) {
+                                        int LA7_40 = input.LA(9);
 
-                                        if ( (LA7_43=='d') ) {
-                                            int LA7_45 = input.LA(10);
+                                        if ( (LA7_40=='d') ) {
+                                            int LA7_42 = input.LA(10);
 
-                                            if ( (LA7_45=='d') ) {
-                                                int LA7_47 = input.LA(11);
+                                            if ( (LA7_42=='d') ) {
+                                                int LA7_44 = input.LA(11);
 
-                                                if ( (LA7_47=='r') ) {
-                                                    int LA7_48 = input.LA(12);
+                                                if ( (LA7_44=='r') ) {
+                                                    int LA7_46 = input.LA(12);
 
-                                                    if ( (LA7_48=='e') ) {
-                                                        int LA7_49 = input.LA(13);
+                                                    if ( (LA7_46=='e') ) {
+                                                        int LA7_47 = input.LA(13);
 
-                                                        if ( (LA7_49=='s') ) {
-                                                            int LA7_50 = input.LA(14);
+                                                        if ( (LA7_47=='s') ) {
+                                                            int LA7_48 = input.LA(14);
 
-                                                            if ( (LA7_50=='s') ) {
-                                                                int LA7_51 = input.LA(15);
+                                                            if ( (LA7_48=='s') ) {
+                                                                int LA7_49 = input.LA(15);
 
-                                                                if ( ((LA7_51 >= '0' && LA7_51 <= '9')||(LA7_51 >= 'A' && LA7_51 <= 'Z')||(LA7_51 >= 'a' && LA7_51 <= 'z')) ) {
+                                                                if ( ((LA7_49 >= '0' && LA7_49 <= '9')||(LA7_49 >= 'A' && LA7_49 <= 'Z')||(LA7_49 >= 'a' && LA7_49 <= 'z')) ) {
                                                                     alt7=9;
                                                                 }
                                                                 else {
-                                                                    alt7=6;
+                                                                    alt7=5;
                                                                 }
                                                             }
                                                             else {
@@ -756,28 +688,28 @@ public class NetworkSpecLexer extends Lexer {
             break;
         case 'r':
             {
-            int LA7_7 = input.LA(2);
+            int LA7_6 = input.LA(2);
 
-            if ( (LA7_7=='e') ) {
-                int LA7_16 = input.LA(3);
+            if ( (LA7_6=='e') ) {
+                switch ( input.LA(3) ) {
+                case 'g':
+                    {
+                    int LA7_18 = input.LA(4);
 
-                if ( (LA7_16=='g') ) {
-                    int LA7_21 = input.LA(4);
+                    if ( (LA7_18=='i') ) {
+                        int LA7_23 = input.LA(5);
 
-                    if ( (LA7_21=='i') ) {
-                        int LA7_26 = input.LA(5);
+                        if ( (LA7_23=='o') ) {
+                            int LA7_28 = input.LA(6);
 
-                        if ( (LA7_26=='o') ) {
-                            int LA7_31 = input.LA(6);
+                            if ( (LA7_28=='n') ) {
+                                int LA7_33 = input.LA(7);
 
-                            if ( (LA7_31=='n') ) {
-                                int LA7_36 = input.LA(7);
-
-                                if ( ((LA7_36 >= '0' && LA7_36 <= '9')||(LA7_36 >= 'A' && LA7_36 <= 'Z')||(LA7_36 >= 'a' && LA7_36 <= 'z')) ) {
+                                if ( ((LA7_33 >= '0' && LA7_33 <= '9')||(LA7_33 >= 'A' && LA7_33 <= 'Z')||(LA7_33 >= 'a' && LA7_33 <= 'z')) ) {
                                     alt7=9;
                                 }
                                 else {
-                                    alt7=7;
+                                    alt7=6;
                                 }
                             }
                             else {
@@ -791,10 +723,66 @@ public class NetworkSpecLexer extends Lexer {
                     else {
                         alt7=9;
                     }
-                }
-                else {
+                    }
+                    break;
+                case 's':
+                    {
+                    int LA7_19 = input.LA(4);
+
+                    if ( (LA7_19=='o') ) {
+                        int LA7_24 = input.LA(5);
+
+                        if ( (LA7_24=='u') ) {
+                            int LA7_29 = input.LA(6);
+
+                            if ( (LA7_29=='r') ) {
+                                int LA7_34 = input.LA(7);
+
+                                if ( (LA7_34=='c') ) {
+                                    int LA7_38 = input.LA(8);
+
+                                    if ( (LA7_38=='e') ) {
+                                        int LA7_41 = input.LA(9);
+
+                                        if ( (LA7_41=='s') ) {
+                                            int LA7_43 = input.LA(10);
+
+                                            if ( ((LA7_43 >= '0' && LA7_43 <= '9')||(LA7_43 >= 'A' && LA7_43 <= 'Z')||(LA7_43 >= 'a' && LA7_43 <= 'z')) ) {
+                                                alt7=9;
+                                            }
+                                            else {
+                                                alt7=7;
+                                            }
+                                        }
+                                        else {
+                                            alt7=9;
+                                        }
+                                    }
+                                    else {
+                                        alt7=9;
+                                    }
+                                }
+                                else {
+                                    alt7=9;
+                                }
+                            }
+                            else {
+                                alt7=9;
+                            }
+                        }
+                        else {
+                            alt7=9;
+                        }
+                    }
+                    else {
+                        alt7=9;
+                    }
+                    }
+                    break;
+                default:
                     alt7=9;
                 }
+
             }
             else {
                 alt7=9;
@@ -803,18 +791,18 @@ public class NetworkSpecLexer extends Lexer {
             break;
         case 't':
             {
-            int LA7_8 = input.LA(2);
+            int LA7_7 = input.LA(2);
 
-            if ( (LA7_8=='y') ) {
-                int LA7_17 = input.LA(3);
+            if ( (LA7_7=='y') ) {
+                int LA7_15 = input.LA(3);
 
-                if ( (LA7_17=='p') ) {
-                    int LA7_22 = input.LA(4);
+                if ( (LA7_15=='p') ) {
+                    int LA7_20 = input.LA(4);
 
-                    if ( (LA7_22=='e') ) {
-                        int LA7_27 = input.LA(5);
+                    if ( (LA7_20=='e') ) {
+                        int LA7_25 = input.LA(5);
 
-                        if ( ((LA7_27 >= '0' && LA7_27 <= '9')||(LA7_27 >= 'A' && LA7_27 <= 'Z')||(LA7_27 >= 'a' && LA7_27 <= 'z')) ) {
+                        if ( ((LA7_25 >= '0' && LA7_25 <= '9')||(LA7_25 >= 'A' && LA7_25 <= 'Z')||(LA7_25 >= 'a' && LA7_25 <= 'z')) ) {
                             alt7=9;
                         }
                         else {
@@ -834,6 +822,7 @@ public class NetworkSpecLexer extends Lexer {
             }
             }
             break;
+        case 'a':
         case 'b':
         case 'c':
         case 'e':

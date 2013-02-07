@@ -17,49 +17,49 @@ import fr.inria.arles.pankesh.semanticmodel.*;
 } 
 
 @members {
-  //Initialize the context
-  private Context context; 
+  //Initialize the context  
+  private Context context;    
 }
  
 archSpec : 
-	//	'regions'
-		{ context = new Context();
-		context.currentRegion = new RegionsGenerator();
-		context.currentMappingConstraint = new MappingConstraint(); }
-	//	':' (region_def)+  
-		{ context.currentRegion.generateCode(); }   
+  //  'regions'
+    { context = new Context();
+    context.currentRegion = new RegionsGenerator();
+    context.currentMappingConstraint = new MappingConstraint(); }
+  //  ':' (region_def)+  
+    { context.currentRegion.generateCode(); }   
     'structs'         
         ':'       
     (struct_def)+  
    // 'abilities' ':' abilities_def  
-    'softwarecomponents' ':' sc_def 
+    'softwarecomponents' ':' component_def 
 ;
 
 region_def :
-	
+  
      CAPITALIZED_ID ':' dataType  ';'
     { 
     context.currentRegion.addRegion($CAPITALIZED_ID.text, $dataType.text); 
     }
 ;
 
-sc_def :
-	('storageService' (ss_def)+ )* 
-   'computationalService' (cs_def)+ 
-    ('controller' (controller_def)+ )*
+component_def :
+   //('storageService' ':' (ss_def)+ )* 
+   'computationalService' ':' (cs_def)+ 
+    ((controller_def)+ )*
      
 ;
 
 ss_def:
   CAPITALIZED_ID
-    {	context.currentStorageService = new Storage();
-    	//context.currentStorageService = new Storage($CAPITALIZED_ID.text);
-    	}
+    { context.currentStorageService = new Storage();
+      //context.currentStorageService = new Storage($CAPITALIZED_ID.text);
+      }
     (storageAttribute_def ';')*
     (storageDataAccess_def ';')* 
     (storagePartition_def ';')*
      {
-     	
+      
      context.currentStorageService.setStorageServiceName($CAPITALIZED_ID.text);
      context.currentStorageService.createStorageObject();
      context.currentStorageService.generateCode();
@@ -122,7 +122,7 @@ controller_def:
 ;
 
 cntrlPartition_def :
-	cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
+  cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
     { 
     context.currentController.setPartitionAttribute($CAPITALIZED_ID.text); 
      // Next two lines are for  Mapping constraints
@@ -137,7 +137,7 @@ cntrlAttribute_def:
 ;
 
 cntrlConsumeInfo_def:
-	'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?  
+  'consume' lc_id ('from' 'region-hops' ':' INT ':' CAPITALIZED_ID )?  
    { context.currentController.addConsumedInfo($lc_id.text);  }
 ; 
  
@@ -287,4 +287,3 @@ INT : '0'..'9'('0'..'9')*  ;
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;
 
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};
-
