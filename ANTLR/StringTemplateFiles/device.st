@@ -15,11 +15,13 @@ public class Startup implements DeviceStartup {
 	private static String softwarePlatform;
 	private static String networkAddress;
 	private static Set<String> abilities = new HashSet<String>();
-	private static PubSubMiddleware myPubSub = PubSubMiddleware.getInstance();
-
+	private static PubSubMiddleware myPubSub;
+	public static Object myContext = null;
 
 
 private static void setUpNode(Device deviceInfo)	{	
+
+	myPubSub = PubSubMiddleware.getInstance(deviceInfo);
 	
 	$device.abilities:{ sc |	
 	Fake$sc$ fake$sc$Impl = new Fake$sc$(myPubSub, deviceInfo); 

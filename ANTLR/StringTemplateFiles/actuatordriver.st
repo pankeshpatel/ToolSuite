@@ -3,11 +3,14 @@ package $Actuatordriver.packageName$;
 import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.common.*;
+import java.util.List;
 
-public abstract class  $Actuatordriver.name$ implements Runnable, CommandListener  {	
+public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {	
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
+	private String partitionAttribute = "$Actuatordriver.PartitionAttributeVal$";
+	
 	
 	public $Actuatordriver.name$(PubSubMiddleware pubSubM, Device deviceInfo) {  
 	
@@ -35,7 +38,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, CommandListene
 	
     $Actuatordriver.allActions:{ action | protected abstract void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; separator=", "$); }; separator="\n"$
 	
-    public final Object commandReceived(String methodName, Object arg, Device deviceInfo) { 
+    public void notifyReceived(String methodName, Object arg, Device deviceInfo) { 
     $Actuatordriver.allActions:{ action |
     if (methodName.equals("$action.name$")   $action.allParameter:{ param | && arg instanceof $param.type.name$}; separator=", "$) {
     	
@@ -43,15 +46,19 @@ public abstract class  $Actuatordriver.name$ implements Runnable, CommandListene
     	
     	
 		   $action.name$($action.allParameter:{ param | ($param.type.name$)arg }; separator=", "$);
-		   return null;
-      } }; separator="\n"$
-    		  return null;
-    }	
-    
+		   
+      } 
+    }$
+    }
    
      $Actuatordriver.allActions:{ action | 
     	public void subscribe$action.name; format="capital"$() {
-           this.myPubSubMiddleware.registerInstance(this,"$action.name$");
+    		
+    		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
+				partitionAttribute, myDeviceInfo.getRegionLabels(),
+				myDeviceInfo.getRegion());
+				
+           this.myPubSubMiddleware.subscribe(this,"$action.name$",regionInfo);
    		}
     }$  		
    		  		
