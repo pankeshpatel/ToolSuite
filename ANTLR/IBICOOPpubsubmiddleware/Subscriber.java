@@ -6,5 +6,4 @@ public interface Subscriber {
 
 	public abstract void notifyReceived(String eventName, Object arg,
 			Device deviceInfo);
-
 }

@@ -1,4 +1,4 @@
-package fr.inria.arles.pankesh.pubsubmiddleware;
+package fr.inria.arles.pankesh.singlepcpubsubmiddleware;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,0 +1,11 @@
+softwarecomponents:
+    computationalService:
+		RoomAvgTemp			
+			generate roomAvgTempMeasurement:TempStruct;
+		    consume tempMeasurement from region-hops:0:Room;
+		    partition-per : Room ;
+   controller:
+		HomeAvgTemp
+			consume roomAvgTempMeasurement from region-hops:0:Room;
+			command Display(displayTemp) to region-hops:0:Home;
+			partition-per : Home;

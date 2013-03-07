@@ -1,0 +1,17 @@
+regions :
+	Home : String ;
+	Room : String;
+	
+structs:
+	TempStruct
+		tempValue : double;
+		unitOfMeasurement : String;
+
+resources:
+	sensors:
+		TemperatureSensor 
+			generate  tempMeasurement : TempStruct;
+
+	actuators:
+		Monitor
+			action Display(displayTemp : TempStruct);
