@@ -3,6 +3,6 @@ package fr.inria.arles.pankesh.common;
 public interface DeviceStartup {
 
 	/** Called to start the device */
-	public void startDevice();
+	public void startDevice(Object obj, Object context);
 
 }

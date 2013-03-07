@@ -11,6 +11,7 @@ import $device.logicPackageName$.*;
 
 public class Startup implements DeviceStartup {
 	
+	private static Object ui;
 	private static String name ;
 	private static String softwarePlatform;
 	private static String networkAddress;
@@ -51,7 +52,9 @@ private static Device setUpDeviceInfo() {
 }
 
 @Override
-public void startDevice() {
+public void startDevice(Object obj, Object context) {
+	ui= obj;
+	myContext=context;
 	setUpNode(setUpDeviceInfo());
 	
 }

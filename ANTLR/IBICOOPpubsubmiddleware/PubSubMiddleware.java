@@ -19,7 +19,7 @@ import org.ibicoop.broker.common.IbiTopicEvent;
 import org.ibicoop.broker.common.IbiTopicFilter;
 import org.ibicoop.init.IbicoopInit;
 
-
+import sim.deviceDOne.Startup;
 import fr.inria.arles.pankesh.common.RegionIDTables;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 
@@ -62,7 +62,7 @@ public class PubSubMiddleware implements EventNotificationListener {
 	public void initialize(String type, String name) {
 
 		Object[] ibicoopInput;
-		if (type == "Android") {
+		if (type == "PC") {
 
 			ibicoopInput = new Object[2];
 			ibicoopInput[0] = name + "@ibicoop.org";

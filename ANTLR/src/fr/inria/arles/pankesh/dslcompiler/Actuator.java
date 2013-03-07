@@ -43,6 +43,8 @@ public class Actuator {
 		
 		generateActuatorFactoryImpl();
 		
+		generateGUIActuator();
+		
 	}
 
 	private void generateActuatorFactoryImpl() {
@@ -76,6 +78,21 @@ public class Actuator {
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 
 	}
+	
+	
+	
+	public void generateGUIActuator() {
+		
+		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedActuatorDriver
+				.buildAbstractClassoFGUI(actuatorDriver);
+		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);	
+		
+	}
+	
+	
+	
 
 	// Getter and Setter of Parameters
 
