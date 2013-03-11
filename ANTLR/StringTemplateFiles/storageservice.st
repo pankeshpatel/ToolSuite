@@ -3,12 +3,14 @@ package $Storageservice.packageName$;
 import fr.inria.arles.pankesh.pubsubmiddleware.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import fr.inria.arles.pankesh.common.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 
 
 
-public abstract class  $Storageservice.name$  implements Runnable, CommandListener {
+public abstract class  $Storageservice.name$  implements Runnable, Subscriber {
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
@@ -44,26 +46,40 @@ public abstract class  $Storageservice.name$  implements Runnable, CommandListen
 	protected void set$dataAccess.dataAccessName; format="capital"$ 
 			($dataAccess.query.type.name; format="capital" $ newIndex  , $dataAccess.generatedInfo.type.name$  new$dataAccess.dataAccessName; format="capital"$Value ) {
 		$dataAccess.dataAccessName$.put(newIndex, new$dataAccess.dataAccessName; format="capital"$Value );
+			myPubSubMiddleware.publish("$dataAccess.dataAccessName$Received", new$dataAccess.dataAccessName$Value, myDeviceInfo);
+		
 	}
 	
 	protected $dataAccess.generatedInfo.type.name$ get$dataAccess.dataAccessName$($dataAccess.query.type.name; format="capital" $ index) {
 	      return $dataAccess.dataAccessName$.get(index);   
 	      }
-	
-	public final Object commandReceived(String methodName, Object arg, Device deviceInfo)  {
+	    
+	public void notifyReceived(String eventName, Object arg, Device deviceInfo) {
+		try {
 
-	    if (methodName.equals("get$dataAccess.dataAccessName$")) {
-	    	
-	    	Logger.log(myDeviceInfo.getName(),"$Storageservice.name$",
+			if (eventName.equals("get$dataAccess.dataAccessName$")) {
+				Logger.log(myDeviceInfo.getName(),"$Storageservice.name$",
 					"CommandReceived get$dataAccess.dataAccessName$");
-	      return get$dataAccess.dataAccessName$(($dataAccess.query.type.name; format="capital" $)arg);
-	    }
-	    return null;
-	      
-	    }
+
+				onNew$dataAccess.dataAccessName$RequestReceived((String) arg);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public abstract void onNew$dataAccess.dataAccessName$RequestReceived(String arg);
 	
 	public void subscribe$dataAccess.dataAccessName$() {
-		this.myPubSubMiddleware.registerInstance(this, "get$dataAccess.dataAccessName$");
+		List<String> regionInfo = new ArrayList<String>();
+
+		regionInfo.add("*");
+		regionInfo.add("*");
+		regionInfo.add("*");
+		
+		this.myPubSubMiddleware.subscribe(this, "get$dataAccess.dataAccessName$",regionInfo);
+		
 	}
 	
 	
@@ -73,13 +89,3 @@ public abstract class  $Storageservice.name$  implements Runnable, CommandListen
 
 }
 
-
-  
-
-        
-    
-	
-	
-    
-
-    

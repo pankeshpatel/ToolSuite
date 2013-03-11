@@ -23,4 +23,15 @@ public class  Fake$CS.name$ extends $CS.name$  {
 	    }	   		
 	   	
 		}; separator="\n"$ 
+		
+		
+		$CS.allDataAccess:{ dataAccess |	   
+	    public void onNew$dataAccess.dataAccessName; format="capital"$Received( $CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$ arg)
+	    {
+	    	//TODO : write code here
+	    }	   	
+	}$
+		
+		
+		
 }

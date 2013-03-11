@@ -12,6 +12,16 @@ public class  Fake$Storageservice.name$  extends $Storageservice.name$  {
 		super(pubSubM, deviceInfo);
 
 	}
+	
+	$Storageservice.allDataAccess:{ dataAccess |
+	
+	@Override
+	public void onNew$dataAccess.dataAccessName; format="capital"$RequestReceived( String arg) {
+		//TODO : write code here
+
+	}
+	
+	}$
 
 }
 

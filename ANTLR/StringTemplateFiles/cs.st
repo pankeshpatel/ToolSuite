@@ -25,6 +25,8 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	protected void postInitialize() {
       $CS.allConsumedInfo:{consumedInfo|subscribe$consumedInfo.name; format="capital"$(); 
     }$ 
+    $CS.allDataAccess:{ dataAccess|subscribe$dataAccess.dataAccessName; format="capital"$();
+    }$
     }
     
 	$CS.allAttributes:{ attribute |
@@ -79,6 +81,16 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         }
         }$
         
+        $CS.allDataAccess:{ dataAccess |
+        if (eventName.equals("receive$dataAccess.dataAccessName; format="capital"$")) {
+				Logger.log(myDeviceInfo.getName(), "Proximity",
+						"Notification Received Profile");
+
+				onNew$dataAccess.dataAccessName; format="capital"$Received(($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$) arg);
+		}
+        }$
+        
+        
         	 } catch (Exception e) {
                  e.printStackTrace();
            }
@@ -86,7 +98,9 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	  
 	    $CS.allConsumedInfo:{ consumedInfo | 
 	   
-	    public abstract void onNew$consumedInfo.name; format="capital"$( $consumedInfo.type.name$ arg);	   		
+	    public abstract void onNew$consumedInfo.name; format="capital"$($consumedInfo.type.name$ arg);	   		
+	  
+	   
 	   	public void subscribe$consumedInfo.name; format="capital"$() {
 	   		    
 	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
@@ -97,15 +111,33 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
 	   		
          		this.myPubSubMiddleware.subscribe(this,"$consumedInfo.name$", regionInfo);
 		}
-		}$ 		
+		}$ 	
+		
+		$CS.allDataAccess:{ dataAccess |
+		    
+		public abstract void onNew$dataAccess.dataAccessName; format="capital"$Received($CS.allGeneratedInfo:{ generatedInfo |$generatedInfo.type.name$}$  arg);	   		
+	   	public void subscribe$dataAccess.dataAccessName; format="capital"$() {
+	   		    
+	   		List<String> regionInfo = RegionSubscription.getSubscriptionRequest(
+					partitionAttribute, myDeviceInfo.getRegionLabels(),
+					myDeviceInfo.getRegion());
+	   		
+	   		
+	   		
+         		this.myPubSubMiddleware.subscribe(this,"$dataAccess.dataAccessName; format="capital"$Received", regionInfo);
+		}
+		    
+		    
+		}$
+		
 		public void run() {	
 		}	
         
 		$CS.allDataAccess:{ dataAccess |
-		    protected  $dataAccess.generatedInfo.type.name$ get$dataAccess.dataAccessName; format="capital"$($dataAccess.query.type.name; format="capital" $ arg) {
+		    protected void get$dataAccess.dataAccessName; format="capital"$($dataAccess.query.type.name; format="capital" $ arg) {
 		    	 Logger.log(myDeviceInfo.getName(),"$CS.name$",
 		     				"Sending command get$dataAccess.dataAccessName$");
-		    	return ($dataAccess.generatedInfo.type.name$) this.myPubSubMiddleware.sendCommand("get$dataAccess.dataAccessName; format="capital"$", arg , myDeviceInfo );     
+		    	this.myPubSubMiddleware.publish("get$dataAccess.dataAccessName; format="capital"$", arg , myDeviceInfo );     
 		    }
 		}; separator="\n"$ 
 }
