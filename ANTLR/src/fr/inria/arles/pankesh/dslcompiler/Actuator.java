@@ -43,7 +43,7 @@ public class Actuator {
 		
 		generateActuatorFactoryImpl();
 		
-		generateGUIActuator();
+	//	generateGUIActuator();
 		
 	}
 

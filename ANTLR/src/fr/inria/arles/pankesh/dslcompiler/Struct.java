@@ -14,11 +14,14 @@ public class Struct {
 
 	private Structure createdStructure;
 	private List<StructField> StructFieldSet = new ArrayList<StructField>();
-
+	private String structName;
+	
+	
 	public Struct() {
 	}
 
 	public Struct(String structName) {
+		this.structName=structName;
 		createdStructure = new Structure(structName, getStructFieldSet());
 	}
 
@@ -40,6 +43,10 @@ public class Struct {
 
 	public List<StructField> getStructFieldSet() {
 		return StructFieldSet;
+	}
+	
+	public String getStructName(){
+		return structName;
 	}
 
 }

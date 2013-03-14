@@ -3,6 +3,7 @@ package fr.inria.arles.pankesh.dslcompiler;
 import java.util.HashSet;
 import java.util.Set;
 
+
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
@@ -11,6 +12,7 @@ import fr.inria.arles.pankesh.semanticmodel.DataType;
 import fr.inria.arles.pankesh.semanticmodel.PrimitiveType;
 import fr.inria.arles.pankesh.semanticmodel.SensorDriver;
 import fr.inria.arles.pankesh.semanticmodel.SensorMeasurement;
+import fr.inria.arles.pankesh.semanticmodel.Structure;
 
 public class Sensor {
 
@@ -100,9 +102,9 @@ public class Sensor {
 	}
 
 	public void addSensorMeasurement(String measurementName,
-			String measurementStruct) {
+			String measurementStruct, Struct struct ) {
 		SensorMeasurement sensorMeasurement = new SensorMeasurement(
-				measurementName, new DataType(measurementStruct));
+				measurementName, new DataType(measurementStruct),struct );
 		generatedInfo.add(sensorMeasurement);
 	}
 

@@ -49,7 +49,7 @@ public void run() {
 		public void onNew$generatedInfo.name; format="capital"$($generatedInfo.type.name$ response) {
 
 			$generatedInfo.type.name$ s$generatedInfo.type.name$ = new $generatedInfo.type.name$(
-					response.getbadgeID(), response.gettimeStamp());
+			$generatedInfo.data.StructFieldSet:{ StructFieldSet | response.get$StructFieldSet.name$()}; separator=", "$);
 			set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);
 		}
 		

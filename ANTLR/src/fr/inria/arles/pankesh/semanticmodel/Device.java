@@ -1,5 +1,6 @@
 package fr.inria.arles.pankesh.semanticmodel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -7,27 +8,33 @@ import java.util.Set;
 
 import fr.inria.arles.pankesh.common.GlobalVariable;
 
-public class Device {
+public class Device implements Serializable {
+
+	/**
+ * 
+ */
+	private static final long serialVersionUID = 1L;
 
 	private String name;
 	private String id;
 	private String type;
 	private String networkAddress;
-	
 
 	private List<String> regionIDs = new ArrayList<String>();
 	private List<String> regionLabels = new ArrayList<String>();
 
 	private Set<String> abilities = new HashSet<String>();
 
-	public Device(String name, String type, String networkAddress, List<String> regionIDs, List<String> regionLabels, Set<String> abilities) {
+	public Device(String name, String type, String networkAddress,
+			List<String> regionIDs, List<String> regionLabels,
+			Set<String> abilities) {
 
 		this.name = name;
-		
+
 		this.type = type;
 		this.networkAddress = networkAddress;
 		this.regionIDs = regionIDs;
-		this.regionLabels = regionLabels;		
+		this.regionLabels = regionLabels;
 		this.abilities = abilities;
 
 	}
@@ -35,8 +42,6 @@ public class Device {
 	public String getName() {
 		return name;
 	}
-
-
 
 	public String getType() {
 		return type;
@@ -46,8 +51,6 @@ public class Device {
 		return networkAddress;
 	}
 
-
-	
 	public List<String> getRegionLabels() {
 		return regionLabels;
 	}
@@ -63,17 +66,20 @@ public class Device {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceDirPath) + getName();
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.deviceDirPath) + getName();
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getUtilPackageName() {
-		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable
+				.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 

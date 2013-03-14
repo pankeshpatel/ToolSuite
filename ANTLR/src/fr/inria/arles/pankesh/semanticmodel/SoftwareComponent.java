@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+
+
 public abstract class SoftwareComponent<I extends Information> {
 
 	private String name;

@@ -215,7 +215,8 @@ struct_def:
 ;
 structField_def:  
   lc_id ':' dataType 
-  { context.currentStruct.addField($lc_id.text, $dataType.text);  }  
+  { context.currentStruct.addField($lc_id.text, $dataType.text);
+    context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
 
 lc_id: ID  
@@ -250,7 +251,7 @@ attribute_def:
 
 sensorMeasurement_def :
     'generate' lc_id ':'  CAPITALIZED_ID
-    { context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text); 
+    { context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text ,context.getStructSymblTable($CAPITALIZED_ID.text) ); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text); } 
 ;
 

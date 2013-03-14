@@ -1,5 +1,6 @@
 package fr.inria.arles.pankesh.semanticmodel;
 
+
 public class DataAccess {
 
 	private Information query;

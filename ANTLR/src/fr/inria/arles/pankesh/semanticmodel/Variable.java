@@ -1,5 +1,7 @@
 package fr.inria.arles.pankesh.semanticmodel;
 
+
+
 public class Variable {
 
 	String name;

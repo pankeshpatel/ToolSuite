@@ -1,11 +1,16 @@
 package fr.inria.arles.pankesh.semanticmodel;
 
 import fr.inria.arles.pankesh.common.GlobalVariable;
+import fr.inria.arles.pankesh.dslcompiler.Struct;
 
 public class SensorMeasurement extends Information {
 
-	public SensorMeasurement(String name, DataType type) {
+	public Struct data;
+	
+	public SensorMeasurement(String name, DataType type, Struct data) {
 		super(name, type);
+		this.data=data;
+
 
 	}
 

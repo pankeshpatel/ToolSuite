@@ -82,7 +82,7 @@ public abstract class  $CS.name$ implements Subscriber, Runnable{
         }$
         
         $CS.allDataAccess:{ dataAccess |
-        if (eventName.equals("receive$dataAccess.dataAccessName; format="capital"$")) {
+        if (eventName.equals("$dataAccess.dataAccessName; format="capital"$Received")) {
 				Logger.log(myDeviceInfo.getName(), "Proximity",
 						"Notification Received Profile");
 
