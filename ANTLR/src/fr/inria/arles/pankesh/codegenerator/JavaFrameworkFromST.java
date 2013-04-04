@@ -10,6 +10,7 @@ import fr.inria.arles.pankesh.semanticmodel.ActuatorDriver;
 import fr.inria.arles.pankesh.semanticmodel.ComputationalService;
 import fr.inria.arles.pankesh.semanticmodel.Controller;
 import fr.inria.arles.pankesh.semanticmodel.Device;
+import fr.inria.arles.pankesh.semanticmodel.GUIDriver;
 import fr.inria.arles.pankesh.semanticmodel.Regions;
 import fr.inria.arles.pankesh.semanticmodel.SensorDriver;
 import fr.inria.arles.pankesh.semanticmodel.SensorMeasurement;
@@ -90,15 +91,6 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Fake" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Logic", "actuator");
 	}
 	
-	
-	public CompilationUnit buildAbstractClassoFGUI(ActuatorDriver actuatorDriver) {
-
-		StringTemplate templateOfActuatorDriver = group.getInstanceOf("LGUI");
-		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
-		return new CompilationUnit("Fake" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Logic", "actuator");
-	}
-	
-	
 	public CompilationUnit buildImploFActuatorFactory(ActuatorDriver actuatorDriver) {
 
 		StringTemplate templateOfActuatorDriver = group.getInstanceOf("implactuator");
@@ -106,7 +98,39 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Impl" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator");
 	}
 	
+	public CompilationUnit buildAbstractClassoFGUIDriver(GUIDriver guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guidriver");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit(guiDriver.getName() + ".java", templateOfGUIDriver, "guiDriver", "Future");
+	}
 	
+	public CompilationUnit buildAbstractClassoFGUI(GUIDriver guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("LGUI");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("Fake" + guiDriver.getName() + ".java", templateOfGUIDriver, "Logic", "gui");
+	}
+	
+	public CompilationUnit buildFactoryofGUI(GUIDriver guiDriver) {
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("actuatorfactory");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "Factory", "GUI");
+	}
+
+	public CompilationUnit buildGUIInterface(GUIDriver guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("igui");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("I" + guiDriver.getName() + ".java", templateOfGUIDriver, "Interface", "gui");
+	}
+	
+	public CompilationUnit buildImploFGUIFactory(GUIDriver guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("implgui");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "gui");
+	}
 
 	public CompilationUnit buildAbstractClassOFStorageService(StorageService storageService) {
 

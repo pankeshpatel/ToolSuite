@@ -11,6 +11,7 @@ import fr.inria.arles.pankesh.dslcompiler.CS;
 import fr.inria.arles.pankesh.dslcompiler.ControllerService;
 import fr.inria.arles.pankesh.dslcompiler.DeployementConstraint;
 import fr.inria.arles.pankesh.dslcompiler.DeviceNetwork;
+import fr.inria.arles.pankesh.dslcompiler.GUI;
 import fr.inria.arles.pankesh.dslcompiler.MappingConstraint;
 import fr.inria.arles.pankesh.dslcompiler.RegionsGenerator;
 import fr.inria.arles.pankesh.dslcompiler.Sensor;
@@ -31,6 +32,9 @@ public class Context {
 	public static Map<String, String> symblTable = new HashMap<String, String>();
 	
 	public static Map<String, Struct> structSymblTable = new HashMap<String, Struct>();
+	
+	public static Map<String, String> responseSymblTable = new HashMap<String, String>();
+
 
 	public static List<Device> deviceList = new ArrayList<Device>();
 
@@ -95,12 +99,24 @@ public class Context {
 
 	}
 	
+	public static void constructResponseTypeSymblTable(String structAccessKey,
+			String structAccessObj) {
+		responseSymblTable.put(structAccessKey, structAccessObj);
+	}
+	
+	public static String getResponseTypeSymblTable(String structAccessKey) {
+		return responseSymblTable.get(structAccessKey);
+
+	}
+	
 	// Cursor to current structure
 	public Struct currentStruct;
 
 	public Sensor currentSensor;
 
 	public Actuator currentActuator;
+	
+	public GUI currentGUI;
 
 	public Storage currentStorageService;
 

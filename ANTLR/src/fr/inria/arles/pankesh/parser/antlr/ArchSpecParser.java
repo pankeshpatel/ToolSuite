@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g 2013-03-14 13:31:05
+// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g 2013-04-04 10:01:02
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 

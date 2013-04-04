@@ -82,7 +82,8 @@ storageDataAccess_def :
 storageGeneratedInfo_def :
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);}
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+    context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);}
 ;
 
 storagedataIndex_def:
@@ -233,7 +234,8 @@ primitiveType:
 abilities_def :
   'sensors' ':'   (sensor_def)+
   'actuators' ':' (actuator_def)+
-  ('storages'  ':' (ss_def))*
+  'storages'  ':' (ss_def)+
+  ('end user applications' ':' (gui_def))*
  ; 
 
 sensor_def:
@@ -280,6 +282,52 @@ parameter_def :
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     }
 ; 
+
+gui_def:
+  CAPITALIZED_ID
+  {    context.currentGUI = new GUI();
+  }
+   (gui_action_def ';')*
+   (gui_command_def ';')*
+   (gui_request_def  ';')*
+   {context.currentGUI.setGUIName($CAPITALIZED_ID.text);
+    context.currentGUI.createGUIObject();
+    context.currentGUI.generateCode();}   
+;
+
+gui_action_def:
+    'action' CAPITALIZED_ID '(' (gui_parameter_def)? ')'
+    { context.currentGUI.addAction($CAPITALIZED_ID.text); } 
+;
+
+gui_parameter_def :
+    lc_id ':'  CAPITALIZED_ID (',' gui_parameter_def )?
+    { 
+    context.currentGUI.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+    }
+; 
+
+gui_command_def :
+    'command'  name = CAPITALIZED_ID '(' (guiParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID 
+    { 
+      context.currentGUI.addCommand($name.text);  
+    }
+;
+
+gui_request_def :
+   'request' lc_id
+   { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
+   context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
+;
+
+guiParameter_def :
+    lc_id ':'  CAPITALIZED_ID (',' guiParameter_def )?
+    { 
+    context.currentGUI.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+    }
+;
+
+
 
 ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )*
    ;
