@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 import fr.inria.arles.pankesh.common.GlobalVariable;
-import fr.inria.arles.pankesh.dslcompiler.Struct;
 
 public class GUIDriver extends SoftwareComponent<Information> {
 
@@ -14,15 +13,17 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	private Set<Command> commands = new HashSet<Command>();
 	private Set<DataAccess> dataAccess = new HashSet<DataAccess>();
 	public String struct;
+	private Widget reqWidgets;
 	
 	public GUIDriver(String name, Set<Action> actionsList, Set<Command> commandsList,
 			Set<Attribute> attributes, Set<Information> generateInfo,
-			Set<Information> consumeInfo, Set<DataAccess> dataAccess, String struct) {
+			Set<Information> consumeInfo, Set<DataAccess> dataAccess, String struct, Widget reqWidgets) {
 		super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		this.actions = actionsList;
 		this.commands = commandsList;
 		this.dataAccess = dataAccess;
 		this.struct = struct;
+		this.reqWidgets=reqWidgets;
 
 	}
 	
@@ -42,6 +43,10 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	
 	public Set<Action> getActions() {
 		return actions;
+	}
+	
+	public Widget getReqWidgets() {
+		return reqWidgets;
 	}
 
 	public List<Action> getAllActions() {
@@ -78,6 +83,12 @@ public class GUIDriver extends SoftwareComponent<Information> {
 
 		return packageName;
 
+	}
+	
+public String getDeviceImplPackageName(){
+		
+		packageName  = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		return packageName;		
 	}
 
 }

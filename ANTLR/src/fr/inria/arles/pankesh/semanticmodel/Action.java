@@ -3,15 +3,19 @@ package fr.inria.arles.pankesh.semanticmodel;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Action {
 
 	private String name;
 	private Parameter parameters;
+	private Widget widget;
+	private String control;
 
-	public Action(String name, Parameter parameters) {
+	public Action(String name, Parameter parameters, String control) {
 		super();
 		this.name = name;
 		this.parameters = parameters;
+		this.control=control;
 	}
 
 	public String getName() {
@@ -20,6 +24,10 @@ public class Action {
 
 	public Parameter getParameters() {
 		return parameters;
+	}
+	
+	public String getControl(){
+		return this.control;
 	}
 
 	public List<Parameter> getAllParameter() {

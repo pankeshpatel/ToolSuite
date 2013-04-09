@@ -16,6 +16,7 @@ import fr.inria.arles.pankesh.semanticmodel.GUIDriver;
 import fr.inria.arles.pankesh.semanticmodel.Information;
 import fr.inria.arles.pankesh.semanticmodel.Parameter;
 import fr.inria.arles.pankesh.semanticmodel.PrimitiveType;
+import fr.inria.arles.pankesh.semanticmodel.Widget;
 
 public class GUI {
 
@@ -27,6 +28,8 @@ public class GUI {
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
 	private String struct;
+	private Widget widget;
+
 
 	public GUI() {
 
@@ -42,10 +45,12 @@ public class GUI {
 
 	public void createGUIObject() {
 		guiDriver = new GUIDriver(getGUIName(), getActionList(), getCommandList(),
-				getAttributeSet(), generatedInfo, null, getDataAccessList(), getRequestType() );
+				getAttributeSet(), generatedInfo, null, getDataAccessList(), getRequestType() , getReqWidget());
 	}
 
 	// Code generator of the abstract classes and Logic files
+
+	
 
 	public void generateCode() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
@@ -120,8 +125,8 @@ public class GUI {
 
 	// Getter and Setter of Command
 
-	public void addCommand(String actionName) {
-		Command command = new Command(actionName, getParameters());
+	public void addCommand(String actionName, Widget widget) {
+		Command command = new Command(actionName, getParameters(), widget);
 		commands.add(command);
 	}
 
@@ -150,8 +155,8 @@ public class GUI {
 	}
 
 	// Getter and Setter of Action
-	public void addAction(String actionName) {
-		Action action = new Action(actionName, getParameter());
+	public void addAction(String actionName, String widgetName) {
+		Action action = new Action(actionName, getParameter(), widgetName);
 		actions.add(action);
 	}
 
@@ -172,5 +177,14 @@ public class GUI {
 	public Set<Attribute> getAttributeSet() {
 		return attributeSet;
 	}
+	
+	public void setReqWidget(String textbox, String button, String textview){
+		widget=new Widget(textbox,button,textview);
+	}
 
+	public Widget getReqWidget() {
+		
+		return widget;
+	}
+	
 }

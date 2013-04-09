@@ -76,7 +76,7 @@ public class ControllerService {
 	// Getter and Setter of Command
 
 	public void addCommand(String actionName) {
-		Action action = new Action(actionName, getParameters());
+		Action action = new Action(actionName, getParameters(),null);
 		actions.add(action);
 	}
 

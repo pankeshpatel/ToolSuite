@@ -91,7 +91,7 @@ public class Actuator {
 
 	// Getter and Setter of Action
 	public void addAction(String actionName) {
-		Action action = new Action(actionName, getParameter());
+		Action action = new Action(actionName, getParameter(), null);
 		actions.add(action);
 	}
 

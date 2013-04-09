@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g 2013-04-04 16:48:12
+// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g 2013-04-09 14:18:49
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class VocabSpecParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", "WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", "'accessed-by'", "'action'", "'actuators'", "'attribute'", "'boolean'", "'command'", "'computationalService'", "'consume'", "'controller'", "'deployment-instance'", "'double'", "'end user applications'", "'from'", "'generate'", "'long'", "'partition-per'", "'region-hops'", "'regions'", "'request'", "'resources'", "'sensors'", "'singleton'", "'storageService'", "'storages'", "'structs'", "'to'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "CAPITALIZED_ID", "ID", "INT", "WS", "'('", "')'", "','", "':'", "';'", "'Boolean'", "'Integer'", "'String'", "'accessed-by'", "'action'", "'actuators'", "'attribute'", "'boolean'", "'command'", "'computationalService'", "'consume'", "'controller'", "'deployment-instance'", "'double'", "'end user applications'", "'from'", "'generate'", "'long'", "'partition-per'", "'region-hops'", "'regions'", "'request'", "'resources'", "'sensors'", "'singleton'", "'storageService'", "'storages'", "'structs'", "'to'", "'with'"
     };
 
     public static final int EOF=-1;
@@ -52,6 +52,7 @@ public class VocabSpecParser extends Parser {
     public static final int T__39=39;
     public static final int T__40=40;
     public static final int T__41=41;
+    public static final int T__42=42;
     public static final int CAPITALIZED_ID=4;
     public static final int ID=5;
     public static final int INT=6;
@@ -2710,21 +2711,22 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "gui_action_def"
-    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:298:1: gui_action_def : 'action' CAPITALIZED_ID '(' ( gui_parameter_def )? ')' ;
+    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:298:1: gui_action_def : 'action' name= CAPITALIZED_ID '(' ( gui_parameter_def )? ')' 'with' ui= CAPITALIZED_ID ;
     public final void gui_action_def() throws RecognitionException {
-        Token CAPITALIZED_ID39=null;
+        Token name=null;
+        Token ui=null;
 
         try {
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:298:15: ( 'action' CAPITALIZED_ID '(' ( gui_parameter_def )? ')' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:299:5: 'action' CAPITALIZED_ID '(' ( gui_parameter_def )? ')'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:298:15: ( 'action' name= CAPITALIZED_ID '(' ( gui_parameter_def )? ')' 'with' ui= CAPITALIZED_ID )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:299:5: 'action' name= CAPITALIZED_ID '(' ( gui_parameter_def )? ')' 'with' ui= CAPITALIZED_ID
             {
             match(input,17,FOLLOW_17_in_gui_action_def1351); 
 
-            CAPITALIZED_ID39=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def1353); 
+            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def1357); 
 
-            match(input,8,FOLLOW_8_in_gui_action_def1355); 
+            match(input,8,FOLLOW_8_in_gui_action_def1359); 
 
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:299:33: ( gui_parameter_def )?
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:299:40: ( gui_parameter_def )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -2733,9 +2735,9 @@ public class VocabSpecParser extends Parser {
             }
             switch (alt38) {
                 case 1 :
-                    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:299:34: gui_parameter_def
+                    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:299:41: gui_parameter_def
                     {
-                    pushFollow(FOLLOW_gui_parameter_def_in_gui_action_def1358);
+                    pushFollow(FOLLOW_gui_parameter_def_in_gui_action_def1362);
                     gui_parameter_def();
 
                     state._fsp--;
@@ -2747,9 +2749,13 @@ public class VocabSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_gui_action_def1362); 
+            match(input,9,FOLLOW_9_in_gui_action_def1366); 
 
-             context.currentGUI.addAction((CAPITALIZED_ID39!=null?CAPITALIZED_ID39.getText():null)); 
+            match(input,42,FOLLOW_42_in_gui_action_def1368); 
+
+            ui=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_action_def1374); 
+
+             context.currentGUI.addAction((name!=null?name.getText():null),(ui!=null?ui.getText():null) ); 
 
             }
 
@@ -2771,23 +2777,23 @@ public class VocabSpecParser extends Parser {
     // $ANTLR start "gui_parameter_def"
     // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:303:1: gui_parameter_def : lc_id ':' CAPITALIZED_ID ( ',' gui_parameter_def )? ;
     public final void gui_parameter_def() throws RecognitionException {
-        Token CAPITALIZED_ID41=null;
-        VocabSpecParser.lc_id_return lc_id40 =null;
+        Token CAPITALIZED_ID40=null;
+        VocabSpecParser.lc_id_return lc_id39 =null;
 
 
         try {
             // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:303:19: ( lc_id ':' CAPITALIZED_ID ( ',' gui_parameter_def )? )
             // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:304:5: lc_id ':' CAPITALIZED_ID ( ',' gui_parameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_gui_parameter_def1382);
-            lc_id40=lc_id();
+            pushFollow(FOLLOW_lc_id_in_gui_parameter_def1394);
+            lc_id39=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_gui_parameter_def1384); 
+            match(input,11,FOLLOW_11_in_gui_parameter_def1396); 
 
-            CAPITALIZED_ID41=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_parameter_def1387); 
+            CAPITALIZED_ID40=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_parameter_def1399); 
 
             // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:304:31: ( ',' gui_parameter_def )?
             int alt39=2;
@@ -2800,9 +2806,9 @@ public class VocabSpecParser extends Parser {
                 case 1 :
                     // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:304:32: ',' gui_parameter_def
                     {
-                    match(input,10,FOLLOW_10_in_gui_parameter_def1390); 
+                    match(input,10,FOLLOW_10_in_gui_parameter_def1402); 
 
-                    pushFollow(FOLLOW_gui_parameter_def_in_gui_parameter_def1392);
+                    pushFollow(FOLLOW_gui_parameter_def_in_gui_parameter_def1404);
                     gui_parameter_def();
 
                     state._fsp--;
@@ -2815,7 +2821,9 @@ public class VocabSpecParser extends Parser {
 
 
              
-                context.currentGUI.addParameter((lc_id40!=null?input.toString(lc_id40.start,lc_id40.stop):null), (CAPITALIZED_ID41!=null?CAPITALIZED_ID41.getText():null)); 
+                context.currentGUI.addParameter((lc_id39!=null?input.toString(lc_id39.start,lc_id39.stop):null), (CAPITALIZED_ID40!=null?CAPITALIZED_ID40.getText():null)); 
+                context.constructSymbTable((lc_id39!=null?input.toString(lc_id39.start,lc_id39.stop):null), (CAPITALIZED_ID40!=null?CAPITALIZED_ID40.getText():null));
+                
                 
 
             }
@@ -2836,21 +2844,24 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "gui_command_def"
-    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:310:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( guiParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID ;
+    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:312:1: gui_command_def : 'command' name= CAPITALIZED_ID '(' ( guiParameter_def )? ')' 'to' 'region-hops' ':' INT ':' region= CAPITALIZED_ID 'with' textbox= CAPITALIZED_ID button= CAPITALIZED_ID ;
     public final void gui_command_def() throws RecognitionException {
         Token name=null;
+        Token region=null;
+        Token textbox=null;
+        Token button=null;
 
         try {
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:310:17: ( 'command' name= CAPITALIZED_ID '(' ( guiParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:311:5: 'command' name= CAPITALIZED_ID '(' ( guiParameter_def )? ')' 'to' 'region-hops' ':' INT ':' CAPITALIZED_ID
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:312:17: ( 'command' name= CAPITALIZED_ID '(' ( guiParameter_def )? ')' 'to' 'region-hops' ':' INT ':' region= CAPITALIZED_ID 'with' textbox= CAPITALIZED_ID button= CAPITALIZED_ID )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:313:5: 'command' name= CAPITALIZED_ID '(' ( guiParameter_def )? ')' 'to' 'region-hops' ':' INT ':' region= CAPITALIZED_ID 'with' textbox= CAPITALIZED_ID button= CAPITALIZED_ID
             {
-            match(input,21,FOLLOW_21_in_gui_command_def1415); 
+            match(input,21,FOLLOW_21_in_gui_command_def1427); 
 
-            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1422); 
+            name=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1434); 
 
-            match(input,8,FOLLOW_8_in_gui_command_def1424); 
+            match(input,8,FOLLOW_8_in_gui_command_def1436); 
 
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:311:42: ( guiParameter_def )?
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:313:42: ( guiParameter_def )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -2859,9 +2870,9 @@ public class VocabSpecParser extends Parser {
             }
             switch (alt40) {
                 case 1 :
-                    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:311:43: guiParameter_def
+                    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:313:43: guiParameter_def
                     {
-                    pushFollow(FOLLOW_guiParameter_def_in_gui_command_def1427);
+                    pushFollow(FOLLOW_guiParameter_def_in_gui_command_def1439);
                     guiParameter_def();
 
                     state._fsp--;
@@ -2873,22 +2884,28 @@ public class VocabSpecParser extends Parser {
             }
 
 
-            match(input,9,FOLLOW_9_in_gui_command_def1431); 
+            match(input,9,FOLLOW_9_in_gui_command_def1443); 
 
-            match(input,41,FOLLOW_41_in_gui_command_def1433); 
+            match(input,41,FOLLOW_41_in_gui_command_def1445); 
 
-            match(input,32,FOLLOW_32_in_gui_command_def1436); 
+            match(input,32,FOLLOW_32_in_gui_command_def1448); 
 
-            match(input,11,FOLLOW_11_in_gui_command_def1438); 
+            match(input,11,FOLLOW_11_in_gui_command_def1450); 
 
-            match(input,INT,FOLLOW_INT_in_gui_command_def1440); 
+            match(input,INT,FOLLOW_INT_in_gui_command_def1452); 
 
-            match(input,11,FOLLOW_11_in_gui_command_def1442); 
+            match(input,11,FOLLOW_11_in_gui_command_def1454); 
 
-            match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1444); 
+            region=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1460); 
+
+            match(input,42,FOLLOW_42_in_gui_command_def1462); 
+
+            textbox=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1468); 
+
+            button=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_gui_command_def1474); 
 
              
-                  context.currentGUI.addCommand((name!=null?name.getText():null));  
+                  context.currentGUI.addCommand((name!=null?name.getText():null),new Widget((textbox!=null?textbox.getText():null),(button!=null?button.getText():null),""));  
                 
 
             }
@@ -2909,25 +2926,25 @@ public class VocabSpecParser extends Parser {
 
 
     // $ANTLR start "gui_request_def"
-    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:317:1: gui_request_def : 'request' lc_id ;
+    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:319:1: gui_request_def : 'request' lc_id ;
     public final void gui_request_def() throws RecognitionException {
-        VocabSpecParser.lc_id_return lc_id42 =null;
+        VocabSpecParser.lc_id_return lc_id41 =null;
 
 
         try {
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:317:17: ( 'request' lc_id )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:318:4: 'request' lc_id
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:319:17: ( 'request' lc_id )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:320:4: 'request' lc_id
             {
-            match(input,34,FOLLOW_34_in_gui_request_def1463); 
+            match(input,34,FOLLOW_34_in_gui_request_def1494); 
 
-            pushFollow(FOLLOW_lc_id_in_gui_request_def1465);
-            lc_id42=lc_id();
+            pushFollow(FOLLOW_lc_id_in_gui_request_def1496);
+            lc_id41=lc_id();
 
             state._fsp--;
 
 
-             context.currentGUI.getDataAccessListFromSymblTable((lc_id42!=null?input.toString(lc_id42.start,lc_id42.stop):null));
-               context.currentGUI.setRequestType(context.getResponseTypeSymblTable((lc_id42!=null?input.toString(lc_id42.start,lc_id42.stop):null)));
+             context.currentGUI.getDataAccessListFromSymblTable((lc_id41!=null?input.toString(lc_id41.start,lc_id41.stop):null));
+               context.currentGUI.setRequestType(context.getResponseTypeSymblTable((lc_id41!=null?input.toString(lc_id41.start,lc_id41.stop):null)));
 
             }
 
@@ -2946,28 +2963,64 @@ public class VocabSpecParser extends Parser {
 
 
 
+    // $ANTLR start "req_ui_parameter"
+    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:325:1: req_ui_parameter : textbox= CAPITALIZED_ID button= CAPITALIZED_ID textview= CAPITALIZED_ID ;
+    public final void req_ui_parameter() throws RecognitionException {
+        Token textbox=null;
+        Token button=null;
+        Token textview=null;
+
+        try {
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:325:18: (textbox= CAPITALIZED_ID button= CAPITALIZED_ID textview= CAPITALIZED_ID )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:326:5: textbox= CAPITALIZED_ID button= CAPITALIZED_ID textview= CAPITALIZED_ID
+            {
+            textbox=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_req_ui_parameter1520); 
+
+            button=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_req_ui_parameter1526); 
+
+            textview=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_req_ui_parameter1532); 
+
+            context.currentGUI.setReqWidget((textbox!=null?textbox.getText():null),(button!=null?button.getText():null),(textview!=null?textview.getText():null));
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return ;
+    }
+    // $ANTLR end "req_ui_parameter"
+
+
+
     // $ANTLR start "guiParameter_def"
-    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:323:1: guiParameter_def : lc_id ':' CAPITALIZED_ID ( ',' guiParameter_def )? ;
+    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:330:1: guiParameter_def : lc_id ':' CAPITALIZED_ID ( ',' guiParameter_def )? ;
     public final void guiParameter_def() throws RecognitionException {
-        Token CAPITALIZED_ID44=null;
-        VocabSpecParser.lc_id_return lc_id43 =null;
+        Token CAPITALIZED_ID43=null;
+        VocabSpecParser.lc_id_return lc_id42 =null;
 
 
         try {
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:323:18: ( lc_id ':' CAPITALIZED_ID ( ',' guiParameter_def )? )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:324:5: lc_id ':' CAPITALIZED_ID ( ',' guiParameter_def )?
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:330:18: ( lc_id ':' CAPITALIZED_ID ( ',' guiParameter_def )? )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:331:5: lc_id ':' CAPITALIZED_ID ( ',' guiParameter_def )?
             {
-            pushFollow(FOLLOW_lc_id_in_guiParameter_def1483);
-            lc_id43=lc_id();
+            pushFollow(FOLLOW_lc_id_in_guiParameter_def1552);
+            lc_id42=lc_id();
 
             state._fsp--;
 
 
-            match(input,11,FOLLOW_11_in_guiParameter_def1485); 
+            match(input,11,FOLLOW_11_in_guiParameter_def1554); 
 
-            CAPITALIZED_ID44=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_guiParameter_def1488); 
+            CAPITALIZED_ID43=(Token)match(input,CAPITALIZED_ID,FOLLOW_CAPITALIZED_ID_in_guiParameter_def1557); 
 
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:324:31: ( ',' guiParameter_def )?
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:331:31: ( ',' guiParameter_def )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -2976,11 +3029,11 @@ public class VocabSpecParser extends Parser {
             }
             switch (alt41) {
                 case 1 :
-                    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:324:32: ',' guiParameter_def
+                    // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:331:32: ',' guiParameter_def
                     {
-                    match(input,10,FOLLOW_10_in_guiParameter_def1491); 
+                    match(input,10,FOLLOW_10_in_guiParameter_def1560); 
 
-                    pushFollow(FOLLOW_guiParameter_def_in_guiParameter_def1493);
+                    pushFollow(FOLLOW_guiParameter_def_in_guiParameter_def1562);
                     guiParameter_def();
 
                     state._fsp--;
@@ -2993,7 +3046,7 @@ public class VocabSpecParser extends Parser {
 
 
              
-                context.currentGUI.addParameter((lc_id43!=null?input.toString(lc_id43.start,lc_id43.stop):null), (CAPITALIZED_ID44!=null?CAPITALIZED_ID44.getText():null)); 
+                context.currentGUI.addParameter((lc_id42!=null?input.toString(lc_id42.start,lc_id42.stop):null), (CAPITALIZED_ID43!=null?CAPITALIZED_ID43.getText():null)); 
                 
 
             }
@@ -3193,32 +3246,40 @@ public class VocabSpecParser extends Parser {
     public static final BitSet FOLLOW_gui_request_def_in_gui_def1326 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_gui_def1329 = new BitSet(new long[]{0x0000000400000002L});
     public static final BitSet FOLLOW_17_in_gui_action_def1351 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_def1353 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_gui_action_def1355 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_gui_parameter_def_in_gui_action_def1358 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_gui_action_def1362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_gui_parameter_def1382 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_gui_parameter_def1384 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_parameter_def1387 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_gui_parameter_def1390 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_gui_parameter_def_in_gui_parameter_def1392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_gui_command_def1415 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1422 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_8_in_gui_command_def1424 = new BitSet(new long[]{0x0000000000000220L});
-    public static final BitSet FOLLOW_guiParameter_def_in_gui_command_def1427 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_9_in_gui_command_def1431 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_gui_command_def1433 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_gui_command_def1436 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_gui_command_def1438 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_INT_in_gui_command_def1440 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_gui_command_def1442 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_gui_request_def1463 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_lc_id_in_gui_request_def1465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_lc_id_in_guiParameter_def1483 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_guiParameter_def1485 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_CAPITALIZED_ID_in_guiParameter_def1488 = new BitSet(new long[]{0x0000000000000402L});
-    public static final BitSet FOLLOW_10_in_guiParameter_def1491 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_guiParameter_def_in_guiParameter_def1493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_def1357 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_gui_action_def1359 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_gui_parameter_def_in_gui_action_def1362 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_gui_action_def1366 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_gui_action_def1368 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_action_def1374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_gui_parameter_def1394 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_gui_parameter_def1396 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_parameter_def1399 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_gui_parameter_def1402 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_gui_parameter_def_in_gui_parameter_def1404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_gui_command_def1427 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1434 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_8_in_gui_command_def1436 = new BitSet(new long[]{0x0000000000000220L});
+    public static final BitSet FOLLOW_guiParameter_def_in_gui_command_def1439 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_9_in_gui_command_def1443 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_gui_command_def1445 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_gui_command_def1448 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_gui_command_def1450 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_INT_in_gui_command_def1452 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_gui_command_def1454 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1460 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_gui_command_def1462 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1468 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_gui_command_def1474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_gui_request_def1494 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_lc_id_in_gui_request_def1496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_req_ui_parameter1520 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_req_ui_parameter1526 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_req_ui_parameter1532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lc_id_in_guiParameter_def1552 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_guiParameter_def1554 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_CAPITALIZED_ID_in_guiParameter_def1557 = new BitSet(new long[]{0x0000000000000402L});
+    public static final BitSet FOLLOW_10_in_guiParameter_def1560 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_guiParameter_def_in_guiParameter_def1562 = new BitSet(new long[]{0x0000000000000002L});
 
 }

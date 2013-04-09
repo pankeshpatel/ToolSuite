@@ -296,28 +296,35 @@ gui_def:
 ;
 
 gui_action_def:
-    'action' CAPITALIZED_ID '(' (gui_parameter_def)? ')'
-    { context.currentGUI.addAction($CAPITALIZED_ID.text); } 
+    'action' name = CAPITALIZED_ID '(' (gui_parameter_def)? ')' 'with' ui = CAPITALIZED_ID
+    { context.currentGUI.addAction($name.text,$ui.text ); } 
 ;
 
 gui_parameter_def :
     lc_id ':'  CAPITALIZED_ID (',' gui_parameter_def )?
     { 
     context.currentGUI.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
+    
     }
 ; 
 
 gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (guiParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID 
+    'command'  name = CAPITALIZED_ID '(' (guiParameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' textbox = CAPITALIZED_ID button = CAPITALIZED_ID  
     { 
-      context.currentGUI.addCommand($name.text);  
+      context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
     }
 ;
 
 gui_request_def :
-   'request' lc_id
+   'request' lc_id 
    { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
    context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
+;
+ 
+req_ui_parameter :
+    textbox = CAPITALIZED_ID button = CAPITALIZED_ID textview = CAPITALIZED_ID 
+    {context.currentGUI.setReqWidget($textbox.text,$button.text,$textview.text);}
 ;
 
 guiParameter_def :

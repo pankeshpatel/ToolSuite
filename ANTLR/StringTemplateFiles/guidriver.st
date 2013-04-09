@@ -25,7 +25,7 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
     }$ }
 
 	$GUIdriver.commands:{ command |
-	public void $command.name; format="capital"$Command(TempStruct newValue) {
+	public void $command.name; format="capital"$FromGUI(TempStruct newValue) {
 
 	   this.myPubSubMiddleware.publish("$command.name; format="capital"$", newValue,
 					myDeviceInfo);
