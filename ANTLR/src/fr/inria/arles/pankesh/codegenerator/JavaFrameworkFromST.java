@@ -113,9 +113,9 @@ public class JavaFrameworkFromST {
 	}
 	
 	public CompilationUnit buildFactoryofGUI(GUIDriver guiDriver) {
-		StringTemplate templateOfGUIDriver = group.getInstanceOf("actuatorfactory");
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guifactory");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "Factory", "GUI");
+		return new CompilationUnit(guiDriver.getName() + "Factory" + ".java", templateOfGUIDriver, "Factory", "gui");
 	}
 
 	public CompilationUnit buildGUIInterface(GUIDriver guiDriver) {

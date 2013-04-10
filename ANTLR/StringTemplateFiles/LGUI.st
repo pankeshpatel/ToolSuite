@@ -14,7 +14,7 @@ public  class  Fake$GUIdriver.name$ extends $GUIdriver.name$  {
 	Activity ui;
 	public Fake$GUIdriver.name$ obj=this;
 
-	public Fake$GUIdriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, I$GUIdriver.name$ ui) {
+	public Fake$GUIdriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Object ui) {
 		super(myPubSubMiddleware, deviceInfo);
 		this.ui = (I$GUIdriver.name$) ui;
 
@@ -33,13 +33,13 @@ public  class  Fake$GUIdriver.name$ extends $GUIdriver.name$  {
 	
     $GUIdriver.allActions:{ action |     
     @Override
-    protected  void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; separator=", "$) {
+    protected  void $action.name$(final $action.allParameter:{ param | $param.type.name$ arg }; separator=", "$) {
     	
     	this.ui.runOnUiThread(new Runnable() {
 
 			public void run() {
 		
-				driver$GUIdriver.name$.$action.name$($action.allParameter:{ param | arg }; separator=", "$);
+				driver$GUIdriver.name$.$action.name$GUI($action.allParameter:{ param | arg }; separator=", "$);
 				
 			}
 		});
