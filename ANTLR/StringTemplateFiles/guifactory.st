@@ -7,7 +7,7 @@ import framework.I$GUIdriver.name$;
 
 public class $GUIdriver.name$Factory {
 
-	public static I$GUIdriver.name$ get$GUIdriver.name$(String nameMonitor,
+	public static I$GUIdriver.name$ get$GUIdriver.name$Driver(String nameMonitor,
 			Activity context, Fake$GUIdriver.name$ obj) {
 
 		if (nameMonitor.equals("Android")) {
