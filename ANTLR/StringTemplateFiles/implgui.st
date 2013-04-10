@@ -99,8 +99,9 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 			
 		@Override
 		public void $command.name$GUI() {
-			TempStruct newValue = new TempStruct(100.0, "Android command");
-			fn.$command.name; format="capital"$FromGUI(newValue);
+		     
+			//TempStruct newValue = new TempStruct(100.0, "C");
+			fn.$command.name; format="capital"$FromGUI($command.widget.textbox$.getText().toString());
 		}
 	
 	}; separator="\n"$

@@ -23,7 +23,8 @@ public class GUI {
 	private GUIDriver guiDriver;
 	private Set<Action> actions = new HashSet<Action>();
 	private Set<Command> commands = new HashSet<Command>();
-	private Parameter parameter;
+	private Parameter actionParameter;
+	private Parameter commandParameter;
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
 	private String GUIName;
@@ -65,6 +66,8 @@ public class GUI {
 		generateGUIFactory();
 
 		generateGUIFactoryImpl();
+		
+		generateGUILayout();
 
 	}
 
@@ -89,6 +92,15 @@ public class GUI {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
 				.buildGUIInterface(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+	
+	private void generateGUILayout() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.buildGUILayout(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -126,7 +138,7 @@ public class GUI {
 	// Getter and Setter of Command
 
 	public void addCommand(String actionName, Widget widget) {
-		Command command = new Command(actionName, getParameters(), widget);
+		Command command = new Command(actionName, getCommandParameter(), widget);
 		commands.add(command);
 	}
 
@@ -134,29 +146,29 @@ public class GUI {
 		return commands;
 	}
 
-	// Getter and Setter of Parameters
-	private Parameter getParameters() {
-		return parameter;
+	// Getter and Setter of Action Parameters
+	private Parameter getActionParameter() {
+		return actionParameter;
 	}
 
-	public void addParameter(String parameterName) {
-		parameter = new Parameter(parameterName, new DataType(
+	public void addActionParameter(String parameterName, String parameterType) {
+		actionParameter = new Parameter(parameterName, new DataType(parameterType));
+	}
+
+	// Getter and Setter of Command Parameters
+
+	public void addCommandParameter(String parameterName) {
+		commandParameter = new Parameter(parameterName, new DataType(
 				getDatafromSymblTable(parameterName)));
 	}
 
-	// Getter and Setter of Parameters
-
-	public void addParameter(String parameterName, String parameterType) {
-		parameter = new Parameter(parameterName, new DataType(parameterType));
-	}
-
-	public Parameter getParameter() {
-		return parameter;
+	public Parameter getCommandParameter() {
+		return commandParameter;
 	}
 
 	// Getter and Setter of Action
 	public void addAction(String actionName, String widgetName) {
-		Action action = new Action(actionName, getParameter(), widgetName);
+		Action action = new Action(actionName, getActionParameter(), widgetName);
 		actions.add(action);
 	}
 

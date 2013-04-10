@@ -131,6 +131,13 @@ public class JavaFrameworkFromST {
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "gui");
 	}
+	
+	public CompilationUnit buildGUILayout(GUIDriver guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiLayout");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("Layout" + guiDriver.getName() + ".xml", templateOfGUIDriver, "ImplFactory", "gui");
+	}
 
 	public CompilationUnit buildAbstractClassOFStorageService(StorageService storageService) {
 

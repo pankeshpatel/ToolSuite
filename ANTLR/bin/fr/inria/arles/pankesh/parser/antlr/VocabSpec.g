@@ -296,21 +296,21 @@ gui_def:
 ;
 
 gui_action_def:
-    'action' name = CAPITALIZED_ID '(' (gui_parameter_def)? ')' 'with' ui = CAPITALIZED_ID
+    'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = CAPITALIZED_ID
     { context.currentGUI.addAction($name.text,$ui.text ); } 
 ;
 
-gui_parameter_def :
-    lc_id ':'  CAPITALIZED_ID (',' gui_parameter_def )?
+gui_action_parameter_def :
+    lc_id ':'  CAPITALIZED_ID (',' gui_action_parameter_def )?
     { 
-    context.currentGUI.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+    context.currentGUI.addActionParameter($lc_id.text, $CAPITALIZED_ID.text); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     
     }
 ; 
 
 gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (guiParameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' textbox = CAPITALIZED_ID button = CAPITALIZED_ID  
+    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' textbox = CAPITALIZED_ID button = CAPITALIZED_ID  
     { 
       context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
     }
@@ -327,10 +327,10 @@ req_ui_parameter :
     {context.currentGUI.setReqWidget($textbox.text,$button.text,$textview.text);}
 ;
 
-guiParameter_def :
-    lc_id ':'  CAPITALIZED_ID (',' guiParameter_def )?
+gui_command_parameter_def :
+    lc_id (',' gui_command_parameter_def )?
     { 
-    context.currentGUI.addParameter($lc_id.text, $CAPITALIZED_ID.text); 
+    context.currentGUI.addCommandParameter($lc_id.text); 
     }
 ;
 

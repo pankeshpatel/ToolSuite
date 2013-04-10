@@ -25,9 +25,9 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
     }$ }
 
 	$GUIdriver.commands:{ command |
-	public void $command.name; format="capital"$FromGUI(TempStruct newValue) {
+	public void $command.name; format="capital"$FromGUI($command.allParameter:{ param | $param.type.name$ newValue}; separator=" , "$) {
 
-	   this.myPubSubMiddleware.publish("$command.name; format="capital"$", newValue,
+	   this.myPubSubMiddleware.publish("$command.name; format="capital"$", $if(command.Parameter)$ $command.allParameter: { param | newValue }; separator=" , "$ $else$ null $endif$,
 					myDeviceInfo);
 		}	
 	}; separator="\n"$
