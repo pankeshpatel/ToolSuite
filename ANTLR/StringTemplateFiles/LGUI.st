@@ -14,9 +14,9 @@ public  class  Fake$GUIdriver.name$ extends $GUIdriver.name$  {
 	Activity ui;
 	public Fake$GUIdriver.name$ obj=this;
 
-	public Fake$GUIdriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Object ui) {
+	public Fake$GUIdriver.name$(PubSubMiddleware myPubSubMiddleware, final Device deviceInfo, final Object ui) {
 		super(myPubSubMiddleware, deviceInfo);
-		this.ui = (I$GUIdriver.name$) ui;
+		this.ui = (Activity) ui;
 
 		this.ui.runOnUiThread(new Runnable() {
 
