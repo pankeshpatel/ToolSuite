@@ -1,6 +1,8 @@
 package $GUIdriver.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
+import android.app.Activity;
+import android.app.Dialog;
 import fr.inria.arles.pankesh.semanticmodel.*;
 import $GUIdriver.PackageName$.*;
 import factory.*;
@@ -21,13 +23,13 @@ public  class  Fake$GUIdriver.name$ extends $GUIdriver.name$  {
 			public void run() {
 
 				 driver$GUIdriver.name$ = $GUIdriver.name$Factory.get$GUIdriver.name$Driver(deviceInfo.getType(),(Activity) ui,obj);
-				((Dialog) driver).show();
+				((Dialog) driver$GUIdriver.name$).show();
 
 			}
 		});	
 	
 	
-	}	
+	}
 	
     $GUIdriver.allActions:{ action |     
     @Override
