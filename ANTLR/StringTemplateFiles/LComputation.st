@@ -10,7 +10,7 @@ import $CS.PackageName$.*;
 public class  Fake$CS.name$ extends $CS.name$  { 
 
 
-   public Fake$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo) {
+   public Fake$CS.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
 		super(pubSubM, deviceInfo);
 	}   
     		

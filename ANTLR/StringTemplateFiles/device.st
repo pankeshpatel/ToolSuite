@@ -25,7 +25,7 @@ private static void setUpNode(Device deviceInfo)	{
 	myPubSub = PubSubMiddleware.getInstance(deviceInfo);
 	
 	$device.abilities:{ sc |	
-	Fake$sc$ fake$sc$Impl = new Fake$sc$(myPubSub, deviceInfo); 
+	Fake$sc$ fake$sc$Impl = new Fake$sc$(myPubSub, deviceInfo, ui); 
 	new Thread(fake$sc$Impl).start();
     }; separator="\n"$
 	

@@ -8,7 +8,7 @@ import factory.*;
    
 public  class  Fake$Actuatordriver.name$ extends $Actuatordriver.name$  {	
 
-	public Fake$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo) {
+	public Fake$Actuatordriver.name$(PubSubMiddleware myPubSubMiddleware, Device deviceInfo, Object ui) {
 		super(myPubSubMiddleware, deviceInfo);
 
 	}	
@@ -16,7 +16,7 @@ public  class  Fake$Actuatordriver.name$ extends $Actuatordriver.name$  {
     $Actuatordriver.allActions:{ action |     
     @Override
     protected  void $action.name$($action.allParameter:{ param | $param.type.name$ arg }; separator=", "$) {
-     I$Actuatordriver.name$ obj$Actuatordriver.name$ = $Actuatordriver.name$Factory.get$Actuatordriver.name$("Android");
+     I$Actuatordriver.name$ obj$Actuatordriver.name$ = $Actuatordriver.name$Factory.get$Actuatordriver.name$(myDeviceInfo.getType());
      obj$Actuatordriver.name$.$action.name$($action.allParameter:{ param | arg }; separator=", "$);
     }
     

@@ -9,7 +9,8 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
 	protected final PubSubMiddleware myPubSubMiddleware;
 	protected final Device myDeviceInfo;
-	private String partitionAttribute = "$Actuatordriver.PartitionAttributeVal$";
+	//private String partitionAttribute = "$Actuatordriver.PartitionAttributeVal$";
+	private String partitionAttribute = "Room";
 	
 	
 	public $Actuatordriver.name$(PubSubMiddleware pubSubM, Device deviceInfo) {  
@@ -40,7 +41,7 @@ public abstract class  $Actuatordriver.name$ implements Runnable, Subscriber  {
 	
     public void notifyReceived(String methodName, Object arg, Device deviceInfo) { 
     $Actuatordriver.allActions:{ action |
-    if (methodName.equals("$action.name$")   $action.allParameter:{ param | && arg instanceof $param.type.name$}; separator=", "$) {
+    if (methodName.equals("$action.name$") ) {
     	
     	Logger.log( myDeviceInfo.getName() ,"$Actuatordriver.name$" , "$action.name$ has been received");
     	

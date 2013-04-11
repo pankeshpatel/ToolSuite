@@ -8,7 +8,7 @@ import $SensorDriver.PackageName$.*;
 
 public class  Fake$SensorDriver.name$ extends $SensorDriver.name$  { 
    
-	public Fake$SensorDriver.name$(PubSubMiddleware pubSubM, Device deviceInfo) {
+	public Fake$SensorDriver.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
 		super(pubSubM, deviceInfo);
 
 	}	

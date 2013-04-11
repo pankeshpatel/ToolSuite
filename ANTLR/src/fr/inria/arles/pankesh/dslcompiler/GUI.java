@@ -68,6 +68,8 @@ public class GUI {
 		generateGUIFactoryImpl();
 		
 		generateGUILayout();
+		
+		generateGUIManifest();
 
 	}
 
@@ -101,6 +103,15 @@ public class GUI {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver
 				.buildGUILayout(guiDriver);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
+	}
+	
+	private void generateGUIManifest() {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver
+				.buildGUIManifest(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 

@@ -8,7 +8,7 @@ import $Storageservice.PackageName$.*;
 
 public class  Fake$Storageservice.name$  extends $Storageservice.name$  {
 	
-	public Fake$Storageservice.name$(PubSubMiddleware pubSubM, Device deviceInfo) {
+	public Fake$Storageservice.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
 		super(pubSubM, deviceInfo);
 
 	}

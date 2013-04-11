@@ -46,7 +46,7 @@ public class JavaFrameworkFromST {
 
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("implsensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
-		return new CompilationUnit("PC" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor");
+		return new CompilationUnit("Impl" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor");
 	}
 	
 
@@ -95,7 +95,7 @@ public class JavaFrameworkFromST {
 
 		StringTemplate templateOfActuatorDriver = group.getInstanceOf("implactuator");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
-		return new CompilationUnit("PC" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator");
+		return new CompilationUnit("Impl" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator");
 	}
 	
 	public CompilationUnit buildAbstractClassoFGUIDriver(GUIDriver guiDriver) {
@@ -129,14 +129,21 @@ public class JavaFrameworkFromST {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("implgui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("Android" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "gui");
+		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "gui");
 	}
 	
 	public CompilationUnit buildGUILayout(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiLayout");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("layout" + guiDriver.getName() + ".xml", templateOfGUIDriver, "ImplFactory", "gui");
+		return new CompilationUnit(guiDriver.getName() + "layout" + ".xml", templateOfGUIDriver, "ImplFactory", "gui");
+	}
+	
+	public CompilationUnit buildGUIManifest(GUIDriver guiDriver) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiManifest");
+		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
+		return new CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "ImplFactory", "gui");
 	}
 
 	public CompilationUnit buildAbstractClassOFStorageService(StorageService storageService) {
@@ -150,7 +157,7 @@ public class JavaFrameworkFromST {
 
 		StringTemplate templateOfStorageService = group.getInstanceOf("implstorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
-		return new CompilationUnit("PC" + storageService.getName() + ".java", templateOfStorageService, "ImplFactory", "actuator");
+		return new CompilationUnit("Impl" + storageService.getName() + ".java", templateOfStorageService, "ImplFactory", "actuator");
 	}
 	
 	

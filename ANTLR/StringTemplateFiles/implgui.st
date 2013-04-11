@@ -1,8 +1,9 @@
-
 package $GUIdriver.deviceImplPackageName$;
 
 import logic.*;
-import com.example.$GUIdriver.name$project.R;
+
+//TODO : Developers should  uncomment the following line for Android.
+//import com.example.$GUIdriver.name$project.R;
 
 import framework.*;
 
@@ -12,11 +13,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
-public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$ {
+public class Impl$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$ {
 
 	Fake$GUIdriver.name$ fn;
 
-	public Android$GUIdriver.name$(Context context, Fake$GUIdriver.name$ obj) {
+	public Impl$GUIdriver.name$(Context context, Fake$GUIdriver.name$ obj) {
 		super(context);
 		this.fn = (Fake$GUIdriver.name$) obj;
 	}
@@ -25,12 +26,12 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 		
 		TextView $action.control$;
 	
-	};separator="\n"$ 
+	};separator="\n"  $ 
 	
 	$GUIdriver.commands:{ command |
 	
-		$command.widget.textboxs:{ textbox | EditText  $textbox$; };seperator="\n"$
-		$command.widget.buttons:{ button | Button $button$; };seperator="\n"$		
+		$command.widget.textboxs:{ textbox | EditText  $textbox$; }; seperator="\n"$
+		$command.widget.buttons:{ button | Button $button$; }; seperator="\n"$		
 
 	};separator="\n"$
 			
@@ -44,18 +45,26 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 	};separator="\n"$ 
     
 	public void onCreate(Bundle savedInstanceState) {
-		setContentView(R.layout.$GUIdriver.name$layout);
+	
+	    //TODO : Developers should  uncomment the following line for Android.
+	
+		//setContentView(R.layout.$GUIdriver.name$layout);
 		super.onCreate(savedInstanceState);
 
 		$GUIdriver.allActions:{ action | 
+			
+			//TODO : Developers should  uncomment the following line for Android.
 		
-			$action.control$ = (TextView) findViewById(R.id.$action.control$View);
+			//$action.control$ = (TextView) findViewById(R.id.$action.control$View);
 		
 		};separator="\n"$ 
 		
 		$GUIdriver.commands:{ command |
-			$command.widget.textboxs:{ textbox | $textbox$ = (EditText)findViewById(R.id.$textbox$View);};separator="\n"$
-			$command.widget.buttons:{ button | $button$ = (Button) findViewById(R.id.$button$View);};separator="\n"$
+			
+			//TODO : Developers should  uncomment the following line for Android.
+		
+			//$command.widget.textboxs:{ textbox | $textbox$ = (EditText)findViewById(R.id.$textbox$View);};separator="\n"$
+			//$command.widget.buttons:{ button | $button$ = (Button) findViewById(R.id.$button$View);};separator="\n"$
 
 			$command.widget.buttons:{ button | $button$.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
@@ -68,10 +77,12 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 		};separator="\n"$
 				
 		$GUIdriver.reqWidgets:{ reqWidget | 
+		
+			//TODO : Developers should  uncomment the following line for Android.
 
-			$reqWidget.textview$ = (EditText)findViewById(R.id.$reqWidget.textview$View);
-			$reqWidget.button$ = (Button) findViewById(R.id.$reqWidget.button$View);
-			$reqWidget.textview$ = (TextView) findViewById(R.id.$reqWidget.textview$View);
+			//$reqWidget.textview$ = (EditText)findViewById(R.id.$reqWidget.textview$View);
+			//$reqWidget.button$ = (Button) findViewById(R.id.$reqWidget.button$View);
+			//$reqWidget.textview$ = (TextView) findViewById(R.id.$reqWidget.textview$View);
 			
 			$reqWidget.button$.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
@@ -99,9 +110,10 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 			
 		@Override
 		public void $command.name$GUI() {
+		
+		     //TODO : Developers should  uncomment the following line for Android and write an appropriate application logic
 		     
-			//TempStruct newValue = new TempStruct(100.0, "C");
-			fn.$command.name; format="capital"$FromGUI($command.widget.textboxs:{ textbox | $textbox$.getText().toString() }; separator=", "$);
+			//fn.$command.name; format="capital"$FromGUI($command.widget.textboxs:{ textbox | new TempStruct( $textbox$.getText().toString() , "C")}; separator=", "$);
 		}
 	
 	}; separator="\n"$
