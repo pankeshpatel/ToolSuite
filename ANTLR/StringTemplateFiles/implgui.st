@@ -2,16 +2,15 @@
 package $GUIdriver.deviceImplPackageName$;
 
 import logic.*;
+import com.example.$GUIdriver.name$project.R;
+
 import framework.*;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-
-import com.example.androidguibutton.R;
 
 public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$ {
 
@@ -30,9 +29,8 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 	
 	$GUIdriver.commands:{ command |
 	
-		Button $command.widget.button$;
-		EditText $command.widget.textbox$;
-		
+		$command.widget.textboxs:{ textbox | EditText  $textbox$; };seperator="\n"$
+		$command.widget.buttons:{ button | Button $button$; };seperator="\n"$		
 
 	};separator="\n"$
 			
@@ -46,7 +44,7 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 	};separator="\n"$ 
     
 	public void onCreate(Bundle savedInstanceState) {
-		setContentView(R.layout.$GUIdriver.name$_layout);
+		setContentView(R.layout.$GUIdriver.name$layout);
 		super.onCreate(savedInstanceState);
 
 		$GUIdriver.allActions:{ action | 
@@ -56,15 +54,16 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 		};separator="\n"$ 
 		
 		$GUIdriver.commands:{ command |
-			$command.widget.textbox$ = (EditText)findViewById(R.id.$command.widget.textbox$View);
-			$command.widget.button$ = (Button) findViewById(R.id.$command.widget.button$View);
+			$command.widget.textboxs:{ textbox | $textbox$ = (EditText)findViewById(R.id.$textbox$View);};separator="\n"$
+			$command.widget.buttons:{ button | $button$ = (Button) findViewById(R.id.$button$View);};separator="\n"$
 
-			$command.widget.button$.setOnClickListener(new View.OnClickListener() {
+			$command.widget.buttons:{ button | $button$.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
 
 					$command.name$GUI();
 				}
 			});
+			};separator="\n"$
 		
 		};separator="\n"$
 				
@@ -102,7 +101,7 @@ public class Android$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$
 		public void $command.name$GUI() {
 		     
 			//TempStruct newValue = new TempStruct(100.0, "C");
-			fn.$command.name; format="capital"$FromGUI($command.widget.textbox$.getText().toString());
+			fn.$command.name; format="capital"$FromGUI($command.widget.textboxs:{ textbox | $textbox$.getText().toString() }; separator=", "$);
 		}
 	
 	}; separator="\n"$

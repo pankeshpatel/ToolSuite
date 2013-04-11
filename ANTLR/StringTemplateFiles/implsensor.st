@@ -4,7 +4,7 @@ import framework.*;
 
 
 /* Rename class-name with Implementation.   */
-public class Impl$SensorDriver.name$ implements I$SensorDriver.name$ {
+public class PC$SensorDriver.name$ implements I$SensorDriver.name$ {
 
   
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 

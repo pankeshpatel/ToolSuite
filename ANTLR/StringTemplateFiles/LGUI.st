@@ -1,6 +1,7 @@
 package $GUIdriver.logicPackageName$;
 
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
+
 import android.app.Activity;
 import android.app.Dialog;
 import fr.inria.arles.pankesh.semanticmodel.*;

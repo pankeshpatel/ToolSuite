@@ -310,7 +310,7 @@ gui_action_parameter_def :
 ; 
 
 gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' textbox = CAPITALIZED_ID button = CAPITALIZED_ID  
+    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' (textbox = CAPITALIZED_ID)? button = CAPITALIZED_ID 
     { 
       context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
     }

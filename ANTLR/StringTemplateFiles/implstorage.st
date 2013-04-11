@@ -3,7 +3,7 @@ package $Storageservice.deviceImplPackageName$;
 import framework.*;
 
 /* Rename class-name with Implementation.   */
-public class Impl$Storageservice.name$ implements I$Storageservice.name$ {
+public class PC$Storageservice.name$ implements I$Storageservice.name$ {
 
   $Storageservice.allDataAccess:{ dataAccess |    
   

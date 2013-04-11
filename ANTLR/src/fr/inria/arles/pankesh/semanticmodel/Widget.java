@@ -1,42 +1,30 @@
 package fr.inria.arles.pankesh.semanticmodel;
 
+import java.util.HashSet;
+import java.util.Set;
 
 public class Widget {
 
-	public String textbox;
-	public String button;
-	public String textview;
-	
+	public Set<String> textboxs = new HashSet<String>();
+	public Set<String> buttons = new HashSet<String>();;
+	public Set<String> textviews = new HashSet<String>();;
+
 	public Widget(String textbox, String button, String textview) {
-		this.textbox = textbox;
-		this.button = button;
-		this.textview = textview;
+		textboxs.add(textbox);
+		buttons.add(button);
+		textviews.add(textview);
 	}
 
-	public String getTextbox() {
-		return textbox;
+	public Set<String> getTextbox() {
+		return textboxs;
 	}
 
-	public void setTextbox(String textbox) {
-		this.textbox = textbox;
+	public Set<String> getButton() {
+		return buttons;
 	}
 
-	public String getButton() {
-		return button;
+	public Set<String> getTextview() {
+		return textviews;
 	}
 
-	public void setButton(String button) {
-		this.button = button;
-	}
-
-	public String getTextview() {
-		return textview;
-	}
-
-	public void setTextview(String textview) {
-		this.textview = textview;
-	}
-	
-	
-	
 }
