@@ -11,7 +11,7 @@ public class  $SensorDriver.name$Factory  {
   		// TODO : Developers should replace "Impl" word with appropriate 
   		//  name for readability.
   
-        if (name$SensorDriver.name$.equals("Impl"))
+        if (name$SensorDriver.name$.equals("PC"))
           return new Impl$SensorDriver.name$();  // Register  device specific driver
         
        // if (name$SensorDriver.name$.equals("iOS"))

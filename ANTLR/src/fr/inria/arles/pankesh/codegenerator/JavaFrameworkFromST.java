@@ -219,12 +219,32 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(struct.getName() + ".java", templateOfStructure, "structure", "Future");
 	}
 
-	public CompilationUnit buildAbstractClassoFDevice(Device device) {
+	public CompilationUnit buildClassoFStartup(Device device) {
 
 		StringTemplate templateOfDevice = group.getInstanceOf("device");
 		templateOfDevice.setAttribute("device", device);
 		return new CompilationUnit("Startup" + ".java", templateOfDevice, "device", device.getName());
+		
 	}
+	
+	public CompilationUnit buildClassoFExecution(Device device) {
+
+		if(device.getType().equals("PC")){
+		
+			StringTemplate templateOfDevice = group.getInstanceOf("deskexecution");
+			templateOfDevice.setAttribute("device", device);
+			return new CompilationUnit(device.getName() + "Main" + ".java", templateOfDevice, "device", device.getName());
+			
+		}else{
+			
+			StringTemplate templateOfDevice = group.getInstanceOf("androidexecution");
+			templateOfDevice.setAttribute("device", device);
+			return new CompilationUnit("MainActivity" + ".java", templateOfDevice, "device", device.getName());
+			
+		}
+		
+		
+	}	
 
 	public CompilationUnit buildAbstractClassOFRegion(Regions region, String className) {
 

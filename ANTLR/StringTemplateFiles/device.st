@@ -22,7 +22,7 @@ public class Startup implements DeviceStartup {
 
 private static void setUpNode(Device deviceInfo)	{	
 
-	myPubSub = PubSubMiddleware.getInstance(deviceInfo);
+	myPubSub = PubSubMiddleware.getInstance(deviceInfo, myContext);
 	
 	$device.abilities:{ sc |	
 	Fake$sc$ fake$sc$Impl = new Fake$sc$(myPubSub, deviceInfo, ui); 

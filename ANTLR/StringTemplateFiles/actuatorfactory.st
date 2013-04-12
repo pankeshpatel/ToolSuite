@@ -11,7 +11,7 @@ public class  $Actuatordriver.name$Factory  {
 		// TODO : Developers should replace "Impl" word with appropriate 
 		//  name for readability.
   
-        if (name$Actuatordriver.name$.equals("Impl"))
+        if (name$Actuatordriver.name$.equals("PC"))
           return new Impl$Actuatordriver.name$();  // Register  device specific driver
         
        // if (name$Actuatordriver.name$.equals("iOS"))

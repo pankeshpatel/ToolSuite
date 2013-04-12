@@ -120,8 +120,31 @@ public class TaskMapper {
 										.get(tempkey[i]);
 								Device selectedDevice = pickOneFrom(tempDeviceSet);
 
-								finalMapping.get(selectedDevice).add(
-										tempSoftWareComponent);
+//								if(selectedDevice.getAbilities().contains("GUI")) {
+									
+								//	if (selectedDevice.getAbilities().toString().indexOf("GUI")) {
+										
+										//if ( selectedDevice.getAbilities().toString().indexOf("GUI")) {
+										
+									
+									  //  finalMapping.get(selectedDevice).add(tempSoftWareComponent);
+								
+								for ( String ability : selectedDevice.getAbilities()) {  
+									  if (ability.contains("GUI")) {										
+										
+									} else {										
+										finalMapping.get(selectedDevice).add(tempSoftWareComponent);										
+									}									
+									
+								}
+									
+								
+								
+								
+								
+								
+								
+								
 							}
 						}
 

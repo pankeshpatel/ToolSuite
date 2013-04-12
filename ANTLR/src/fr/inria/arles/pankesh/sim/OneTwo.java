@@ -4,15 +4,14 @@ public class OneTwo {
 
 	public static void main(String[] args) {
 
-		/*
-		 * new sim.deviceD1.Startup().startDevice(); new
-		 * sim.deviceD2.Startup().startDevice(); new
-		 * sim.deviceD3.Startup().startDevice(); new
-		 * sim.deviceD4.Startup().startDevice(); new
-		 * sim.deviceD5.Startup().startDevice(); new
-		 * sim.deviceD6.Startup().startDevice(); new
-		 * sim.deviceD7.Startup().startDevice(); new
-		 * sim.deviceD8.Startup().startDevice();
-		 */
+		  /*new sim.deviceDOne.Startup().startDevice(null,null); 
+		  new sim.deviceDTwo.Startup().startDevice(null,null); 
+		  new sim.deviceDThree.Startup().startDevice(null,null); 
+		  new sim.deviceDFour.Startup().startDevice(null,null); 
+		  new sim.deviceDFive.Startup().startDevice(null,null); 
+		  new sim.deviceDSix.Startup().startDevice(null,null); 
+		  new sim.deviceDSeven.Startup().startDevice(null,null);
+		  new sim.deviceDEight.Startup().startDevice(null,null);*/
+		 
 	}
 }

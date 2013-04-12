@@ -13,7 +13,7 @@ public class $GUIdriver.name$Factory {
 		// TODO : Developers should replace "Impl" word with appropriate 
 		//  name for readability.
 
-		if (nameMonitor.equals("Impl")) {
+		if (nameMonitor.equals("Android")) {
 
 			Impl$GUIdriver.name$ driver = new Impl$GUIdriver.name$(context, obj);
 

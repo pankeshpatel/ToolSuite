@@ -34,7 +34,7 @@ public  class  Fake$GUIdriver.name$ extends $GUIdriver.name$  {
 	
     $GUIdriver.allActions:{ action |     
     @Override
-    protected  void $action.name$(final $action.allParameter:{ param | $param.type.name$ arg }; separator=", "$) {
+    protected  void $action.name$( $action.allParameter:{ param | final $param.type.name$ arg }; separator=", "$) {
     	
     	this.ui.runOnUiThread(new Runnable() {
 

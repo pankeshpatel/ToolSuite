@@ -92,7 +92,10 @@ public class SourceFileDumper {
 					.mkdirs();
 			file = new File(GlobalVariable.outputDirPath
 					+ GlobalVariable.utilDirPath + "/" + unit.getName());
-		} else {
+			
+		}
+		
+		else {
 			// new File("./src/fr/inria/arles/pankesh/gen").mkdir();
 			/*
 			 * file = new File("./src/fr/inria/arles/pankesh/gen/" +

@@ -32,7 +32,8 @@ public class Mapper {
 			Device device = MergeDeviceAbilities(entry.getKey(),
 					entry.getValue(), "DBServer");
 
-			genearateDeviceCode(device);
+			genearateStartupCode(device);
+			genearateExecutionCode(device);
 
 		}
 
@@ -61,10 +62,18 @@ public class Mapper {
 				device.getRegionLabels(), resultAbilities);
 	}
 
-	private static void genearateDeviceCode(Device device) {
+	private static void genearateStartupCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice
-				.buildAbstractClassoFDevice(device);
+				.buildClassoFStartup(device);
+		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
+		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
+	}
+	
+	private static void genearateExecutionCode(Device device) {
+		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generateDevice
+				.buildClassoFExecution(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}

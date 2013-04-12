@@ -29,7 +29,7 @@
         </activity>
         <activity
             android:name="deviceImpl.Impl$GUIdriver.name$"
-            android:label="$GUIdriver.name$" >
+            android:label="Impl$GUIdriver.name$" >
         </activity> 
         
         
