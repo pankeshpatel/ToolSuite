@@ -3,7 +3,8 @@ package $GUIdriver.deviceImplPackageName$;
 import logic.*;
 
 //TODO : Developers should  uncomment the following line for Android.
-//import com.example.$GUIdriver.name$project.R;
+
+//import com.example.$GUIdriver.lowerName$project.R;
 
 import framework.*;
 
@@ -45,10 +46,10 @@ public class Impl$GUIdriver.name$ extends Dialog implements I$GUIdriver.name$ {
 	};separator="\n"$ 
     
 	public void onCreate(Bundle savedInstanceState) {
-	
-	    //TODO : Developers should  uncomment the following line for Android.
-	
-		//setContentView(R.layout.$GUIdriver.name$layout);
+		
+		//TODO : Developers should  uncomment the following line for Android.
+		
+		//setContentView(R.layout.$GUIdriver.lowerName$layout);
 		super.onCreate(savedInstanceState);
 
 		$GUIdriver.allActions:{ action | 

@@ -136,7 +136,7 @@ public class JavaFrameworkFromST {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiLayout");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit(guiDriver.getName() + "layout" + ".xml", templateOfGUIDriver, "ImplFactory", "gui");
+		return new CompilationUnit(guiDriver.getName().toLowerCase() + "layout" + ".xml", templateOfGUIDriver, "ImplFactory", "gui");
 	}
 	
 	public CompilationUnit buildGUIManifest(GUIDriver guiDriver) {

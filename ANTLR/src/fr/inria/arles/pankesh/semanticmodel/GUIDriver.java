@@ -14,11 +14,13 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	private Set<DataAccess> dataAccess = new HashSet<DataAccess>();
 	public String struct;
 	private Widget reqWidgets;
+	private String lowername;
 	
-	public GUIDriver(String name, Set<Action> actionsList, Set<Command> commandsList,
+	public GUIDriver(String name, String lowername, Set<Action> actionsList, Set<Command> commandsList,
 			Set<Attribute> attributes, Set<Information> generateInfo,
 			Set<Information> consumeInfo, Set<DataAccess> dataAccess, String struct, Widget reqWidgets) {
 		super(name, attributes, generateInfo, consumeInfo, "NoInstance");
+		this.lowername = lowername;
 		this.actions = actionsList;
 		this.commands = commandsList;
 		this.dataAccess = dataAccess;
@@ -56,6 +58,10 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	}
 
 	private String packageName;
+	
+	public String getLowerName() {
+		return lowername;
+	}
 
 	public String getPackageName() {
 		packageName = GlobalVariable

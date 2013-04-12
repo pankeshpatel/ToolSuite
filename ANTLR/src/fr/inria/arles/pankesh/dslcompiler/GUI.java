@@ -39,13 +39,17 @@ public class GUI {
 	public String getGUIName() {
 		return GUIName;
 	}
+	
+	public String getLowerCaseGUIName() {
+		return GUIName.toLowerCase();
+	}
 
 	public void setGUIName(String computationalServiceName) {
 		this.GUIName = computationalServiceName;
 	}
 
 	public void createGUIObject() {
-		guiDriver = new GUIDriver(getGUIName(), getActionList(), getCommandList(),
+		guiDriver = new GUIDriver(getGUIName(), getLowerCaseGUIName(), getActionList(), getCommandList(),
 				getAttributeSet(), generatedInfo, null, getDataAccessList(), getRequestType() , getReqWidget());
 	}
 
