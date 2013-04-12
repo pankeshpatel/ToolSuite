@@ -9,7 +9,8 @@ public abstract class  $GUIdriver.name$ implements Runnable, Subscriber  {
   
   protected final PubSubMiddleware myPubSubMiddleware;
   protected final Device myDeviceInfo;
-  private String partitionAttribute = "$GUIdriver.PartitionAttributeVal$";
+  //private String partitionAttribute = "$GUIdriver.PartitionAttributeVal$";
+  private String partitionAttribute = "Room";
   
   
   public $GUIdriver.name$(PubSubMiddleware pubSubM, Device deviceInfo) {  

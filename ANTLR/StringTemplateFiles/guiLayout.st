@@ -21,20 +21,24 @@
 
 	$GUIdriver.commands:{ command |
         
+        $command.widget.textboxs:{ textbox |
         	 <EditText
-	            android:id="@+id/$command.widget.textbox$View"
+	            android:id="@+id/$textbox$View"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:ems="10" >
         	</EditText>
+        }; seperator="\n"$
         
+        $command.widget.buttons:{ button |
 	        <Button
 			    android:id="@+id/$command.widget.button$View"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-			    android:text="Send"
+			    android:text="$command.name$"
 			    android:onClick="sendMessage" />
-        
+        };separator="\n"$
+    
     };separator="\n"$
         
     
