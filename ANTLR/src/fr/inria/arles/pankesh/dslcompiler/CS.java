@@ -3,16 +3,17 @@ package fr.inria.arles.pankesh.dslcompiler;
 import java.util.HashSet;
 import java.util.Set;
 
-
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
 import fr.inria.arles.pankesh.parser.antlr.Context;
+import fr.inria.arles.pankesh.semanticmodel.Action;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
 import fr.inria.arles.pankesh.semanticmodel.ComputationalService;
 import fr.inria.arles.pankesh.semanticmodel.DataAccess;
 import fr.inria.arles.pankesh.semanticmodel.DataType;
 import fr.inria.arles.pankesh.semanticmodel.Information;
+import fr.inria.arles.pankesh.semanticmodel.Parameter;
 import fr.inria.arles.pankesh.semanticmodel.PrimitiveType;
 
 public class CS {
@@ -21,8 +22,30 @@ public class CS {
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
+	private Set<Action> actions = new HashSet<Action>();
 	private String partitionAttributeValue;
 	private String computationalServiceName;
+	private Parameter parameter;
+	
+	
+	public void addCommand(String actionName) {
+		Action action = new Action(actionName, getParameters(),null);
+		actions.add(action);
+	}
+	
+	private Set<Action> getActionList() {
+		return actions;
+	}
+	
+	private Parameter getParameters() {
+		return parameter;
+	}
+	
+	public void addParameter(String parameterName) {
+		parameter = new Parameter(parameterName, new DataType(
+				getDatafromSymblTable(parameterName)));
+	}
+	
 
 	public CS() {
 	}
@@ -38,7 +61,7 @@ public class CS {
 	public void createCSObject() {
 		computationalService = new ComputationalService(
 				getComputationalServiceName(), getAttributeSet(),
-				getGeneratedInfo(), getConsumedInfo(), getDataAccessList(),
+				getGeneratedInfo(), getConsumedInfo(), getDataAccessList(), getActionList(),
 				getPartitionAttributeVal());
 	}
 
