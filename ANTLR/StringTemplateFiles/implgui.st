@@ -2,9 +2,11 @@ package $GUIdriver.deviceImplPackageName$;
 
 import logic.*;
 
+
 //TODO : Developers should  uncomment the following line for Android.
 
-//import com.example.$GUIdriver.lowerName$project.R;
+
+//import com.example.$GUIdriver.lowerName$.R;
 
 import framework.*;
 
