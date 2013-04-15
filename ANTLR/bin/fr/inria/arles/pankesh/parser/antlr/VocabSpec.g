@@ -34,9 +34,9 @@ vocabSpec :
     'resources' ':' abilities_def   
    // 'softwarecomponents' ':' sc_def  
 ;
- 
+
 region_def :    
-	
+
      CAPITALIZED_ID ':' dataType  ';'
     { 
     context.currentRegion.addRegion($CAPITALIZED_ID.text, $dataType.text); 
@@ -46,7 +46,7 @@ region_def :
 sc_def :
 	('storageService' (ss_def)+ )* 
    'computationalService' (cs_def)+ 
- //   ('controller' (controller_def)+ )*
+    ('controller' (controller_def)+ )*
      
 ;
 
@@ -114,7 +114,7 @@ controller_def:
     (cntrlPartition_def ';')*
     {
     context.currentController.setControllerName($CAPITALIZED_ID.text);
-  //  context.currentController.createCSObject();
+    context.currentController.createCSObject();
     context.currentController.generateCode();
     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
     context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
@@ -145,13 +145,13 @@ cntrlConsumeInfo_def:
 cntrlCommand_def :
     'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID 
     { 
-      context.currentComputationalService.addCommand($name.text);  
+      context.currentController.addCommand($name.text);  
     }
 ;
 
 cntrlParameter_def :
     lc_id  (',' parameter_def )?
-    { context.currentComputationalService.addParameter($lc_id.text); }  
+    { context.currentController.addParameter($lc_id.text); }  
 ;
 
 cs_def:
@@ -344,4 +344,3 @@ INT : '0'..'9'('0'..'9')*  ;
 CAPITALIZED_ID: 'A'..'Z' ('a'..'z' | 'A'..'Z' )*;
 
 WS: ('\t' | ' ' | '\r' | '\n' | '\u000C')+ {$channel = HIDDEN;};
-

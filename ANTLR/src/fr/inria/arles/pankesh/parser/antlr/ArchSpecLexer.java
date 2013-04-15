@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g 2013-04-14 22:49:59
+// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g 2013-04-15 12:09:30
 
   package fr.inria.arles.pankesh.parser.antlr; 
   
@@ -41,6 +41,7 @@ public class ArchSpecLexer extends Lexer {
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
+    public static final int T__37=37;
     public static final int CAPITALIZED_ID=4;
     public static final int ID=5;
     public static final int INT=6;
@@ -424,10 +425,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:28:7: ( 'deployment-instance' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:28:9: 'deployment-instance'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:28:7: ( 'controller' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:28:9: 'controller'
             {
-            match("deployment-instance"); 
+            match("controller"); 
 
 
 
@@ -447,10 +448,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:29:7: ( 'double' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:29:9: 'double'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:29:7: ( 'deployment-instance' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:29:9: 'deployment-instance'
             {
-            match("double"); 
+            match("deployment-instance"); 
 
 
 
@@ -470,10 +471,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:30:7: ( 'from' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:30:9: 'from'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:30:7: ( 'double' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:30:9: 'double'
             {
-            match("from"); 
+            match("double"); 
 
 
 
@@ -493,10 +494,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:31:7: ( 'generate' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:31:9: 'generate'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:31:7: ( 'from' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:31:9: 'from'
             {
-            match("generate"); 
+            match("from"); 
 
 
 
@@ -516,10 +517,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:32:7: ( 'long' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:32:9: 'long'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:32:7: ( 'generate' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:32:9: 'generate'
             {
-            match("long"); 
+            match("generate"); 
 
 
 
@@ -539,10 +540,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:33:7: ( 'partition-per' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:33:9: 'partition-per'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:33:7: ( 'long' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:33:9: 'long'
             {
-            match("partition-per"); 
+            match("long"); 
 
 
 
@@ -562,10 +563,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:34:7: ( 'region-hops' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:34:9: 'region-hops'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:34:7: ( 'partition-per' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:34:9: 'partition-per'
             {
-            match("region-hops"); 
+            match("partition-per"); 
 
 
 
@@ -585,10 +586,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:35:7: ( 'request' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:35:9: 'request'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:35:7: ( 'region-hops' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:35:9: 'region-hops'
             {
-            match("request"); 
+            match("region-hops"); 
 
 
 
@@ -608,10 +609,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:36:7: ( 'sensors' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:36:9: 'sensors'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:36:7: ( 'request' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:36:9: 'request'
             {
-            match("sensors"); 
+            match("request"); 
 
 
 
@@ -631,10 +632,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:37:7: ( 'singleton' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:37:9: 'singleton'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:37:7: ( 'sensors' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:37:9: 'sensors'
             {
-            match("singleton"); 
+            match("sensors"); 
 
 
 
@@ -654,10 +655,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:38:7: ( 'softwarecomponents' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:38:9: 'softwarecomponents'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:38:7: ( 'singleton' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:38:9: 'singleton'
             {
-            match("softwarecomponents"); 
+            match("singleton"); 
 
 
 
@@ -677,10 +678,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:39:7: ( 'structs' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:39:9: 'structs'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:39:7: ( 'softwarecomponents' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:39:9: 'softwarecomponents'
             {
-            match("structs"); 
+            match("softwarecomponents"); 
 
 
 
@@ -700,10 +701,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:40:7: ( 'to' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:40:9: 'to'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:40:7: ( 'structs' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:40:9: 'structs'
             {
-            match("to"); 
+            match("structs"); 
 
 
 
@@ -718,17 +719,40 @@ public class ArchSpecLexer extends Lexer {
     }
     // $ANTLR end "T__36"
 
+    // $ANTLR start "T__37"
+    public final void mT__37() throws RecognitionException {
+        try {
+            int _type = T__37;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:41:7: ( 'to' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:41:9: 'to'
+            {
+            match("to"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__37"
+
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:287:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:287:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:283:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:283:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
             {
             matchRange('a','z'); 
 
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:287:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:283:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop1:
             do {
                 int alt1=2;
@@ -778,12 +802,12 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:5: ( '0' .. '9' ( '0' .. '9' )* )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:7: '0' .. '9' ( '0' .. '9' )*
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:286:5: ( '0' .. '9' ( '0' .. '9' )* )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:286:7: '0' .. '9' ( '0' .. '9' )*
             {
             matchRange('0','9'); 
 
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:15: ( '0' .. '9' )*
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:286:15: ( '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -833,12 +857,12 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = CAPITALIZED_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:292:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:292:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:288:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:288:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
             {
             matchRange('A','Z'); 
 
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:292:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:288:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop3:
             do {
                 int alt3=2;
@@ -888,10 +912,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:294:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:294:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             {
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:294:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             int cnt4=0;
             loop4:
             do {
@@ -944,8 +968,8 @@ public class ArchSpecLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | ID | INT | CAPITALIZED_ID | WS )
-        int alt5=33;
+        // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | ID | INT | CAPITALIZED_ID | WS )
+        int alt5=34;
         alt5 = dfa5.predict(input);
         switch (alt5) {
             case 1 :
@@ -1181,31 +1205,39 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:182: ID
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:182: T__37
+                {
+                mT__37(); 
+
+
+                }
+                break;
+            case 31 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:188: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 31 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:185: INT
+            case 32 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:191: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 32 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:189: CAPITALIZED_ID
+            case 33 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:195: CAPITALIZED_ID
                 {
                 mCAPITALIZED_ID(); 
 
 
                 }
                 break;
-            case 33 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:204: WS
+            case 34 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:210: WS
                 {
                 mWS(); 
 
@@ -1221,61 +1253,63 @@ public class ArchSpecLexer extends Lexer {
     protected DFA5 dfa5 = new DFA5(this);
     static final String DFA5_eotS =
         "\6\uffff\3\26\13\24\4\uffff\3\26\17\24\1\100\3\26\22\24\1\uffff"+
-        "\3\26\12\24\1\145\1\24\1\147\7\24\3\26\12\24\1\uffff\1\24\1\uffff"+
-        "\7\24\2\26\1\u0086\1\24\1\u0088\7\24\1\u0090\10\24\1\u0099\1\u009a"+
-        "\1\uffff\1\24\1\uffff\2\24\1\u009e\1\u009f\1\24\1\u00a1\1\24\1\uffff"+
-        "\2\24\1\uffff\1\u00a5\1\u00a6\2\24\1\u00a9\2\uffff\3\24\2\uffff"+
-        "\1\24\1\uffff\1\24\1\u00af\1\24\2\uffff\2\24\2\uffff\1\u00b3\1\u00b4"+
-        "\2\24\1\uffff\1\24\1\u00b8\1\24\2\uffff\2\24\2\uffff\2\24\1\uffff"+
-        "\16\24\1\u00cc\1\24\1\uffff\1\u00ce\1\uffff";
+        "\3\26\13\24\1\147\1\24\1\151\7\24\3\26\13\24\1\uffff\1\24\1\uffff"+
+        "\7\24\2\26\1\u0089\1\24\1\u008b\10\24\1\u0094\10\24\1\u009d\1\u009e"+
+        "\1\uffff\1\24\1\uffff\2\24\1\u00a2\1\u00a3\1\24\1\u00a5\2\24\1\uffff"+
+        "\2\24\1\uffff\1\u00aa\1\u00ab\2\24\1\u00ae\2\uffff\3\24\2\uffff"+
+        "\1\24\1\uffff\2\24\1\u00b5\1\24\2\uffff\2\24\2\uffff\1\u00b9\1\u00ba"+
+        "\3\24\1\uffff\1\24\1\u00bf\1\24\2\uffff\1\24\1\u00c2\1\24\2\uffff"+
+        "\2\24\2\uffff\16\24\1\u00d4\1\24\1\uffff\1\u00d6\1\uffff";
     static final String DFA5_eofS =
-        "\u00cf\uffff";
+        "\u00d7\uffff";
     static final String DFA5_minS =
         "\1\11\5\uffff\1\157\1\156\1\164\1\143\2\157\1\145\1\162\1\145\1"+
         "\157\1\141\2\145\1\157\4\uffff\1\157\1\164\1\162\1\143\1\164\1\157"+
         "\1\155\1\160\1\165\1\157\2\156\1\162\1\147\2\156\1\146\1\162\1\101"+
         "\1\154\1\145\1\151\1\145\1\151\1\162\1\154\1\155\1\163\1\154\1\142"+
         "\1\155\1\145\1\147\1\164\1\151\1\165\1\163\1\147\1\164\1\165\1\uffff"+
-        "\1\145\1\147\1\156\1\163\1\157\1\141\1\151\1\145\1\141\2\165\1\157"+
-        "\1\154\1\101\1\162\1\101\1\151\1\157\1\145\1\157\1\154\1\167\1\143"+
-        "\1\141\1\145\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155"+
-        "\1\171\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\1\162\1\145"+
-        "\1\141\1\164\1\156\1\162\1\101\1\145\1\101\1\157\1\165\1\156\1\144"+
-        "\1\141\1\145\1\155\1\101\1\164\1\151\1\55\1\164\1\163\1\164\1\162"+
-        "\1\163\2\101\1\uffff\1\144\1\uffff\1\162\1\164\2\101\1\164\1\101"+
-        "\1\145\1\uffff\1\145\1\157\1\uffff\2\101\1\157\1\145\1\101\2\uffff"+
-        "\1\55\1\163\1\145\2\uffff\1\151\1\uffff\1\156\1\101\1\156\2\uffff"+
-        "\1\156\1\143\2\uffff\2\101\1\157\1\164\1\uffff\1\55\1\101\1\157"+
-        "\2\uffff\1\156\1\55\2\uffff\1\155\1\141\1\uffff\1\160\1\154\1\157"+
-        "\1\123\1\156\2\145\1\162\1\156\1\166\1\164\1\151\1\163\1\143\1\101"+
-        "\1\145\1\uffff\1\101\1\uffff";
+        "\1\145\1\147\1\156\1\163\1\157\1\141\1\151\1\145\1\141\2\165\1\162"+
+        "\1\157\1\154\1\101\1\162\1\101\1\151\1\157\1\145\1\157\1\154\1\167"+
+        "\1\143\1\141\1\145\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164"+
+        "\1\155\1\157\1\171\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163"+
+        "\1\162\1\145\1\141\1\164\1\156\1\162\1\101\1\145\1\101\1\157\1\165"+
+        "\1\156\1\144\1\141\1\145\1\154\1\155\1\101\1\164\1\151\1\55\1\164"+
+        "\1\163\1\164\1\162\1\163\2\101\1\uffff\1\144\1\uffff\1\162\1\164"+
+        "\2\101\1\164\1\101\1\154\1\145\1\uffff\1\145\1\157\1\uffff\2\101"+
+        "\1\157\1\145\1\101\2\uffff\1\55\1\163\1\145\2\uffff\1\151\1\uffff"+
+        "\1\145\1\156\1\101\1\156\2\uffff\1\156\1\143\2\uffff\2\101\1\157"+
+        "\1\162\1\164\1\uffff\1\55\1\101\1\157\2\uffff\1\156\1\101\1\55\2"+
+        "\uffff\1\155\1\141\2\uffff\1\160\1\154\1\157\1\123\1\156\2\145\1"+
+        "\162\1\156\1\166\1\164\1\151\1\163\1\143\1\101\1\145\1\uffff\1\101"+
+        "\1\uffff";
     static final String DFA5_maxS =
         "\1\172\5\uffff\1\157\1\156\2\164\3\157\1\162\1\145\1\157\1\141\1"+
         "\145\1\164\1\157\4\uffff\1\157\1\164\1\162\2\164\1\157\1\156\1\160"+
         "\1\165\1\157\2\156\1\162\1\161\2\156\1\146\1\162\1\172\1\154\1\145"+
-        "\1\151\1\145\1\165\1\162\1\154\1\160\1\163\1\154\1\142\1\155\1\145"+
+        "\1\151\1\145\1\165\1\162\1\154\1\160\1\164\1\154\1\142\1\155\1\145"+
         "\1\147\1\164\1\151\1\165\1\163\1\147\1\164\1\165\1\uffff\1\145\1"+
-        "\147\1\156\1\163\1\157\1\141\1\151\1\145\1\141\2\165\1\157\1\154"+
-        "\1\172\1\162\1\172\1\151\1\157\1\145\1\157\1\154\1\167\1\143\1\141"+
-        "\1\145\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155\1\171"+
-        "\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\1\162\1\145\1\141"+
-        "\1\164\1\156\1\162\1\172\1\145\1\172\1\157\1\165\1\156\1\144\1\141"+
-        "\1\145\1\155\1\172\1\164\1\151\1\55\1\164\1\163\1\164\1\162\1\163"+
-        "\2\172\1\uffff\1\144\1\uffff\1\162\1\164\2\172\1\164\1\172\1\145"+
-        "\1\uffff\1\145\1\157\1\uffff\2\172\1\157\1\145\1\172\2\uffff\1\55"+
-        "\1\163\1\145\2\uffff\1\151\1\uffff\1\156\1\172\1\156\2\uffff\1\156"+
-        "\1\143\2\uffff\2\172\1\157\1\164\1\uffff\1\55\1\172\1\157\2\uffff"+
-        "\1\156\1\55\2\uffff\1\155\1\141\1\uffff\1\160\1\154\1\157\1\123"+
-        "\1\156\2\145\1\162\1\156\1\166\1\164\1\151\1\163\1\143\1\172\1\145"+
-        "\1\uffff\1\172\1\uffff";
+        "\147\1\156\1\163\1\157\1\141\1\151\1\145\1\141\2\165\1\162\1\157"+
+        "\1\154\1\172\1\162\1\172\1\151\1\157\1\145\1\157\1\154\1\167\1\143"+
+        "\1\141\1\145\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155"+
+        "\1\157\1\171\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\1\162"+
+        "\1\145\1\141\1\164\1\156\1\162\1\172\1\145\1\172\1\157\1\165\1\156"+
+        "\1\144\1\141\1\145\1\154\1\155\1\172\1\164\1\151\1\55\1\164\1\163"+
+        "\1\164\1\162\1\163\2\172\1\uffff\1\144\1\uffff\1\162\1\164\2\172"+
+        "\1\164\1\172\1\154\1\145\1\uffff\1\145\1\157\1\uffff\2\172\1\157"+
+        "\1\145\1\172\2\uffff\1\55\1\163\1\145\2\uffff\1\151\1\uffff\1\145"+
+        "\1\156\1\172\1\156\2\uffff\1\156\1\143\2\uffff\2\172\1\157\1\162"+
+        "\1\164\1\uffff\1\55\1\172\1\157\2\uffff\1\156\1\172\1\55\2\uffff"+
+        "\1\155\1\141\2\uffff\1\160\1\154\1\157\1\123\1\156\2\145\1\162\1"+
+        "\156\1\166\1\164\1\151\1\163\1\143\1\172\1\145\1\uffff\1\172\1\uffff";
     static final String DFA5_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\16\uffff\1\36\1\37\1\40\1\41\50\uffff"+
-        "\1\35\44\uffff\1\23\1\uffff\1\25\36\uffff\1\10\1\uffff\1\12\7\uffff"+
-        "\1\22\2\uffff\1\27\5\uffff\1\6\1\7\3\uffff\1\15\1\16\1\uffff\1\20"+
-        "\3\uffff\1\30\1\31\2\uffff\1\34\1\11\4\uffff\1\24\3\uffff\1\13\1"+
-        "\14\2\uffff\1\26\1\32\2\uffff\1\21\20\uffff\1\33\1\uffff\1\17";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\16\uffff\1\37\1\40\1\41\1\42\50\uffff"+
+        "\1\36\46\uffff\1\24\1\uffff\1\26\37\uffff\1\10\1\uffff\1\12\10\uffff"+
+        "\1\23\2\uffff\1\30\5\uffff\1\6\1\7\3\uffff\1\15\1\16\1\uffff\1\20"+
+        "\4\uffff\1\31\1\32\2\uffff\1\35\1\11\5\uffff\1\25\3\uffff\1\13\1"+
+        "\14\3\uffff\1\27\1\33\2\uffff\1\21\1\22\20\uffff\1\34\1\uffff\1"+
+        "\17";
     static final String DFA5_specialS =
-        "\u00cf\uffff}>";
+        "\u00d7\uffff}>";
     static final String[] DFA5_transitionS = {
             "\2\27\1\uffff\2\27\22\uffff\1\27\7\uffff\1\1\1\2\2\uffff\1\3"+
             "\3\uffff\12\25\1\4\1\5\5\uffff\1\26\1\6\6\26\1\7\11\26\1\10"+
@@ -1331,8 +1365,7 @@ public class ArchSpecLexer extends Lexer {
             "\1\107",
             "\1\110",
             "\1\111\2\uffff\1\112",
-            "\1\113",
-            "\1\114",
+            "\1\113\1\114",
             "\1\115",
             "\1\116",
             "\1\117",
@@ -1344,8 +1377,8 @@ public class ArchSpecLexer extends Lexer {
             "\1\125",
             "\1\126",
             "\1\127",
-            "",
             "\1\130",
+            "",
             "\1\131",
             "\1\132",
             "\1\133",
@@ -1358,11 +1391,11 @@ public class ArchSpecLexer extends Lexer {
             "\1\142",
             "\1\143",
             "\1\144",
-            "\32\24\6\uffff\32\24",
+            "\1\145",
             "\1\146",
             "\32\24\6\uffff\32\24",
             "\1\150",
-            "\1\151",
+            "\32\24\6\uffff\32\24",
             "\1\152",
             "\1\153",
             "\1\154",
@@ -1381,109 +1414,118 @@ public class ArchSpecLexer extends Lexer {
             "\1\171",
             "\1\172",
             "\1\173",
-            "",
             "\1\174",
-            "",
             "\1\175",
             "\1\176",
+            "",
             "\1\177",
+            "",
             "\1\u0080",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
             "\1\u0085",
-            "\32\26\6\uffff\32\26",
+            "\1\u0086",
             "\1\u0087",
-            "\32\24\6\uffff\32\24",
-            "\1\u0089",
+            "\1\u0088",
+            "\32\26\6\uffff\32\26",
             "\1\u008a",
-            "\1\u008b",
+            "\32\24\6\uffff\32\24",
             "\1\u008c",
             "\1\u008d",
             "\1\u008e",
             "\1\u008f",
-            "\32\24\6\uffff\32\24",
+            "\1\u0090",
             "\1\u0091",
             "\1\u0092",
             "\1\u0093",
-            "\1\u0094",
+            "\32\24\6\uffff\32\24",
             "\1\u0095",
             "\1\u0096",
             "\1\u0097",
             "\1\u0098",
-            "\32\26\6\uffff\32\26",
-            "\32\26\6\uffff\32\26",
-            "",
+            "\1\u0099",
+            "\1\u009a",
             "\1\u009b",
-            "",
             "\1\u009c",
-            "\1\u009d",
-            "\32\24\6\uffff\32\24",
-            "\32\24\6\uffff\32\24",
+            "\32\26\6\uffff\32\26",
+            "\32\26\6\uffff\32\26",
+            "",
+            "\1\u009f",
+            "",
             "\1\u00a0",
+            "\1\u00a1",
             "\32\24\6\uffff\32\24",
-            "\1\u00a2",
-            "",
-            "\1\u00a3",
+            "\32\24\6\uffff\32\24",
             "\1\u00a4",
-            "",
             "\32\24\6\uffff\32\24",
-            "\32\24\6\uffff\32\24",
+            "\1\u00a6",
             "\1\u00a7",
+            "",
             "\1\u00a8",
+            "\1\u00a9",
+            "",
             "\32\24\6\uffff\32\24",
-            "",
-            "",
-            "\1\u00aa",
-            "\1\u00ab",
+            "\32\24\6\uffff\32\24",
             "\1\u00ac",
-            "",
-            "",
             "\1\u00ad",
-            "",
-            "\1\u00ae",
             "\32\24\6\uffff\32\24",
+            "",
+            "",
+            "\1\u00af",
             "\1\u00b0",
-            "",
-            "",
             "\1\u00b1",
+            "",
+            "",
             "\1\u00b2",
             "",
-            "",
+            "\1\u00b3",
+            "\1\u00b4",
             "\32\24\6\uffff\32\24",
-            "\32\24\6\uffff\32\24",
-            "\1\u00b5",
             "\1\u00b6",
             "",
+            "",
             "\1\u00b7",
+            "\1\u00b8",
+            "",
+            "",
             "\32\24\6\uffff\32\24",
-            "\1\u00b9",
-            "",
-            "",
-            "\1\u00ba",
+            "\32\24\6\uffff\32\24",
             "\1\u00bb",
-            "",
-            "",
             "\1\u00bc",
             "\1\u00bd",
             "",
             "\1\u00be",
-            "\1\u00bf",
+            "\32\24\6\uffff\32\24",
             "\1\u00c0",
+            "",
+            "",
             "\1\u00c1",
-            "\1\u00c2",
+            "\32\24\6\uffff\32\24",
             "\1\u00c3",
+            "",
+            "",
             "\1\u00c4",
             "\1\u00c5",
+            "",
+            "",
             "\1\u00c6",
             "\1\u00c7",
             "\1\u00c8",
             "\1\u00c9",
             "\1\u00ca",
             "\1\u00cb",
-            "\32\24\6\uffff\32\24",
+            "\1\u00cc",
             "\1\u00cd",
+            "\1\u00ce",
+            "\1\u00cf",
+            "\1\u00d0",
+            "\1\u00d1",
+            "\1\u00d2",
+            "\1\u00d3",
+            "\32\24\6\uffff\32\24",
+            "\1\u00d5",
             "",
             "\32\24\6\uffff\32\24",
             ""
@@ -1519,7 +1561,7 @@ public class ArchSpecLexer extends Lexer {
             this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | ID | INT | CAPITALIZED_ID | WS );";
+            return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | ID | INT | CAPITALIZED_ID | WS );";
         }
     }
  

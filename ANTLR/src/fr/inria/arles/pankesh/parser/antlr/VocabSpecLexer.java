@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g 2013-04-14 22:49:09
+// $ANTLR 3.4 /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g 2013-04-15 12:10:38
 
   package fr.inria.arles.pankesh.parser.antlr; 
   
@@ -46,6 +46,7 @@ public class VocabSpecLexer extends Lexer {
     public static final int T__39=39;
     public static final int T__40=40;
     public static final int T__41=41;
+    public static final int T__42=42;
     public static final int CAPITALIZED_ID=4;
     public static final int ID=5;
     public static final int INT=6;
@@ -429,10 +430,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:28:7: ( 'deployment-instance' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:28:9: 'deployment-instance'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:28:7: ( 'controller' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:28:9: 'controller'
             {
-            match("deployment-instance"); 
+            match("controller"); 
 
 
 
@@ -452,10 +453,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:29:7: ( 'double' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:29:9: 'double'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:29:7: ( 'deployment-instance' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:29:9: 'deployment-instance'
             {
-            match("double"); 
+            match("deployment-instance"); 
 
 
 
@@ -475,10 +476,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:30:7: ( 'end user applications' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:30:9: 'end user applications'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:30:7: ( 'double' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:30:9: 'double'
             {
-            match("end user applications"); 
+            match("double"); 
 
 
 
@@ -498,10 +499,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:31:7: ( 'from' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:31:9: 'from'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:31:7: ( 'end user applications' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:31:9: 'end user applications'
             {
-            match("from"); 
+            match("end user applications"); 
 
 
 
@@ -521,10 +522,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:32:7: ( 'generate' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:32:9: 'generate'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:32:7: ( 'from' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:32:9: 'from'
             {
-            match("generate"); 
+            match("from"); 
 
 
 
@@ -544,10 +545,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:33:7: ( 'long' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:33:9: 'long'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:33:7: ( 'generate' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:33:9: 'generate'
             {
-            match("long"); 
+            match("generate"); 
 
 
 
@@ -567,10 +568,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:34:7: ( 'partition-per' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:34:9: 'partition-per'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:34:7: ( 'long' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:34:9: 'long'
             {
-            match("partition-per"); 
+            match("long"); 
 
 
 
@@ -590,10 +591,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:35:7: ( 'region-hops' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:35:9: 'region-hops'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:35:7: ( 'partition-per' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:35:9: 'partition-per'
             {
-            match("region-hops"); 
+            match("partition-per"); 
 
 
 
@@ -613,10 +614,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:36:7: ( 'regions' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:36:9: 'regions'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:36:7: ( 'region-hops' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:36:9: 'region-hops'
             {
-            match("regions"); 
+            match("region-hops"); 
 
 
 
@@ -636,10 +637,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:37:7: ( 'request' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:37:9: 'request'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:37:7: ( 'regions' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:37:9: 'regions'
             {
-            match("request"); 
+            match("regions"); 
 
 
 
@@ -659,10 +660,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:38:7: ( 'resources' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:38:9: 'resources'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:38:7: ( 'request' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:38:9: 'request'
             {
-            match("resources"); 
+            match("request"); 
 
 
 
@@ -682,10 +683,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:39:7: ( 'sensors' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:39:9: 'sensors'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:39:7: ( 'resources' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:39:9: 'resources'
             {
-            match("sensors"); 
+            match("resources"); 
 
 
 
@@ -705,10 +706,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:40:7: ( 'singleton' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:40:9: 'singleton'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:40:7: ( 'sensors' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:40:9: 'sensors'
             {
-            match("singleton"); 
+            match("sensors"); 
 
 
 
@@ -728,10 +729,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:41:7: ( 'storageService' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:41:9: 'storageService'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:41:7: ( 'singleton' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:41:9: 'singleton'
             {
-            match("storageService"); 
+            match("singleton"); 
 
 
 
@@ -751,10 +752,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:42:7: ( 'storages' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:42:9: 'storages'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:42:7: ( 'storageService' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:42:9: 'storageService'
             {
-            match("storages"); 
+            match("storageService"); 
 
 
 
@@ -774,10 +775,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:43:7: ( 'structs' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:43:9: 'structs'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:43:7: ( 'storages' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:43:9: 'storages'
             {
-            match("structs"); 
+            match("storages"); 
 
 
 
@@ -797,10 +798,10 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:44:7: ( 'to' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:44:9: 'to'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:44:7: ( 'structs' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:44:9: 'structs'
             {
-            match("to"); 
+            match("structs"); 
 
 
 
@@ -820,8 +821,31 @@ public class VocabSpecLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:45:7: ( 'with' )
-            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:45:9: 'with'
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:45:7: ( 'to' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:45:9: 'to'
+            {
+            match("to"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__41"
+
+    // $ANTLR start "T__42"
+    public final void mT__42() throws RecognitionException {
+        try {
+            int _type = T__42;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:46:7: ( 'with' )
+            // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:46:9: 'with'
             {
             match("with"); 
 
@@ -836,7 +860,7 @@ public class VocabSpecLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__41"
+    // $ANTLR end "T__42"
 
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
@@ -1064,8 +1088,8 @@ public class VocabSpecLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | ID | INT | CAPITALIZED_ID | WS )
-        int alt5=38;
+        // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | ID | INT | CAPITALIZED_ID | WS )
+        int alt5=39;
         alt5 = dfa5.predict(input);
         switch (alt5) {
             case 1 :
@@ -1341,31 +1365,39 @@ public class VocabSpecLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:212: ID
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:212: T__42
+                {
+                mT__42(); 
+
+
+                }
+                break;
+            case 36 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:218: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 36 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:215: INT
+            case 37 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:221: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 37 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:219: CAPITALIZED_ID
+            case 38 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:225: CAPITALIZED_ID
                 {
                 mCAPITALIZED_ID(); 
 
 
                 }
                 break;
-            case 38 :
-                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:234: WS
+            case 39 :
+                // /Users/soukou/git/FrameworkGenerator4/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g:1:240: WS
                 {
                 mWS(); 
 
@@ -1381,16 +1413,17 @@ public class VocabSpecLexer extends Lexer {
     protected DFA5 dfa5 = new DFA5(this);
     static final String DFA5_eotS =
         "\6\uffff\3\30\15\26\4\uffff\3\30\17\26\1\105\1\26\3\30\24\26\1\uffff"+
-        "\1\26\3\30\12\26\1\uffff\1\156\1\26\1\160\10\26\1\171\3\30\12\26"+
-        "\1\uffff\1\26\1\uffff\10\26\1\uffff\2\30\1\u0092\1\26\1\u0094\7"+
-        "\26\1\u009c\11\26\1\u00a7\1\u00a8\1\uffff\1\26\1\uffff\2\26\1\u00ac"+
-        "\1\u00ad\1\26\1\u00af\1\26\1\uffff\2\26\1\uffff\1\u00b3\1\u00b4"+
-        "\1\26\1\u00b6\2\26\1\u00ba\2\uffff\3\26\2\uffff\1\26\1\uffff\1\26"+
-        "\1\u00c0\1\26\2\uffff\1\26\1\uffff\2\26\1\u00c5\2\uffff\1\u00c6"+
-        "\1\u00c7\2\26\1\uffff\1\26\1\u00cb\1\u00cc\1\26\3\uffff\2\26\3\uffff"+
-        "\2\26\1\uffff\6\26\1\u00d8\1\26\1\uffff\4\26\1\u00de\1\uffff";
+        "\1\26\3\30\13\26\1\uffff\1\160\1\26\1\162\10\26\1\173\3\30\13\26"+
+        "\1\uffff\1\26\1\uffff\10\26\1\uffff\2\30\1\u0095\1\26\1\u0097\10"+
+        "\26\1\u00a0\11\26\1\u00ab\1\u00ac\1\uffff\1\26\1\uffff\2\26\1\u00b0"+
+        "\1\u00b1\1\26\1\u00b3\2\26\1\uffff\2\26\1\uffff\1\u00b8\1\u00b9"+
+        "\1\26\1\u00bb\2\26\1\u00bf\2\uffff\3\26\2\uffff\1\26\1\uffff\2\26"+
+        "\1\u00c6\1\26\2\uffff\1\26\1\uffff\2\26\1\u00cb\2\uffff\1\u00cc"+
+        "\1\u00cd\3\26\1\uffff\1\26\1\u00d2\1\u00d3\1\26\3\uffff\1\26\1\u00d6"+
+        "\1\26\3\uffff\2\26\2\uffff\6\26\1\u00e0\1\26\1\uffff\4\26\1\u00e6"+
+        "\1\uffff";
     static final String DFA5_eofS =
-        "\u00df\uffff";
+        "\u00e7\uffff";
     static final String DFA5_minS =
         "\1\11\5\uffff\1\157\1\156\1\164\1\143\2\157\1\145\1\156\1\162\1"+
         "\145\1\157\1\141\2\145\1\157\1\151\4\uffff\1\157\1\164\1\162\1\143"+
@@ -1398,48 +1431,50 @@ public class VocabSpecLexer extends Lexer {
         "\1\157\1\101\1\164\1\154\1\145\1\151\1\145\1\151\1\162\1\154\1\155"+
         "\1\163\1\154\1\142\1\40\1\155\1\145\1\147\1\164\1\151\1\165\1\157"+
         "\1\163\1\147\1\162\1\165\1\uffff\1\150\1\145\1\147\1\156\1\163\1"+
-        "\157\1\141\1\151\1\145\1\141\2\165\1\157\1\154\1\uffff\1\101\1\162"+
-        "\1\101\1\151\1\157\1\145\1\165\1\157\1\154\1\141\1\143\1\101\1\141"+
-        "\1\145\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155\1\171"+
-        "\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\2\162\1\145\1\147"+
-        "\1\164\1\uffff\1\156\1\162\1\101\1\145\1\101\1\157\1\165\1\156\1"+
-        "\144\1\141\1\145\1\155\1\101\1\164\1\151\1\55\1\164\1\143\1\163"+
-        "\1\164\1\145\1\163\2\101\1\uffff\1\144\1\uffff\1\162\1\164\2\101"+
-        "\1\164\1\101\1\145\1\uffff\1\145\1\157\1\uffff\2\101\1\145\1\101"+
-        "\1\157\1\123\1\101\2\uffff\1\55\1\163\1\145\2\uffff\1\151\1\uffff"+
-        "\1\156\1\101\1\156\2\uffff\1\163\1\uffff\1\156\1\145\1\101\2\uffff"+
-        "\2\101\1\157\1\164\1\uffff\1\55\2\101\1\162\3\uffff\1\156\1\55\3"+
-        "\uffff\1\166\1\141\1\uffff\1\151\1\154\1\143\1\123\2\145\1\101\1"+
-        "\162\1\uffff\1\166\1\151\1\143\1\145\1\101\1\uffff";
+        "\157\1\141\1\151\1\145\1\141\2\165\1\162\1\157\1\154\1\uffff\1\101"+
+        "\1\162\1\101\1\151\1\157\1\145\1\165\1\157\1\154\1\141\1\143\1\101"+
+        "\1\141\1\145\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155"+
+        "\1\157\1\171\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\2\162"+
+        "\1\145\1\147\1\164\1\uffff\1\156\1\162\1\101\1\145\1\101\1\157\1"+
+        "\165\1\156\1\144\1\141\1\145\1\154\1\155\1\101\1\164\1\151\1\55"+
+        "\1\164\1\143\1\163\1\164\1\145\1\163\2\101\1\uffff\1\144\1\uffff"+
+        "\1\162\1\164\2\101\1\164\1\101\1\154\1\145\1\uffff\1\145\1\157\1"+
+        "\uffff\2\101\1\145\1\101\1\157\1\123\1\101\2\uffff\1\55\1\163\1"+
+        "\145\2\uffff\1\151\1\uffff\1\145\1\156\1\101\1\156\2\uffff\1\163"+
+        "\1\uffff\1\156\1\145\1\101\2\uffff\2\101\1\157\1\162\1\164\1\uffff"+
+        "\1\55\2\101\1\162\3\uffff\1\156\1\101\1\55\3\uffff\1\166\1\141\2"+
+        "\uffff\1\151\1\154\1\143\1\123\2\145\1\101\1\162\1\uffff\1\166\1"+
+        "\151\1\143\1\145\1\101\1\uffff";
     static final String DFA5_maxS =
         "\1\172\5\uffff\1\157\1\156\2\164\3\157\1\156\1\162\1\145\1\157\1"+
         "\141\1\145\1\164\1\157\1\151\4\uffff\1\157\1\164\1\162\2\164\1\157"+
         "\1\156\1\160\1\165\1\144\1\157\2\156\1\162\1\163\2\156\1\162\1\172"+
-        "\1\164\1\154\1\145\1\151\1\145\1\165\1\162\1\154\1\160\1\163\1\154"+
+        "\1\164\1\154\1\145\1\151\1\145\1\165\1\162\1\154\1\160\1\164\1\154"+
         "\1\142\1\40\1\155\1\145\1\147\1\164\1\151\1\165\1\157\1\163\1\147"+
         "\1\162\1\165\1\uffff\1\150\1\145\1\147\1\156\1\163\1\157\1\141\1"+
-        "\151\1\145\1\141\2\165\1\157\1\154\1\uffff\1\172\1\162\1\172\1\151"+
-        "\1\157\1\145\1\165\1\157\1\154\1\141\1\143\1\172\1\141\1\145\1\147"+
-        "\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155\1\171\1\145\1\uffff"+
-        "\1\141\1\uffff\1\164\1\156\1\163\2\162\1\145\1\147\1\164\1\uffff"+
-        "\1\156\1\162\1\172\1\145\1\172\1\157\1\165\1\156\1\144\1\141\1\145"+
-        "\1\155\1\172\1\164\1\151\1\163\1\164\1\143\1\163\1\164\1\145\1\163"+
-        "\2\172\1\uffff\1\144\1\uffff\1\162\1\164\2\172\1\164\1\172\1\145"+
-        "\1\uffff\1\145\1\157\1\uffff\2\172\1\145\1\172\1\157\1\163\1\172"+
-        "\2\uffff\1\55\1\163\1\145\2\uffff\1\151\1\uffff\1\156\1\172\1\156"+
-        "\2\uffff\1\163\1\uffff\1\156\1\145\1\172\2\uffff\2\172\1\157\1\164"+
-        "\1\uffff\1\55\2\172\1\162\3\uffff\1\156\1\55\3\uffff\1\166\1\141"+
-        "\1\uffff\1\151\1\154\1\143\1\123\2\145\1\172\1\162\1\uffff\1\166"+
-        "\1\151\1\143\1\145\1\172\1\uffff";
+        "\151\1\145\1\141\2\165\1\162\1\157\1\154\1\uffff\1\172\1\162\1\172"+
+        "\1\151\1\157\1\145\1\165\1\157\1\154\1\141\1\143\1\172\1\141\1\145"+
+        "\1\147\1\163\1\156\1\164\1\142\1\141\1\156\1\164\1\155\1\157\1\171"+
+        "\1\145\1\uffff\1\141\1\uffff\1\164\1\156\1\163\2\162\1\145\1\147"+
+        "\1\164\1\uffff\1\156\1\162\1\172\1\145\1\172\1\157\1\165\1\156\1"+
+        "\144\1\141\1\145\1\154\1\155\1\172\1\164\1\151\1\163\1\164\1\143"+
+        "\1\163\1\164\1\145\1\163\2\172\1\uffff\1\144\1\uffff\1\162\1\164"+
+        "\2\172\1\164\1\172\1\154\1\145\1\uffff\1\145\1\157\1\uffff\2\172"+
+        "\1\145\1\172\1\157\1\163\1\172\2\uffff\1\55\1\163\1\145\2\uffff"+
+        "\1\151\1\uffff\1\145\1\156\1\172\1\156\2\uffff\1\163\1\uffff\1\156"+
+        "\1\145\1\172\2\uffff\2\172\1\157\1\162\1\164\1\uffff\1\55\2\172"+
+        "\1\162\3\uffff\1\156\1\172\1\55\3\uffff\1\166\1\141\2\uffff\1\151"+
+        "\1\154\1\143\1\123\2\145\1\172\1\162\1\uffff\1\166\1\151\1\143\1"+
+        "\145\1\172\1\uffff";
     static final String DFA5_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\20\uffff\1\43\1\44\1\45\1\46\53\uffff"+
-        "\1\41\16\uffff\1\23\31\uffff\1\24\1\uffff\1\26\10\uffff\1\42\30"+
-        "\uffff\1\10\1\uffff\1\12\7\uffff\1\22\2\uffff\1\30\7\uffff\1\6\1"+
-        "\7\3\uffff\1\15\1\16\1\uffff\1\20\3\uffff\1\31\1\32\1\uffff\1\34"+
-        "\3\uffff\1\40\1\11\4\uffff\1\25\4\uffff\1\37\1\13\1\14\2\uffff\1"+
-        "\27\1\33\1\35\2\uffff\1\21\10\uffff\1\36\5\uffff\1\17";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\20\uffff\1\44\1\45\1\46\1\47\53\uffff"+
+        "\1\42\17\uffff\1\24\32\uffff\1\25\1\uffff\1\27\10\uffff\1\43\31"+
+        "\uffff\1\10\1\uffff\1\12\10\uffff\1\23\2\uffff\1\31\7\uffff\1\6"+
+        "\1\7\3\uffff\1\15\1\16\1\uffff\1\20\4\uffff\1\32\1\33\1\uffff\1"+
+        "\35\3\uffff\1\41\1\11\5\uffff\1\26\4\uffff\1\40\1\13\1\14\3\uffff"+
+        "\1\30\1\34\1\36\2\uffff\1\21\1\22\10\uffff\1\37\5\uffff\1\17";
     static final String DFA5_specialS =
-        "\u00df\uffff}>";
+        "\u00e7\uffff}>";
     static final String[] DFA5_transitionS = {
             "\2\31\1\uffff\2\31\22\uffff\1\31\7\uffff\1\1\1\2\2\uffff\1\3"+
             "\3\uffff\12\27\1\4\1\5\5\uffff\1\30\1\6\6\30\1\7\11\30\1\10"+
@@ -1498,8 +1533,7 @@ public class VocabSpecLexer extends Lexer {
             "\1\115",
             "\1\116",
             "\1\117\2\uffff\1\120",
-            "\1\121",
-            "\1\122",
+            "\1\121\1\122",
             "\1\123",
             "\1\124",
             "\1\125",
@@ -1513,8 +1547,8 @@ public class VocabSpecLexer extends Lexer {
             "\1\135",
             "\1\136",
             "\1\137",
-            "",
             "\1\140",
+            "",
             "\1\141",
             "\1\142",
             "\1\143",
@@ -1528,21 +1562,21 @@ public class VocabSpecLexer extends Lexer {
             "\1\153",
             "\1\154",
             "\1\155",
+            "\1\156",
+            "\1\157",
             "",
             "\32\26\6\uffff\32\26",
-            "\1\157",
-            "\32\26\6\uffff\32\26",
             "\1\161",
-            "\1\162",
+            "\32\26\6\uffff\32\26",
             "\1\163",
             "\1\164",
             "\1\165",
             "\1\166",
             "\1\167",
             "\1\170",
-            "\32\26\6\uffff\32\26",
+            "\1\171",
             "\1\172",
-            "\1\173",
+            "\32\26\6\uffff\32\26",
             "\1\174",
             "\1\175",
             "\1\176",
@@ -1554,117 +1588,126 @@ public class VocabSpecLexer extends Lexer {
             "\1\u0084",
             "\1\u0085",
             "\1\u0086",
-            "",
             "\1\u0087",
-            "",
             "\1\u0088",
             "\1\u0089",
+            "",
             "\1\u008a",
+            "",
             "\1\u008b",
             "\1\u008c",
             "\1\u008d",
             "\1\u008e",
             "\1\u008f",
-            "",
             "\1\u0090",
             "\1\u0091",
-            "\32\30\6\uffff\32\30",
+            "\1\u0092",
+            "",
             "\1\u0093",
-            "\32\26\6\uffff\32\26",
-            "\1\u0095",
+            "\1\u0094",
+            "\32\30\6\uffff\32\30",
             "\1\u0096",
-            "\1\u0097",
+            "\32\26\6\uffff\32\26",
             "\1\u0098",
             "\1\u0099",
             "\1\u009a",
             "\1\u009b",
-            "\32\26\6\uffff\32\26",
+            "\1\u009c",
             "\1\u009d",
             "\1\u009e",
-            "\1\u009f\105\uffff\1\u00a0",
+            "\1\u009f",
+            "\32\26\6\uffff\32\26",
             "\1\u00a1",
             "\1\u00a2",
-            "\1\u00a3",
-            "\1\u00a4",
+            "\1\u00a3\105\uffff\1\u00a4",
             "\1\u00a5",
             "\1\u00a6",
-            "\32\30\6\uffff\32\30",
-            "\32\30\6\uffff\32\30",
-            "",
+            "\1\u00a7",
+            "\1\u00a8",
             "\1\u00a9",
-            "",
             "\1\u00aa",
-            "\1\u00ab",
-            "\32\26\6\uffff\32\26",
-            "\32\26\6\uffff\32\26",
+            "\32\30\6\uffff\32\30",
+            "\32\30\6\uffff\32\30",
+            "",
+            "\1\u00ad",
+            "",
             "\1\u00ae",
+            "\1\u00af",
             "\32\26\6\uffff\32\26",
-            "\1\u00b0",
-            "",
-            "\1\u00b1",
+            "\32\26\6\uffff\32\26",
             "\1\u00b2",
-            "",
             "\32\26\6\uffff\32\26",
-            "\32\26\6\uffff\32\26",
+            "\1\u00b4",
             "\1\u00b5",
-            "\32\26\6\uffff\32\26",
+            "",
+            "\1\u00b6",
             "\1\u00b7",
-            "\1\u00b8\37\uffff\1\u00b9",
+            "",
             "\32\26\6\uffff\32\26",
-            "",
-            "",
-            "\1\u00bb",
+            "\32\26\6\uffff\32\26",
+            "\1\u00ba",
+            "\32\26\6\uffff\32\26",
             "\1\u00bc",
-            "\1\u00bd",
-            "",
-            "",
-            "\1\u00be",
-            "",
-            "\1\u00bf",
+            "\1\u00bd\37\uffff\1\u00be",
             "\32\26\6\uffff\32\26",
+            "",
+            "",
+            "\1\u00c0",
             "\1\u00c1",
-            "",
-            "",
             "\1\u00c2",
             "",
+            "",
             "\1\u00c3",
+            "",
             "\1\u00c4",
+            "\1\u00c5",
             "\32\26\6\uffff\32\26",
+            "\1\u00c7",
             "",
             "",
-            "\32\26\6\uffff\32\26",
-            "\32\26\6\uffff\32\26",
             "\1\u00c8",
-            "\1\u00c9",
             "",
+            "\1\u00c9",
             "\1\u00ca",
             "\32\26\6\uffff\32\26",
+            "",
+            "",
             "\32\26\6\uffff\32\26",
-            "\1\u00cd",
-            "",
-            "",
-            "",
+            "\32\26\6\uffff\32\26",
             "\1\u00ce",
             "\1\u00cf",
-            "",
-            "",
-            "",
             "\1\u00d0",
-            "\1\u00d1",
             "",
-            "\1\u00d2",
-            "\1\u00d3",
-            "\1\u00d4",
-            "\1\u00d5",
-            "\1\u00d6",
-            "\1\u00d7",
+            "\1\u00d1",
             "\32\26\6\uffff\32\26",
+            "\32\26\6\uffff\32\26",
+            "\1\u00d4",
+            "",
+            "",
+            "",
+            "\1\u00d5",
+            "\32\26\6\uffff\32\26",
+            "\1\u00d7",
+            "",
+            "",
+            "",
+            "\1\u00d8",
             "\1\u00d9",
+            "",
             "",
             "\1\u00da",
             "\1\u00db",
             "\1\u00dc",
             "\1\u00dd",
+            "\1\u00de",
+            "\1\u00df",
+            "\32\26\6\uffff\32\26",
+            "\1\u00e1",
+            "",
+            "\1\u00e2",
+            "\1\u00e3",
+            "\1\u00e4",
+            "\1\u00e5",
             "\32\26\6\uffff\32\26",
             ""
     };
@@ -1699,7 +1742,7 @@ public class VocabSpecLexer extends Lexer {
             this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | ID | INT | CAPITALIZED_ID | WS );";
+            return "1:1: Tokens : ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | ID | INT | CAPITALIZED_ID | WS );";
         }
     }
  
