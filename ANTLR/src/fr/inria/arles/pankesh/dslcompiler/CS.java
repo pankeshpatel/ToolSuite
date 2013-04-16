@@ -6,6 +6,7 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
 import fr.inria.arles.pankesh.semanticmodel.ComputationalService;
@@ -41,12 +42,17 @@ public class CS {
 	// Code generator of abstract files and Logic files
 
 	public void generateCode() {
-		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedComputationalService.buildAbstractClassoFCS(computationalService);
-		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
-		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
-		generateComputationalLogicCode(); // This function call will generate
+		
+		if(GlobalVariable.activity.equals("generateAF")) {
+		
+		  JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		  CompilationUnit generatedCU = generatedComputationalService.buildAbstractClassoFCS(computationalService);
+		  SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		  dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+		  generateComputationalLogicCode(); // This function call will generate
 											// partial file of Logic files
+		}	
+		
 	}
 
 	public void generateComputationalLogicCode() {

@@ -227,6 +227,17 @@ public class JavaFrameworkFromST {
 		templateOfStructure.setAttribute("struct", struct);
 		return new CompilationUnit(struct.getName() + ".java", templateOfStructure, "structure", "Future");
 	}
+	
+	/*
+	 * 
+	 * This is end of  use for  Architecture specification
+	 * 
+	 * 
+	 */
+	
+	
+	
+	
 
 	public CompilationUnit buildClassoFStartup(Device device) {
 

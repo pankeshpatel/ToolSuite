@@ -35,12 +35,13 @@ public class Test {
 		GlobalVariable.networkSpec = args[2];
 		GlobalVariable.stringTemplatePath = args[3];
 		GlobalVariable.activity = args[4];
-		GlobalVariable.frameworkRootDir = args[5];
+		
 
 		if (GlobalVariable.activity.equals("generateDD")) {
 
 			// This code parses the Vocabulary Specification
-
+			GlobalVariable.frameworkRootDir = args[5];
+			
 			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
@@ -48,9 +49,11 @@ public class Test {
 			vocParser.vocabSpec();
 		}
 
-		// TODO : input Vocabulary and architecture specification
+
 		if (GlobalVariable.activity.equals("generateAF")) {
 
+            GlobalVariable.frameworkRootDir = args[5];
+			
 			// This code parses the Vocabulary specification.
 			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);

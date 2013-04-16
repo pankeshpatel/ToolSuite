@@ -20,8 +20,18 @@ public class SourceFileDumper {
 
 	public void dumpCompilationUnit(CompilationUnit template) {
 		try {
-			myGenerateCompilationUnit(template, "PC");
-			myGenerateCompilationUnit(template, "Android");
+			
+			if (GlobalVariable.activity.equals("generateDD")) {			
+			   myGenerateCompilationUnit(template, GlobalVariable.devicePCType);
+			   myGenerateCompilationUnit(template, GlobalVariable.deviceAndroidType);
+			}
+			
+			if(GlobalVariable.activity.equals("generateAF")){
+				
+				myGenerateCompilationUnit(template, "ApplicationLogic");				
+			}
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 			new RuntimeException(e);
@@ -41,19 +51,30 @@ public class SourceFileDumper {
 			file = new File(dir, unit.getName());
 
 		} else if (unit.getType().equals("Logic")) { 
-
-			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getName());
+			
+			   new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
+			   file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getName());			
+			
 
 		} else if (unit.getType().equals("Factory")) { 
+			
+			if (deviceType.equals("ApplicationLogic")){
+				 // Do not generate any Factory class in Architecture Specification
+			}else {			
 			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath).mkdirs();
-
 			file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.factoryDirPath + "/" + unit.getName());
+			}
 
 		} else if (unit.getType().equals("ImplFactory")) { 
-			   
-		    	 new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
-				  file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getName());		    	
+			
+			if (deviceType.equals("ApplicationLogic")){
+				
+				//Do not generate any  Impl java class in Architecture specification.
+				
+			}else {
+			      new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath).mkdirs();
+				  file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.deviceImplDirPath + "/" + unit.getName());
+			}
 		   
 	
 		//	else {
@@ -73,32 +94,26 @@ public class SourceFileDumper {
 		  	
 			if(deviceType.equals("Android")) {
 				
-			     if (unit.getObjectName().equals("manifest")) {				
-			      
-			    	 //new File(GlobalVariable.frameworkRootDir + deviceType + "/").mkdirs();
+			     if (unit.getObjectName().equals("manifest")) {			      
+			    
 			         file = new File(GlobalVariable.frameworkRootDir + deviceType + "/" + unit.getName());
 			     }
-			     if (unit.getObjectName().equals("layout")){
-			    	 
-			    	// new File(GlobalVariable.frameworkRootDir + deviceType +  "res" + "layout").mkdirs();
-				    // file = new File(GlobalVariable.frameworkRootDir + deviceType + "/" + "res" + "layout" + "/" + unit.getName());			    	 
-			    	// new File(GlobalVariable.frameworkRootDir + deviceType + "/" + "res" );
+			     if (unit.getObjectName().equals("layout")){    	 
+			    
   	 
 			    	 file = new File(GlobalVariable.frameworkRootDir + deviceType + "/res/layout/"  + unit.getName());
 			     }
 			} else {
 				//DO not generate  xml files
-			}   
-		
-		}
-		
-		
-		
+			}	
+		}		
 		else { 
-
-			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath).mkdirs();
-			file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath + "/" + unit.getName());
-
+			
+				
+       			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath).mkdirs();
+		    	file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.frameworkDirPath + "/" + unit.getName());
+				
+			
 		}
 
 		if ( file != null ) {

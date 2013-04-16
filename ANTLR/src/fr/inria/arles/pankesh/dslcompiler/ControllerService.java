@@ -6,6 +6,7 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Action;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
@@ -44,12 +45,17 @@ public class ControllerService {
 
 	// Next two function generates abstract file and Logic files.
 	public void generateCode() {
+		
+		if(GlobalVariable.activity.equals("generateAF")) {
+			
 		JavaFrameworkFromST generatedController = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedController.buildAbstractClassoFController(controller);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 		genearteControllerLogicCode(); // This function call will generate
 										// partial Logic files
+		}	
+		
 	}
 
 	public void genearteControllerLogicCode() {
