@@ -18,14 +18,14 @@ public class Test {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		if (args.length != 4) {
-
-			System.out
-					.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
-							+ "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
-							+ "<relativepathfordevices> <relativepathforutil> ");
-			System.exit(1);
-		}
+//		if (args.length != 5) {
+//
+//			System.out
+//					.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
+//							+ "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
+//							+ "<relativepathfordevices> <relativepathforutil> ");
+//			System.exit(1);
+//		}
 
 		// --- VocArchSpec NetworkSpec gen /logic /sim/device /util
 
@@ -33,40 +33,91 @@ public class Test {
 		GlobalVariable.archSpec = args[1];
 		GlobalVariable.networkSpec = args[2];
 		GlobalVariable.stringTemplatePath = args[3];
+		GlobalVariable.activity = args[4];
+		 GlobalVariable.frameworkRootDir = args[5];
+		
+		
+		if (GlobalVariable.activity.equals("generateDD")) {
+			
+		   
+			
+		   // This code parses the Vocabulary Specification
 
-		List<Device> deviceList;
-		List<DeployementConstraint> mappingConstraintList;
+			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();			
+		}
+		
+		//TODO : input Vocabulary and architecture specification
+		if (GlobalVariable.activity.equals("generateAF")) {
+			
+			// This code parses the Vocabulary Specification
+			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();
+			
+			// This code parses the Architecture Specificaton
+			ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
+			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
+			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
+			ArchSpecParser archParser = new ArchSpecParser(archTokens);
+			archParser.archSpec();			
+		}
 
-		// This code parses the Vocabulary Specification
+		
+		
+		//TODO : Decide  input
+		if (GlobalVariable.activity.equals("generateDeply")) {
+	
+			
+			
+	
+	
+	
+		}
+		
+		
+		
+		
+		
 
-		ANTLRFileStream vocStream = new ANTLRFileStream(
-				GlobalVariable.vocabSpec);
-		VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
-		CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
-		VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-		vocParser.vocabSpec();
-
-		// This code parses the Architecture Specificaton
-		ANTLRFileStream archStream = new ANTLRFileStream(
-				GlobalVariable.archSpec);
-		ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
-		CommonTokenStream archTokens = new CommonTokenStream(archLexer);
-		ArchSpecParser archParser = new ArchSpecParser(archTokens);
-		archParser.archSpec();
-
-		mappingConstraintList = Context.getDeploymentConstrainsList();
-
-		// This code parses the Network description.
-		ANTLRFileStream networkStream = new ANTLRFileStream(
-				GlobalVariable.networkSpec);
-		NetworkSpecLexer networkLexer = new NetworkSpecLexer(networkStream);
-		CommonTokenStream networkTokens = new CommonTokenStream(networkLexer);
-		NetworkSpecParser networkParser = new NetworkSpecParser(networkTokens);
-		networkParser.networkspec();
-		deviceList = Context.getDeviceList();
-
-		// This code maps the software compoents and devices.
-		Mapper.MapperAlgo(deviceList, mappingConstraintList);
+//		List<Device> deviceList;
+//		List<DeployementConstraint> mappingConstraintList;
+//
+//		// This code parses the Vocabulary Specification
+//
+//		ANTLRFileStream vocStream = new ANTLRFileStream(
+//				GlobalVariable.vocabSpec);
+//		VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+//		CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+//		VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+//		vocParser.vocabSpec();
+//
+//		// This code parses the Architecture Specificaton
+//		ANTLRFileStream archStream = new ANTLRFileStream(
+//				GlobalVariable.archSpec);
+//		ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
+//		CommonTokenStream archTokens = new CommonTokenStream(archLexer);
+//		ArchSpecParser archParser = new ArchSpecParser(archTokens);
+//		archParser.archSpec();
+//
+//		mappingConstraintList = Context.getDeploymentConstrainsList();
+//
+//		// This code parses the Network description.
+//		ANTLRFileStream networkStream = new ANTLRFileStream(
+//				GlobalVariable.networkSpec);
+//		NetworkSpecLexer networkLexer = new NetworkSpecLexer(networkStream);
+//		CommonTokenStream networkTokens = new CommonTokenStream(networkLexer);
+//		NetworkSpecParser networkParser = new NetworkSpecParser(networkTokens);
+//		networkParser.networkspec();
+//		deviceList = Context.getDeviceList();
+//
+//		// This code maps the software compoents and devices.
+//		Mapper.MapperAlgo(deviceList, mappingConstraintList);
 
 	}
 }

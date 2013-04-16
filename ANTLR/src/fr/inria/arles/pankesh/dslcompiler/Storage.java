@@ -7,6 +7,7 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
 import fr.inria.arles.pankesh.semanticmodel.DataAccess;
@@ -47,6 +48,9 @@ public class Storage {
 				.buildAbstractClassOFStorageService(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
+		
+		if (GlobalVariable.activity.equals("generateDD")) {	
+		
 		generateStorage(); // This function call will generate partial logic
 							// file of storage
 		generateStorageInterface(); // This function will generate
@@ -55,6 +59,8 @@ public class Storage {
 		generateStorageFactory(); // This function will generate StorageService
 									// Interface.
 		generateStorageImplFactory();
+		
+		}
 		
 	}
 

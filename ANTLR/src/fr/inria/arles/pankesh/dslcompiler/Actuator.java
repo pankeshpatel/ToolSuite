@@ -6,6 +6,7 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.semanticmodel.Action;
 import fr.inria.arles.pankesh.semanticmodel.ActuatorDriver;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
@@ -36,12 +37,18 @@ public class Actuator {
 				.buildAbstractClassoFActuatorDriver(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
+		
+		if (GlobalVariable.activity.equals("generateDD")) {	
+		
+		
 		generateActuator(); // This function call will create a partial Logic
 							// files
 		generateActuatorInterface(); // This function call will create Interface of Actuator.		
 		generateActuatorFactory();
 		
 		generateActuatorFactoryImpl();
+		
+		}
 		
 	//	generateGUIActuator();
 		

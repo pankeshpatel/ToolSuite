@@ -6,6 +6,7 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.parser.antlr.Context;
 import fr.inria.arles.pankesh.semanticmodel.Action;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
@@ -63,6 +64,10 @@ public class GUI {
 				.buildAbstractClassoFGUIDriver(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+		
+		if (GlobalVariable.activity.equals("generateDD")) {	
+		
+		
 		generateGUI(); // This function call will create a partial Logic
 						// files
 		generateGUIInterface(); // This function call will create Interface of
@@ -74,6 +79,8 @@ public class GUI {
 		generateGUILayout();
 		
 		generateGUIManifest();
+		}
+	
 
 	}
 

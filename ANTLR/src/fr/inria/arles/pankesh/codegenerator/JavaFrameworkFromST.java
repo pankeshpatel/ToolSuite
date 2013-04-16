@@ -18,12 +18,18 @@ import fr.inria.arles.pankesh.semanticmodel.StorageService;
 import fr.inria.arles.pankesh.semanticmodel.Structure;
 
 public class JavaFrameworkFromST {
+	
+	
+
 
 	private StringTemplateGroup group = new StringTemplateGroup("myGroup", GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
-
+	
+	
+	//For Vocabulary Framework generation
+		
 	public CompilationUnit buildAbstractClassoFSensorDriver(SensorDriver sensorDriver) {
 
-		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensordriver");
+	   	StringTemplate templateOfSensorDriver = group.getInstanceOf("sensordriver");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(sensorDriver.getName() + ".java", templateOfSensorDriver, "sensorDriver", "Future");
 	}
@@ -62,7 +68,8 @@ public class JavaFrameworkFromST {
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);
 		return new CompilationUnit("Listener" + sensorMeasurement.getName() + ".java", templateOfSensorDriver, "Listener", "sensor");
 
-	}
+	}	
+	
 
 	public CompilationUnit buildAbstractClassoFActuatorDriver(ActuatorDriver actuatorDriver) {
 
@@ -181,6 +188,28 @@ public class JavaFrameworkFromST {
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("Fake" + storageService.getName() + ".java", templateOfStorageService, "Logic", "storage");
 	}
+	
+	
+	
+	public CompilationUnit buildAbstractClassOFRegion(Regions region, String className) {
+
+		StringTemplate templateOfStructure = group.getInstanceOf(className);
+		templateOfStructure.setAttribute("region", region);
+		return new CompilationUnit(className + ".java", templateOfStructure, "Region", "Future");
+	}
+	
+	
+	
+	
+	
+	
+	
+	/*
+	 *  This is used for architecture specification. 
+	 * 
+	 */
+	
+	
 
 	public CompilationUnit buildAbstractClassoFCS(ComputationalService computationalService) {
 
@@ -246,11 +275,6 @@ public class JavaFrameworkFromST {
 		
 	}	
 
-	public CompilationUnit buildAbstractClassOFRegion(Regions region, String className) {
-
-		StringTemplate templateOfStructure = group.getInstanceOf(className);
-		templateOfStructure.setAttribute("region", region);
-		return new CompilationUnit(className + ".java", templateOfStructure, "Region", "Future");
-	}
+	
 
 }
