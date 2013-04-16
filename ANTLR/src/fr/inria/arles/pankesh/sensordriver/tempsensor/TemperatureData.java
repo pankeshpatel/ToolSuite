@@ -7,8 +7,7 @@ public class TemperatureData extends SensorData {
 	private double tempvalue;
 	private String unitOfMeasurement;
 
-	public TemperatureData(double tempValue, String unitOfMeasurement,
-			long timestamp) {
+	public TemperatureData(double tempValue, String unitOfMeasurement, long timestamp) {
 		super(timestamp);
 		this.tempvalue = tempValue;
 		this.unitOfMeasurement = unitOfMeasurement;

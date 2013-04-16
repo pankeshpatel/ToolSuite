@@ -6,11 +6,10 @@ import fr.inria.arles.pankesh.dslcompiler.Struct;
 public class SensorMeasurement extends Information {
 
 	public Struct data;
-	
+
 	public SensorMeasurement(String name, DataType type, Struct data) {
 		super(name, type);
-		this.data=data;
-
+		this.data = data;
 
 	}
 
@@ -22,8 +21,7 @@ public class SensorMeasurement extends Information {
 
 	public String getPackageName() {
 
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 

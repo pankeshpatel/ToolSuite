@@ -4,7 +4,6 @@ import org.antlr.stringtemplate.StringTemplate;
 import org.antlr.stringtemplate.StringTemplateGroup;
 import org.antlr.stringtemplate.language.DefaultTemplateLexer;
 
-
 import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.semanticmodel.ActuatorDriver;
 import fr.inria.arles.pankesh.semanticmodel.ComputationalService;
@@ -18,18 +17,14 @@ import fr.inria.arles.pankesh.semanticmodel.StorageService;
 import fr.inria.arles.pankesh.semanticmodel.Structure;
 
 public class JavaFrameworkFromST {
-	
-	
-
 
 	private StringTemplateGroup group = new StringTemplateGroup("myGroup", GlobalVariable.stringTemplatePath, DefaultTemplateLexer.class);
-	
-	
-	//For Vocabulary Framework generation
-		
+
+	// For Vocabulary Framework generation
+
 	public CompilationUnit buildAbstractClassoFSensorDriver(SensorDriver sensorDriver) {
 
-	   	StringTemplate templateOfSensorDriver = group.getInstanceOf("sensordriver");
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensordriver");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit(sensorDriver.getName() + ".java", templateOfSensorDriver, "sensorDriver", "Future");
 	}
@@ -47,14 +42,13 @@ public class JavaFrameworkFromST {
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("I" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Interface", "sensor");
 	}
-	
+
 	public CompilationUnit buildImploFSensorFactory(SensorDriver sensorDriver) {
 
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("implsensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("Impl" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor");
 	}
-	
 
 	public CompilationUnit buildAbstractClassoFSensorFactory(SensorDriver sensorDriver) {
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensorfactory");
@@ -68,8 +62,7 @@ public class JavaFrameworkFromST {
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorMeasurement);
 		return new CompilationUnit("Listener" + sensorMeasurement.getName() + ".java", templateOfSensorDriver, "Listener", "sensor");
 
-	}	
-	
+	}
 
 	public CompilationUnit buildAbstractClassoFActuatorDriver(ActuatorDriver actuatorDriver) {
 
@@ -97,28 +90,28 @@ public class JavaFrameworkFromST {
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Fake" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Logic", "actuator");
 	}
-	
+
 	public CompilationUnit buildImploFActuatorFactory(ActuatorDriver actuatorDriver) {
 
 		StringTemplate templateOfActuatorDriver = group.getInstanceOf("implactuator");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
 		return new CompilationUnit("Impl" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator");
 	}
-	
+
 	public CompilationUnit buildAbstractClassoFGUIDriver(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guidriver");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit(guiDriver.getName() + ".java", templateOfGUIDriver, "guiDriver", "Future");
 	}
-	
+
 	public CompilationUnit buildAbstractClassoFGUI(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("LGUI");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("Fake" + guiDriver.getName() + ".java", templateOfGUIDriver, "Logic", "gui");
 	}
-	
+
 	public CompilationUnit buildFactoryofGUI(GUIDriver guiDriver) {
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guifactory");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
@@ -131,26 +124,26 @@ public class JavaFrameworkFromST {
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("I" + guiDriver.getName() + ".java", templateOfGUIDriver, "Interface", "gui");
 	}
-	
+
 	public CompilationUnit buildImploFGUIFactory(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("implgui");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "gui");
+		return new CompilationUnit("Impl" + guiDriver.getName() + ".java", templateOfGUIDriver, "ImplFactory", "java");
 	}
-	
+
 	public CompilationUnit buildGUILayout(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiLayout");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit(guiDriver.getName().toLowerCase() + "layout" + ".xml", templateOfGUIDriver, "ImplFactory", "gui");
+		return new CompilationUnit(guiDriver.getName().toLowerCase() + "layout" + ".xml", templateOfGUIDriver, "androidgui", "layout");
 	}
-	
+
 	public CompilationUnit buildGUIManifest(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiManifest");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
-		return new CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "ImplFactory", "gui");
+		return new CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "androidgui", "manifest");
 	}
 
 	public CompilationUnit buildAbstractClassOFStorageService(StorageService storageService) {
@@ -159,15 +152,13 @@ public class JavaFrameworkFromST {
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit(storageService.getName() + ".java", templateOfStorageService, "storageService", "Future");
 	}
-	
+
 	public CompilationUnit buildImploFStorageFactory(StorageService storageService) {
 
 		StringTemplate templateOfStorageService = group.getInstanceOf("implstorage");
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("Impl" + storageService.getName() + ".java", templateOfStorageService, "ImplFactory", "actuator");
 	}
-	
-	
 
 	public CompilationUnit buildAbstractClassoFStorageFactory(StorageService storageService) {
 
@@ -188,28 +179,17 @@ public class JavaFrameworkFromST {
 		templateOfStorageService.setAttribute("Storageservice", storageService);
 		return new CompilationUnit("Fake" + storageService.getName() + ".java", templateOfStorageService, "Logic", "storage");
 	}
-	
-	
-	
+
 	public CompilationUnit buildAbstractClassOFRegion(Regions region, String className) {
 
 		StringTemplate templateOfStructure = group.getInstanceOf(className);
 		templateOfStructure.setAttribute("region", region);
 		return new CompilationUnit(className + ".java", templateOfStructure, "Region", "Future");
 	}
-	
-	
-	
-	
-	
-	
-	
+
 	/*
-	 *  This is used for architecture specification. 
-	 * 
+	 * This is used for architecture specification.
 	 */
-	
-	
 
 	public CompilationUnit buildAbstractClassoFCS(ComputationalService computationalService) {
 
@@ -253,28 +233,25 @@ public class JavaFrameworkFromST {
 		StringTemplate templateOfDevice = group.getInstanceOf("device");
 		templateOfDevice.setAttribute("device", device);
 		return new CompilationUnit("Startup" + ".java", templateOfDevice, "device", device.getName());
-		
+
 	}
-	
+
 	public CompilationUnit buildClassoFExecution(Device device) {
 
-		if(device.getType().equals("PC")){
-		
+		if (device.getType().equals("PC")) {
+
 			StringTemplate templateOfDevice = group.getInstanceOf("deskexecution");
 			templateOfDevice.setAttribute("device", device);
 			return new CompilationUnit(device.getName() + "Main" + ".java", templateOfDevice, "device", device.getName());
-			
-		}else{
-			
+
+		} else {
+
 			StringTemplate templateOfDevice = group.getInstanceOf("androidexecution");
 			templateOfDevice.setAttribute("device", device);
 			return new CompilationUnit("MainActivity" + ".java", templateOfDevice, "device", device.getName());
-			
-		}
-		
-		
-	}	
 
-	
+		}
+
+	}
 
 }

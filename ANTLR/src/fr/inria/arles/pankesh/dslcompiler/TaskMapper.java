@@ -22,8 +22,7 @@ public class TaskMapper {
 	 * @return Map<Device,Set<String>> : This is final mapping between devices
 	 *         and software Components ( CS, Controller).
 	 */
-	public static Map<Device, Set<String>> mapTasks(List<Device> deviceList,
-			List<DeployementConstraint> mappingConstraintList) {
+	public static Map<Device, Set<String>> mapTasks(List<Device> deviceList, List<DeployementConstraint> mappingConstraintList) {
 
 		Map<String, Set<Device>> deviceListByRegion = new HashMap<String, Set<Device>>();
 		Set<String> regionLabelSet = new HashSet<String>();
@@ -70,8 +69,7 @@ public class TaskMapper {
 			int i, j;
 			for (i = 0, j = 0; i < setOfRegionLabels.size(); i++, j++) {
 
-				regionMap.get(setOfRegionLabels.get(i)).add(
-						setOfRegionIDs.get(j));
+				regionMap.get(setOfRegionLabels.get(i)).add(setOfRegionIDs.get(j));
 
 			}
 
@@ -85,71 +83,66 @@ public class TaskMapper {
 
 		for (String regionLabel : regionMap.keySet()) {
 			for (DeployementConstraint mc : mappingConstraintList) {
-//
-//				if (mc.getAttributeName().equals("deployment-instance")
-//						&& mc.getAttributeValue().equals("singleton")) {
-//
-//					List<Device> selectedDeviceWithAbility = pickDevicesWithAbilities(
-//							"DBServer", deviceList);
-//
-//					for (Device ds : selectedDeviceWithAbility) {
-//
-//						String tempSoftwareComponent = mc
-//								.getSoftwareComponentName();
-//						finalMapping.get(ds).add(tempSoftwareComponent);
-//
-//					}
-//
-//				} else {
+				//
+				// if (mc.getAttributeName().equals("deployment-instance")
+				// && mc.getAttributeValue().equals("singleton")) {
+				//
+				// List<Device> selectedDeviceWithAbility =
+				// pickDevicesWithAbilities(
+				// "DBServer", deviceList);
+				//
+				// for (Device ds : selectedDeviceWithAbility) {
+				//
+				// String tempSoftwareComponent = mc
+				// .getSoftwareComponentName();
+				// finalMapping.get(ds).add(tempSoftwareComponent);
+				//
+				// }
+				//
+				// } else {
 
-					if (regionLabel.equals(mc.getAttributeValue())) {
+				if (regionLabel.equals(mc.getAttributeValue())) {
 
-						String tempSoftWareComponent = mc
-								.getSoftwareComponentName();
+					String tempSoftWareComponent = mc.getSoftwareComponentName();
 
-						// for (String regionID : regionMap.keySet()) {
-						// Random selection
+					// for (String regionID : regionMap.keySet()) {
+					// Random selection
 
-						String[] tempkey = regionMap.get(regionLabel).toArray(
-								new String[regionMap.get(regionLabel).size()]);
+					String[] tempkey = regionMap.get(regionLabel).toArray(new String[regionMap.get(regionLabel).size()]);
 
-						for (int i = 0; i < tempkey.length; i++) {
+					for (int i = 0; i < tempkey.length; i++) {
 
-							if (tempkey[i] != null) {
-								Set<Device> tempDeviceSet = deviceListByRegion
-										.get(tempkey[i]);
-								Device selectedDevice = pickOneFrom(tempDeviceSet);
+						if (tempkey[i] != null) {
+							Set<Device> tempDeviceSet = deviceListByRegion.get(tempkey[i]);
+							Device selectedDevice = pickOneFrom(tempDeviceSet);
 
-//								if(selectedDevice.getAbilities().contains("GUI")) {
-									
-								//	if (selectedDevice.getAbilities().toString().indexOf("GUI")) {
-										
-										//if ( selectedDevice.getAbilities().toString().indexOf("GUI")) {
-										
-									
-									  //  finalMapping.get(selectedDevice).add(tempSoftWareComponent);
-								
-								for ( String ability : selectedDevice.getAbilities()) {  
-									  if (ability.contains("GUI")) {										
-										
-									} else {										
-										finalMapping.get(selectedDevice).add(tempSoftWareComponent);										
-									}									
-									
+							// if(selectedDevice.getAbilities().contains("GUI"))
+							// {
+
+							// if
+							// (selectedDevice.getAbilities().toString().indexOf("GUI"))
+							// {
+
+							// if (
+							// selectedDevice.getAbilities().toString().indexOf("GUI"))
+							// {
+
+							// finalMapping.get(selectedDevice).add(tempSoftWareComponent);
+
+							for (String ability : selectedDevice.getAbilities()) {
+								if (ability.contains("GUI")) {
+
+								} else {
+									finalMapping.get(selectedDevice).add(tempSoftWareComponent);
 								}
-									
-								
-								
-								
-								
-								
-								
-								
-							}
-						}
 
-						// }
-				//	}
+							}
+
+						}
+					}
+
+					// }
+					// }
 
 				}
 
@@ -185,8 +178,7 @@ public class TaskMapper {
 
 	}
 
-	private static List<Device> pickDevicesWithAbilities(String abilityName,
-			List<Device> deviceList) {
+	private static List<Device> pickDevicesWithAbilities(String abilityName, List<Device> deviceList) {
 
 		List<Device> deviceListWithAbility = new ArrayList<Device>();
 

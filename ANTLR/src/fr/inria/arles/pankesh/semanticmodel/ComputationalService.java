@@ -5,18 +5,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
 import fr.inria.arles.pankesh.common.GlobalVariable;
 
 public class ComputationalService extends SoftwareComponent<Information> {
 
 	private Set<DataAccess> dataAccess = new HashSet<DataAccess>();
 
-	public ComputationalService(String name, Set<Attribute> attributes,
-			Set<Information> generateInfo, Set<Information> consumeInfo,
-			Set<DataAccess> dataAccess, String partitionAttributeValue) {
-		super(name, attributes, generateInfo, consumeInfo,
-				partitionAttributeValue);
+	public ComputationalService(String name, Set<Attribute> attributes, Set<Information> generateInfo, Set<Information> consumeInfo, Set<DataAccess> dataAccess, String partitionAttributeValue) {
+		super(name, attributes, generateInfo, consumeInfo, partitionAttributeValue);
 		this.dataAccess = dataAccess;
 	}
 
@@ -33,20 +29,17 @@ public class ComputationalService extends SoftwareComponent<Information> {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getUtilPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 }

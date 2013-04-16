@@ -9,8 +9,7 @@ public class DeployementConstraint {
 	public DeployementConstraint() {
 	}
 
-	public DeployementConstraint(String softwareComponentName,
-			String attributeName, String attributeValue) {
+	public DeployementConstraint(String softwareComponentName, String attributeName, String attributeValue) {
 		super();
 		this.softwareComponentName = softwareComponentName;
 		this.attributeName = attributeName;

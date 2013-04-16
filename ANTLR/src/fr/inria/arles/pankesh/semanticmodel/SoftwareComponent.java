@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
-
 public abstract class SoftwareComponent<I extends Information> {
 
 	private String name;
@@ -15,9 +13,7 @@ public abstract class SoftwareComponent<I extends Information> {
 	private Set<I> consumeInfo = new HashSet<I>();
 	private String partitionAttributeVal;
 
-	public SoftwareComponent(String name, Set<Attribute> attributes,
-			Set<I> generateInfo, Set<I> consumeInfo,
-			String partitionAttributeVal) {
+	public SoftwareComponent(String name, Set<Attribute> attributes, Set<I> generateInfo, Set<I> consumeInfo, String partitionAttributeVal) {
 		super();
 		this.name = name;
 		this.attributes = attributes;

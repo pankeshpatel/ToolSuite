@@ -3,7 +3,6 @@ package fr.inria.arles.pankesh.dslcompiler;
 import java.util.HashSet;
 import java.util.Set;
 
-
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
@@ -40,15 +39,13 @@ public class ControllerService {
 	}
 
 	public void createCSObject() {
-		controller = new Controller(getControllerName(), getAttributeSet(),
-				getActionList(), getConsumedInfo(), getPartitionAttributeVal());
+		controller = new Controller(getControllerName(), getAttributeSet(), getActionList(), getConsumedInfo(), getPartitionAttributeVal());
 	}
 
 	// Next two function generates abstract file and Logic files.
 	public void generateCode() {
 		JavaFrameworkFromST generatedController = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedController
-				.buildAbstractClassoFController(controller);
+		CompilationUnit generatedCU = generatedController.buildAbstractClassoFController(controller);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 		genearteControllerLogicCode(); // This function call will generate
@@ -57,8 +54,7 @@ public class ControllerService {
 
 	public void genearteControllerLogicCode() {
 		JavaFrameworkFromST generatedController = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedController
-				.buildAbstractClassoFControllerLogic(controller);
+		CompilationUnit generatedCU = generatedController.buildAbstractClassoFControllerLogic(controller);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
@@ -76,7 +72,7 @@ public class ControllerService {
 	// Getter and Setter of Command
 
 	public void addCommand(String actionName) {
-		Action action = new Action(actionName, getParameters(),null);
+		Action action = new Action(actionName, getParameters(), null);
 		actions.add(action);
 	}
 
@@ -86,8 +82,7 @@ public class ControllerService {
 	}
 
 	public void addParameter(String parameterName) {
-		parameter = new Parameter(parameterName, new DataType(
-				getDatafromSymblTable(parameterName)));
+		parameter = new Parameter(parameterName, new DataType(getDatafromSymblTable(parameterName)));
 	}
 
 	public String getDatafromSymblTable(String variableName) {
@@ -105,8 +100,7 @@ public class ControllerService {
 	}
 
 	public void addConsumedInfo(String variableName) {
-		consumedInfo.add(new Information(variableName, new DataType(
-				getDatafromSymblTable(variableName))));
+		consumedInfo.add(new Information(variableName, new DataType(getDatafromSymblTable(variableName))));
 	}
 
 	// Getter and Setter of Attribute
@@ -118,8 +112,7 @@ public class ControllerService {
 	}
 
 	public void addAttribute(String fieldName, String fieldType) {
-		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
-				fieldType));
+		Attribute attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
 		attributeSet.add(attribute);
 	}
 

@@ -30,11 +30,10 @@ import fr.inria.arles.pankesh.semanticmodel.Device;
 public class Context {
 
 	public static Map<String, String> symblTable = new HashMap<String, String>();
-	
-	public static Map<String, Struct> structSymblTable = new HashMap<String, Struct>();
-	
-	public static Map<String, String> responseSymblTable = new HashMap<String, String>();
 
+	public static Map<String, Struct> structSymblTable = new HashMap<String, Struct>();
+
+	public static Map<String, String> responseSymblTable = new HashMap<String, String>();
 
 	public static List<Device> deviceList = new ArrayList<Device>();
 
@@ -49,8 +48,7 @@ public class Context {
 
 	}
 
-	public static void constructDataAccessSymblTable(String dataAccessKey,
-			Set<DataAccess> dataAccessObj) {
+	public static void constructDataAccessSymblTable(String dataAccessKey, Set<DataAccess> dataAccessObj) {
 		dataAccessSymblTable.put(dataAccessKey, dataAccessObj);
 	}
 
@@ -77,8 +75,7 @@ public class Context {
 		return symblTable.get(variableName);
 	}
 
-	public static void constructSymbTable(String variableName,
-			String variableType) {
+	public static void constructSymbTable(String variableName, String variableType) {
 
 		if (symblTable.containsKey(variableName)) {
 
@@ -86,36 +83,34 @@ public class Context {
 			symblTable.put(variableName, variableType);
 		}
 	}
-	
+
 	// Getter and Setter of structSymblTable
-	
-	public static void constructStructSymblTable(String structAccessKey,
-			Struct structAccessObj) {
+
+	public static void constructStructSymblTable(String structAccessKey, Struct structAccessObj) {
 		structSymblTable.put(structAccessKey, structAccessObj);
 	}
-	
+
 	public static Struct getStructSymblTable(String structAccessKey) {
 		return structSymblTable.get(structAccessKey);
 
 	}
-	
-	public static void constructResponseTypeSymblTable(String structAccessKey,
-			String structAccessObj) {
+
+	public static void constructResponseTypeSymblTable(String structAccessKey, String structAccessObj) {
 		responseSymblTable.put(structAccessKey, structAccessObj);
 	}
-	
+
 	public static String getResponseTypeSymblTable(String structAccessKey) {
 		return responseSymblTable.get(structAccessKey);
 
 	}
-	
+
 	// Cursor to current structure
 	public Struct currentStruct;
 
 	public Sensor currentSensor;
 
 	public Actuator currentActuator;
-	
+
 	public GUI currentGUI;
 
 	public Storage currentStorageService;

@@ -26,9 +26,7 @@ public class DeviceNetwork {
 
 	public void addDeviceObj() {
 
-		device = new Device(getDeviceName(), getDeviceType(),
-				getNetworkAddress(), getRegionValues(), getRegionLabel(),
-				deviceAbilities);
+		device = new Device(getDeviceName(), getDeviceType(), getNetworkAddress(), getRegionValues(), getRegionLabel(), deviceAbilities);
 
 		Context.addDeviceinSymblTable(device);
 
@@ -52,8 +50,6 @@ public class DeviceNetwork {
 	public String getDeviceName() {
 		return deviceName;
 	}
-
-	
 
 	// Getter and Setter of DeviceType
 

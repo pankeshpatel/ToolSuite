@@ -15,20 +15,18 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	public String struct;
 	private Widget reqWidgets;
 	private String lowername;
-	
-	public GUIDriver(String name, String lowername, Set<Action> actionsList, Set<Command> commandsList,
-			Set<Attribute> attributes, Set<Information> generateInfo,
-			Set<Information> consumeInfo, Set<DataAccess> dataAccess, String struct, Widget reqWidgets) {
+
+	public GUIDriver(String name, String lowername, Set<Action> actionsList, Set<Command> commandsList, Set<Attribute> attributes, Set<Information> generateInfo, Set<Information> consumeInfo, Set<DataAccess> dataAccess, String struct, Widget reqWidgets) {
 		super(name, attributes, generateInfo, consumeInfo, "NoInstance");
 		this.lowername = lowername;
 		this.actions = actionsList;
 		this.commands = commandsList;
 		this.dataAccess = dataAccess;
 		this.struct = struct;
-		this.reqWidgets=reqWidgets;
+		this.reqWidgets = reqWidgets;
 
 	}
-	
+
 	public Set<DataAccess> getDataAccess() {
 		return dataAccess;
 	}
@@ -42,11 +40,11 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	public Set<Command> getCommands() {
 		return commands;
 	}
-	
+
 	public Set<Action> getActions() {
 		return actions;
 	}
-	
+
 	public Widget getReqWidgets() {
 		return reqWidgets;
 	}
@@ -58,43 +56,39 @@ public class GUIDriver extends SoftwareComponent<Information> {
 	}
 
 	private String packageName;
-	
+
 	public String getLowerName() {
 		return lowername;
 	}
 
 	public String getPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getFactoryPackageName() {
 
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.factoryDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.factoryDirPath);
 		return packageName;
 
 	}
 
 	public String getFactoryDeviceImplGUI() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
 
 		return packageName;
 
 	}
-	
-public String getDeviceImplPackageName(){
-		
-		packageName  = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
-		return packageName;		
+
+	public String getDeviceImplPackageName() {
+
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceImplDirPath);
+		return packageName;
 	}
 
 }

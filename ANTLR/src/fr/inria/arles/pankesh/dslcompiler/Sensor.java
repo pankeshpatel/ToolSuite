@@ -3,7 +3,6 @@ package fr.inria.arles.pankesh.dslcompiler;
 import java.util.HashSet;
 import java.util.Set;
 
-
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
@@ -25,98 +24,86 @@ public class Sensor {
 	}
 
 	public Sensor(String sensorName) {
-		sensorDriver = new SensorDriver(sensorName, getAttributeSet(),
-				getGeneratedInfo(), null);
+		sensorDriver = new SensorDriver(sensorName, getAttributeSet(), getGeneratedInfo(), null);
 	}
 
-	
+	// This function generates: (1) framework of Sensor (2) Internal logic of
+	// Sensor (3) interface code .
 
-	// This function generates: (1) framework of Sensor (2) Internal logic of Sensor (3) interface code .
-	
 	public void generateCode() {
 		JavaFrameworkFromST generatedSensorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedSensorDriver
-				.buildAbstractClassoFSensorDriver(sensorDriver);
+		CompilationUnit generatedCU = generatedSensorDriver.buildAbstractClassoFSensorDriver(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorDriver = new SourceFileDumper();
-		dumpGeneratedSensorDriver.dumpCompilationUnit(generatedCU);		
-			
-		if (GlobalVariable.activity.equals("generateDD")) {			
-	 		generateSensorCode(); // Internal logic call
-	    	generateInterfaceCode(); // This function generates interfaces of sensor
-			
-		//This function will generate listener
-		for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
-			generateSensorListener(sensorDriver.getAllGeneratedInfo().get(i)); // This function generates Listener
-		}
+		dumpGeneratedSensorDriver.dumpCompilationUnit(generatedCU);
 
-		generateSensorFactory(); // This function generates sensor factory
-		generateSensorImplFactory();
-		 
+		if (GlobalVariable.activity.equals("generateDD")) {
+			generateSensorCode(); // Internal logic call
+			generateInterfaceCode(); // This function generates interfaces of
+										// sensor
+
+			// This function will generate listener
+			for (int i = 0; i < sensorDriver.getAllGeneratedInfo().size(); i++) {
+				generateSensorListener(sensorDriver.getAllGeneratedInfo().get(i)); // This
+																					// function
+																					// generates
+																					// Listener
+			}
+
+			generateSensorFactory(); // This function generates sensor factory
+			generateSensorImplFactory();
+
 		}
-		
-		
-		
 
 	}
-	
+
 	// This function generates internal logic file of Sensor
-		public void generateSensorCode() {
-			JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
-			CompilationUnit generateCU = generateSensor
-					.buildAbstractClassoFSensor(sensorDriver);
-			SourceFileDumper dumpGenerateSensor = new SourceFileDumper();
-			dumpGenerateSensor.dumpCompilationUnit(generateCU);
-		}	
-   
-	 // This function will generate Factory	
-	 private void generateSensorImplFactory() {
+	public void generateSensorCode() {
+		JavaFrameworkFromST generateSensor = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensor.buildAbstractClassoFSensor(sensorDriver);
+		SourceFileDumper dumpGenerateSensor = new SourceFileDumper();
+		dumpGenerateSensor.dumpCompilationUnit(generateCU);
+	}
+
+	// This function will generate Factory
+	private void generateSensorImplFactory() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory.buildImploFSensorFactory(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
-		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);		
-	 }
-	 
-	 
-    // This function will generate Sensor Factory
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
+	}
+
+	// This function will generate Sensor Factory
 	private void generateSensorFactory() {
 		JavaFrameworkFromST generateSensorFactory = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorFactory
-				.buildAbstractClassoFSensorFactory(sensorDriver);
+		CompilationUnit generateCU = generateSensorFactory.buildAbstractClassoFSensorFactory(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorFacotry = new SourceFileDumper();
 		dumpGeneratedSensorFacotry.dumpCompilationUnit(generateCU);
 
 	}
 
-	// This function generates interfaces   of Sensor.
-	private void generateInterfaceCode() { 
+	// This function generates interfaces of Sensor.
+	private void generateInterfaceCode() {
 		JavaFrameworkFromST generateSensorInterface = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorInterface
-				.buildAbstractClassoFSensorInterface(sensorDriver);
+		CompilationUnit generateCU = generateSensorInterface.buildAbstractClassoFSensorInterface(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorInterface = new SourceFileDumper();
 		dumpGeneratedSensorInterface.dumpCompilationUnit(generateCU);
 	}
-	
-     // This  function will genearate Sensor Listener.
+
+	// This function will genearate Sensor Listener.
 	public void generateSensorListener(SensorMeasurement sensorMeasurement) {
 		JavaFrameworkFromST generateSensorListener = new JavaFrameworkFromST();
-		CompilationUnit generateCU = generateSensorListener
-				.buildAbstractClassoFSensorListener(sensorMeasurement);
+		CompilationUnit generateCU = generateSensorListener.buildAbstractClassoFSensorListener(sensorMeasurement);
 		SourceFileDumper dumpGeneratedSensorListener = new SourceFileDumper();
 		dumpGeneratedSensorListener.dumpCompilationUnit(generateCU);
 	}
-	
-	
-	
 
 	// Getter and Setter of GeneratedInfo
 	public Set<SensorMeasurement> getGeneratedInfo() {
 		return generatedInfo;
 	}
 
-	public void addSensorMeasurement(String measurementName,
-			String measurementStruct, Struct struct ) {
-		SensorMeasurement sensorMeasurement = new SensorMeasurement(
-				measurementName, new DataType(measurementStruct),struct );
+	public void addSensorMeasurement(String measurementName, String measurementStruct, Struct struct) {
+		SensorMeasurement sensorMeasurement = new SensorMeasurement(measurementName, new DataType(measurementStruct), struct);
 		generatedInfo.add(sensorMeasurement);
 	}
 
@@ -128,8 +115,7 @@ public class Sensor {
 	}
 
 	public void addAttribute(String fieldName, String fieldType) {
-		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
-				fieldType));
+		Attribute attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
 		attributeSet.add(attribute);
 	}
 

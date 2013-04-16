@@ -28,8 +28,7 @@ public class Regions {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 

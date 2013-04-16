@@ -13,9 +13,7 @@ public class MappingConstraint {
 	}
 
 	public void addDeployementConstraintObj() {
-		deploymentConstraint = new DeployementConstraint(
-				getSoftwareComponentName(), getAttributeName(),
-				getAttributeValue());
+		deploymentConstraint = new DeployementConstraint(getSoftwareComponentName(), getAttributeName(), getAttributeValue());
 
 		Context.addDeploymentConstraints(deploymentConstraint);
 	}

@@ -3,7 +3,6 @@ package fr.inria.arles.pankesh.semanticmodel;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Action {
 
 	private String name;
@@ -15,7 +14,7 @@ public class Action {
 		super();
 		this.name = name;
 		this.parameters = parameters;
-		this.control=control;
+		this.control = control;
 	}
 
 	public String getName() {
@@ -25,8 +24,8 @@ public class Action {
 	public Parameter getParameters() {
 		return parameters;
 	}
-	
-	public String getControl(){
+
+	public String getControl() {
 		return this.control;
 	}
 

@@ -25,9 +25,7 @@ public class Device implements Serializable {
 
 	private Set<String> abilities = new HashSet<String>();
 
-	public Device(String name, String type, String networkAddress,
-			List<String> regionIDs, List<String> regionLabels,
-			Set<String> abilities) {
+	public Device(String name, String type, String networkAddress, List<String> regionIDs, List<String> regionLabels, Set<String> abilities) {
 
 		this.name = name;
 
@@ -66,20 +64,17 @@ public class Device implements Serializable {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.deviceDirPath) + getName();
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.deviceDirPath) + getName();
 		return packageName;
 	}
 
 	public String getLogicPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.logicDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.logicDirPath);
 		return packageName;
 	}
 
 	public String getUtilPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.utilDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.utilDirPath);
 		return packageName;
 	}
 

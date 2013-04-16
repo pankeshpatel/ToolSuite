@@ -3,7 +3,6 @@ package fr.inria.arles.pankesh.dslcompiler;
 import java.util.HashSet;
 import java.util.Set;
 
-
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
@@ -37,52 +36,49 @@ public class Storage {
 	}
 
 	public void createStorageObject() {
-		storageService = new StorageService(getStorageServiceName(),
-				getAttributeSet(), getDataAccessList(), null);
+		storageService = new StorageService(getStorageServiceName(), getAttributeSet(), getDataAccessList(), null);
 	}
 
 	// Next two functions generate abstract class and partial logic files.
 	public void generateCode() {
 		JavaFrameworkFromST generatedStorageService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedStorageService
-				.buildAbstractClassOFStorageService(storageService);
+		CompilationUnit generatedCU = generatedStorageService.buildAbstractClassOFStorageService(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
-		
-		if (GlobalVariable.activity.equals("generateDD")) {	
-		
-		generateStorage(); // This function call will generate partial logic
-							// file of storage
-		generateStorageInterface(); // This function will generate
-									// StorageService Interface.
 
-		generateStorageFactory(); // This function will generate StorageService
-									// Interface.
-		generateStorageImplFactory();
-		
+		if (GlobalVariable.activity.equals("generateDD")) {
+
+			generateStorage(); // This function call will generate partial logic
+								// file of storage
+			generateStorageInterface(); // This function will generate
+										// StorageService Interface.
+
+			generateStorageFactory(); // This function will generate
+										// StorageService
+										// Interface.
+			generateStorageImplFactory();
+
 		}
-		
+
 	}
 
 	private void generateStorageImplFactory() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateStorageFactory.buildImploFStorageFactory(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
-		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);		
+		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateStorageFactory() {
 		JavaFrameworkFromST generateStorageFactory = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageFactory
-				.buildAbstractClassoFStorageFactory(storageService);
+		CompilationUnit generatedCU = generateStorageFactory.buildAbstractClassoFStorageFactory(storageService);
 		SourceFileDumper dumpGeneratedStorageFactory = new SourceFileDumper();
 		dumpGeneratedStorageFactory.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateStorageInterface() {
 		JavaFrameworkFromST generateStorageInterface = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateStorageInterface
-				.buildClassOFStorageInterface(storageService);
+		CompilationUnit generatedCU = generateStorageInterface.buildClassOFStorageInterface(storageService);
 		SourceFileDumper dumpGeneratedStorageInterface = new SourceFileDumper();
 		dumpGeneratedStorageInterface.dumpCompilationUnit(generatedCU);
 
@@ -90,8 +86,7 @@ public class Storage {
 
 	private void generateStorage() {
 		JavaFrameworkFromST generatedStorageService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedStorageService
-				.buildAbstractClassOFStorage(storageService);
+		CompilationUnit generatedCU = generatedStorageService.buildAbstractClassOFStorage(storageService);
 		SourceFileDumper dumpGeneratedStorageService = new SourceFileDumper();
 		dumpGeneratedStorageService.dumpCompilationUnit(generatedCU);
 	}
@@ -103,19 +98,16 @@ public class Storage {
 	}
 
 	public void addDataAccess() {
-		DataAccess dataAccess = new DataAccess(getDataAccessIndex(),
-				getGeneratedInfo());
+		DataAccess dataAccess = new DataAccess(getDataAccessIndex(), getGeneratedInfo());
 		dataAccessList.add(dataAccess);
-		Context.constructDataAccessSymblTable(getGeneratedInfo().getName(),
-				dataAccessList);
+		Context.constructDataAccessSymblTable(getGeneratedInfo().getName(), dataAccessList);
 
 	}
 
 	// getter and Setter of generatedInfo
 
 	public void addGeneratedInfo(String variableName, String variableType) {
-		generatedInfo = new Information(variableName,
-				new DataType(variableType));
+		generatedInfo = new Information(variableName, new DataType(variableType));
 	}
 
 	public Information getGeneratedInfo() {
@@ -140,8 +132,7 @@ public class Storage {
 	}
 
 	public void addAttribute(String fieldName, String fieldType) {
-		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
-				fieldType));
+		Attribute attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
 		attributeSet.add(attribute);
 	}
 

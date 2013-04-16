@@ -30,8 +30,7 @@ public class Structure extends DataType {
 	private String packageName;
 
 	public String getPackageName() {
-		packageName = GlobalVariable
-				.convertPathTopackage(GlobalVariable.frameworkDirPath);
+		packageName = GlobalVariable.convertPathTopackage(GlobalVariable.frameworkDirPath);
 		return packageName;
 	}
 

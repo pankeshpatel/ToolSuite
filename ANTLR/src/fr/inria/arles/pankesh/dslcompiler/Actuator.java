@@ -25,48 +25,47 @@ public class Actuator {
 	}
 
 	public Actuator(String actuatorName) {
-		actuatorDriver = new ActuatorDriver(actuatorName, getActionList(),
-				getAttributeSet(), null, null);
+		actuatorDriver = new ActuatorDriver(actuatorName, getActionList(), getAttributeSet(), null, null);
 	}
 
 	// Code generator of the abstract classes and Logic files
 
 	public void generateCode() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedActuatorDriver
-				.buildAbstractClassoFActuatorDriver(actuatorDriver);
+		CompilationUnit generatedCU = generatedActuatorDriver.buildAbstractClassoFActuatorDriver(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-		
-		if (GlobalVariable.activity.equals("generateDD")) {	
-		
-		
-		generateActuator(); // This function call will create a partial Logic
-							// files
-		generateActuatorInterface(); // This function call will create Interface of Actuator.		
-		generateActuatorFactory();
-		
-		generateActuatorFactoryImpl();
-		
+
+		if (GlobalVariable.activity.equals("generateDD")) {
+
+			generateActuator(); // This function call will create a partial
+								// Logic
+								// files
+			generateActuatorInterface(); // This function call will create
+											// Interface of Actuator.
+			generateActuatorFactory();
+
+			generateActuatorFactoryImpl();
+
 		}
-		
-	//	generateGUIActuator();
-		
+
+		// generateGUIActuator();
+
 	}
 
 	private void generateActuatorFactoryImpl() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver.buildImploFActuatorFactory(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
-		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);	
-		
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
+
 	}
 
 	private void generateActuatorFactory() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedActuatorDriver.buildFactoryofActuator(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
-		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);		
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateActuatorInterface() {
@@ -74,13 +73,12 @@ public class Actuator {
 		CompilationUnit generatedCU = generatedActuatorDriver.buildActuatorInterface(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
-		
+
 	}
 
 	public void generateActuator() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedActuatorDriver
-				.buildAbstractClassoFActuator(actuatorDriver);
+		CompilationUnit generatedCU = generatedActuatorDriver.buildAbstractClassoFActuator(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 
@@ -111,8 +109,7 @@ public class Actuator {
 	private Set<Attribute> attributeSet = new HashSet<Attribute>();
 
 	public void addAttribute(String fieldName, String fieldType) {
-		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
-				fieldType));
+		Attribute attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
 		attributeSet.add(attribute);
 	}
 

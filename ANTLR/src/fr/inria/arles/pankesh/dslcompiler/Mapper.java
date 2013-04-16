@@ -20,17 +20,13 @@ public class Mapper {
 	 * @throws IOException
 	 */
 
-	public static void MapperAlgo(List<Device> deviceList,
-			List<DeployementConstraint> mappingConstraintList)
-			throws IOException {
+	public static void MapperAlgo(List<Device> deviceList, List<DeployementConstraint> mappingConstraintList) throws IOException {
 
-		Map<Device, Set<String>> taskMapper = TaskMapper.mapTasks(deviceList,
-				mappingConstraintList);
+		Map<Device, Set<String>> taskMapper = TaskMapper.mapTasks(deviceList, mappingConstraintList);
 
 		for (Entry<Device, Set<String>> entry : taskMapper.entrySet()) {
 
-			Device device = MergeDeviceAbilities(entry.getKey(),
-					entry.getValue(), "DBServer");
+			Device device = MergeDeviceAbilities(entry.getKey(), entry.getValue(), "DBServer");
 
 			genearateStartupCode(device);
 			genearateExecutionCode(device);
@@ -39,8 +35,7 @@ public class Mapper {
 
 	}
 
-	private static Device MergeDeviceAbilities(Device device,
-			Set<String> swComponentName, String filterAbility) {
+	private static Device MergeDeviceAbilities(Device device, Set<String> swComponentName, String filterAbility) {
 
 		List<String> forLoopAbilities = new ArrayList<String>();
 		forLoopAbilities.addAll(device.getAbilities());
@@ -57,23 +52,19 @@ public class Mapper {
 			}
 		}
 
-		return new Device(device.getName(), device.getType(),
-				device.getNetworkAddress(), device.getRegion(),
-				device.getRegionLabels(), resultAbilities);
+		return new Device(device.getName(), device.getType(), device.getNetworkAddress(), device.getRegion(), device.getRegionLabels(), resultAbilities);
 	}
 
 	private static void genearateStartupCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateDevice
-				.buildClassoFStartup(device);
+		CompilationUnit generatedCU = generateDevice.buildClassoFStartup(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	private static void genearateExecutionCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generateDevice
-				.buildClassoFExecution(device);
+		CompilationUnit generatedCU = generateDevice.buildClassoFExecution(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}

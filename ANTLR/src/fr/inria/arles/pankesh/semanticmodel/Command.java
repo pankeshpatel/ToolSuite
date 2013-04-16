@@ -3,7 +3,6 @@ package fr.inria.arles.pankesh.semanticmodel;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Command {
 
 	private String name;
@@ -14,7 +13,7 @@ public class Command {
 		super();
 		this.name = name;
 		this.parameters = parameters;
-		this.widget=widget;
+		this.widget = widget;
 	}
 
 	public Widget getWidget() {

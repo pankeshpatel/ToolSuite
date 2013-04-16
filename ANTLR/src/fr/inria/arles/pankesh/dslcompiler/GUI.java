@@ -32,7 +32,6 @@ public class GUI {
 	private String struct;
 	private Widget widget;
 
-
 	public GUI() {
 
 	}
@@ -40,7 +39,7 @@ public class GUI {
 	public String getGUIName() {
 		return GUIName;
 	}
-	
+
 	public String getLowerCaseGUIName() {
 		return GUIName.toLowerCase();
 	}
@@ -50,44 +49,39 @@ public class GUI {
 	}
 
 	public void createGUIObject() {
-		guiDriver = new GUIDriver(getGUIName(), getLowerCaseGUIName(), getActionList(), getCommandList(),
-				getAttributeSet(), generatedInfo, null, getDataAccessList(), getRequestType() , getReqWidget());
+		guiDriver = new GUIDriver(getGUIName(), getLowerCaseGUIName(), getActionList(), getCommandList(), getAttributeSet(), generatedInfo, null, getDataAccessList(), getRequestType(), getReqWidget());
 	}
 
 	// Code generator of the abstract classes and Logic files
 
-	
-
 	public void generateCode() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildAbstractClassoFGUIDriver(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildAbstractClassoFGUIDriver(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
-		
-		if (GlobalVariable.activity.equals("generateDD")) {	
-		
-		
-		generateGUI(); // This function call will create a partial Logic
-						// files
-		generateGUIInterface(); // This function call will create Interface of
-								// GUI.
-		generateGUIFactory();
 
-		generateGUIFactoryImpl();
-		
-		generateGUILayout();
-		
-		generateGUIManifest();
+		if (GlobalVariable.activity.equals("generateDD")) {
+
+			generateGUI(); // This function call will create a partial Logic
+							// files
+			generateGUIInterface(); // This function call will create Interface
+									// of
+									// GUI.
+			generateGUIFactory();
+
+			generateGUIFactoryImpl();
+
+			
+			
+			generateGUILayout();
+			generateGUIManifest();
 		}
-	
 
 	}
 
 	private void generateGUIFactoryImpl() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildImploFGUIFactory(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildImploFGUIFactory(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -95,34 +89,30 @@ public class GUI {
 
 	private void generateGUIFactory() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildFactoryofGUI(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildFactoryofGUI(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateGUIInterface() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildGUIInterface(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildGUIInterface(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
+
 	private void generateGUILayout() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildGUILayout(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildGUILayout(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
 	}
-	
+
 	private void generateGUIManifest() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildGUIManifest(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildGUIManifest(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -130,8 +120,7 @@ public class GUI {
 
 	public void generateGUI() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedGUIDriver
-				.buildAbstractClassoFGUI(guiDriver);
+		CompilationUnit generatedCU = generatedGUIDriver.buildAbstractClassoFGUI(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
@@ -148,12 +137,12 @@ public class GUI {
 	public Set<DataAccess> getDataAccessList() {
 		return dataAccessList;
 	}
-	
-	public void setRequestType(String struct){
-		this.struct=struct;
+
+	public void setRequestType(String struct) {
+		this.struct = struct;
 	}
-	
-	public String getRequestType(){
+
+	public String getRequestType() {
 		return struct;
 	}
 
@@ -180,8 +169,7 @@ public class GUI {
 	// Getter and Setter of Command Parameters
 
 	public void addCommandParameter(String parameterName) {
-		commandParameter = new Parameter(parameterName, new DataType(
-				getDatafromSymblTable(parameterName)));
+		commandParameter = new Parameter(parameterName, new DataType(getDatafromSymblTable(parameterName)));
 	}
 
 	public Parameter getCommandParameter() {
@@ -203,22 +191,21 @@ public class GUI {
 	private Set<Attribute> attributeSet = new HashSet<Attribute>();
 
 	public void addAttribute(String fieldName, String fieldType) {
-		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
-				fieldType));
+		Attribute attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
 		attributeSet.add(attribute);
 	}
 
 	public Set<Attribute> getAttributeSet() {
 		return attributeSet;
 	}
-	
-	public void setReqWidget(String textbox, String button, String textview){
-		widget=new Widget(textbox,button,textview);
+
+	public void setReqWidget(String textbox, String button, String textview) {
+		widget = new Widget(textbox, button, textview);
 	}
 
 	public Widget getReqWidget() {
-		
+
 		return widget;
 	}
-	
+
 }

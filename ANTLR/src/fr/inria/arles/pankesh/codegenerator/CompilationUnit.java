@@ -9,8 +9,7 @@ public class CompilationUnit {
 	private final String type;
 	private final String objectName;
 
-	public CompilationUnit(String fileName, StringTemplate template,
-			String type, String objectName) {
+	public CompilationUnit(String fileName, StringTemplate template, String type, String objectName) {
 		super();
 		this.fileName = fileName;
 		this.template = template;

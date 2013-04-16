@@ -21,8 +21,7 @@ public class RegionsGenerator {
 	}
 
 	public void addRegion(String regionLabel, String regionType) {
-		RegionFields Field = new RegionFields(regionLabel, new PrimitiveType(
-				regionType));
+		RegionFields Field = new RegionFields(regionLabel, new PrimitiveType(regionType));
 		regions.add(Field);
 
 	}
@@ -33,12 +32,12 @@ public class RegionsGenerator {
 
 	public void generateCode() {
 		// Regions region = new Regions(getRegionType());
-		
+
 		if (GlobalVariable.activity.equals("generateDD")) {
-		generateRegionCode(region, "RegionID");
-		generateRegionCode(region, "RegionLabel");
-		generateRegionCode(region, "DSConvert");
-		
+			generateRegionCode(region, "RegionID");
+			generateRegionCode(region, "RegionLabel");
+			generateRegionCode(region, "DSConvert");
+
 		}
 	}
 
