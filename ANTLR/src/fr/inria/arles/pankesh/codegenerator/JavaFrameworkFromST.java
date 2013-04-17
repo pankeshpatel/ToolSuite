@@ -264,5 +264,23 @@ public class JavaFrameworkFromST {
 		}
 
 	}
+	
+	public CompilationUnit buildClassoFProjectFile(Device device) {
+
+		if (device.getType().equals("PC")) {
+
+			StringTemplate templateOfDevice = group.getInstanceOf("eclipseProjectPC");
+			templateOfDevice.setAttribute("device", device);
+			return new CompilationUnit(".project", templateOfDevice, "deviceProject", device.getName(), device);
+
+		} else {
+
+			StringTemplate templateOfDevice = group.getInstanceOf("eclipseProjectAndroid");
+			templateOfDevice.setAttribute("device", device);
+			return new CompilationUnit(".project", templateOfDevice, "deviceProject", device.getName(), device);
+
+		}
+
+	}
 
 }

@@ -41,5 +41,12 @@ public class CompilationUnit {
 	public String toString() {
 		return template.toString();
 	}
+	
+	public String getFileName() {
+		return fileName;
+	}
+	
+	
+	
 
 }

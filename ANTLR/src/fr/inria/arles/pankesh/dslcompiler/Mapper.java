@@ -39,6 +39,7 @@ public class Mapper {
 			multiplyTemplate(device);
 			genearateStartupCode(device);
 			genearateExecutionCode(device);
+			genearateProjectFileCode(device);
 
 		}
 	}
@@ -154,5 +155,13 @@ public class Mapper {
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
+	
+	private static void genearateProjectFileCode(Device device) {
+		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generateDevice.buildClassoFProjectFile(device);
+		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
+		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
+	}
+	
 
 }

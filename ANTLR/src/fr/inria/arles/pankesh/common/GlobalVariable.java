@@ -9,7 +9,8 @@ public class GlobalVariable {
 	public static String frameworkRootDir;
 
 	public static String frameworkDirPath = "/framework";
-	public static String outputDirPath = "./gen";
+	//public static String outputDirPath = "./gen";
+	public static String outputDirPath = "/gen";
 	public static String logicDirPath = "/logic";
 	public static String deviceDirPath = "/sim/device";
 	public static String utilDirPath = "/util";
