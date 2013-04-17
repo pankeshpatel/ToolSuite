@@ -45,17 +45,17 @@ public class ControllerService {
 
 	// Next two function generates abstract file and Logic files.
 	public void generateCode() {
-		
-		if(GlobalVariable.activity.equals("generateAF")) {
-			
-		JavaFrameworkFromST generatedController = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedController.buildAbstractClassoFController(controller);
-		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
-		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
-		genearteControllerLogicCode(); // This function call will generate
-										// partial Logic files
-		}	
-		
+
+		if (GlobalVariable.activity.equals("generateAF")) {
+
+			JavaFrameworkFromST generatedController = new JavaFrameworkFromST();
+			CompilationUnit generatedCU = generatedController.buildAbstractClassoFController(controller);
+			SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+			dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+			genearteControllerLogicCode(); // This function call will generate
+											// partial Logic files
+		}
+
 	}
 
 	public void genearteControllerLogicCode() {

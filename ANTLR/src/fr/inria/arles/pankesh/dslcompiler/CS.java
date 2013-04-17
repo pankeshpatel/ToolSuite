@@ -42,17 +42,18 @@ public class CS {
 	// Code generator of abstract files and Logic files
 
 	public void generateCode() {
-		
-		if(GlobalVariable.activity.equals("generateAF")) {
-		
-		  JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
-		  CompilationUnit generatedCU = generatedComputationalService.buildAbstractClassoFCS(computationalService);
-		  SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
-		  dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
-		  generateComputationalLogicCode(); // This function call will generate
-											// partial file of Logic files
-		}	
-		
+
+		if (GlobalVariable.activity.equals("generateAF")) {
+
+			JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+			CompilationUnit generatedCU = generatedComputationalService.buildAbstractClassoFCS(computationalService);
+			SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+			dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+			generateComputationalLogicCode(); // This function call will
+												// generate
+												// partial file of Logic files
+		}
+
 	}
 
 	public void generateComputationalLogicCode() {

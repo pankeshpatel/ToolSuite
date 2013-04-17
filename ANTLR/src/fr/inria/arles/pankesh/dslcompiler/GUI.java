@@ -71,8 +71,6 @@ public class GUI {
 
 			generateGUIFactoryImpl();
 
-			
-			
 			generateGUILayout();
 			generateGUIManifest();
 		}

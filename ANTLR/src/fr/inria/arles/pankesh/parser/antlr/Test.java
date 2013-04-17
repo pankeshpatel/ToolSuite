@@ -68,12 +68,45 @@ public class Test {
 			ArchSpecParser archParser = new ArchSpecParser(archTokens);
 			archParser.archSpec();
 		}
+		
+		
+		
+		if(GlobalVariable.activity.equals("generateMapping")) {
+			
+			GlobalVariable.frameworkRootDir = args[5];
+			
+			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			vocParser.vocabSpec();	
+			
+			ANTLRFileStream archStream = new ANTLRFileStream(
+					GlobalVariable.archSpec);
+			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
+			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
+			ArchSpecParser archParser = new ArchSpecParser(archTokens);
+			archParser.archSpec();
+					
+					
+			List<Device> deviceList;
+			List<DeployementConstraint> mappingConstraintList;
+					
+			mappingConstraintList = Context.getDeploymentConstrainsList();
 
-		// TODO : Decide input
-		if (GlobalVariable.activity.equals("generateDeply")) {
+					// This code parses the Network description.
+			ANTLRFileStream networkStream = new ANTLRFileStream(GlobalVariable.networkSpec);
+			NetworkSpecLexer networkLexer = new NetworkSpecLexer(networkStream);
+			CommonTokenStream networkTokens = new CommonTokenStream(networkLexer);
+			NetworkSpecParser networkParser = new NetworkSpecParser(networkTokens);
+			networkParser.networkspec();
+			deviceList = Context.getDeviceList();
 
+			// This code maps the software compoents and devices.
+			Mapper.MapperAlgo(deviceList, mappingConstraintList);			
+		
 		}
-
+		
 		// List<Device> deviceList;
 		// List<DeployementConstraint> mappingConstraintList;
 		//

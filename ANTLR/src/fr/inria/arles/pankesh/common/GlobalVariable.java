@@ -18,7 +18,8 @@ public class GlobalVariable {
 	public static String stringTemplatePath;
 	public static String activity;
 	public static String devicePCType= "PC";
-	public static String deviceAndroidType = "Android" ;
+	public static String deviceAndroidType = "Android" ;	
+	public static String deploymentFolderPath = "CodeForDeployment";
 	
 
 	/*
