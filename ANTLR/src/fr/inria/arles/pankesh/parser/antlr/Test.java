@@ -7,6 +7,7 @@ import org.antlr.runtime.CommonTokenStream;
 
 import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.dslcompiler.DeployementConstraint;
+import fr.inria.arles.pankesh.dslcompiler.Linker;
 import fr.inria.arles.pankesh.dslcompiler.Mapper;
 import fr.inria.arles.pankesh.semanticmodel.Device;
 
@@ -16,6 +17,7 @@ public class Test {
 	 * @param args
 	 * @throws Exception
 	 */
+	
 	public static void main(String[] args) throws Exception {
 
 		// if (args.length != 5) {
@@ -51,6 +53,7 @@ public class Test {
 
 
 		if (GlobalVariable.activity.equals("generateAF")) {
+			
 
             GlobalVariable.frameworkRootDir = args[5];
 			
@@ -108,8 +111,13 @@ public class Test {
 		}
 		
 		
+		if(GlobalVariable.activity.equals("linking")) {
+			
+			GlobalVariable.frameworkRootDir = args[5];
+			
+			Linker.linkerAlgo();			
 		
-	
+		}
 		
 		
 		// List<Device> deviceList;
