@@ -42,40 +42,40 @@ public class Linker {
 	
 	public static void copyDeviceDrivers(String type , String name){
 		 
-    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + type + "/gen/deviceImpl" );
-    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/gen/"  + "deviceImpl");
+    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + type + "/src/deviceImpl" );
+    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"  + "deviceImpl");
     	copyFiles(srcFolder, destFolder);
     	
 	}
 	
 	public static void copyFactory(String type , String name){
     	
-    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + type + "/gen/factory" );
-    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/gen/"  + "factory");
+    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + type + "/src/factory" );
+    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"  + "factory");
     	copyFiles(srcFolder, destFolder);
     	
 	}
 	
 	public static void copyFramework(String type , String name){
     	
-    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/gen/framework" );
-    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/gen/"  + "framework");
+    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/src/framework" );
+    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"  + "framework");
     	copyFiles(srcFolder, destFolder);
     	
 	}
 	
 	public static void copyLogic(String type , String name){
     	
-    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/gen/logic" );
-    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/gen/"  + "logic");
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + type + "/src/logic" );
+    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/"  + "logic");
     	copyFiles(srcFolder, destFolder);
     	
 	}
 	
 	public static void copyApplicationLogic(String type , String name){
     	
-    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/gen/logic");
-    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/gen/" + "logic" );
+    	File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "ApplicationLogic/src/logic");
+    	File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + name + "/src/" + "logic" );
     	copyFiles(srcFolder, destFolder);
 
 	}

@@ -26,7 +26,6 @@ public class Mapper {
 	 * @throws IOException
 	 */
 	
-	private static File file;
 
 	public static void MapperAlgo(List<Device> deviceList, List<DeployementConstraint> mappingConstraintList) throws IOException {
 
@@ -69,7 +68,7 @@ public class Mapper {
 		
 
 		// The following line take the template from the GlobalVariable.frameworkRootDir
-		File srcFolder = new File(GlobalVariable.frameworkRootDir + unit.getType()); 
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + unit.getType()); 
 		//File destFolder = new File(GlobalVariable.frameworkRootDir + unit.getType() + "Device" + unit.getName());
 		
 		// The following  line set the destination folder.

@@ -7,7 +7,6 @@ public class Action {
 
 	private String name;
 	private Parameter parameters;
-	private Widget widget;
 	private String control;
 
 	public Action(String name, Parameter parameters, String control) {

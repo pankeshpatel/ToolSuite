@@ -3,9 +3,7 @@ package fr.inria.arles.pankesh.dslcompiler;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
-import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
-import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
+
 import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.semanticmodel.PrimitiveType;
 import fr.inria.arles.pankesh.semanticmodel.RegionFields;
