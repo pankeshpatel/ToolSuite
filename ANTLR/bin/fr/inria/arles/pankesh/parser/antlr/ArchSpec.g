@@ -43,11 +43,34 @@ region_def :
 
 component_def :
    //('storageService' ':' (ss_def)+ )* 
-   'computationalService' ':' (cs_def)+ 
-   'controller' ':' (controller_def)+   
+   'computationalService' ':' (cs_def)+  
+  //  'controller' ':' (controller_def)+   
    //(controller_def)*
     //'controller' ':' (controller_def)+ 
      
+;
+
+
+cs_def:
+  CAPITALIZED_ID
+    { 
+     context.currentComputationalService = new CS(); 
+     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
+    (csAttribute_def ';')*
+    (csGeneratedInfo_def ';')* 
+    (csConsumeInfo_def ';')* 
+    (csRequest_def  ';')*
+    (cntrlCommand_def ';')* 
+    (partition_def ';')*
+    { 
+     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
+     context.currentComputationalService.createCSObject();
+    context.currentComputationalService.generateCode(); 
+    // Next line is for Software Component Name
+    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+    
+    }
 ;
 
 ss_def:
@@ -101,35 +124,35 @@ storagePartition_def :
 ;
 
 
-controller_def:
-  CAPITALIZED_ID
-    {
-    context.currentController = new ControllerService();
+ //controller_def: 
+ // CAPITALIZED_ID
+  //  {
+//    context.currentController = new ControllerService();
     //context.currentController = new ControllerService($CAPITALIZED_ID.text);
-    }
-    (cntrlAttribute_def ';')*
-    (cntrlConsumeInfo_def ';')*
-    (cntrlCommand_def ';')* 
-    (cntrlPartition_def ';')*
-    {
-    context.currentController.setControllerName($CAPITALIZED_ID.text);
-    context.currentController.createCSObject();
-    context.currentController.generateCode();
-    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-    
-    }
-;
+//    }
+//    (cntrlAttribute_def ';')*
+//    (cntrlConsumeInfo_def ';')*
+//    (cntrlCommand_def ';')* 
+//    (cntrlPartition_def ';')*
+//    {
+//    context.currentController.setControllerName($CAPITALIZED_ID.text);
+//    context.currentController.createCSObject();
+//    context.currentController.generateCode();
+//    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+//    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+//    
+//    }
+//; 
 
-cntrlPartition_def :
-  cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
-    { 
-    context.currentController.setPartitionAttribute($CAPITALIZED_ID.text); 
+//cntrlPartition_def :
+//  cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
+//    { 
+//    context.currentController.setPartitionAttribute($CAPITALIZED_ID.text); 
      // Next two lines are for  Mapping constraints
-    context.currentMappingConstraint.setAttributeName($cntrlDeploymentConstraint.text);  
-    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text);  
-    }
-;
+//    context.currentMappingConstraint.setAttributeName($cntrlDeploymentConstraint.text);  
+//    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text);  
+//    }
+//; 
  
 cntrlAttribute_def:
   'attribute' lc_id ':' dataType
@@ -144,41 +167,22 @@ cntrlConsumeInfo_def:
 cntrlCommand_def :
     'command'  name = CAPITALIZED_ID '(' (cntrlParameter_def)? ')' 'to'  'region-hops' ':' INT ':' CAPITALIZED_ID 
     { 
-      context.currentController.addCommand($name.text);  
+      context.currentComputationalService.addCommand($name.text);  
     }
 ;
 
 cntrlParameter_def :
     lc_id  (',' parameter_def )?
-    { context.currentController.addParameter($lc_id.text); }  
+    { context.currentComputationalService.addParameter($lc_id.text); }  
 ;
 
-cs_def:
-  CAPITALIZED_ID
-    { 
-     context.currentComputationalService = new CS(); 
-     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
-    (csAttribute_def ';')*
-    (csGeneratedInfo_def ';')* 
-    (csConsumeInfo_def ';')* 
-    (csRequest_def  ';')*
-    (partition_def ';')*
-    { 
-     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
-     context.currentComputationalService.createCSObject();
-    context.currentComputationalService.generateCode(); 
-    // Next line is for Software Component Name
-    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-    
-    }
-;
+
 
 csAttribute_def :
     'attribute' lc_id ':' dataType
     { context.currentComputationalService.addAttribute($lc_id.text, $dataType.text);  } 
 ;
-
+ 
 csGeneratedInfo_def:
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 

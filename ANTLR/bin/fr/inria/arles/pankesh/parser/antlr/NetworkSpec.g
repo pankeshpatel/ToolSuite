@@ -24,42 +24,42 @@ networkspec:
       'devices' ':'
       { context = new Context();
       }
-	  (device_def)*	  
-	  ;
-	  
+    (device_def)*   
+    ;
+    
 device_def:
- 	 deviceName = (ID|CAPITALIZED_ID) ':' 
- 	 { 
- 	 context.currentNetwork = new DeviceNetwork();
- 	 context.currentNetwork.setDeviceName($deviceName.text);
- 	 }  
- 	
- 	  'region' ':' (location_def)* 
- 	  'type' ':' (device_type)* ';'
- 	  'resources' ':' (abilities_def)* ';'
- 	  { context.currentNetwork.addDeviceObj();}
+   deviceName = (ID|CAPITALIZED_ID) ':' 
+   { 
+   context.currentNetwork = new DeviceNetwork();
+   context.currentNetwork.setDeviceName($deviceName.text);
+   }  
+  
+    'region' ':' (location_def)* 
+    'type' ':' (device_type)* ';'
+    'resources' ':' (abilities_def)* ';'
+    { context.currentNetwork.addDeviceObj();}
 ;
 
 networkAddress_def :
-	'networkaddress' ':' INT 
-	{context.currentNetwork.setNetworkAddress($INT.text);}
+  'networkaddress' ':' INT 
+  {context.currentNetwork.setNetworkAddress($INT.text);}
 ;
 
 location_def :
-		CAPITALIZED_ID ':' INT ';'
-		{context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
-		context.currentNetwork.addRegionValue($INT.text);}
+    CAPITALIZED_ID ':' INT ';'
+    {context.currentNetwork.addRegionLabel($CAPITALIZED_ID.text);
+    context.currentNetwork.addRegionValue($INT.text);}
 ;
 
 device_type :
-		 CAPITALIZED_ID 
-		{context.currentNetwork.setDeviceType($CAPITALIZED_ID.text);}
+     CAPITALIZED_ID 
+    {context.currentNetwork.setDeviceType($CAPITALIZED_ID.text);}
 ;
 
 abilities_def :
-	 CAPITALIZED_ID (',' abilities_def)?
-	{context.currentNetwork.addDeviceAbilities($CAPITALIZED_ID.text);
-	}
+   CAPITALIZED_ID (',' abilities_def)?
+  {context.currentNetwork.addDeviceAbilities($CAPITALIZED_ID.text);
+  }
 ;
 
 

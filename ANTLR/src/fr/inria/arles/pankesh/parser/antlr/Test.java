@@ -73,7 +73,6 @@ public class Test {
 		}
 		
 		
-		
 		if(GlobalVariable.activity.equals("generateMapping")) {
 			
 			GlobalVariable.frameworkRootDir = args[5];

@@ -6,13 +6,14 @@ import java.util.Set;
 import fr.inria.arles.pankesh.codegenerator.CompilationUnit;
 import fr.inria.arles.pankesh.codegenerator.JavaFrameworkFromST;
 import fr.inria.arles.pankesh.codegenerator.SourceFileDumper;
-import fr.inria.arles.pankesh.common.GlobalVariable;
 import fr.inria.arles.pankesh.parser.antlr.Context;
+import fr.inria.arles.pankesh.semanticmodel.Action;
 import fr.inria.arles.pankesh.semanticmodel.Attribute;
 import fr.inria.arles.pankesh.semanticmodel.ComputationalService;
 import fr.inria.arles.pankesh.semanticmodel.DataAccess;
 import fr.inria.arles.pankesh.semanticmodel.DataType;
 import fr.inria.arles.pankesh.semanticmodel.Information;
+import fr.inria.arles.pankesh.semanticmodel.Parameter;
 import fr.inria.arles.pankesh.semanticmodel.PrimitiveType;
 
 public class CS {
@@ -21,8 +22,30 @@ public class CS {
 	private Set<Information> generatedInfo = new HashSet<Information>();
 	private Set<Information> consumedInfo = new HashSet<Information>();
 	private Set<DataAccess> dataAccessList = new HashSet<DataAccess>();
+	private Set<Action> actions = new HashSet<Action>();
 	private String partitionAttributeValue;
 	private String computationalServiceName;
+	private Parameter parameter;
+	
+	
+	public void addCommand(String actionName) {
+		Action action = new Action(actionName, getParameters(),null);
+		actions.add(action);
+	}
+	
+	private Set<Action> getActionList() {
+		return actions;
+	}
+	
+	private Parameter getParameters() {
+		return parameter;
+	}
+	
+	public void addParameter(String parameterName) {
+		parameter = new Parameter(parameterName, new DataType(
+				getDatafromSymblTable(parameterName)));
+	}
+	
 
 	public CS() {
 	}
@@ -36,29 +59,28 @@ public class CS {
 	}
 
 	public void createCSObject() {
-		computationalService = new ComputationalService(getComputationalServiceName(), getAttributeSet(), getGeneratedInfo(), getConsumedInfo(), getDataAccessList(), getPartitionAttributeVal());
+		computationalService = new ComputationalService(
+				getComputationalServiceName(), getAttributeSet(),
+				getGeneratedInfo(), getConsumedInfo(), getDataAccessList(), getActionList(),
+				getPartitionAttributeVal());
 	}
 
 	// Code generator of abstract files and Logic files
 
 	public void generateCode() {
-
-		if (GlobalVariable.activity.equals("generateAF")) {
-
-			JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
-			CompilationUnit generatedCU = generatedComputationalService.buildAbstractClassoFCS(computationalService);
-			SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
-			dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
-			generateComputationalLogicCode(); // This function call will
-												// generate
-												// partial file of Logic files
-		}
-
+		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedComputationalService
+				.buildAbstractClassoFCS(computationalService);
+		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
+		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
+		generateComputationalLogicCode(); // This function call will generate
+											// partial file of Logic files
 	}
 
 	public void generateComputationalLogicCode() {
 		JavaFrameworkFromST generatedComputationalService = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedComputationalService.buildAbstractClassoFCSLogic(computationalService);
+		CompilationUnit generatedCU = generatedComputationalService
+				.buildAbstractClassoFCSLogic(computationalService);
 		SourceFileDumper dumpGeneratedComputationalService = new SourceFileDumper();
 		dumpGeneratedComputationalService.dumpCompilationUnit(generatedCU);
 	}
@@ -94,7 +116,8 @@ public class CS {
 	}
 
 	public void addConsumedInfo(String variableName) {
-		consumedInfo.add(new Information(variableName, new DataType(getDatafromSymblTable(variableName))));
+		consumedInfo.add(new Information(variableName, new DataType(
+				getDatafromSymblTable(variableName))));
 	}
 
 	public String getDatafromSymblTable(String variableName) {
@@ -107,7 +130,8 @@ public class CS {
 	}
 
 	public void addGeneratedInfo(String variableName, String variableType) {
-		generatedInfo.add(new Information(variableName, new DataType(variableType)));
+		generatedInfo.add(new Information(variableName, new DataType(
+				variableType)));
 	}
 
 	// Getter and Setter of Attribute
@@ -118,7 +142,8 @@ public class CS {
 	}
 
 	public void addAttribute(String fieldName, String fieldType) {
-		Attribute attribute = new Attribute(fieldName, new PrimitiveType(fieldType));
+		Attribute attribute = new Attribute(fieldName, new PrimitiveType(
+				fieldType));
 		attributeSet.add(attribute);
 	}
 }
