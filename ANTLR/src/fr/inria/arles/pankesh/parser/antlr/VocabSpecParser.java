@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Hiral\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g 2013-04-28 18:34:52
+// $ANTLR 3.4 C:\\Users\\Hiral\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\VocabSpec.g 2013-04-28 18:49:24
 
 package fr.inria.arles.pankesh.parser.antlr;
 import fr.inria.arles.pankesh.dslcompiler.*; 
