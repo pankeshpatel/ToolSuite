@@ -21,6 +21,7 @@ public class GlobalVariable {
 	public static String devicePCType= "/" + "DeviceDrivers" + "/" + "PC" + "/";
 	public static String deviceAndroidType = "/" + "DeviceDrivers" + "/" + "Android" + "/" ;	
 	public static String deploymentFolderPath = "CodeForDeployment";
+	public static String androidDevicepath = "AndroidDNine";
 	public static String activityGenPath;
 	
 

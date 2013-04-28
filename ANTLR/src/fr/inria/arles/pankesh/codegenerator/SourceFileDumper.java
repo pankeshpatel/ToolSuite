@@ -12,23 +12,25 @@ public class SourceFileDumper {
 
 	public SourceFileDumper() {
 
-	}	
+	}
 
 	public void dumpCompilationUnit(CompilationUnit template) {
 		try {
 
 			if (GlobalVariable.activity.equals("generateDD")) {
-				myGenerateCompilationUnit(template, GlobalVariable.devicePCType);
-				myGenerateCompilationUnit(template, GlobalVariable.deviceAndroidType);
+				myGenerateCompilationUnit(template, GlobalVariable.devicePCType, null);
+				myGenerateCompilationUnit(template, GlobalVariable.deviceAndroidType, null);
 			}
 
 			if (GlobalVariable.activity.equals("generateAF")) {
 
-				myGenerateCompilationUnit(template, "ApplicationLogic");
+				myGenerateCompilationUnit(template, "ApplicationLogic", null);
 			}
 
-			if (GlobalVariable.activity.equals("generateMapping")) {
-				myGenerateCompilationUnit(template, "deviceMapping");
+			if (GlobalVariable.activity.equals("generateMapping")) {			
+				
+				myGenerateCompilationUnit(template, "deviceMapping", "Android");
+				
 			}
 
 		} catch (IOException e) {
@@ -37,26 +39,32 @@ public class SourceFileDumper {
 		}
 	}
 
-	private void myGenerateCompilationUnit(CompilationUnit unit, String deviceType) throws IOException {
+	private void myGenerateCompilationUnit(CompilationUnit unit, String deviceType, String str) throws IOException {
 
 		String content = unit.toString();
 
 		if ((unit.getType()).equals("device")) {
 
-		new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPath + unit.geObjectInside().getName()).mkdirs();
-		String dirName = GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPath + unit.geObjectInside().getName();
-		File dir = new File(dirName);
-		file = new File(dir, unit.getName());
-			
-		}else if ((unit.getType()).equals("deviceProject")){
-			
-			file = new File(GlobalVariable.frameworkRootDir + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() +  unit.geObjectInside().getName() + "/" + unit.getFileName() );
-			
+			new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPath + unit.geObjectInside().getName()).mkdirs();
+			String dirName = GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPath + unit.geObjectInside().getName();
+			File dir = new File(dirName);
+			file = new File(dir, unit.getName());
+
+		} else if ((unit.getType()).equals("deviceProject")) {
+
+			file = new File(GlobalVariable.frameworkRootDir + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.geObjectInside().getName() + "/" + unit.getFileName());
+
 		} else if (unit.getType().equals("Logic")) {
 
-			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
-			file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getName());
+			if (GlobalVariable.activity.equals("generateMapping")) {
 
+			} else {	
+			
+				new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
+				file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getName());
+			}
+			
+			
 		} else if (unit.getType().equals("Factory")) {
 
 			if (deviceType.equals("ApplicationLogic")) {
@@ -95,22 +103,30 @@ public class SourceFileDumper {
 			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.utilDirPath).mkdirs();
 			file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.utilDirPath + "/" + unit.getName());
 
-		} else if (unit.getType().equals("androidgui")) {
-
-			if (deviceType.equals("Android")) {
-
-				if (unit.getObjectName().equals("manifest")) {
-
-					file = new File(GlobalVariable.frameworkRootDir + deviceType + "/" + unit.getName());
+		} else if (unit.getType().equals("androidgui")) {	
+			
+			
+			
+	     if (str.equals("Android")) {				
+		   
+	    	 
+				if (unit.getObjectName().equals("manifest")) {	
+					
+					
+					file = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deviceAndroidType  + "/" + unit.getName());
 				}
 				if (unit.getObjectName().equals("layout")) {
+					
 
-					file = new File(GlobalVariable.frameworkRootDir + deviceType + "/res/layout/" + unit.getName());
+					file = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deviceAndroidType + "/" + "res/layout/" + unit.getName());
 				}
 			} else {
 				// DO not generate xml files
 			}
-		} else {
+		} 
+		
+		
+		else {
 			if (GlobalVariable.activity.equals("generateMapping")) {
 
 			} else {

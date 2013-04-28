@@ -102,7 +102,7 @@ public class Test {
 					
 			mappingConstraintList = Context.getDeploymentConstrainsList();
 
-					// This code parses the Network description.
+			// This code parses the Network description.
 			ANTLRFileStream networkStream = new ANTLRFileStream(GlobalVariable.networkSpec);
 			NetworkSpecLexer networkLexer = new NetworkSpecLexer(networkStream);
 			CommonTokenStream networkTokens = new CommonTokenStream(networkLexer);
@@ -111,9 +111,17 @@ public class Test {
 			deviceList = Context.getDeviceList();
 
 			// This code maps the software compoents and devices.
-			Mapper.MapperAlgo(deviceList, mappingConstraintList);	
+			Mapper.MapperAlgo(deviceList, mappingConstraintList);
+			
+//			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
+//			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+//			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+//			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+//			vocParser.vocabSpec();	
 			
 			GenFiller.copyMapping();
+			
+			
 		
 		}
 		

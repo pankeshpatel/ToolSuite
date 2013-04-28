@@ -60,7 +60,7 @@ public class GUI {
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-		if (GlobalVariable.activity.equals("generateDD")) {
+		if (GlobalVariable.activity.equals("generateDD") ) {
 
 			generateGUI(); // This function call will create a partial Logic
 							// files
@@ -71,10 +71,15 @@ public class GUI {
 
 			generateGUIFactoryImpl();
 
+			//generateGUILayout();
+			//generateGUIManifest();
+		}
+		
+		
+		if(GlobalVariable.activity.equals("generateMapping")) {
 			generateGUILayout();
 			generateGUIManifest();
 		}
-
 	}
 
 	private void generateGUIFactoryImpl() {
