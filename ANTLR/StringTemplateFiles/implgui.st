@@ -6,7 +6,7 @@ import logic.*;
 //TODO : Developers should  uncomment the following line for Android.
 
 
-//import com.example.$GUIdriver.lowerName$.R;
+//import com.example.android.R;
 
 import framework.*;
 

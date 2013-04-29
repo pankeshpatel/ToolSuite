@@ -1,9 +1,10 @@
+package com.example.android;
 import android.os.Bundle;
 
 import android.app.Activity;
 import android.view.Menu;
 
-import com.example.$GUIdriver.lowerName$.R;
+import com.example.android.R;
 
 public class MainActivity extends Activity {
 
