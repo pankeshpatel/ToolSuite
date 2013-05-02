@@ -1,4 +1,4 @@
-// $ANTLR 3.4 Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2013-04-29 18:14:15
+// $ANTLR 3.4 Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2013-05-02 12:10:27
 
   package fr.inria.arles.pankesh.parser.antlr; 
 
@@ -11,7 +11,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class NetworkSpecLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__8=8;
     public static final int T__9=9;
     public static final int T__10=10;
     public static final int T__11=11;
@@ -19,10 +18,13 @@ public class NetworkSpecLexer extends Lexer {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
     public static final int CAPITALIZED_ID=4;
     public static final int ID=5;
     public static final int INT=6;
-    public static final int WS=7;
+    public static final int MOBILEFLAG=7;
+    public static final int WS=8;
 
     // delegates
     // delegators
@@ -39,36 +41,15 @@ public class NetworkSpecLexer extends Lexer {
     }
     public String getGrammarFileName() { return "Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g"; }
 
-    // $ANTLR start "T__8"
-    public final void mT__8() throws RecognitionException {
-        try {
-            int _type = T__8;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:11:6: ( ',' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:11:8: ','
-            {
-            match(','); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__8"
-
     // $ANTLR start "T__9"
     public final void mT__9() throws RecognitionException {
         try {
             int _type = T__9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:12:6: ( ':' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:12:8: ':'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:11:6: ( ',' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:11:8: ','
             {
-            match(':'); 
+            match(','); 
 
             }
 
@@ -86,10 +67,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:13:7: ( ';' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:13:9: ';'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:12:7: ( ':' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:12:9: ':'
             {
-            match(';'); 
+            match(':'); 
 
             }
 
@@ -107,12 +88,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:7: ( 'devices' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:9: 'devices'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:13:7: ( ';' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:13:9: ';'
             {
-            match("devices"); 
-
-
+            match(';'); 
 
             }
 
@@ -130,10 +109,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:7: ( 'networkaddress' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:9: 'networkaddress'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:7: ( 'devices' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:9: 'devices'
             {
-            match("networkaddress"); 
+            match("devices"); 
 
 
 
@@ -153,10 +132,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:7: ( 'region' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:9: 'region'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:7: ( 'mobile' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:9: 'mobile'
             {
-            match("region"); 
+            match("mobile"); 
 
 
 
@@ -176,10 +155,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:7: ( 'resources' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:9: 'resources'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:7: ( 'networkaddress' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:9: 'networkaddress'
             {
-            match("resources"); 
+            match("networkaddress"); 
 
 
 
@@ -199,10 +178,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:18:7: ( 'type' )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:18:9: 'type'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:7: ( 'region' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:9: 'region'
             {
-            match("type"); 
+            match("region"); 
 
 
 
@@ -217,57 +196,121 @@ public class NetworkSpecLexer extends Lexer {
     }
     // $ANTLR end "T__15"
 
+    // $ANTLR start "T__16"
+    public final void mT__16() throws RecognitionException {
+        try {
+            int _type = T__16;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:18:7: ( 'resources' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:18:9: 'resources'
+            {
+            match("resources"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__16"
+
+    // $ANTLR start "T__17"
+    public final void mT__17() throws RecognitionException {
+        try {
+            int _type = T__17;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:19:7: ( 'type' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:19:9: 'type'
+            {
+            match("type"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__17"
+
+    // $ANTLR start "MOBILEFLAG"
+    public final void mMOBILEFLAG() throws RecognitionException {
+        try {
+            int _type = MOBILEFLAG;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:72:12: ( 'true' | 'false' )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0=='t') ) {
+                alt1=1;
+            }
+            else if ( (LA1_0=='f') ) {
+                alt1=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+
+            }
+            switch (alt1) {
+                case 1 :
+                    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:72:15: 'true'
+                    {
+                    match("true"); 
+
+
+
+                    }
+                    break;
+                case 2 :
+                    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:72:24: 'false'
+                    {
+                    match("false"); 
+
+
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "MOBILEFLAG"
+
     // $ANTLR start "ID"
     public final void mID() throws RecognitionException {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:66:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:66:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
             {
             matchRange('a','z'); 
 
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:66:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
-
-                if ( ((LA1_0 >= 'A' && LA1_0 <= 'Z')||(LA1_0 >= 'a' && LA1_0 <= 'z')) ) {
-                    alt1=1;
-                }
-
-
-                switch (alt1) {
-            	case 1 :
-            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
-            	    {
-            	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
-            	        input.consume();
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:66:41: ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( ((LA2_0 >= '0' && LA2_0 <= '9')) ) {
+                if ( ((LA2_0 >= 'A' && LA2_0 <= 'Z')||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
                     alt2=1;
                 }
 
@@ -276,7 +319,7 @@ public class NetworkSpecLexer extends Lexer {
             	case 1 :
             	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
-            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+            	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
             	    }
             	    else {
@@ -295,28 +338,7 @@ public class NetworkSpecLexer extends Lexer {
             } while (true);
 
 
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "ID"
-
-    // $ANTLR start "INT"
-    public final void mINT() throws RecognitionException {
-        try {
-            int _type = INT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:69:5: ( '0' .. '9' ( '0' .. '9' )* )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:69:7: '0' .. '9' ( '0' .. '9' )*
-            {
-            matchRange('0','9'); 
-
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:69:15: ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:41: ( '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -359,25 +381,25 @@ public class NetworkSpecLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "INT"
+    // $ANTLR end "ID"
 
-    // $ANTLR start "CAPITALIZED_ID"
-    public final void mCAPITALIZED_ID() throws RecognitionException {
+    // $ANTLR start "INT"
+    public final void mINT() throws RecognitionException {
         try {
-            int _type = CAPITALIZED_ID;
+            int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:71:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:71:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:78:5: ( '0' .. '9' ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:78:7: '0' .. '9' ( '0' .. '9' )*
             {
-            matchRange('A','Z'); 
+            matchRange('0','9'); 
 
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:71:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:78:15: ( '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( ((LA4_0 >= 'A' && LA4_0 <= 'Z')||(LA4_0 >= 'a' && LA4_0 <= 'z')) ) {
+                if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
                     alt4=1;
                 }
 
@@ -386,7 +408,7 @@ public class NetworkSpecLexer extends Lexer {
             	case 1 :
             	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
-            	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+            	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
             	    }
             	    else {
@@ -405,18 +427,73 @@ public class NetworkSpecLexer extends Lexer {
             } while (true);
 
 
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:71:50: ( '0' .. '9' )*
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "INT"
+
+    // $ANTLR start "CAPITALIZED_ID"
+    public final void mCAPITALIZED_ID() throws RecognitionException {
+        try {
+            int _type = CAPITALIZED_ID;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+            {
+            matchRange('A','Z'); 
+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop5:
             do {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( ((LA5_0 >= '0' && LA5_0 <= '9')) ) {
+                if ( ((LA5_0 >= 'A' && LA5_0 <= 'Z')||(LA5_0 >= 'a' && LA5_0 <= 'z')) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
+            	case 1 :
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
+            	    {
+            	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+            	        input.consume();
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop5;
+                }
+            } while (true);
+
+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:50: ( '0' .. '9' )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( ((LA6_0 >= '0' && LA6_0 <= '9')) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
             	case 1 :
             	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
@@ -434,7 +511,7 @@ public class NetworkSpecLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
@@ -455,22 +532,22 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:73:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:73:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:82:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:82:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             {
-            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:73:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
-            int cnt6=0;
-            loop6:
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:82:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            int cnt7=0;
+            loop7:
             do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                if ( ((LA6_0 >= '\t' && LA6_0 <= '\n')||(LA6_0 >= '\f' && LA6_0 <= '\r')||LA6_0==' ') ) {
-                    alt6=1;
+                if ( ((LA7_0 >= '\t' && LA7_0 <= '\n')||(LA7_0 >= '\f' && LA7_0 <= '\r')||LA7_0==' ') ) {
+                    alt7=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt7) {
             	case 1 :
             	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
@@ -488,12 +565,12 @@ public class NetworkSpecLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt6 >= 1 ) break loop6;
+            	    if ( cnt7 >= 1 ) break loop7;
                         EarlyExitException eee =
-                            new EarlyExitException(6, input);
+                            new EarlyExitException(7, input);
                         throw eee;
                 }
-                cnt6++;
+                cnt7++;
             } while (true);
 
 
@@ -511,495 +588,116 @@ public class NetworkSpecLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | INT | CAPITALIZED_ID | WS )
-        int alt7=12;
-        switch ( input.LA(1) ) {
-        case ',':
-            {
-            alt7=1;
-            }
-            break;
-        case ':':
-            {
-            alt7=2;
-            }
-            break;
-        case ';':
-            {
-            alt7=3;
-            }
-            break;
-        case 'd':
-            {
-            int LA7_4 = input.LA(2);
-
-            if ( (LA7_4=='e') ) {
-                int LA7_12 = input.LA(3);
-
-                if ( (LA7_12=='v') ) {
-                    int LA7_16 = input.LA(4);
-
-                    if ( (LA7_16=='i') ) {
-                        int LA7_21 = input.LA(5);
-
-                        if ( (LA7_21=='c') ) {
-                            int LA7_26 = input.LA(6);
-
-                            if ( (LA7_26=='e') ) {
-                                int LA7_31 = input.LA(7);
-
-                                if ( (LA7_31=='s') ) {
-                                    int LA7_35 = input.LA(8);
-
-                                    if ( ((LA7_35 >= '0' && LA7_35 <= '9')||(LA7_35 >= 'A' && LA7_35 <= 'Z')||(LA7_35 >= 'a' && LA7_35 <= 'z')) ) {
-                                        alt7=9;
-                                    }
-                                    else {
-                                        alt7=4;
-                                    }
-                                }
-                                else {
-                                    alt7=9;
-                                }
-                            }
-                            else {
-                                alt7=9;
-                            }
-                        }
-                        else {
-                            alt7=9;
-                        }
-                    }
-                    else {
-                        alt7=9;
-                    }
-                }
-                else {
-                    alt7=9;
-                }
-            }
-            else {
-                alt7=9;
-            }
-            }
-            break;
-        case 'n':
-            {
-            int LA7_5 = input.LA(2);
-
-            if ( (LA7_5=='e') ) {
-                int LA7_13 = input.LA(3);
-
-                if ( (LA7_13=='t') ) {
-                    int LA7_17 = input.LA(4);
-
-                    if ( (LA7_17=='w') ) {
-                        int LA7_22 = input.LA(5);
-
-                        if ( (LA7_22=='o') ) {
-                            int LA7_27 = input.LA(6);
-
-                            if ( (LA7_27=='r') ) {
-                                int LA7_32 = input.LA(7);
-
-                                if ( (LA7_32=='k') ) {
-                                    int LA7_36 = input.LA(8);
-
-                                    if ( (LA7_36=='a') ) {
-                                        int LA7_40 = input.LA(9);
-
-                                        if ( (LA7_40=='d') ) {
-                                            int LA7_42 = input.LA(10);
-
-                                            if ( (LA7_42=='d') ) {
-                                                int LA7_44 = input.LA(11);
-
-                                                if ( (LA7_44=='r') ) {
-                                                    int LA7_46 = input.LA(12);
-
-                                                    if ( (LA7_46=='e') ) {
-                                                        int LA7_47 = input.LA(13);
-
-                                                        if ( (LA7_47=='s') ) {
-                                                            int LA7_48 = input.LA(14);
-
-                                                            if ( (LA7_48=='s') ) {
-                                                                int LA7_49 = input.LA(15);
-
-                                                                if ( ((LA7_49 >= '0' && LA7_49 <= '9')||(LA7_49 >= 'A' && LA7_49 <= 'Z')||(LA7_49 >= 'a' && LA7_49 <= 'z')) ) {
-                                                                    alt7=9;
-                                                                }
-                                                                else {
-                                                                    alt7=5;
-                                                                }
-                                                            }
-                                                            else {
-                                                                alt7=9;
-                                                            }
-                                                        }
-                                                        else {
-                                                            alt7=9;
-                                                        }
-                                                    }
-                                                    else {
-                                                        alt7=9;
-                                                    }
-                                                }
-                                                else {
-                                                    alt7=9;
-                                                }
-                                            }
-                                            else {
-                                                alt7=9;
-                                            }
-                                        }
-                                        else {
-                                            alt7=9;
-                                        }
-                                    }
-                                    else {
-                                        alt7=9;
-                                    }
-                                }
-                                else {
-                                    alt7=9;
-                                }
-                            }
-                            else {
-                                alt7=9;
-                            }
-                        }
-                        else {
-                            alt7=9;
-                        }
-                    }
-                    else {
-                        alt7=9;
-                    }
-                }
-                else {
-                    alt7=9;
-                }
-            }
-            else {
-                alt7=9;
-            }
-            }
-            break;
-        case 'r':
-            {
-            int LA7_6 = input.LA(2);
-
-            if ( (LA7_6=='e') ) {
-                switch ( input.LA(3) ) {
-                case 'g':
-                    {
-                    int LA7_18 = input.LA(4);
-
-                    if ( (LA7_18=='i') ) {
-                        int LA7_23 = input.LA(5);
-
-                        if ( (LA7_23=='o') ) {
-                            int LA7_28 = input.LA(6);
-
-                            if ( (LA7_28=='n') ) {
-                                int LA7_33 = input.LA(7);
-
-                                if ( ((LA7_33 >= '0' && LA7_33 <= '9')||(LA7_33 >= 'A' && LA7_33 <= 'Z')||(LA7_33 >= 'a' && LA7_33 <= 'z')) ) {
-                                    alt7=9;
-                                }
-                                else {
-                                    alt7=6;
-                                }
-                            }
-                            else {
-                                alt7=9;
-                            }
-                        }
-                        else {
-                            alt7=9;
-                        }
-                    }
-                    else {
-                        alt7=9;
-                    }
-                    }
-                    break;
-                case 's':
-                    {
-                    int LA7_19 = input.LA(4);
-
-                    if ( (LA7_19=='o') ) {
-                        int LA7_24 = input.LA(5);
-
-                        if ( (LA7_24=='u') ) {
-                            int LA7_29 = input.LA(6);
-
-                            if ( (LA7_29=='r') ) {
-                                int LA7_34 = input.LA(7);
-
-                                if ( (LA7_34=='c') ) {
-                                    int LA7_38 = input.LA(8);
-
-                                    if ( (LA7_38=='e') ) {
-                                        int LA7_41 = input.LA(9);
-
-                                        if ( (LA7_41=='s') ) {
-                                            int LA7_43 = input.LA(10);
-
-                                            if ( ((LA7_43 >= '0' && LA7_43 <= '9')||(LA7_43 >= 'A' && LA7_43 <= 'Z')||(LA7_43 >= 'a' && LA7_43 <= 'z')) ) {
-                                                alt7=9;
-                                            }
-                                            else {
-                                                alt7=7;
-                                            }
-                                        }
-                                        else {
-                                            alt7=9;
-                                        }
-                                    }
-                                    else {
-                                        alt7=9;
-                                    }
-                                }
-                                else {
-                                    alt7=9;
-                                }
-                            }
-                            else {
-                                alt7=9;
-                            }
-                        }
-                        else {
-                            alt7=9;
-                        }
-                    }
-                    else {
-                        alt7=9;
-                    }
-                    }
-                    break;
-                default:
-                    alt7=9;
-                }
-
-            }
-            else {
-                alt7=9;
-            }
-            }
-            break;
-        case 't':
-            {
-            int LA7_7 = input.LA(2);
-
-            if ( (LA7_7=='y') ) {
-                int LA7_15 = input.LA(3);
-
-                if ( (LA7_15=='p') ) {
-                    int LA7_20 = input.LA(4);
-
-                    if ( (LA7_20=='e') ) {
-                        int LA7_25 = input.LA(5);
-
-                        if ( ((LA7_25 >= '0' && LA7_25 <= '9')||(LA7_25 >= 'A' && LA7_25 <= 'Z')||(LA7_25 >= 'a' && LA7_25 <= 'z')) ) {
-                            alt7=9;
-                        }
-                        else {
-                            alt7=8;
-                        }
-                    }
-                    else {
-                        alt7=9;
-                    }
-                }
-                else {
-                    alt7=9;
-                }
-            }
-            else {
-                alt7=9;
-            }
-            }
-            break;
-        case 'a':
-        case 'b':
-        case 'c':
-        case 'e':
-        case 'f':
-        case 'g':
-        case 'h':
-        case 'i':
-        case 'j':
-        case 'k':
-        case 'l':
-        case 'm':
-        case 'o':
-        case 'p':
-        case 'q':
-        case 's':
-        case 'u':
-        case 'v':
-        case 'w':
-        case 'x':
-        case 'y':
-        case 'z':
-            {
-            alt7=9;
-            }
-            break;
-        case '0':
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
-            {
-            alt7=10;
-            }
-            break;
-        case 'A':
-        case 'B':
-        case 'C':
-        case 'D':
-        case 'E':
-        case 'F':
-        case 'G':
-        case 'H':
-        case 'I':
-        case 'J':
-        case 'K':
-        case 'L':
-        case 'M':
-        case 'N':
-        case 'O':
-        case 'P':
-        case 'Q':
-        case 'R':
-        case 'S':
-        case 'T':
-        case 'U':
-        case 'V':
-        case 'W':
-        case 'X':
-        case 'Y':
-        case 'Z':
-            {
-            alt7=11;
-            }
-            break;
-        case '\t':
-        case '\n':
-        case '\f':
-        case '\r':
-        case ' ':
-            {
-            alt7=12;
-            }
-            break;
-        default:
-            NoViableAltException nvae =
-                new NoViableAltException("", 7, 0, input);
-
-            throw nvae;
-
-        }
-
-        switch (alt7) {
+        // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | MOBILEFLAG | ID | INT | CAPITALIZED_ID | WS )
+        int alt8=14;
+        alt8 = dfa8.predict(input);
+        switch (alt8) {
             case 1 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:10: T__8
-                {
-                mT__8(); 
-
-
-                }
-                break;
-            case 2 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:15: T__9
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:10: T__9
                 {
                 mT__9(); 
 
 
                 }
                 break;
-            case 3 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:20: T__10
+            case 2 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:15: T__10
                 {
                 mT__10(); 
 
 
                 }
                 break;
-            case 4 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:26: T__11
+            case 3 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:21: T__11
                 {
                 mT__11(); 
 
 
                 }
                 break;
-            case 5 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:32: T__12
+            case 4 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:27: T__12
                 {
                 mT__12(); 
 
 
                 }
                 break;
-            case 6 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:38: T__13
+            case 5 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:33: T__13
                 {
                 mT__13(); 
 
 
                 }
                 break;
-            case 7 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:44: T__14
+            case 6 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:39: T__14
                 {
                 mT__14(); 
 
 
                 }
                 break;
-            case 8 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:50: T__15
+            case 7 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:45: T__15
                 {
                 mT__15(); 
 
 
                 }
                 break;
+            case 8 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:51: T__16
+                {
+                mT__16(); 
+
+
+                }
+                break;
             case 9 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:56: ID
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:57: T__17
+                {
+                mT__17(); 
+
+
+                }
+                break;
+            case 10 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:63: MOBILEFLAG
+                {
+                mMOBILEFLAG(); 
+
+
+                }
+                break;
+            case 11 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:74: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 10 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:59: INT
+            case 12 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:77: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 11 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:63: CAPITALIZED_ID
+            case 13 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:81: CAPITALIZED_ID
                 {
                 mCAPITALIZED_ID(); 
 
 
                 }
                 break;
-            case 12 :
-                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:78: WS
+            case 14 :
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:96: WS
                 {
                 mWS(); 
 
@@ -1012,6 +710,137 @@ public class NetworkSpecLexer extends Lexer {
     }
 
 
+    protected DFA8 dfa8 = new DFA8(this);
+    static final String DFA8_eotS =
+        "\4\uffff\6\12\4\uffff\24\12\1\52\1\53\6\12\2\uffff\1\53\1\12\1\63"+
+        "\1\12\1\65\1\12\1\67\1\uffff\1\12\1\uffff\1\12\1\uffff\3\12\1\75"+
+        "\1\12\1\uffff\3\12\1\102\1\uffff";
+    static final String DFA8_eofS =
+        "\103\uffff";
+    static final String DFA8_minS =
+        "\1\11\3\uffff\1\145\1\157\2\145\1\162\1\141\4\uffff\1\166\1\142"+
+        "\1\164\1\147\1\160\1\165\1\154\2\151\1\167\1\151\1\157\2\145\1\163"+
+        "\1\143\1\154\2\157\1\165\2\60\3\145\1\162\1\156\1\162\2\uffff\1"+
+        "\60\1\163\1\60\1\153\1\60\1\143\1\60\1\uffff\1\141\1\uffff\1\145"+
+        "\1\uffff\1\144\1\163\1\144\1\60\1\162\1\uffff\1\145\2\163\1\60\1"+
+        "\uffff";
+    static final String DFA8_maxS =
+        "\1\172\3\uffff\1\145\1\157\2\145\1\171\1\141\4\uffff\1\166\1\142"+
+        "\1\164\1\163\1\160\1\165\1\154\2\151\1\167\1\151\1\157\2\145\1\163"+
+        "\1\143\1\154\2\157\1\165\2\172\3\145\1\162\1\156\1\162\2\uffff\1"+
+        "\172\1\163\1\172\1\153\1\172\1\143\1\172\1\uffff\1\141\1\uffff\1"+
+        "\145\1\uffff\1\144\1\163\1\144\1\172\1\162\1\uffff\1\145\2\163\1"+
+        "\172\1\uffff";
+    static final String DFA8_acceptS =
+        "\1\uffff\1\1\1\2\1\3\6\uffff\1\13\1\14\1\15\1\16\34\uffff\1\11\1"+
+        "\12\7\uffff\1\5\1\uffff\1\7\1\uffff\1\4\5\uffff\1\10\4\uffff\1\6";
+    static final String DFA8_specialS =
+        "\103\uffff}>";
+    static final String[] DFA8_transitionS = {
+            "\2\15\1\uffff\2\15\22\uffff\1\15\13\uffff\1\1\3\uffff\12\13"+
+            "\1\2\1\3\5\uffff\32\14\6\uffff\3\12\1\4\1\12\1\11\6\12\1\5\1"+
+            "\6\3\12\1\7\1\12\1\10\6\12",
+            "",
+            "",
+            "",
+            "\1\16",
+            "\1\17",
+            "\1\20",
+            "\1\21",
+            "\1\23\6\uffff\1\22",
+            "\1\24",
+            "",
+            "",
+            "",
+            "",
+            "\1\25",
+            "\1\26",
+            "\1\27",
+            "\1\30\13\uffff\1\31",
+            "\1\32",
+            "\1\33",
+            "\1\34",
+            "\1\35",
+            "\1\36",
+            "\1\37",
+            "\1\40",
+            "\1\41",
+            "\1\42",
+            "\1\43",
+            "\1\44",
+            "\1\45",
+            "\1\46",
+            "\1\47",
+            "\1\50",
+            "\1\51",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "\1\54",
+            "\1\55",
+            "\1\56",
+            "\1\57",
+            "\1\60",
+            "\1\61",
+            "",
+            "",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "\1\62",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "\1\64",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "\1\66",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "",
+            "\1\70",
+            "",
+            "\1\71",
+            "",
+            "\1\72",
+            "\1\73",
+            "\1\74",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            "\1\76",
+            "",
+            "\1\77",
+            "\1\100",
+            "\1\101",
+            "\12\12\7\uffff\32\12\6\uffff\32\12",
+            ""
+    };
+
+    static final short[] DFA8_eot = DFA.unpackEncodedString(DFA8_eotS);
+    static final short[] DFA8_eof = DFA.unpackEncodedString(DFA8_eofS);
+    static final char[] DFA8_min = DFA.unpackEncodedStringToUnsignedChars(DFA8_minS);
+    static final char[] DFA8_max = DFA.unpackEncodedStringToUnsignedChars(DFA8_maxS);
+    static final short[] DFA8_accept = DFA.unpackEncodedString(DFA8_acceptS);
+    static final short[] DFA8_special = DFA.unpackEncodedString(DFA8_specialS);
+    static final short[][] DFA8_transition;
+
+    static {
+        int numStates = DFA8_transitionS.length;
+        DFA8_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA8_transition[i] = DFA.unpackEncodedString(DFA8_transitionS[i]);
+        }
+    }
+
+    class DFA8 extends DFA {
+
+        public DFA8(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 8;
+            this.eot = DFA8_eot;
+            this.eof = DFA8_eof;
+            this.min = DFA8_min;
+            this.max = DFA8_max;
+            this.accept = DFA8_accept;
+            this.special = DFA8_special;
+            this.transition = DFA8_transition;
+        }
+        public String getDescription() {
+            return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | MOBILEFLAG | ID | INT | CAPITALIZED_ID | WS );";
+        }
+    }
  
 
 }

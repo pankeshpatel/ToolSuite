@@ -60,7 +60,7 @@ public class Mapper {
 			}
 		}
 
-		return new Device(device.getName(), device.getType(), device.getNetworkAddress(), device.getRegion(), device.getRegionLabels(), resultAbilities);
+		return new Device(device.getName(), device.getType(), device.getNetworkAddress(), device.getRegion(), device.getRegionLabels(), resultAbilities, device.getMobileFlag());
 	}
 
 	public static void multiplyTemplate(Device unit) {

@@ -37,8 +37,14 @@ device_def:
     'region' ':' (location_def)* 
     'type' ':' (device_type)* ';'
     'resources' ':' (abilities_def)* ';'
+    (mobileFlag_def)* ';'
     { context.currentNetwork.addDeviceObj();}
 ;
+
+mobileFlag_def :
+   'mobile' ':' MOBILEFLAG 
+   {context.currentNetwork.setMobileFlag($MOBILEFLAG.text);}
+; 
 
 networkAddress_def :
   'networkaddress' ':' INT 
@@ -62,6 +68,9 @@ abilities_def :
   }
 ;
 
+
+MOBILEFLAG :  'true' | 'false'
+   ;
 
 ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )* ('0'..'9')*
    ;

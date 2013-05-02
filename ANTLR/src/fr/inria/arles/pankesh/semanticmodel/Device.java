@@ -24,8 +24,10 @@ public class Device implements Serializable {
 	private List<String> regionLabels = new ArrayList<String>();
 
 	private Set<String> abilities = new HashSet<String>();
+	
+	private String myMobileFlag;
 
-	public Device(String name, String type, String networkAddress, List<String> regionIDs, List<String> regionLabels, Set<String> abilities) {
+	public Device(String name, String type, String networkAddress, List<String> regionIDs, List<String> regionLabels, Set<String> abilities, String mobileFlag) {
 
 		this.name = name;
 
@@ -34,6 +36,7 @@ public class Device implements Serializable {
 		this.regionIDs = regionIDs;
 		this.regionLabels = regionLabels;
 		this.abilities = abilities;
+		this.myMobileFlag = mobileFlag;
 
 	}
 
@@ -60,6 +63,13 @@ public class Device implements Serializable {
 	public Set<String> getAbilities() {
 		return abilities;
 	}
+	
+	public String getMobileFlag() {
+		return myMobileFlag;
+	}
+	
+	
+	
 
 	private String packageName;
 
