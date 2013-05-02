@@ -18,49 +18,42 @@ public class Test {
 	 * @param args
 	 * @throws Exception
 	 */
-	
+
 	public static void main(String[] args) throws Exception {
 
-		 if (args.length != 7) {
-		
-		 System.out
-		 .println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test "
-		 +
-		 "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> "
-		 + "<relativepathfordevices> <relativepathforutil> ");
-		 System.exit(1);
-		 }
+		if (args.length != 7) {
+
+			System.out.println("usage: java -classpath <classpath> fr.inria.arles.pankesh.parser.antlr.Test " + "<vocfilepath> <networkfilepath> <gendirpath> <relativepathforlogic> " + "<relativepathfordevices> <relativepathforutil> ");
+			System.exit(1);
+		}
 
 		// --- VocArchSpec NetworkSpec gen /logic /sim/device /util
 
 		GlobalVariable.vocabSpec = args[0];
 		GlobalVariable.archSpec = args[1];
-	 	GlobalVariable.networkSpec = args[2];
+		GlobalVariable.networkSpec = args[2];
 		GlobalVariable.stringTemplatePath = args[3];
 		GlobalVariable.activity = args[4];
 		GlobalVariable.activityGenPath = args[6];
-		
 
 		if (GlobalVariable.activity.equals("generateDD")) {
 
 			// This code parses the Vocabulary Specification
 			GlobalVariable.frameworkRootDir = args[5];
-			
+
 			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
 			vocParser.vocabSpec();
-			
+
 			GenFiller.copyDeviceDrivers();
 		}
 
-
 		if (GlobalVariable.activity.equals("generateAF")) {
-			
 
-            GlobalVariable.frameworkRootDir = args[5];
-			
+			GlobalVariable.frameworkRootDir = args[5];
+
 			// This code parses the Vocabulary specification.
 			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
@@ -74,32 +67,29 @@ public class Test {
 			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 			ArchSpecParser archParser = new ArchSpecParser(archTokens);
 			archParser.archSpec();
-			
+
 			GenFiller.copyApplicationLogic();
 		}
-		
-		
-		if(GlobalVariable.activity.equals("generateMapping")) {
-			
+
+		if (GlobalVariable.activity.equals("generateMapping")) {
+
 			GlobalVariable.frameworkRootDir = args[5];
-			
+
 			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
 			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
 			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
 			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-			vocParser.vocabSpec();	
-			
-			ANTLRFileStream archStream = new ANTLRFileStream(
-					GlobalVariable.archSpec);
+			vocParser.vocabSpec();
+
+			ANTLRFileStream archStream = new ANTLRFileStream(GlobalVariable.archSpec);
 			ArchSpecLexer archLexer = new ArchSpecLexer(archStream);
 			CommonTokenStream archTokens = new CommonTokenStream(archLexer);
 			ArchSpecParser archParser = new ArchSpecParser(archTokens);
 			archParser.archSpec();
-					
-					
+
 			List<Device> deviceList;
 			List<DeployementConstraint> mappingConstraintList;
-					
+
 			mappingConstraintList = Context.getDeploymentConstrainsList();
 
 			// This code parses the Network description.
@@ -112,31 +102,28 @@ public class Test {
 
 			// This code maps the software compoents and devices.
 			Mapper.MapperAlgo(deviceList, mappingConstraintList);
-			
-//			ANTLRFileStream vocStream = new ANTLRFileStream(GlobalVariable.vocabSpec);
-//			VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
-//			CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
-//			VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
-//			vocParser.vocabSpec();	
-			
+
+			// ANTLRFileStream vocStream = new
+			// ANTLRFileStream(GlobalVariable.vocabSpec);
+			// VocabSpecLexer vocLexer = new VocabSpecLexer(vocStream);
+			// CommonTokenStream vocTokens = new CommonTokenStream(vocLexer);
+			// VocabSpecParser vocParser = new VocabSpecParser(vocTokens);
+			// vocParser.vocabSpec();
+
 			GenFiller.copyMapping();
-			
-			
-		
+
 		}
-		
-		
-		if(GlobalVariable.activity.equals("linking")) {
-			
+
+		if (GlobalVariable.activity.equals("linking")) {
+
 			GlobalVariable.frameworkRootDir = args[5];
-			
-			Linker.linkerAlgo();			
-			
+
+			Linker.linkerAlgo();
+
 			GenFiller.copyLinking();
-		
+
 		}
-		
-		
+
 		// List<Device> deviceList;
 		// List<DeployementConstraint> mappingConstraintList;
 		//

@@ -13,7 +13,6 @@ import fr.inria.arles.pankesh.semanticmodel.PrimitiveType;
 import fr.inria.arles.pankesh.semanticmodel.SensorDriver;
 import fr.inria.arles.pankesh.semanticmodel.SensorMeasurement;
 
-
 public class Sensor {
 
 	private SensorDriver sensorDriver;

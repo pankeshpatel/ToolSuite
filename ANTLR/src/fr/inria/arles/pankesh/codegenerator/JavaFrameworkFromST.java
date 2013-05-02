@@ -227,23 +227,17 @@ public class JavaFrameworkFromST {
 		templateOfStructure.setAttribute("struct", struct);
 		return new CompilationUnit(struct.getName() + ".java", templateOfStructure, "structure", "Future", struct);
 	}
-	
+
 	/*
 	 * 
-	 * This is end of  use for  Architecture specification
-	 * 
-	 * 
+	 * This is end of use for Architecture specification
 	 */
-	
-	
-	
-	
 
 	public CompilationUnit buildClassoFStartup(Device device) {
 
 		StringTemplate templateOfDevice = group.getInstanceOf("device");
 		templateOfDevice.setAttribute("device", device);
-		return new CompilationUnit("Startup" + ".java", templateOfDevice, "device", device.getName() , device);
+		return new CompilationUnit("Startup" + ".java", templateOfDevice, "device", device.getName(), device);
 
 	}
 
@@ -264,7 +258,7 @@ public class JavaFrameworkFromST {
 		}
 
 	}
-	
+
 	public CompilationUnit buildClassoFProjectFile(Device device) {
 
 		if (device.getType().equals("PC")) {

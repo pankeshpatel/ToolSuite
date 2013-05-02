@@ -19,7 +19,7 @@ public class DeviceNetwork {
 	private String deviceName;
 	private String softwarePlatform;
 	private List<Device> deviceList = new ArrayList<Device>();
-	
+
 	private String myMobileFlag;
 
 	public DeviceNetwork() {
@@ -27,24 +27,21 @@ public class DeviceNetwork {
 
 	public void addDeviceObj() {
 
-		device = new Device(getDeviceName(), getDeviceType(), getNetworkAddress(), 
-				         getRegionValues(), getRegionLabel(), deviceAbilities, getMobileFlag());
+		device = new Device(getDeviceName(), getDeviceType(), getNetworkAddress(), getRegionValues(), getRegionLabel(), deviceAbilities, getMobileFlag());
 
 		Context.addDeviceinSymblTable(device);
 
 	}
-	
-	// Getter and Setter of  MobileFlag
-	
-	public void setMobileFlag(String mobileFlag){
+
+	// Getter and Setter of MobileFlag
+
+	public void setMobileFlag(String mobileFlag) {
 		this.myMobileFlag = mobileFlag;
 	}
-	
-	public String getMobileFlag(){
+
+	public String getMobileFlag() {
 		return myMobileFlag;
 	}
-	
-	
 
 	// Getter and Setter of Software Platform
 

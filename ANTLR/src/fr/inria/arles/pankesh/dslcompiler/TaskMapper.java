@@ -116,22 +116,22 @@ public class TaskMapper {
 							Set<Device> tempDeviceSet = deviceListByRegion.get(tempkey[i]);
 							Device selectedDevice = pickOneFrom(tempDeviceSet);
 
-							
-							/* for (String ability : selectedDevice.getAbilities()) {
-								if (ability.contains("GUI")) {
+							/*
+							 * for (String ability :
+							 * selectedDevice.getAbilities()) { if
+							 * (ability.contains("GUI")) {
+							 * 
+							 * } else { finalMapping.get(selectedDevice).add(
+							 * tempSoftWareComponent); }
+							 * 
+							 * }
+							 */
 
-								} else {
-									finalMapping.get(selectedDevice).add(tempSoftWareComponent);
-								}
+							if (selectedDevice.getMobileFlag().equals("true")) {
 
-							} */
-							
-							if (selectedDevice.getMobileFlag().equals("true") ) {
-								
-							}else {
+							} else {
 								finalMapping.get(selectedDevice).add(tempSoftWareComponent);
 							}
-							
 
 						}
 					}

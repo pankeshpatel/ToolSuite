@@ -27,10 +27,10 @@ public class SourceFileDumper {
 				myGenerateCompilationUnit(template, "ApplicationLogic", null);
 			}
 
-			if (GlobalVariable.activity.equals("generateMapping")) {			
-				
+			if (GlobalVariable.activity.equals("generateMapping")) {
+
 				myGenerateCompilationUnit(template, "deviceMapping", "Android");
-				
+
 			}
 
 		} catch (IOException e) {
@@ -58,13 +58,12 @@ public class SourceFileDumper {
 
 			if (GlobalVariable.activity.equals("generateMapping")) {
 
-			} else {	
-			
+			} else {
+
 				new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath).mkdirs();
 				file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.logicDirPath + "/" + unit.getName());
 			}
-			
-			
+
 		} else if (unit.getType().equals("Factory")) {
 
 			if (deviceType.equals("ApplicationLogic")) {
@@ -103,29 +102,23 @@ public class SourceFileDumper {
 			new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.utilDirPath).mkdirs();
 			file = new File(GlobalVariable.frameworkRootDir + deviceType + GlobalVariable.outputDirPath + GlobalVariable.utilDirPath + "/" + unit.getName());
 
-		} else if (unit.getType().equals("androidgui")) {	
-			
-			
-			
-	     if (str.equals("Android")) {				
-		   
-	    	 
-				if (unit.getObjectName().equals("manifest")) {	
-					
-					
-					file = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deviceAndroidType  + "/" + unit.getName());
+		} else if (unit.getType().equals("androidgui")) {
+
+			if (str.equals("Android")) {
+
+				if (unit.getObjectName().equals("manifest")) {
+
+					file = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deviceAndroidType + "/" + unit.getName());
 				}
 				if (unit.getObjectName().equals("layout")) {
-					
 
 					file = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deviceAndroidType + "/" + "res/layout/" + unit.getName());
 				}
 			} else {
 				// DO not generate xml files
 			}
-		} 
-		
-		
+		}
+
 		else {
 			if (GlobalVariable.activity.equals("generateMapping")) {
 

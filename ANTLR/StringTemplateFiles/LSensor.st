@@ -23,8 +23,8 @@ public class  Fake$SensorDriver.name$ extends $SensorDriver.name$  {
 @Override
 public void run() {
 	continueFlag = true;
-	// while (true) {
-	for (int i = 0; i <= 5; i++) {
+	   while (true) {
+	//for (int i = 0; i <= 5; i++) {
 
 		try {
 			Thread.sleep(1000);

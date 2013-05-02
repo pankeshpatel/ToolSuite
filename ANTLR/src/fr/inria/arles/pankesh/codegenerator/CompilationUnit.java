@@ -20,10 +20,10 @@ public class CompilationUnit {
 		this.objectName = objectName;
 		this.myObj = obj;
 	}
-	
+
 	public Device geObjectInside() {
-		return (Device)myObj;
-	}	
+		return (Device) myObj;
+	}
 
 	public String getObjectName() {
 		return objectName;
@@ -41,12 +41,9 @@ public class CompilationUnit {
 	public String toString() {
 		return template.toString();
 	}
-	
+
 	public String getFileName() {
 		return fileName;
 	}
-	
-	
-	
 
 }

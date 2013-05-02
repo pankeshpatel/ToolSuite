@@ -9,7 +9,7 @@ public class GlobalVariable {
 	public static String frameworkRootDir;
 
 	public static String frameworkDirPath = "/framework";
-	//public static String outputDirPath = "./gen";
+	// public static String outputDirPath = "./gen";
 	public static String outputDirPath = "/src";
 	public static String logicDirPath = "/logic";
 	public static String deviceDirPath = "/sim/device";
@@ -18,12 +18,11 @@ public class GlobalVariable {
 	public static String deviceImplDirPath = "/deviceImpl";
 	public static String stringTemplatePath;
 	public static String activity;
-	public static String devicePCType= "/" + "DeviceDrivers" + "/" + "PC" + "/";
-	public static String deviceAndroidType = "/" + "DeviceDrivers" + "/" + "Android" + "/" ;	
+	public static String devicePCType = "/" + "DeviceDrivers" + "/" + "PC" + "/";
+	public static String deviceAndroidType = "/" + "DeviceDrivers" + "/" + "Android" + "/";
 	public static String deploymentFolderPath = "CodeForDeployment";
 	public static String androidDevicepath = "AndroidDNine";
 	public static String activityGenPath;
-	
 
 	/*
 	 * public static String convertPathTopackage(String pathName) {

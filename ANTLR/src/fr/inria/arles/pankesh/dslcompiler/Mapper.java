@@ -25,7 +25,6 @@ public class Mapper {
 	 * @param args
 	 * @throws IOException
 	 */
-	
 
 	public static void MapperAlgo(List<Device> deviceList, List<DeployementConstraint> mappingConstraintList) throws IOException {
 
@@ -64,17 +63,17 @@ public class Mapper {
 	}
 
 	public static void multiplyTemplate(Device unit) {
-		
-		
 
-		// The following line take the template from the GlobalVariable.frameworkRootDir
-		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + unit.getType()); 
-		//File destFolder = new File(GlobalVariable.frameworkRootDir + unit.getType() + "Device" + unit.getName());
-		
-		// The following  line set the destination folder.
-		new File(GlobalVariable.frameworkRootDir  + GlobalVariable.deploymentFolderPath).mkdirs();
+		// The following line take the template from the
+		// GlobalVariable.frameworkRootDir
+		File srcFolder = new File(GlobalVariable.frameworkRootDir + "/" + "DeviceDrivers" + "/" + unit.getType());
+		// File destFolder = new File(GlobalVariable.frameworkRootDir +
+		// unit.getType() + "Device" + unit.getName());
+
+		// The following line set the destination folder.
+		new File(GlobalVariable.frameworkRootDir + GlobalVariable.deploymentFolderPath).mkdirs();
 		File destFolder = new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.getType() + unit.getName());
-		
+
 		// make sure source exists
 		if (!srcFolder.exists()) {
 
@@ -92,8 +91,6 @@ public class Mapper {
 				System.exit(0);
 			}
 		}
-
-		
 
 	}
 
@@ -139,8 +136,6 @@ public class Mapper {
 		}
 	}
 
-	
-	
 	private static void genearateStartupCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice.buildClassoFStartup(device);
@@ -154,13 +149,12 @@ public class Mapper {
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
-	
+
 	private static void genearateProjectFileCode(Device device) {
 		JavaFrameworkFromST generateDevice = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generateDevice.buildClassoFProjectFile(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
 	}
-	
 
 }
