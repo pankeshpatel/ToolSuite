@@ -114,6 +114,7 @@ public void run() {
 	}; separator="\n"$
 	
 	}
+			}
 	
 	
 	if (deviceType.equals("Android")) { 			
@@ -148,7 +149,7 @@ public void run() {
 			
 	
 			
-		}	
+			
 	
 }  }
 	
