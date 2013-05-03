@@ -3,13 +3,39 @@ package $SensorDriver.logicPackageName$;
 import fr.inria.arles.pankesh.pubsubmiddleware.PubSubMiddleware;
 import factory.*;
 import fr.inria.arles.pankesh.semanticmodel.*;
+import android.app.Activity;
+import android.app.Dialog;
+import framework.*;
 
 import $SensorDriver.PackageName$.*;
 
 public class  Fake$SensorDriver.name$ extends $SensorDriver.name$  { 
+
+	I$SensorDriver.name$ obj$SensorDriver.name$;
+	Activity ui;
+	public Fake$SensorDriver.name$ obj = this;
+	Device deviceInfo;	
+	public String deviceType;
    
-	public Fake$SensorDriver.name$(PubSubMiddleware pubSubM, Device deviceInfo, Object ui) {
+	public Fake$SensorDriver.name$(PubSubMiddleware pubSubM, final Device deviceInfo, final Object ui) {
 		super(pubSubM, deviceInfo);
+		
+		deviceType = deviceInfo.getType();
+		
+		if (deviceType.equals("PC")) {
+		   // DO nothing		    
+		}else {
+		
+		this.ui = (Activity) ui;
+		   this.ui.runOnUiThread(new Runnable() {
+				public void run() {
+					obj$SensorDriver.name$ = $SensorDriver.name$Factory.get$SensorDriver.name$(deviceInfo.getType(), (Activity) ui, obj);
+					((Dialog) obj$SensorDriver.name$).show();
+				}
+			});
+		}
+		
+		
 
 	}	
 	
@@ -65,10 +91,10 @@ public void run() {
 		protected void handleExpiryOfTimer() {
 	
 	
-			
+			if (deviceType.equals("PC")) {
 			
 	I$SensorDriver.name$ obj$SensorDriver.name$ = $SensorDriver.name$Factory
-			.get$SensorDriver.name$(myDeviceInfo.getType());
+			.get$SensorDriver.name$(myDeviceInfo.getType(), null, null);
 
 	if (obj$SensorDriver.name$.isEventDriven()) {
 
@@ -86,6 +112,30 @@ public void run() {
 		set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
 	   
 	}; separator="\n"$
+	
+	}
+	
+	
+	if (deviceType.equals("Android")) { 			
+	
+	if (obj$SensorDriver.name$.isEventDriven()) {
+
+		$SensorDriver.allGeneratedInfo:{ generatedInfo | 
+		
+			obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$($generatedInfo.name; format="capital"$Event);
+		
+	}; separator="\n"$
+
+	} else {
+		
+		$SensorDriver.allGeneratedInfo:{ generatedInfo | 	
+		
+		$generatedInfo.type.name$ s$generatedInfo.type.name$ = obj$SensorDriver.name$.get$generatedInfo.name; format="capital"$();
+		set$generatedInfo.name; format="capital"$(s$generatedInfo.type.name$);		
+	   
+	}; separator="\n"$
+	
+	}
 		
 		
 
@@ -100,7 +150,7 @@ public void run() {
 			
 		}	
 	
-}
+}  }
 	
 	
 	

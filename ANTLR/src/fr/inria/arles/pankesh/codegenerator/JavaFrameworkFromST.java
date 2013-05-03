@@ -43,11 +43,18 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("I" + sensorDriver.getName() + ".java", templateOfSensorDriver, "Interface", "sensor", sensorDriver);
 	}
 
-	public CompilationUnit buildImploFSensorFactory(SensorDriver sensorDriver) {
+	public CompilationUnit buildPCoFSensorFactory(SensorDriver sensorDriver) {
 
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("implsensor");
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
-		return new CompilationUnit("Impl" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor", sensorDriver);
+		return new CompilationUnit("PC" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor", sensorDriver);
+	}
+
+	public CompilationUnit buildAndroidoFSensorFactory(SensorDriver sensorDriver) {
+
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("androidsensor");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit("Android" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor", sensorDriver);
 	}
 
 	public CompilationUnit buildAbstractClassoFSensorFactory(SensorDriver sensorDriver) {
@@ -91,11 +98,19 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit("Fake" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "Logic", "actuator", actuatorDriver);
 	}
 
-	public CompilationUnit buildImploFActuatorFactory(ActuatorDriver actuatorDriver) {
+	// This function will generate a device framework for Actuator PC
+	public CompilationUnit buildPCoFActuatorFactory(ActuatorDriver actuatorDriver) {
 
 		StringTemplate templateOfActuatorDriver = group.getInstanceOf("implactuator");
 		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
-		return new CompilationUnit("Impl" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator", actuatorDriver);
+		return new CompilationUnit("PC" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator", actuatorDriver);
+	}
+
+	// This function will generate a device framework for Actuator Android
+	public CompilationUnit buildAndroidoFActuatorFactory(ActuatorDriver actuatorDriver) {
+		StringTemplate templateOfActuatorDriver = group.getInstanceOf("androidactuator");
+		templateOfActuatorDriver.setAttribute("Actuatordriver", actuatorDriver);
+		return new CompilationUnit("Android" + actuatorDriver.getName() + ".java", templateOfActuatorDriver, "ImplFactory", "actuator", actuatorDriver);
 	}
 
 	public CompilationUnit buildAbstractClassoFGUIDriver(GUIDriver guiDriver) {

@@ -45,7 +45,10 @@ public class Actuator {
 											// Interface of Actuator.
 			generateActuatorFactory();
 
-			generateActuatorFactoryImpl();
+			generateActuatorFactoryPC(); // This function will generate a device
+											// framework for PC
+			generateActuatorFactoryAndroid(); // This function will generate a
+												// device framework for Android
 
 		}
 
@@ -53,12 +56,20 @@ public class Actuator {
 
 	}
 
-	private void generateActuatorFactoryImpl() {
+	// This framework will generate a device framework for PC
+	private void generateActuatorFactoryPC() {
 		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
-		CompilationUnit generatedCU = generatedActuatorDriver.buildImploFActuatorFactory(actuatorDriver);
+		CompilationUnit generatedCU = generatedActuatorDriver.buildPCoFActuatorFactory(actuatorDriver);
 		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
 		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
+	}
 
+	// This framework will generate a device framework for Android
+	private void generateActuatorFactoryAndroid() {
+		JavaFrameworkFromST generatedActuatorDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedActuatorDriver.buildAndroidoFActuatorFactory(actuatorDriver);
+		SourceFileDumper dumpGeneratedActuatorDriver = new SourceFileDumper();
+		dumpGeneratedActuatorDriver.dumpCompilationUnit(generatedCU);
 	}
 
 	private void generateActuatorFactory() {
