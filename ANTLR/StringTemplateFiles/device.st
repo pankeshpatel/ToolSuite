@@ -18,11 +18,12 @@ public class Startup implements DeviceStartup {
 	private static Set<String> abilities = new HashSet<String>();
 	private static PubSubMiddleware myPubSub;
 	public static Object myContext = null;
-
+	public static String mobileFlag;
 
 private static void setUpNode(Device deviceInfo)	{	
 
-	myPubSub = PubSubMiddleware.getInstance(deviceInfo, myContext);
+	//myPubSub = PubSubMiddleware.getInstance(deviceInfo, myContext);
+	myPubSub= (PubSubMiddleware) IoTSuiteFactory.getInstance("ibicoop", deviceInfo, myContext);
 	
 	$device.abilities:{ sc |	
 	Fake$sc$ fake$sc$Impl = new Fake$sc$(myPubSub, deviceInfo, ui); 
@@ -47,7 +48,7 @@ private static Device setUpDeviceInfo() {
   
   $device.RegionLabels:{ region | regionLabels.add("$region$"); } $
 	
-	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , abilities);
+	Device device = new Device(name, softwarePlatform, networkAddress, regionIDs, regionLabels , abilities, mobileFlag);
 	return device;    
 }
 
