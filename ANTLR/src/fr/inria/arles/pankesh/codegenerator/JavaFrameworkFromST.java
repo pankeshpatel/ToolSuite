@@ -268,7 +268,7 @@ public class JavaFrameworkFromST {
 
 			StringTemplate templateOfDevice = group.getInstanceOf("androidexecution");
 			templateOfDevice.setAttribute("device", device);
-			return new CompilationUnit("MainActivity" + ".java", templateOfDevice, "device", device.getName(), device);
+			return new CompilationUnit("MainActivity" + ".java", templateOfDevice, "deviceA", device.getName(), device);
 
 		}
 

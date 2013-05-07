@@ -13,6 +13,7 @@ public class GlobalVariable {
 	public static String outputDirPath = "/src";
 	public static String logicDirPath = "/logic";
 	public static String deviceDirPath = "/sim/device";
+	public static String deviceDirPathA = "/com/example/android/";
 	public static String utilDirPath = "/util";
 	public static String factoryDirPath = "/factory";
 	public static String deviceImplDirPath = "/deviceImpl";

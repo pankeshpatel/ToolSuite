@@ -49,8 +49,15 @@ public class SourceFileDumper {
 			String dirName = GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPath + unit.geObjectInside().getName();
 			File dir = new File(dirName);
 			file = new File(dir, unit.getName());
-
-		} else if ((unit.getType()).equals("deviceProject")) {
+			
+		}else if ((unit.getType()).equals("deviceA")){
+		
+			new File(GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPathA).mkdirs();
+			String dirName = GlobalVariable.frameworkRootDir + "/" + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.getObjectName() + GlobalVariable.outputDirPath + GlobalVariable.deviceDirPathA;
+			File dir = new File(dirName);
+			file = new File(dir, unit.getName());
+			
+		}else if ((unit.getType()).equals("deviceProject")) {
 
 			file = new File(GlobalVariable.frameworkRootDir + GlobalVariable.deploymentFolderPath + "/" + unit.geObjectInside().getType() + unit.geObjectInside().getName() + "/" + unit.getFileName());
 
