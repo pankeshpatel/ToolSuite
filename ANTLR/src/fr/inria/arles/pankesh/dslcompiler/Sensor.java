@@ -51,7 +51,8 @@ public class Sensor {
 			generateSensorFactory(); // This function generates sensor factory
 			generateSensorPCFactory(); // This function will generate Device
 										// Framework for PC
-			generateSensorAndroidFactory(); // // This function will generate
+			generateSensorAndroidFactory();
+			generateSensorAndroidService();// // This function will generate
 											// Device Framework for Android
 
 		}
@@ -77,6 +78,13 @@ public class Sensor {
 	private void generateSensorAndroidFactory() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory.buildAndroidoFSensorFactory(sensorDriver);
+		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
+		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
+	}
+	
+	private void generateSensorAndroidService() {
+		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
+		CompilationUnit generateCU = generateSensorImplFactory.buildAndroidoFSensorService(sensorDriver);
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}

@@ -1,32 +1,35 @@
 package $SensorDriver.deviceImplPackageName$;
 
 import framework.*;
-import android.content.Context;
 import logic.*;
-import android.app.Dialog;
-import android.os.Bundle;
-   
+import android.content.BroadcastReceiver;
 
-public class Android$SensorDriver.name$ extends Dialog implements I$SensorDriver.name$ {
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 
-    private Context myContext;
-  
-   public Android$SensorDriver.name$(Context context, Fake$SensorDriver.name$ obj) {
-		super(context);
-		this.myContext = context;
-		//this.fn = (Fake$SensorDriver.name$) obj;
-	}
-	
-	
-	public void onCreate(Bundle savedInstanceState) {
-	
-		//setContentView(R.layout.activity_main);
-		super.onCreate(savedInstanceState);
 
-	
-	}
+public class Android$SensorDriver.name$ implements I$SensorDriver.name$ {
     
 
+	BroadcastReceiver myReceiver = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+
+			
+		}
+	};
+  
+   public Android$SensorDriver.name$(Context context, Fake$SensorDriver.name$ obj) {
+		
+		Intent intent = new Intent(context, Android$SensorDriver.name$Service.class);
+		context.startService(intent);
+
+		IntentFilter receiverFilter = new IntentFilter();
+		receiverFilter.addAction("$SensorDriver.name$");
+		context.registerReceiver(myReceiver, receiverFilter);
+	}
   
    $SensorDriver.allGeneratedInfo:{ generatedInfo | 
    

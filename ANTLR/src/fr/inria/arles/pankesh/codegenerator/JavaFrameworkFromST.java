@@ -56,6 +56,13 @@ public class JavaFrameworkFromST {
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("Android" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor", sensorDriver);
 	}
+	
+	public CompilationUnit buildAndroidoFSensorService(SensorDriver sensorDriver) {
+
+		StringTemplate templateOfSensorDriver = group.getInstanceOf("androidservice");
+		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
+		return new CompilationUnit("Android" + sensorDriver.getName() + "Service.java", templateOfSensorDriver, "ImplFactory", "sensor", sensorDriver);
+	}
 
 	public CompilationUnit buildAbstractClassoFSensorFactory(SensorDriver sensorDriver) {
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("sensorfactory");
