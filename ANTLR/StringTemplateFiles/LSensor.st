@@ -30,7 +30,7 @@ public class  Fake$SensorDriver.name$ extends $SensorDriver.name$  {
 		   this.ui.runOnUiThread(new Runnable() {
 				public void run() {
 					obj$SensorDriver.name$ = $SensorDriver.name$Factory.get$SensorDriver.name$(deviceInfo.getType(), (Activity) ui, obj);
-					((Dialog) obj$SensorDriver.name$).show();
+				//	((Dialog) obj$SensorDriver.name$).show();
 				}
 			});
 		}
