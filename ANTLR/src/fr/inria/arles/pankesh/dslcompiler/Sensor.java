@@ -81,7 +81,7 @@ public class Sensor {
 		SourceFileDumper dumpGeneratedSensorImplFactory = new SourceFileDumper();
 		dumpGeneratedSensorImplFactory.dumpCompilationUnit(generateCU);
 	}
-	
+
 	private void generateSensorAndroidService() {
 		JavaFrameworkFromST generateSensorImplFactory = new JavaFrameworkFromST();
 		CompilationUnit generateCU = generateSensorImplFactory.buildAndroidoFSensorService(sensorDriver);

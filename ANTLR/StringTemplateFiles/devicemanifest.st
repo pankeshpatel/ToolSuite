@@ -26,14 +26,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="deviceImpl.Impl$GUIdriver.name$"
-            android:label="Impl$GUIdriver.name$" >
-        </activity> 
         
         
+        $device.abilities:{ sc |
+         <activity
+            android:name="deviceImpl.Impl$sc$"
+            android:label="Impl$sc$" >
+        </activity>
         
+        <service android:name="deviceImpl.Android$sc$Service"
+        android:exported="true"
+        android:label="Android$sc$" /> 
         
+        }; separator="\n"$
+        	
+          
     </application>
 
 </manifest>

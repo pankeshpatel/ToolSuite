@@ -77,7 +77,7 @@ public class GUI {
 
 		if (GlobalVariable.activity.equals("generateMapping")) {
 			generateGUILayout();
-			generateGUIManifest();
+			//generateGUIManifest();
 		}
 	}
 
@@ -112,13 +112,13 @@ public class GUI {
 
 	}
 
-	private void generateGUIManifest() {
+	/*private void generateGUIManifest() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
 		CompilationUnit generatedCU = generatedGUIDriver.buildGUIManifest(guiDriver);
 		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
 		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
 
-	}
+	}*/
 
 	public void generateGUI() {
 		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();

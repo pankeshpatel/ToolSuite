@@ -56,7 +56,7 @@ public class JavaFrameworkFromST {
 		templateOfSensorDriver.setAttribute("SensorDriver", sensorDriver);
 		return new CompilationUnit("Android" + sensorDriver.getName() + ".java", templateOfSensorDriver, "ImplFactory", "sensor", sensorDriver);
 	}
-	
+
 	public CompilationUnit buildAndroidoFSensorService(SensorDriver sensorDriver) {
 
 		StringTemplate templateOfSensorDriver = group.getInstanceOf("androidservice");
@@ -161,11 +161,19 @@ public class JavaFrameworkFromST {
 		return new CompilationUnit(guiDriver.getName().toLowerCase() + "layout" + ".xml", templateOfGUIDriver, "androidgui", "layout", guiDriver);
 	}
 
-	public CompilationUnit buildGUIManifest(GUIDriver guiDriver) {
+	/*public CompilationUnit buildGUIManifest(GUIDriver guiDriver) {
 
 		StringTemplate templateOfGUIDriver = group.getInstanceOf("guiManifest");
 		templateOfGUIDriver.setAttribute("GUIdriver", guiDriver);
 		return new CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "androidgui", "manifest", guiDriver);
+	}*/
+	
+	
+	public CompilationUnit buildDeviceManifest(Device device) {
+
+		StringTemplate templateOfGUIDriver = group.getInstanceOf("devicemanifest");
+		templateOfGUIDriver.setAttribute("device", device);
+		return new CompilationUnit("AndroidManifest.xml", templateOfGUIDriver, "androidgui", "manifest", device);
 	}
 
 	public CompilationUnit buildAbstractClassOFStorageService(StorageService storageService) {

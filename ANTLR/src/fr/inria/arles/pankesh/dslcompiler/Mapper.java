@@ -39,6 +39,12 @@ public class Mapper {
 			genearateExecutionCode(device);
 			genearateProjectFileCode(device);
 
+			/*
+			 * if(device.getType().equals("Android")){
+			 * System.out.println("Abilities:>>>>" + device.getAbilities());
+			 * generateDeviceManifest(device); }
+			 */
+
 		}
 	}
 
@@ -63,6 +69,11 @@ public class Mapper {
 	}
 
 	public static void multiplyTemplate(Device unit) {
+
+		if (unit.getType().equals("Android")) {
+			System.out.println("Abilities:>>>>" + unit.getAbilities());
+			generateDeviceManifest(unit);
+		}
 
 		// The following line take the template from the
 		// GlobalVariable.frameworkRootDir
@@ -155,6 +166,14 @@ public class Mapper {
 		CompilationUnit generatedCU = generateDevice.buildClassoFProjectFile(device);
 		SourceFileDumper dumpGeneratedDevice = new SourceFileDumper();
 		dumpGeneratedDevice.dumpCompilationUnit(generatedCU);
+	}
+
+	private static void generateDeviceManifest(Device device) {
+		JavaFrameworkFromST generatedGUIDriver = new JavaFrameworkFromST();
+		CompilationUnit generatedCU = generatedGUIDriver.buildDeviceManifest(device);
+		SourceFileDumper dumpGeneratedGUIDriver = new SourceFileDumper();
+		dumpGeneratedGUIDriver.dumpCompilationUnit(generatedCU);
+
 	}
 
 }

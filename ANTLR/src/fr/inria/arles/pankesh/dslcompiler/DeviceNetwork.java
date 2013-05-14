@@ -26,11 +26,8 @@ public class DeviceNetwork {
 	}
 
 	public void addDeviceObj() {
-
 		device = new Device(getDeviceName(), getDeviceType(), getNetworkAddress(), getRegionValues(), getRegionLabel(), deviceAbilities, getMobileFlag());
-
 		Context.addDeviceinSymblTable(device);
-
 	}
 
 	// Getter and Setter of MobileFlag
