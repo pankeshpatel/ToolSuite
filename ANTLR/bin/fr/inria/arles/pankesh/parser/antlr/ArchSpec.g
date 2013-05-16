@@ -1,4 +1,4 @@
-grammar VocabSpec; 
+grammar ArchSpec;  
 
 options {
   language     = Java;  
@@ -15,30 +15,25 @@ import fr.inria.arles.pankesh.dslcompiler.*;
 import fr.inria.arles.pankesh.semanticmodel.*;  
    
 } 
- 
-@members {
-  //Initialize the context
-  private Context context; 
-} 
 
-vocabSpec : 
-    'regions'
+@members {
+  //Initialize the context  
+  private Context context;    
+}
+ 
+archSpec : 
+  //  'regions'
     { context = new Context();
     context.currentRegion = new RegionsGenerator();
     context.currentMappingConstraint = new MappingConstraint(); }
-    ':' (region_def)+  
+  //  ':' (region_def)+  
     { context.currentRegion.generateCode(); }   
-    'structs'         
-        ':'       
-    (struct_def)+ 
-    'widgets'
-    ':' 
-    (widget_def)+
-    'resources' ':' abilities_def   
-   // 'softwarecomponents' ':' sc_def  
+    ('structs' ':' struct_def)*  
+   // 'abilities' ':' abilities_def  
+    'softwarecomponents' ':' component_def 
 ;
- 
-region_def :    
+
+region_def :
   
      CAPITALIZED_ID ':' dataType  ';'
     { 
@@ -46,11 +41,36 @@ region_def :
     }
 ;
 
-sc_def :
-  ('storageService' (ss_def)+ )* 
-   'computationalService' (cs_def)+ 
- //   ('controller' (controller_def)+ )*
+component_def :
+   //('storageService' ':' (ss_def)+ )* 
+   'computationalService' ':' (cs_def)+  
+  //  'controller' ':' (controller_def)+   
+   //(controller_def)*
+    //'controller' ':' (controller_def)+ 
      
+;
+
+
+cs_def:
+  CAPITALIZED_ID
+    { 
+     context.currentComputationalService = new CS(); 
+     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
+    (csAttribute_def ';')*
+    (csGeneratedInfo_def ';')* 
+    (csConsumeInfo_def ';')* 
+    (csRequest_def  ';')*
+    (cntrlCommand_def ';')* 
+    (partition_def ';')*
+    { 
+     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
+     context.currentComputationalService.createCSObject();
+    context.currentComputationalService.generateCode(); 
+    // Next line is for Software Component Name
+    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+    
+    }
 ;
 
 ss_def:
@@ -60,7 +80,7 @@ ss_def:
       }
     (storageAttribute_def ';')*
     (storageDataAccess_def ';')* 
-  // (storagePartition_def ';')*
+    (storagePartition_def ';')*
      {
       
      context.currentStorageService.setStorageServiceName($CAPITALIZED_ID.text);
@@ -85,8 +105,7 @@ storageDataAccess_def :
 storageGeneratedInfo_def :
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentStorageService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text);  
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-    context.constructResponseTypeSymblTable($lc_id.text, $CAPITALIZED_ID.text);}
+    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);}
 ;
 
 storagedataIndex_def:
@@ -105,35 +124,35 @@ storagePartition_def :
 ;
 
 
-controller_def:
-  CAPITALIZED_ID
-    {
-    context.currentController = new ControllerService();
+ //controller_def: 
+ // CAPITALIZED_ID
+  //  {
+//    context.currentController = new ControllerService();
     //context.currentController = new ControllerService($CAPITALIZED_ID.text);
-    }
-    (cntrlAttribute_def ';')*
-    (cntrlConsumeInfo_def ';')*
-    (cntrlCommand_def ';')* 
-    (cntrlPartition_def ';')*
-    {
-    context.currentController.setControllerName($CAPITALIZED_ID.text);
-  //  context.currentController.createCSObject();
-    context.currentController.generateCode();
-    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-    
-    }
-;
+//    }
+//    (cntrlAttribute_def ';')*
+//    (cntrlConsumeInfo_def ';')*
+//    (cntrlCommand_def ';')* 
+//    (cntrlPartition_def ';')*
+//    {
+//    context.currentController.setControllerName($CAPITALIZED_ID.text);
+//    context.currentController.createCSObject();
+//    context.currentController.generateCode();
+//    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
+//    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
+//    
+//    }
+//; 
 
-cntrlPartition_def :
-  cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
-    { 
-    context.currentController.setPartitionAttribute($CAPITALIZED_ID.text); 
+//cntrlPartition_def :
+//  cntrlDeploymentConstraint ='partition-per' ':' CAPITALIZED_ID 
+//    { 
+//    context.currentController.setPartitionAttribute($CAPITALIZED_ID.text); 
      // Next two lines are for  Mapping constraints
-    context.currentMappingConstraint.setAttributeName($cntrlDeploymentConstraint.text);  
-    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text);  
-    }
-;
+//    context.currentMappingConstraint.setAttributeName($cntrlDeploymentConstraint.text);  
+//    context.currentMappingConstraint.setAttributeValue($CAPITALIZED_ID.text);  
+//    }
+//; 
  
 cntrlAttribute_def:
   'attribute' lc_id ':' dataType
@@ -157,32 +176,13 @@ cntrlParameter_def :
     { context.currentComputationalService.addParameter($lc_id.text); }  
 ;
 
-cs_def:
-  CAPITALIZED_ID
-    { 
-     context.currentComputationalService = new CS(); 
-     context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);}
-    (csAttribute_def ';')*
-    (csGeneratedInfo_def ';')* 
-    (csConsumeInfo_def ';')* 
-    (csRequest_def  ';')*
-    (partition_def ';')*
-    { 
-     context.currentComputationalService.setComputationalServiceName($CAPITALIZED_ID.text);
-     context.currentComputationalService.createCSObject();
-    context.currentComputationalService.generateCode(); 
-    // Next line is for Software Component Name
-    context.currentMappingConstraint.setSoftwareComponentName($CAPITALIZED_ID.text);
-    context.currentMappingConstraint.addDeployementConstraintObj(); // This line creates a  Symbol Table
-    
-    }
-;
+
 
 csAttribute_def :
     'attribute' lc_id ':' dataType
     { context.currentComputationalService.addAttribute($lc_id.text, $dataType.text);  } 
 ;
-
+ 
 csGeneratedInfo_def:
     'generate' lc_id ':'  CAPITALIZED_ID
     { context.currentComputationalService.addGeneratedInfo($lc_id.text, $CAPITALIZED_ID.text); 
@@ -220,7 +220,7 @@ struct_def:
 structField_def:  
   lc_id ':' dataType 
   { context.currentStruct.addField($lc_id.text, $dataType.text);
-    context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
+  context.constructStructSymblTable(context.currentStruct.getStructName(),context.currentStruct);  }  
 ; 
 
 lc_id: ID  
@@ -234,17 +234,9 @@ primitiveType:
   (id='Integer' | id='Boolean' | id='String' |  id = 'double' | id = 'long' | id='boolean' )
 ;
 
-widget_def :
-  'TextView' ':' textview = lc_id ';'
-  'Button' ':' button = lc_id ';'
-  'TextBox' ':' textbox = lc_id ';'
-;
-
 abilities_def :
-  'sensors' ':'   (sensor_def)+ 
+  'sensors' ':'   (sensor_def)+
   'actuators' ':' (actuator_def)+
-  'storages'  ':' (ss_def)+
-  ('end user applications' ':' (gui_def))*
  ; 
 
 sensor_def:
@@ -262,7 +254,7 @@ attribute_def:
 
 sensorMeasurement_def :
     'generate' lc_id ':'  CAPITALIZED_ID
-    { context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text ,context.getStructSymblTable($CAPITALIZED_ID.text) ); 
+    { context.currentSensor.addSensorMeasurement($lc_id.text, $CAPITALIZED_ID.text, context.getStructSymblTable($CAPITALIZED_ID.text)); 
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text); } 
 ;
 
@@ -291,61 +283,6 @@ parameter_def :
     context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
     }
 ; 
-
-gui_def:
-  
-  {context.currentGUI = new GUI();}
-  
-  CAPITALIZED_ID
-  
-   (gui_action_def ';')*
-   (gui_command_def ';')*
-   (gui_request_def  ';')*
-   {context.currentGUI.setGUIName($CAPITALIZED_ID.text);
-    context.currentGUI.createGUIObject();
-    context.currentGUI.generateCode();}   
-;
-
-gui_action_def:
-    'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = CAPITALIZED_ID
-    { context.currentGUI.addAction($name.text,$ui.text ); } 
-;
-
-gui_action_parameter_def :
-    lc_id ':'  CAPITALIZED_ID (',' gui_action_parameter_def )?
-    { 
-    context.currentGUI.addActionParameter($lc_id.text, $CAPITALIZED_ID.text); 
-    context.constructSymbTable($lc_id.text, $CAPITALIZED_ID.text);
-    
-    }
-; 
-
-gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' (textbox = CAPITALIZED_ID)? button = CAPITALIZED_ID 
-    { 
-      context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
-    }
-;
-
-gui_request_def :
-   'request' lc_id 
-   { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
-   context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
-;
- 
-req_ui_parameter :
-    textbox = CAPITALIZED_ID button = CAPITALIZED_ID textview = CAPITALIZED_ID 
-    {context.currentGUI.setReqWidget($textbox.text,$button.text,$textview.text);}
-;
-
-gui_command_parameter_def :
-    lc_id (',' gui_command_parameter_def )?
-    { 
-    context.currentGUI.addCommandParameter($lc_id.text); 
-    }
-;
-
-
 
 ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )*
    ;

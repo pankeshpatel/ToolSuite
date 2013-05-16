@@ -48,7 +48,8 @@ public class Context {
 
 	}
 
-	public static void constructDataAccessSymblTable(String dataAccessKey, Set<DataAccess> dataAccessObj) {
+	public static void constructDataAccessSymblTable(String dataAccessKey,
+			Set<DataAccess> dataAccessObj) {
 		dataAccessSymblTable.put(dataAccessKey, dataAccessObj);
 	}
 
@@ -75,7 +76,8 @@ public class Context {
 		return symblTable.get(variableName);
 	}
 
-	public static void constructSymbTable(String variableName, String variableType) {
+	public static void constructSymbTable(String variableName,
+			String variableType) {
 
 		if (symblTable.containsKey(variableName)) {
 
@@ -86,7 +88,8 @@ public class Context {
 
 	// Getter and Setter of structSymblTable
 
-	public static void constructStructSymblTable(String structAccessKey, Struct structAccessObj) {
+	public static void constructStructSymblTable(String structAccessKey,
+			Struct structAccessObj) {
 		structSymblTable.put(structAccessKey, structAccessObj);
 	}
 
@@ -95,7 +98,8 @@ public class Context {
 
 	}
 
-	public static void constructResponseTypeSymblTable(String structAccessKey, String structAccessObj) {
+	public static void constructResponseTypeSymblTable(String structAccessKey,
+			String structAccessObj) {
 		responseSymblTable.put(structAccessKey, structAccessObj);
 	}
 
