@@ -235,9 +235,9 @@ primitiveType:
 ;
 
 widget_def :
-  'TextView' ':' textview = lc_id ';'
-  'Button' ':' button = lc_id ';'
-  'TextBox' ':' textbox = lc_id ';'
+  'TextView' ':' (textview = lc_id )* ';'
+  'Button' ':' ( button = lc_id)* ';'
+  'TextBox' ':' (textbox = lc_id)* ';'
 ;
 
 abilities_def :
@@ -307,7 +307,7 @@ gui_def:
 ;
 
 gui_action_def:
-    'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = CAPITALIZED_ID
+    'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = lc_id 
     { context.currentGUI.addAction($name.text,$ui.text ); } 
 ;
 
@@ -321,7 +321,7 @@ gui_action_parameter_def :
 ; 
 
 gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' (textbox = CAPITALIZED_ID)? button = CAPITALIZED_ID 
+    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' (textbox = lc_id )? button = lc_id  
     { 
       context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
     }

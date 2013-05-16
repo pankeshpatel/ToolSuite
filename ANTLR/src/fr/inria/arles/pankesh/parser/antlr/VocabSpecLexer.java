@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g 2013-05-16 14:20:14
+// $ANTLR 3.4 /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/VocabSpec.g 2013-05-16 15:32:14
 
   package fr.inria.arles.pankesh.parser.antlr; 
   
