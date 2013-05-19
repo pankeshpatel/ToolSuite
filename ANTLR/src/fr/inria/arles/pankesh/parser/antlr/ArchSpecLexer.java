@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g 2013-05-16 12:31:35
+// $ANTLR 3.4 Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g 2013-05-16 18:23:11
 
   package fr.inria.arles.pankesh.parser.antlr; 
   
@@ -59,15 +59,15 @@ public class ArchSpecLexer extends Lexer {
     public ArchSpecLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g"; }
+    public String getGrammarFileName() { return "Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g"; }
 
     // $ANTLR start "T__8"
     public final void mT__8() throws RecognitionException {
         try {
             int _type = T__8;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:12:6: ( '(' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:12:8: '('
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:12:6: ( '(' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:12:8: '('
             {
             match('('); 
 
@@ -87,8 +87,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:13:6: ( ')' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:13:8: ')'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:13:6: ( ')' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:13:8: ')'
             {
             match(')'); 
 
@@ -108,8 +108,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:14:7: ( ',' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:14:9: ','
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:14:7: ( ',' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:14:9: ','
             {
             match(','); 
 
@@ -129,8 +129,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:15:7: ( ':' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:15:9: ':'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:15:7: ( ':' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:15:9: ':'
             {
             match(':'); 
 
@@ -150,8 +150,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:16:7: ( ';' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:16:9: ';'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:16:7: ( ';' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:16:9: ';'
             {
             match(';'); 
 
@@ -171,8 +171,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:17:7: ( 'Boolean' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:17:9: 'Boolean'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:17:7: ( 'Boolean' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:17:9: 'Boolean'
             {
             match("Boolean"); 
 
@@ -194,8 +194,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:18:7: ( 'Integer' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:18:9: 'Integer'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:18:7: ( 'Integer' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:18:9: 'Integer'
             {
             match("Integer"); 
 
@@ -217,8 +217,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:19:7: ( 'String' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:19:9: 'String'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:19:7: ( 'String' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:19:9: 'String'
             {
             match("String"); 
 
@@ -240,8 +240,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:20:7: ( 'accessed-by' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:20:9: 'accessed-by'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:20:7: ( 'accessed-by' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:20:9: 'accessed-by'
             {
             match("accessed-by"); 
 
@@ -263,8 +263,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:21:7: ( 'action' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:21:9: 'action'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:21:7: ( 'action' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:21:9: 'action'
             {
             match("action"); 
 
@@ -286,8 +286,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:22:7: ( 'actuators' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:22:9: 'actuators'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:22:7: ( 'actuators' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:22:9: 'actuators'
             {
             match("actuators"); 
 
@@ -309,8 +309,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:23:7: ( 'attribute' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:23:9: 'attribute'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:23:7: ( 'attribute' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:23:9: 'attribute'
             {
             match("attribute"); 
 
@@ -332,8 +332,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:24:7: ( 'boolean' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:24:9: 'boolean'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:24:7: ( 'boolean' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:24:9: 'boolean'
             {
             match("boolean"); 
 
@@ -355,8 +355,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:25:7: ( 'command' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:25:9: 'command'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:25:7: ( 'command' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:25:9: 'command'
             {
             match("command"); 
 
@@ -378,8 +378,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:26:7: ( 'computationalService' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:26:9: 'computationalService'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:26:7: ( 'computationalService' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:26:9: 'computationalService'
             {
             match("computationalService"); 
 
@@ -401,8 +401,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:27:7: ( 'consume' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:27:9: 'consume'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:27:7: ( 'consume' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:27:9: 'consume'
             {
             match("consume"); 
 
@@ -424,8 +424,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:28:7: ( 'deployment-instance' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:28:9: 'deployment-instance'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:28:7: ( 'deployment-instance' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:28:9: 'deployment-instance'
             {
             match("deployment-instance"); 
 
@@ -447,8 +447,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:29:7: ( 'double' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:29:9: 'double'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:29:7: ( 'double' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:29:9: 'double'
             {
             match("double"); 
 
@@ -470,8 +470,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:30:7: ( 'from' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:30:9: 'from'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:30:7: ( 'from' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:30:9: 'from'
             {
             match("from"); 
 
@@ -493,8 +493,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:31:7: ( 'generate' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:31:9: 'generate'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:31:7: ( 'generate' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:31:9: 'generate'
             {
             match("generate"); 
 
@@ -516,8 +516,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:32:7: ( 'long' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:32:9: 'long'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:32:7: ( 'long' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:32:9: 'long'
             {
             match("long"); 
 
@@ -539,8 +539,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:33:7: ( 'partition-per' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:33:9: 'partition-per'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:33:7: ( 'partition-per' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:33:9: 'partition-per'
             {
             match("partition-per"); 
 
@@ -562,8 +562,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:34:7: ( 'region-hops' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:34:9: 'region-hops'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:34:7: ( 'region-hops' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:34:9: 'region-hops'
             {
             match("region-hops"); 
 
@@ -585,8 +585,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:35:7: ( 'request' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:35:9: 'request'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:35:7: ( 'request' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:35:9: 'request'
             {
             match("request"); 
 
@@ -608,8 +608,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:36:7: ( 'sensors' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:36:9: 'sensors'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:36:7: ( 'sensors' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:36:9: 'sensors'
             {
             match("sensors"); 
 
@@ -631,8 +631,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:37:7: ( 'singleton' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:37:9: 'singleton'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:37:7: ( 'singleton' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:37:9: 'singleton'
             {
             match("singleton"); 
 
@@ -654,8 +654,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:38:7: ( 'softwarecomponents' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:38:9: 'softwarecomponents'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:38:7: ( 'softwarecomponents' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:38:9: 'softwarecomponents'
             {
             match("softwarecomponents"); 
 
@@ -677,8 +677,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:39:7: ( 'structs' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:39:9: 'structs'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:39:7: ( 'structs' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:39:9: 'structs'
             {
             match("structs"); 
 
@@ -700,8 +700,8 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:40:7: ( 'to' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:40:9: 'to'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:40:7: ( 'to' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:40:9: 'to'
             {
             match("to"); 
 
@@ -723,12 +723,12 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:287:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:287:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:287:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:287:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )*
             {
             matchRange('a','z'); 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:287:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:287:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop1:
             do {
                 int alt1=2;
@@ -741,7 +741,7 @@ public class ArchSpecLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:
             	    {
             	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -778,12 +778,12 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:5: ( '0' .. '9' ( '0' .. '9' )* )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:7: '0' .. '9' ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:290:5: ( '0' .. '9' ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:290:7: '0' .. '9' ( '0' .. '9' )*
             {
             matchRange('0','9'); 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:290:15: ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:290:15: ( '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -796,7 +796,7 @@ public class ArchSpecLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -833,12 +833,12 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = CAPITALIZED_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:292:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:292:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:292:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:292:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )*
             {
             matchRange('A','Z'); 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:292:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:292:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop3:
             do {
                 int alt3=2;
@@ -851,7 +851,7 @@ public class ArchSpecLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:
             	    {
             	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -888,10 +888,10 @@ public class ArchSpecLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:294:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:294:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:294:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:294:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             {
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:294:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:294:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             int cnt4=0;
             loop4:
             do {
@@ -905,7 +905,7 @@ public class ArchSpecLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:
             	    {
             	    if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
             	        input.consume();
@@ -944,12 +944,12 @@ public class ArchSpecLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | ID | INT | CAPITALIZED_ID | WS )
+        // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | ID | INT | CAPITALIZED_ID | WS )
         int alt5=33;
         alt5 = dfa5.predict(input);
         switch (alt5) {
             case 1 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:10: T__8
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:10: T__8
                 {
                 mT__8(); 
 
@@ -957,7 +957,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:15: T__9
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:15: T__9
                 {
                 mT__9(); 
 
@@ -965,7 +965,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:20: T__10
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:20: T__10
                 {
                 mT__10(); 
 
@@ -973,7 +973,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:26: T__11
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:26: T__11
                 {
                 mT__11(); 
 
@@ -981,7 +981,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:32: T__12
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:32: T__12
                 {
                 mT__12(); 
 
@@ -989,7 +989,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:38: T__13
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:38: T__13
                 {
                 mT__13(); 
 
@@ -997,7 +997,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:44: T__14
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:44: T__14
                 {
                 mT__14(); 
 
@@ -1005,7 +1005,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:50: T__15
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:50: T__15
                 {
                 mT__15(); 
 
@@ -1013,7 +1013,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:56: T__16
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:56: T__16
                 {
                 mT__16(); 
 
@@ -1021,7 +1021,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:62: T__17
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:62: T__17
                 {
                 mT__17(); 
 
@@ -1029,7 +1029,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:68: T__18
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:68: T__18
                 {
                 mT__18(); 
 
@@ -1037,7 +1037,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:74: T__19
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:74: T__19
                 {
                 mT__19(); 
 
@@ -1045,7 +1045,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:80: T__20
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:80: T__20
                 {
                 mT__20(); 
 
@@ -1053,7 +1053,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:86: T__21
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:86: T__21
                 {
                 mT__21(); 
 
@@ -1061,7 +1061,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:92: T__22
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:92: T__22
                 {
                 mT__22(); 
 
@@ -1069,7 +1069,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:98: T__23
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:98: T__23
                 {
                 mT__23(); 
 
@@ -1077,7 +1077,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:104: T__24
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:104: T__24
                 {
                 mT__24(); 
 
@@ -1085,7 +1085,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:110: T__25
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:110: T__25
                 {
                 mT__25(); 
 
@@ -1093,7 +1093,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:116: T__26
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:116: T__26
                 {
                 mT__26(); 
 
@@ -1101,7 +1101,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:122: T__27
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:122: T__27
                 {
                 mT__27(); 
 
@@ -1109,7 +1109,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:128: T__28
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:128: T__28
                 {
                 mT__28(); 
 
@@ -1117,7 +1117,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:134: T__29
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:134: T__29
                 {
                 mT__29(); 
 
@@ -1125,7 +1125,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:140: T__30
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:140: T__30
                 {
                 mT__30(); 
 
@@ -1133,7 +1133,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:146: T__31
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:146: T__31
                 {
                 mT__31(); 
 
@@ -1141,7 +1141,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:152: T__32
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:152: T__32
                 {
                 mT__32(); 
 
@@ -1149,7 +1149,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:158: T__33
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:158: T__33
                 {
                 mT__33(); 
 
@@ -1157,7 +1157,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:164: T__34
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:164: T__34
                 {
                 mT__34(); 
 
@@ -1165,7 +1165,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:170: T__35
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:170: T__35
                 {
                 mT__35(); 
 
@@ -1173,7 +1173,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:176: T__36
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:176: T__36
                 {
                 mT__36(); 
 
@@ -1181,7 +1181,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:182: ID
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:182: ID
                 {
                 mID(); 
 
@@ -1189,7 +1189,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:185: INT
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:185: INT
                 {
                 mINT(); 
 
@@ -1197,7 +1197,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:189: CAPITALIZED_ID
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:189: CAPITALIZED_ID
                 {
                 mCAPITALIZED_ID(); 
 
@@ -1205,7 +1205,7 @@ public class ArchSpecLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/ArchSpec.g:1:204: WS
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\ArchSpec.g:1:204: WS
                 {
                 mWS(); 
 

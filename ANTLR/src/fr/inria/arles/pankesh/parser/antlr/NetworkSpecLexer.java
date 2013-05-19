@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g 2013-05-16 12:31:33
+// $ANTLR 3.4 Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g 2013-05-16 18:23:09
 
   package fr.inria.arles.pankesh.parser.antlr; 
 
@@ -39,15 +39,15 @@ public class NetworkSpecLexer extends Lexer {
     public NetworkSpecLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g"; }
+    public String getGrammarFileName() { return "Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g"; }
 
     // $ANTLR start "T__9"
     public final void mT__9() throws RecognitionException {
         try {
             int _type = T__9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:11:6: ( ',' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:11:8: ','
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:11:6: ( ',' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:11:8: ','
             {
             match(','); 
 
@@ -67,8 +67,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:12:7: ( ':' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:12:9: ':'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:12:7: ( ':' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:12:9: ':'
             {
             match(':'); 
 
@@ -88,8 +88,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:13:7: ( ';' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:13:9: ';'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:13:7: ( ';' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:13:9: ';'
             {
             match(';'); 
 
@@ -109,8 +109,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:14:7: ( 'devices' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:14:9: 'devices'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:7: ( 'devices' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:14:9: 'devices'
             {
             match("devices"); 
 
@@ -132,8 +132,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:15:7: ( 'mobile' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:15:9: 'mobile'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:7: ( 'mobile' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:15:9: 'mobile'
             {
             match("mobile"); 
 
@@ -155,8 +155,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:16:7: ( 'networkaddress' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:16:9: 'networkaddress'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:7: ( 'networkaddress' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:16:9: 'networkaddress'
             {
             match("networkaddress"); 
 
@@ -178,8 +178,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:17:7: ( 'region' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:17:9: 'region'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:7: ( 'region' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:17:9: 'region'
             {
             match("region"); 
 
@@ -201,8 +201,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:18:7: ( 'resources' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:18:9: 'resources'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:18:7: ( 'resources' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:18:9: 'resources'
             {
             match("resources"); 
 
@@ -224,8 +224,8 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:19:7: ( 'type' )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:19:9: 'type'
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:19:7: ( 'type' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:19:9: 'type'
             {
             match("type"); 
 
@@ -247,7 +247,7 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = MOBILEFLAG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:72:12: ( 'true' | 'false' )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:72:12: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -266,7 +266,7 @@ public class NetworkSpecLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:72:15: 'true'
+                    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:72:15: 'true'
                     {
                     match("true"); 
 
@@ -275,7 +275,7 @@ public class NetworkSpecLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:72:24: 'false'
+                    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:72:24: 'false'
                     {
                     match("false"); 
 
@@ -299,12 +299,12 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:75:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:75:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:5: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:7: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
             {
             matchRange('a','z'); 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:75:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:17: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop2:
             do {
                 int alt2=2;
@@ -317,7 +317,7 @@ public class NetworkSpecLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
             	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -338,7 +338,7 @@ public class NetworkSpecLexer extends Lexer {
             } while (true);
 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:75:41: ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:75:41: ( '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -351,7 +351,7 @@ public class NetworkSpecLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -388,12 +388,12 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:78:5: ( '0' .. '9' ( '0' .. '9' )* )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:78:7: '0' .. '9' ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:78:5: ( '0' .. '9' ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:78:7: '0' .. '9' ( '0' .. '9' )*
             {
             matchRange('0','9'); 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:78:15: ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:78:15: ( '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -406,7 +406,7 @@ public class NetworkSpecLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -443,12 +443,12 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = CAPITALIZED_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:80:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:80:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:15: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )* )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:17: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' )* ( '0' .. '9' )*
             {
             matchRange('A','Z'); 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:80:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:26: ( 'a' .. 'z' | 'A' .. 'Z' )*
             loop5:
             do {
                 int alt5=2;
@@ -461,7 +461,7 @@ public class NetworkSpecLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
             	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -482,7 +482,7 @@ public class NetworkSpecLexer extends Lexer {
             } while (true);
 
 
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:80:50: ( '0' .. '9' )*
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:80:50: ( '0' .. '9' )*
             loop6:
             do {
                 int alt6=2;
@@ -495,7 +495,7 @@ public class NetworkSpecLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -532,10 +532,10 @@ public class NetworkSpecLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:82:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:82:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:82:3: ( ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+ )
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:82:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             {
-            // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:82:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
+            // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:82:5: ( '\\t' | ' ' | '\\r' | '\\n' | '\\u000C' )+
             int cnt7=0;
             loop7:
             do {
@@ -549,7 +549,7 @@ public class NetworkSpecLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:
+            	    // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:
             	    {
             	    if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
             	        input.consume();
@@ -588,12 +588,12 @@ public class NetworkSpecLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | MOBILEFLAG | ID | INT | CAPITALIZED_ID | WS )
+        // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | MOBILEFLAG | ID | INT | CAPITALIZED_ID | WS )
         int alt8=14;
         alt8 = dfa8.predict(input);
         switch (alt8) {
             case 1 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:10: T__9
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:10: T__9
                 {
                 mT__9(); 
 
@@ -601,7 +601,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:15: T__10
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:15: T__10
                 {
                 mT__10(); 
 
@@ -609,7 +609,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:21: T__11
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:21: T__11
                 {
                 mT__11(); 
 
@@ -617,7 +617,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:27: T__12
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:27: T__12
                 {
                 mT__12(); 
 
@@ -625,7 +625,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:33: T__13
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:33: T__13
                 {
                 mT__13(); 
 
@@ -633,7 +633,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:39: T__14
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:39: T__14
                 {
                 mT__14(); 
 
@@ -641,7 +641,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:45: T__15
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:45: T__15
                 {
                 mT__15(); 
 
@@ -649,7 +649,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:51: T__16
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:51: T__16
                 {
                 mT__16(); 
 
@@ -657,7 +657,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:57: T__17
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:57: T__17
                 {
                 mT__17(); 
 
@@ -665,7 +665,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:63: MOBILEFLAG
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:63: MOBILEFLAG
                 {
                 mMOBILEFLAG(); 
 
@@ -673,7 +673,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:74: ID
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:74: ID
                 {
                 mID(); 
 
@@ -681,7 +681,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:77: INT
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:77: INT
                 {
                 mINT(); 
 
@@ -689,7 +689,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:81: CAPITALIZED_ID
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:81: CAPITALIZED_ID
                 {
                 mCAPITALIZED_ID(); 
 
@@ -697,7 +697,7 @@ public class NetworkSpecLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /Users/soukou/git/ToolSuiteANTLRAfter/ANTLR/src/fr/inria/arles/pankesh/parser/antlr/NetworkSpec.g:1:96: WS
+                // Y:\\git\\ToolSuite\\ANTLR\\src\\fr\\inria\\arles\\pankesh\\parser\\antlr\\NetworkSpec.g:1:96: WS
                 {
                 mWS(); 
 

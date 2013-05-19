@@ -31,9 +31,7 @@ vocabSpec :
     'structs'         
         ':'       
     (struct_def)+ 
-    'widgets'
-    ':' 
-    (widget_def)+
+    ('widgets' ':' widget_def)*
     'resources' ':' abilities_def   
    // 'softwarecomponents' ':' sc_def  
 ;
@@ -235,17 +233,35 @@ primitiveType:
 ;
 
 widget_def :
-  'TextView' ':' (textview = lc_id )* ';'
-  'Button' ':' ( button = lc_id)* ';'
-  'TextBox' ':' (textbox = lc_id)* ';'
+    ('TextView' textview_def ';')*
+    ('Button'  button_def ';')*
+    ('TextBox' textbox_def ';')*
+
+  //('TextView' textview = lc_id )* ';'
+  //('Button'  button = lc_id)* ';'
+  //('TextBox' textbox = lc_id)* ';'
 ;
+
+textview_def :
+    lc_id  (',' textview_def)?
+;
+
+button_def :
+    lc_id  (',' button_def)? 
+;
+
+textbox_def :
+    lc_id (',' textbox_def)?
+;
+
+
 
 abilities_def :
   'sensors' ':'   (sensor_def)+ 
   'actuators' ':' (actuator_def)+
   'storages'  ':' (ss_def)+
-  ('end user applications' ':' (gui_def))*
- ; 
+  ('gui' ':' (gui_def)+ )*
+; 
 
 sensor_def:
     CAPITALIZED_ID
@@ -292,12 +308,9 @@ parameter_def :
     }
 ; 
 
-gui_def:
-  
-  {context.currentGUI = new GUI();}
-  
-  CAPITALIZED_ID
-  
+gui_def:  
+  {context.currentGUI = new GUI();}  
+  CAPITALIZED_ID  
    (gui_action_def ';')*
    (gui_command_def ';')*
    (gui_request_def  ';')*
@@ -308,7 +321,7 @@ gui_def:
 
 gui_action_def:
     'action' name = CAPITALIZED_ID '(' (gui_action_parameter_def)? ')' 'with' ui = lc_id 
-    { context.currentGUI.addAction($name.text,$ui.text ); } 
+    { context.currentGUI.addAction($name.text, $ui.text ); } 
 ;
 
 gui_action_parameter_def :
@@ -321,17 +334,30 @@ gui_action_parameter_def :
 ; 
 
 gui_command_def :
-    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'to'  'region-hops' ':' INT ':' region = CAPITALIZED_ID 'with' (textbox = lc_id )? button = lc_id  
+    'command'  name = CAPITALIZED_ID '(' (gui_command_parameter_def)? ')' 'with' button = lc_id (',' textbox = lc_id)?  
     { 
       context.currentGUI.addCommand($name.text,new Widget($textbox.text,$button.text,""));  
     }
 ;
 
+//TODO  : need discussion on request-response 
+//For  request response, a user needs the following three components
+//  1. TextBox to enter data.
+//  2. Button to made a request.
+//  3. TextView to view the response.
+
 gui_request_def :
-   'request' lc_id 
+   'request' lc_id 'with' button = bt_id ',' textbox = txtbx_id ',' textview = txtview_id 
    { context.currentGUI.getDataAccessListFromSymblTable($lc_id.text);
-   context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
+     context.currentGUI.setRequestType(context.getResponseTypeSymblTable($lc_id.text));}
 ;
+
+bt_id :  ID ;
+
+txtbx_id :  ID ;
+
+txtview_id :  ID ;
+
  
 req_ui_parameter :
     textbox = CAPITALIZED_ID button = CAPITALIZED_ID textview = CAPITALIZED_ID 
@@ -347,7 +373,7 @@ gui_command_parameter_def :
 
 
 
-ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' )*
+ID  : 'a'..'z'  ('a'..'z' | 'A'..'Z' | '0'..'9')*
    ;
    
 INT : '0'..'9'('0'..'9')*  ; 
