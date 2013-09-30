@@ -9,8 +9,8 @@ deployment, and evolution. It offers tool supports in order to ease of applicati
 
 This toolkit is in pre-alphas stage. I am developing IoT applications on real middleware and real 
 devices. I identify bugs and fix those bugs. In order to improve this work, your contributions/suggestions are 
-most welcomed. In order to get theoritical/programming understanding please contact me  
-or refer my publications (Google profile : Pankesh Patel).
+most welcomed. In order to get theoritical/programming understanding please contact me  or refer my publications
+(Google profile : Pankesh Patel).
 
 
 
